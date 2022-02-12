@@ -1,7 +1,7 @@
 ﻿
-namespace Veto.Ecrans.Admin
+namespace Veto
 {
-    partial class UserList
+    partial class UserDetails
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

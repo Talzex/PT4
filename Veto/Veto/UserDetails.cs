@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Veto.Ecrans.Admin
+namespace Veto
 {
-    public partial class UserAM : Veto.Ecrans.Admin.UserBase
+    public partial class UserDetails : Veto.UserBase
     {
-        public UserAM()
+        public UserDetails()
         {
             InitializeComponent();
         }

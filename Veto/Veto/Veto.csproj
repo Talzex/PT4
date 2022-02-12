@@ -46,56 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ecrans\Admin\UserBase.cs">
+    <Compile Include="EcranAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Admin\UserBase.Designer.cs">
-      <DependentUpon>UserBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Admin\EcranAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ecrans\Admin\EcranAdmin.Designer.cs">
+    <Compile Include="EcranAdmin.Designer.cs">
       <DependentUpon>EcranAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\Admin\ListUser.cs">
+    <Compile Include="EcranBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Admin\ListUser.Designer.cs">
-      <DependentUpon>ListUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Bases\EcranBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ecrans\Bases\EcranBase.Designer.cs">
+    <Compile Include="EcranBase.Designer.cs">
       <DependentUpon>EcranBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\Bases\EcranCommun.cs">
+    <Compile Include="EcranCommun.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Bases\EcranCommun.Designer.cs">
+    <Compile Include="EcranCommun.Designer.cs">
       <DependentUpon>EcranCommun.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\Bases\EcranConnexion.cs">
+    <Compile Include="EcranConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Bases\EcranConnexion.Designer.cs">
+    <Compile Include="EcranConnexion.Designer.cs">
       <DependentUpon>EcranConnexion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Secretaire\EcranSecretaire.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ecrans\Secretaire\EcranSecretaire.Designer.cs">
-      <DependentUpon>EcranSecretaire.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Veto\EcranVeto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ecrans\Veto\EcranVeto.Designer.cs">
-      <DependentUpon>EcranVeto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserBase.Designer.cs">
+      <DependentUpon>UserBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -1,5 +1,5 @@
 ﻿
-namespace Veto.Ecrans.Admin
+namespace Veto
 {
     partial class UserAM
     {

@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranSecretaire
+    partial class UserBase
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
