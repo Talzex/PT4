@@ -46,29 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EcranAdmin.cs">
+    <Compile Include="Ecrans\Secretaire\EcranSecretaire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EcranAdmin.Designer.cs">
+    <Compile Include="Ecrans\Secretaire\EcranSecretaire.Designer.cs">
+      <DependentUpon>EcranSecretaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecrans\Admin\EcranAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecrans\Admin\EcranAdmin.Designer.cs">
       <DependentUpon>EcranAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="EcranBase.cs">
+    <Compile Include="Ecrans\EcranBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EcranBase.Designer.cs">
+    <Compile Include="Ecrans\EcranBase.Designer.cs">
       <DependentUpon>EcranBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="EcranCommun.cs">
+    <Compile Include="Ecrans\EcranCommun.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EcranCommun.Designer.cs">
+    <Compile Include="Ecrans\EcranCommun.Designer.cs">
       <DependentUpon>EcranCommun.cs</DependentUpon>
     </Compile>
-    <Compile Include="EcranConnexion.cs">
+    <Compile Include="Ecrans\EcranConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EcranConnexion.Designer.cs">
+    <Compile Include="Ecrans\EcranConnexion.Designer.cs">
       <DependentUpon>EcranConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecrans\Veto\EcranVeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecrans\Veto\EcranVeto.Designer.cs">
+      <DependentUpon>EcranVeto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
