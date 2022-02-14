@@ -4,13 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>430</x>
-      <y>130</y>
-=======
-      <x>290</x>
+      <x>350</x>
       <y>230</y>
->>>>>>> ArborescenceProjet
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -20,13 +15,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>290</x>
-      <y>130</y>
-=======
-      <x>150</x>
+      <x>210</x>
       <y>230</y>
->>>>>>> ArborescenceProjet
       <w>160</w>
       <h>70</h>
     </coordinates>
@@ -36,13 +26,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>630</x>
-      <y>180</y>
-=======
-      <x>490</x>
+      <x>550</x>
       <y>280</y>
->>>>>>> ArborescenceProjet
       <w>110</w>
       <h>30</h>
     </coordinates>
@@ -52,13 +37,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>520</x>
-      <y>130</y>
-=======
-      <x>380</x>
+      <x>440</x>
       <y>230</y>
->>>>>>> ArborescenceProjet
       <w>190</w>
       <h>70</h>
     </coordinates>
@@ -68,13 +48,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>250</x>
-      <y>180</y>
-=======
-      <x>110</x>
+      <x>170</x>
       <y>280</y>
->>>>>>> ArborescenceProjet
       <w>110</w>
       <h>30</h>
     </coordinates>
@@ -84,26 +59,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>400</x>
-      <y>270</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>EcranVeto</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>630</x>
-      <y>270</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>EcranAdmin</panel_attributes>
-=======
-      <x>270</x>
+      <x>330</x>
       <y>360</y>
       <w>110</w>
       <h>30</h>
@@ -114,7 +70,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>380</x>
       <y>280</y>
       <w>190</w>
       <h>100</h>
@@ -125,27 +81,18 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
+      <x>280</x>
       <y>410</y>
       <w>70</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>UserList</panel_attributes>
->>>>>>> ArborescenceProjet
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>840</x>
-      <y>270</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>EcranSecrétaire</panel_attributes>
-=======
-      <x>290</x>
+      <x>350</x>
       <y>470</y>
       <w>90</w>
       <h>30</h>
@@ -156,28 +103,18 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
+      <x>440</x>
       <y>470</y>
       <w>60</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>UserAM</panel_attributes>
->>>>>>> ArborescenceProjet
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>680</x>
-      <y>200</y>
-      <w>30</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-=======
-      <x>250</x>
+      <x>310</x>
       <y>360</y>
       <w>40</w>
       <h>70</h>
@@ -188,7 +125,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
+      <x>410</x>
       <y>380</y>
       <w>30</w>
       <h>50</h>
@@ -199,123 +136,51 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>290</x>
+      <x>350</x>
       <y>410</y>
       <w>150</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>UserBase</panel_attributes>
     <additional_attributes/>
->>>>>>> ArborescenceProjet
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>730</x>
-      <y>190</y>
-      <w>180</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>160.0;80.0;160.0;10.0;10.0;10.0</additional_attributes>
-=======
-      <x>330</x>
+      <x>390</x>
       <y>430</y>
       <w>30</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
->>>>>>> ArborescenceProjet
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>450</x>
-      <y>190</y>
-      <w>200</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0;180.0;10.0</additional_attributes>
-=======
-      <x>400</x>
+      <x>460</x>
       <y>430</y>
       <w>30</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
->>>>>>> ArborescenceProjet
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>580</x>
-      <y>320</y>
-      <w>70</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>UserList</panel_attributes>
-=======
-      <x>540</x>
+      <x>600</x>
       <y>410</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>Calendrier</panel_attributes>
->>>>>>> ArborescenceProjet
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-<<<<<<< HEAD
-      <x>650</x>
-      <y>380</y>
-      <w>90</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>UserDetails</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>740</x>
-      <y>380</y>
-      <w>60</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>UserAM</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>610</x>
-      <y>270</y>
-      <w>40</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0;20.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>290</y>
-      <w>30</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
-=======
-      <x>680</x>
       <y>350</y>
       <w>110</w>
       <h>30</h>
@@ -326,7 +191,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>650</x>
       <y>290</y>
       <w>170</w>
       <h>80</h>
@@ -337,7 +202,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
+      <x>680</x>
       <y>410</y>
       <w>80</w>
       <h>30</h>
@@ -348,7 +213,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
+      <x>760</x>
       <y>410</y>
       <w>80</w>
       <h>30</h>
@@ -359,43 +224,29 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
+      <x>840</x>
       <y>410</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>Stocks</panel_attributes>
     <additional_attributes/>
->>>>>>> ArborescenceProjet
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>650</x>
-      <y>320</y>
-      <w>150</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>UserBase</panel_attributes>
-=======
-      <x>860</x>
+      <x>920</x>
       <y>410</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>Panier</panel_attributes>
->>>>>>> ArborescenceProjet
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>690</x>
-      <y>340</y>
-=======
-      <x>560</x>
+      <x>620</x>
       <y>380</y>
       <w>360</w>
       <h>50</h>
@@ -406,7 +257,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>640</x>
+      <x>700</x>
       <y>380</y>
       <w>30</w>
       <h>50</h>
@@ -417,9 +268,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
+      <x>790</x>
       <y>370</y>
->>>>>>> ArborescenceProjet
       <w>30</w>
       <h>60</h>
     </coordinates>
@@ -429,22 +279,12 @@
   <element>
     <id>Relation</id>
     <coordinates>
-<<<<<<< HEAD
-      <x>760</x>
-      <y>340</y>
-      <w>30</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-=======
-      <x>810</x>
+      <x>870</x>
       <y>380</y>
       <w>30</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
->>>>>>> ArborescenceProjet
   </element>
 </diagram>
