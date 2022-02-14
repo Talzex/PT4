@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class UserBase : Veto.ScreenAdmin
+    public partial class Clients : Veto.ScreenEmployee
     {
-        public UserBase()
+        public Clients()
         {
             InitializeComponent();
         }
