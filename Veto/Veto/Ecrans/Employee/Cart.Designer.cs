@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class ScreenVet
+    partial class Cart
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

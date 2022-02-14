@@ -46,41 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ecrans\Secretaire\EcranSecretaire.cs">
+    <Compile Include="Ecrans\Admin\ScreenAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Secretaire\EcranSecretaire.Designer.cs">
-      <DependentUpon>EcranSecretaire.cs</DependentUpon>
+    <Compile Include="Ecrans\Admin\ScreenAdmin.Designer.cs">
+      <DependentUpon>ScreenAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\Admin\EcranAdmin.cs">
+    <Compile Include="Ecrans\ScreenBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Admin\EcranAdmin.Designer.cs">
-      <DependentUpon>EcranAdmin.cs</DependentUpon>
+    <Compile Include="Ecrans\ScreenBase.Designer.cs">
+      <DependentUpon>ScreenBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\EcranBase.cs">
+    <Compile Include="Ecrans\ScreenCommon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\EcranBase.Designer.cs">
-      <DependentUpon>EcranBase.cs</DependentUpon>
+    <Compile Include="Ecrans\ScreenCommon.Designer.cs">
+      <DependentUpon>ScreenCommon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\EcranCommun.cs">
+    <Compile Include="Ecrans\ScreenLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\EcranCommun.Designer.cs">
-      <DependentUpon>EcranCommun.cs</DependentUpon>
+    <Compile Include="Ecrans\ScreenLogin.Designer.cs">
+      <DependentUpon>ScreenLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\EcranConnexion.cs">
+    <Compile Include="Ecrans\Employee\ScreenEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\EcranConnexion.Designer.cs">
-      <DependentUpon>EcranConnexion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Veto\EcranVeto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ecrans\Veto\EcranVeto.Designer.cs">
-      <DependentUpon>EcranVeto.cs</DependentUpon>
+    <Compile Include="Ecrans\Employee\ScreenEmployee.Designer.cs">
+      <DependentUpon>ScreenEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
