@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class UserBase : Veto.EcranAdmin
+    public partial class UserBase : Veto.ScreenAdmin
     {
         public UserBase()
         {

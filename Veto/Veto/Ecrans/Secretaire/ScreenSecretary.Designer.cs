@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranConnexion
+    partial class ScreenSecretary
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

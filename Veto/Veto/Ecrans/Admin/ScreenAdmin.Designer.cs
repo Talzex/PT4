@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranAdmin
+    partial class ScreenAdmin
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

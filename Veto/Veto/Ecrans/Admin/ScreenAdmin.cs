@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class EcranBase : Form
+    public partial class ScreenAdmin : Veto.ScreenCommon
     {
-        public EcranBase()
+        public ScreenAdmin()
         {
             InitializeComponent();
         }

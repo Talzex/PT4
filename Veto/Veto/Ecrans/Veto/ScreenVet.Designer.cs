@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranCommun
+    partial class ScreenVet
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
