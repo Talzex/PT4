@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranConnexion
+    partial class ScreenConection
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,7 +29,7 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EcranConnexion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenConection));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.LoginTB = new System.Windows.Forms.TextBox();
@@ -102,14 +102,14 @@ namespace Veto
             this.ConnectBT.Text = "Connexion";
             this.ConnectBT.UseVisualStyleBackColor = false;
             // 
-            // EcranConnexion
+            // ScreenConection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.panel1);
-            this.Name = "EcranConnexion";
+            this.Name = "ScreenConection";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranBase
+    partial class ScreenBase
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EcranBase));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenBase));
             this.TopBar = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -54,15 +54,15 @@ namespace Veto
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
             // 
-            // EcranBase
+            // ScreenBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.TopBar);
-            this.Name = "EcranBase";
-            this.Text = "EcranBase";
+            this.Name = "ScreenBase";
+            this.Text = "ScreenBase";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 

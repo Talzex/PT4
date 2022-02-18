@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -64,11 +64,37 @@
     <Compile Include="Ecrans\Employee\Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\Admin\ScreenAdmin.cs">
+    <Compile Include="Ecrans\Employee\ScreenEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Admin\ScreenAdmin.Designer.cs">
-      <DependentUpon>ScreenAdmin.cs</DependentUpon>
+    <Compile Include="Ecrans\Employee\ScreenEmployee.Designer.cs">
+      <DependentUpon>ScreenEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ecrans\Admin\UserAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserAM.Designer.cs">
+      <DependentUpon>UserAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserBase.Designer.cs">
+      <DependentUpon>UserBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserDetails.Designer.cs">
+      <DependentUpon>UserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ecrans\Admin\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
     <Compile Include="Ecrans\ScreenBase.cs">
       <SubType>Form</SubType>
@@ -82,43 +108,26 @@
     <Compile Include="Ecrans\ScreenCommon.Designer.cs">
       <DependentUpon>ScreenCommon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\ScreenLogin.cs">
+    <Compile Include="Ecrans\ScreenConection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\ScreenLogin.Designer.cs">
-      <DependentUpon>ScreenLogin.cs</DependentUpon>
+    <Compile Include="Ecrans\ScreenConection.Designer.cs">
+      <DependentUpon>ScreenConection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ecrans\Employee\ScreenEmployee.cs">
+    <Compile Include="Ecrans\Admin\ScreenAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ecrans\Employee\ScreenEmployee.Designer.cs">
-      <DependentUpon>ScreenEmployee.cs</DependentUpon>
+    <Compile Include="Ecrans\Admin\ScreenAdmin.Designer.cs">
+      <DependentUpon>ScreenAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ecrans\Admin\UserAM.cs" />
-    <Compile Include="Ecrans\Admin\UserAM.Designer.cs">
-      <DependentUpon>UserAM.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Admin\UserBase.cs" />
-    <Compile Include="Ecrans\Admin\UserBase.Designer.cs">
-      <DependentUpon>UserBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Admin\UserDetails.cs" />
-    <Compile Include="Ecrans\Admin\UserDetails.Designer.cs">
-      <DependentUpon>UserDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ecrans\Admin\UserList.cs" />
-    <Compile Include="Ecrans\Admin\UserList.Designer.cs">
-      <DependentUpon>UserList.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Ecrans\EcranBase.resx">
-      <DependentUpon>EcranBase.cs</DependentUpon>
+    <EmbeddedResource Include="Ecrans\ScreenBase.resx">
+      <DependentUpon>ScreenBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ecrans\EcranConnexion.resx">
-      <DependentUpon>EcranConnexion.cs</DependentUpon>
-    <EmbeddedResource Include="Ecrans\EcranCommun.resx">
-      <DependentUpon>EcranCommun.cs</DependentUpon>
+    <EmbeddedResource Include="Ecrans\ScreenConection.resx">
+      <DependentUpon>ScreenConection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ecrans\ScreenCommon.resx">
+      <DependentUpon>ScreenCommon.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Ecrans\Employee\Stats.cs">
       <SubType>Form</SubType>

@@ -1,7 +1,7 @@
 ﻿
 namespace Veto
 {
-    partial class EcranCommun
+    partial class ScreenCommon
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -61,7 +61,7 @@ namespace Veto
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
             // 
-            // EcranCommun
+            // ScreenCommon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
@@ -69,7 +69,7 @@ namespace Veto
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SideBar);
             this.Controls.Add(this.label1);
-            this.Name = "EcranCommun";
+            this.Name = "ScreenCommon";
             this.Load += new System.EventHandler(this.EcranCommun_Load);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.SideBar, 0);

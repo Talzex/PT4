@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class EcranConnexion : Veto.EcranBase
+    public partial class ScreenCommon : Veto.ScreenBase
     {
-        public EcranConnexion()
+        public ScreenCommon()
         {
             InitializeComponent();
+        }
+
+        private void EcranCommun_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
