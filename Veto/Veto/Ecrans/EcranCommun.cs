@@ -14,5 +14,10 @@ namespace Veto
         {
             InitializeComponent();
         }
+
+        private void EcranCommun_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
