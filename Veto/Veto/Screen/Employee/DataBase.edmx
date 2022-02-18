@@ -1,0 +1,1358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="IdAnimal" />
+          </Key>
+          <Property Name="IdAnimal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="NomEspece" Type="varchar" MaxLength="32" />
+          <Property Name="NomRace" Type="varchar" MaxLength="32" />
+          <Property Name="DateDeNaissance" Type="date" />
+          <Property Name="Taille" Type="int" />
+          <Property Name="Poids" Type="int" />
+          <Property Name="IdClient" Type="int" />
+        </EntityType>
+        <EntityType Name="AnimalRDV">
+          <Key>
+            <PropertyRef Name="IdARdv" />
+          </Key>
+          <Property Name="IdARdv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdAnimal" Type="int" Nullable="false" />
+          <Property Name="IdRDV" Type="int" Nullable="false" />
+          <Property Name="Montant" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomClient" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="PrenomClient" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="DateNaissance" Type="datetime" />
+          <Property Name="NumeroTelephone" Type="char" MaxLength="10" />
+          <Property Name="AdresseMail" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Facture">
+          <Key>
+            <PropertyRef Name="IdFacture" />
+          </Key>
+          <Property Name="IdFacture" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumeroFacture" Type="int" Nullable="false" />
+          <Property Name="DateFacture" Type="datetime" Nullable="false" />
+          <Property Name="Montant" Type="int" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoraireTravail">
+          <Key>
+            <PropertyRef Name="IdHoraireTravail" />
+          </Key>
+          <Property Name="IdHoraireTravail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSalarie" Type="int" />
+          <Property Name="IdJournee" Type="int" />
+        </EntityType>
+        <EntityType Name="Journee">
+          <Key>
+            <PropertyRef Name="IdJournee" />
+          </Key>
+          <Property Name="IdJournee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="IdLogs" />
+          </Key>
+          <Property Name="IdLogs" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSalarie" Type="int" Nullable="false" />
+          <Property Name="DateConnexion" Type="datetime" Nullable="false" />
+          <Property Name="actions" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Maladie">
+          <Key>
+            <PropertyRef Name="IdMaladie" />
+          </Key>
+          <Property Name="IdMaladie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomMaladie" Type="varchar" MaxLength="64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MaladieAnimal">
+          <Key>
+            <PropertyRef Name="IdMA" />
+          </Key>
+          <Property Name="IdMA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdMaladie" Type="int" Nullable="false" />
+          <Property Name="IdAnimal" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Medicament">
+          <Key>
+            <PropertyRef Name="IdMedicament" />
+          </Key>
+          <Property Name="IdMedicament" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSoins" Type="int" Nullable="false" />
+          <Property Name="IdProduit" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ordonnance">
+          <Key>
+            <PropertyRef Name="idOrdonnance" />
+          </Key>
+          <Property Name="idOrdonnance" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRdv" Type="int" />
+          <Property Name="IdAnimal" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Produit">
+          <Key>
+            <PropertyRef Name="IdProduit" />
+          </Key>
+          <Property Name="IdProduit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomProduit" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="QuantiteEnStock" Type="int" Nullable="false" />
+          <Property Name="ImageProduit" Type="image" />
+          <Property Name="PrixVenteClient" Type="float" Nullable="false" />
+          <Property Name="PrixAchat" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProduitFacture">
+          <Key>
+            <PropertyRef Name="IdProduitFacture" />
+          </Key>
+          <Property Name="IdProduitFacture" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdFacture" Type="int" Nullable="false" />
+          <Property Name="IdProduit" Type="int" Nullable="false" />
+          <Property Name="Quantite" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProduitOrdonnance">
+          <Key>
+            <PropertyRef Name="idProduitOrdonnance" />
+          </Key>
+          <Property Name="idProduitOrdonnance" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idProduit" Type="int" Nullable="false" />
+          <Property Name="idOrdonnance" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RendezVous">
+          <Key>
+            <PropertyRef Name="idRdv" />
+          </Key>
+          <Property Name="idRdv" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="heureDebut" Type="time" Precision="7" Nullable="false" />
+          <Property Name="heureFin" Type="time" Precision="7" Nullable="false" />
+          <Property Name="motif" Type="text" Nullable="false" />
+          <Property Name="IdJournee" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="IdRoles" />
+          </Key>
+          <Property Name="IdRoles" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom" Type="varchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Salarie">
+          <Key>
+            <PropertyRef Name="IdCompte" />
+          </Key>
+          <Property Name="IdCompte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Mail" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="MDP" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="IdRoles" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Soins">
+          <Key>
+            <PropertyRef Name="IdSoins" />
+          </Key>
+          <Property Name="IdSoins" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="SoinsMaladie">
+          <Key>
+            <PropertyRef Name="IdSoinsMaladie" />
+          </Key>
+          <Property Name="IdSoinsMaladie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdSoins" Type="int" />
+          <Property Name="IdMaladie" Type="int" />
+        </EntityType>
+        <Association Name="C_FK_FACTURE">
+          <End Role="Facture" Type="Self.Facture" Multiplicity="1" />
+          <End Role="ProduitFacture" Type="Self.ProduitFacture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Facture">
+              <PropertyRef Name="IdFacture" />
+            </Principal>
+            <Dependent Role="ProduitFacture">
+              <PropertyRef Name="IdFacture" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_PRODUIT">
+          <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+          <End Role="Medicament" Type="Self.Medicament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produit">
+              <PropertyRef Name="IdProduit" />
+            </Principal>
+            <Dependent Role="Medicament">
+              <PropertyRef Name="IdProduit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_SALARIE">
+          <End Role="Salarie" Type="Self.Salarie" Multiplicity="1" />
+          <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Salarie">
+              <PropertyRef Name="IdCompte" />
+            </Principal>
+            <Dependent Role="Logs">
+              <PropertyRef Name="IdSalarie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_SOINS">
+          <End Role="Soins" Type="Self.Soins" Multiplicity="1" />
+          <End Role="Medicament" Type="Self.Medicament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Soins">
+              <PropertyRef Name="IdSoins" />
+            </Principal>
+            <Dependent Role="Medicament">
+              <PropertyRef Name="IdSoins" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_REF_PRODUIT">
+          <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+          <End Role="ProduitFacture" Type="Self.ProduitFacture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produit">
+              <PropertyRef Name="IdProduit" />
+            </Principal>
+            <Dependent Role="ProduitFacture">
+              <PropertyRef Name="IdProduit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_REF_ROLES">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Salarie" Type="Self.Salarie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="IdRoles" />
+            </Principal>
+            <Dependent Role="Salarie">
+              <PropertyRef Name="IdRoles" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Animal">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="MaladieAnimal" Type="Self.MaladieAnimal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="MaladieAnimal">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Animal__IdClient__7A672E12">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Animal" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Animal">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Facture__IdClien__0B91BA14">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Facture" Type="Self.Facture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Facture">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Maladie">
+          <End Role="Maladie" Type="Self.Maladie" Multiplicity="1" />
+          <End Role="MaladieAnimal" Type="Self.MaladieAnimal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maladie">
+              <PropertyRef Name="IdMaladie" />
+            </Principal>
+            <Dependent Role="MaladieAnimal">
+              <PropertyRef Name="IdMaladie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProduitOr__idOrd__160F4887">
+          <End Role="Ordonnance" Type="Self.Ordonnance" Multiplicity="1" />
+          <End Role="ProduitOrdonnance" Type="Self.ProduitOrdonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordonnance">
+              <PropertyRef Name="idOrdonnance" />
+            </Principal>
+            <Dependent Role="ProduitOrdonnance">
+              <PropertyRef Name="idOrdonnance" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProduitOr__idPro__151B244E">
+          <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+          <End Role="ProduitOrdonnance" Type="Self.ProduitOrdonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produit">
+              <PropertyRef Name="IdProduit" />
+            </Principal>
+            <Dependent Role="ProduitOrdonnance">
+              <PropertyRef Name="idProduit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RendezVou__clien__07C12930">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="RendezVous">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RendezVou__idJou__08B54D69">
+          <End Role="Journee" Type="Self.Journee" Multiplicity="1" />
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journee">
+              <PropertyRef Name="IdJournee" />
+            </Principal>
+            <Dependent Role="RendezVous">
+              <PropertyRef Name="IdJournee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANI_ARDV">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="AnimalRDV" Type="Self.AnimalRDV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="AnimalRDV">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANI_ORDO">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="Ordonnance" Type="Self.Ordonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="Ordonnance">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JOURNEE">
+          <End Role="Journee" Type="Self.Journee" Multiplicity="0..1" />
+          <End Role="HoraireTravail" Type="Self.HoraireTravail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journee">
+              <PropertyRef Name="IdJournee" />
+            </Principal>
+            <Dependent Role="HoraireTravail">
+              <PropertyRef Name="IdJournee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RDV_ARDV">
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="1" />
+          <End Role="AnimalRDV" Type="Self.AnimalRDV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RendezVous">
+              <PropertyRef Name="idRdv" />
+            </Principal>
+            <Dependent Role="AnimalRDV">
+              <PropertyRef Name="IdRDV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RDV_ORDO">
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="0..1" />
+          <End Role="Ordonnance" Type="Self.Ordonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RendezVous">
+              <PropertyRef Name="idRdv" />
+            </Principal>
+            <Dependent Role="Ordonnance">
+              <PropertyRef Name="IdRdv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SALARIE">
+          <End Role="Salarie" Type="Self.Salarie" Multiplicity="0..1" />
+          <End Role="HoraireTravail" Type="Self.HoraireTravail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Salarie">
+              <PropertyRef Name="IdCompte" />
+            </Principal>
+            <Dependent Role="HoraireTravail">
+              <PropertyRef Name="IdSalarie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SM_M">
+          <End Role="Maladie" Type="Self.Maladie" Multiplicity="0..1" />
+          <End Role="SoinsMaladie" Type="Self.SoinsMaladie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maladie">
+              <PropertyRef Name="IdMaladie" />
+            </Principal>
+            <Dependent Role="SoinsMaladie">
+              <PropertyRef Name="IdMaladie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SM_S">
+          <End Role="Soins" Type="Self.Soins" Multiplicity="0..1" />
+          <End Role="SoinsMaladie" Type="Self.SoinsMaladie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Soins">
+              <PropertyRef Name="IdSoins" />
+            </Principal>
+            <Dependent Role="SoinsMaladie">
+              <PropertyRef Name="IdSoins" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Animal" EntityType="Self.Animal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnimalRDV" EntityType="Self.AnimalRDV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Facture" EntityType="Self.Facture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoraireTravail" EntityType="Self.HoraireTravail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Journee" EntityType="Self.Journee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Maladie" EntityType="Self.Maladie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaladieAnimal" EntityType="Self.MaladieAnimal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medicament" EntityType="Self.Medicament" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ordonnance" EntityType="Self.Ordonnance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProduitFacture" EntityType="Self.ProduitFacture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProduitOrdonnance" EntityType="Self.ProduitOrdonnance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RendezVous" EntityType="Self.RendezVous" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Salarie" EntityType="Self.Salarie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Soins" EntityType="Self.Soins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SoinsMaladie" EntityType="Self.SoinsMaladie" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="C_FK_FACTURE" Association="Self.C_FK_FACTURE">
+            <End Role="Facture" EntitySet="Facture" />
+            <End Role="ProduitFacture" EntitySet="ProduitFacture" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_PRODUIT" Association="Self.C_FK_PRODUIT">
+            <End Role="Produit" EntitySet="Produit" />
+            <End Role="Medicament" EntitySet="Medicament" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_SALARIE" Association="Self.C_FK_SALARIE">
+            <End Role="Salarie" EntitySet="Salarie" />
+            <End Role="Logs" EntitySet="Logs" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_SOINS" Association="Self.C_FK_SOINS">
+            <End Role="Soins" EntitySet="Soins" />
+            <End Role="Medicament" EntitySet="Medicament" />
+          </AssociationSet>
+          <AssociationSet Name="C_REF_PRODUIT" Association="Self.C_REF_PRODUIT">
+            <End Role="Produit" EntitySet="Produit" />
+            <End Role="ProduitFacture" EntitySet="ProduitFacture" />
+          </AssociationSet>
+          <AssociationSet Name="C_REF_ROLES" Association="Self.C_REF_ROLES">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Salarie" EntitySet="Salarie" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Animal" Association="Self.FK__Animal">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="MaladieAnimal" EntitySet="MaladieAnimal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Animal__IdClient__7A672E12" Association="Self.FK__Animal__IdClient__7A672E12">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Animal" EntitySet="Animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Facture__IdClien__0B91BA14" Association="Self.FK__Facture__IdClien__0B91BA14">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Facture" EntitySet="Facture" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Maladie" Association="Self.FK__Maladie">
+            <End Role="Maladie" EntitySet="Maladie" />
+            <End Role="MaladieAnimal" EntitySet="MaladieAnimal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProduitOr__idOrd__160F4887" Association="Self.FK__ProduitOr__idOrd__160F4887">
+            <End Role="Ordonnance" EntitySet="Ordonnance" />
+            <End Role="ProduitOrdonnance" EntitySet="ProduitOrdonnance" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProduitOr__idPro__151B244E" Association="Self.FK__ProduitOr__idPro__151B244E">
+            <End Role="Produit" EntitySet="Produit" />
+            <End Role="ProduitOrdonnance" EntitySet="ProduitOrdonnance" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RendezVou__clien__07C12930" Association="Self.FK__RendezVou__clien__07C12930">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="RendezVous" EntitySet="RendezVous" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RendezVou__idJou__08B54D69" Association="Self.FK__RendezVou__idJou__08B54D69">
+            <End Role="Journee" EntitySet="Journee" />
+            <End Role="RendezVous" EntitySet="RendezVous" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANI_ARDV" Association="Self.FK_ANI_ARDV">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="AnimalRDV" EntitySet="AnimalRDV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANI_ORDO" Association="Self.FK_ANI_ORDO">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="Ordonnance" EntitySet="Ordonnance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JOURNEE" Association="Self.FK_JOURNEE">
+            <End Role="Journee" EntitySet="Journee" />
+            <End Role="HoraireTravail" EntitySet="HoraireTravail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RDV_ARDV" Association="Self.FK_RDV_ARDV">
+            <End Role="RendezVous" EntitySet="RendezVous" />
+            <End Role="AnimalRDV" EntitySet="AnimalRDV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RDV_ORDO" Association="Self.FK_RDV_ORDO">
+            <End Role="RendezVous" EntitySet="RendezVous" />
+            <End Role="Ordonnance" EntitySet="Ordonnance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SALARIE" Association="Self.FK_SALARIE">
+            <End Role="Salarie" EntitySet="Salarie" />
+            <End Role="HoraireTravail" EntitySet="HoraireTravail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SM_M" Association="Self.FK_SM_M">
+            <End Role="Maladie" EntitySet="Maladie" />
+            <End Role="SoinsMaladie" EntitySet="SoinsMaladie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SM_S" Association="Self.FK_SM_S">
+            <End Role="Soins" EntitySet="Soins" />
+            <End Role="SoinsMaladie" EntitySet="SoinsMaladie" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="IdAnimal" />
+          </Key>
+          <Property Name="IdAnimal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NomEspece" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="NomRace" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="DateDeNaissance" Type="DateTime" Precision="0" />
+          <Property Name="Taille" Type="Int32" />
+          <Property Name="Poids" Type="Int32" />
+          <Property Name="IdClient" Type="Int32" />
+          <NavigationProperty Name="MaladieAnimal" Relationship="Self.FK__Animal" FromRole="Animal" ToRole="MaladieAnimal" />
+          <NavigationProperty Name="Client" Relationship="Self.FK__Animal__IdClient__7A672E12" FromRole="Animal" ToRole="Client" />
+          <NavigationProperty Name="AnimalRDV" Relationship="Self.FK_ANI_ARDV" FromRole="Animal" ToRole="AnimalRDV" />
+          <NavigationProperty Name="Ordonnance" Relationship="Self.FK_ANI_ORDO" FromRole="Animal" ToRole="Ordonnance" />
+        </EntityType>
+        <EntityType Name="AnimalRDV">
+          <Key>
+            <PropertyRef Name="IdARdv" />
+          </Key>
+          <Property Name="IdARdv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdAnimal" Type="Int32" Nullable="false" />
+          <Property Name="IdRDV" Type="Int32" Nullable="false" />
+          <Property Name="Montant" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="Animal" Relationship="Self.FK_ANI_ARDV" FromRole="AnimalRDV" ToRole="Animal" />
+          <NavigationProperty Name="RendezVous" Relationship="Self.FK_RDV_ARDV" FromRole="AnimalRDV" ToRole="RendezVous" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomClient" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrenomClient" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateNaissance" Type="DateTime" Precision="3" />
+          <Property Name="NumeroTelephone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="AdresseMail" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Animal" Relationship="Self.FK__Animal__IdClient__7A672E12" FromRole="Client" ToRole="Animal" />
+          <NavigationProperty Name="Facture" Relationship="Self.FK__Facture__IdClien__0B91BA14" FromRole="Client" ToRole="Facture" />
+          <NavigationProperty Name="RendezVous" Relationship="Self.FK__RendezVou__clien__07C12930" FromRole="Client" ToRole="RendezVous" />
+        </EntityType>
+        <EntityType Name="Facture">
+          <Key>
+            <PropertyRef Name="IdFacture" />
+          </Key>
+          <Property Name="IdFacture" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroFacture" Type="Int32" Nullable="false" />
+          <Property Name="DateFacture" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Montant" Type="Int32" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Self.FK__Facture__IdClien__0B91BA14" FromRole="Facture" ToRole="Client" />
+          <NavigationProperty Name="ProduitFacture" Relationship="Self.C_FK_FACTURE" FromRole="Facture" ToRole="ProduitFacture" />
+        </EntityType>
+        <EntityType Name="HoraireTravail">
+          <Key>
+            <PropertyRef Name="IdHoraireTravail" />
+          </Key>
+          <Property Name="IdHoraireTravail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSalarie" Type="Int32" />
+          <Property Name="IdJournee" Type="Int32" />
+          <NavigationProperty Name="Journee" Relationship="Self.FK_JOURNEE" FromRole="HoraireTravail" ToRole="Journee" />
+          <NavigationProperty Name="Salarie" Relationship="Self.FK_SALARIE" FromRole="HoraireTravail" ToRole="Salarie" />
+        </EntityType>
+        <EntityType Name="Journee">
+          <Key>
+            <PropertyRef Name="IdJournee" />
+          </Key>
+          <Property Name="IdJournee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="HoraireTravail" Relationship="Self.FK_JOURNEE" FromRole="Journee" ToRole="HoraireTravail" />
+          <NavigationProperty Name="RendezVous" Relationship="Self.FK__RendezVou__idJou__08B54D69" FromRole="Journee" ToRole="RendezVous" />
+        </EntityType>
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="IdLogs" />
+          </Key>
+          <Property Name="IdLogs" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSalarie" Type="Int32" Nullable="false" />
+          <Property Name="DateConnexion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="actions" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Salarie" Relationship="Self.C_FK_SALARIE" FromRole="Logs" ToRole="Salarie" />
+        </EntityType>
+        <EntityType Name="Maladie">
+          <Key>
+            <PropertyRef Name="IdMaladie" />
+          </Key>
+          <Property Name="IdMaladie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomMaladie" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MaladieAnimal" Relationship="Self.FK__Maladie" FromRole="Maladie" ToRole="MaladieAnimal" />
+          <NavigationProperty Name="SoinsMaladie" Relationship="Self.FK_SM_M" FromRole="Maladie" ToRole="SoinsMaladie" />
+        </EntityType>
+        <EntityType Name="MaladieAnimal">
+          <Key>
+            <PropertyRef Name="IdMA" />
+          </Key>
+          <Property Name="IdMA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdMaladie" Type="Int32" Nullable="false" />
+          <Property Name="IdAnimal" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Animal" Relationship="Self.FK__Animal" FromRole="MaladieAnimal" ToRole="Animal" />
+          <NavigationProperty Name="Maladie" Relationship="Self.FK__Maladie" FromRole="MaladieAnimal" ToRole="Maladie" />
+        </EntityType>
+        <EntityType Name="Medicament">
+          <Key>
+            <PropertyRef Name="IdMedicament" />
+          </Key>
+          <Property Name="IdMedicament" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSoins" Type="Int32" Nullable="false" />
+          <Property Name="IdProduit" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Produit" Relationship="Self.C_FK_PRODUIT" FromRole="Medicament" ToRole="Produit" />
+          <NavigationProperty Name="Soins" Relationship="Self.C_FK_SOINS" FromRole="Medicament" ToRole="Soins" />
+        </EntityType>
+        <EntityType Name="Ordonnance">
+          <Key>
+            <PropertyRef Name="idOrdonnance" />
+          </Key>
+          <Property Name="idOrdonnance" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRdv" Type="Int32" />
+          <Property Name="IdAnimal" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Animal" Relationship="Self.FK_ANI_ORDO" FromRole="Ordonnance" ToRole="Animal" />
+          <NavigationProperty Name="ProduitOrdonnance" Relationship="Self.FK__ProduitOr__idOrd__160F4887" FromRole="Ordonnance" ToRole="ProduitOrdonnance" />
+          <NavigationProperty Name="RendezVous" Relationship="Self.FK_RDV_ORDO" FromRole="Ordonnance" ToRole="RendezVous" />
+        </EntityType>
+        <EntityType Name="Produit">
+          <Key>
+            <PropertyRef Name="IdProduit" />
+          </Key>
+          <Property Name="IdProduit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomProduit" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QuantiteEnStock" Type="Int32" Nullable="false" />
+          <Property Name="ImageProduit" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PrixVenteClient" Type="Double" Nullable="false" />
+          <Property Name="PrixAchat" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Medicament" Relationship="Self.C_FK_PRODUIT" FromRole="Produit" ToRole="Medicament" />
+          <NavigationProperty Name="ProduitFacture" Relationship="Self.C_REF_PRODUIT" FromRole="Produit" ToRole="ProduitFacture" />
+          <NavigationProperty Name="ProduitOrdonnance" Relationship="Self.FK__ProduitOr__idPro__151B244E" FromRole="Produit" ToRole="ProduitOrdonnance" />
+        </EntityType>
+        <EntityType Name="ProduitFacture">
+          <Key>
+            <PropertyRef Name="IdProduitFacture" />
+          </Key>
+          <Property Name="IdProduitFacture" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdFacture" Type="Int32" Nullable="false" />
+          <Property Name="IdProduit" Type="Int32" Nullable="false" />
+          <Property Name="Quantite" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Facture" Relationship="Self.C_FK_FACTURE" FromRole="ProduitFacture" ToRole="Facture" />
+          <NavigationProperty Name="Produit" Relationship="Self.C_REF_PRODUIT" FromRole="ProduitFacture" ToRole="Produit" />
+        </EntityType>
+        <EntityType Name="ProduitOrdonnance">
+          <Key>
+            <PropertyRef Name="idProduitOrdonnance" />
+          </Key>
+          <Property Name="idProduitOrdonnance" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idProduit" Type="Int32" Nullable="false" />
+          <Property Name="idOrdonnance" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ordonnance" Relationship="Self.FK__ProduitOr__idOrd__160F4887" FromRole="ProduitOrdonnance" ToRole="Ordonnance" />
+          <NavigationProperty Name="Produit" Relationship="Self.FK__ProduitOr__idPro__151B244E" FromRole="ProduitOrdonnance" ToRole="Produit" />
+        </EntityType>
+        <EntityType Name="RendezVous">
+          <Key>
+            <PropertyRef Name="idRdv" />
+          </Key>
+          <Property Name="idRdv" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="heureDebut" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="heureFin" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="motif" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdJournee" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AnimalRDV" Relationship="Self.FK_RDV_ARDV" FromRole="RendezVous" ToRole="AnimalRDV" />
+          <NavigationProperty Name="Client" Relationship="Self.FK__RendezVou__clien__07C12930" FromRole="RendezVous" ToRole="Client" />
+          <NavigationProperty Name="Journee" Relationship="Self.FK__RendezVou__idJou__08B54D69" FromRole="RendezVous" ToRole="Journee" />
+          <NavigationProperty Name="Ordonnance" Relationship="Self.FK_RDV_ORDO" FromRole="RendezVous" ToRole="Ordonnance" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="IdRoles" />
+          </Key>
+          <Property Name="IdRoles" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Salarie" Relationship="Self.C_REF_ROLES" FromRole="Roles" ToRole="Salarie" />
+        </EntityType>
+        <EntityType Name="Salarie">
+          <Key>
+            <PropertyRef Name="IdCompte" />
+          </Key>
+          <Property Name="IdCompte" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MDP" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdRoles" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="HoraireTravail" Relationship="Self.FK_SALARIE" FromRole="Salarie" ToRole="HoraireTravail" />
+          <NavigationProperty Name="Logs" Relationship="Self.C_FK_SALARIE" FromRole="Salarie" ToRole="Logs" />
+          <NavigationProperty Name="Roles" Relationship="Self.C_REF_ROLES" FromRole="Salarie" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="Soins">
+          <Key>
+            <PropertyRef Name="IdSoins" />
+          </Key>
+          <Property Name="IdSoins" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Medicament" Relationship="Self.C_FK_SOINS" FromRole="Soins" ToRole="Medicament" />
+          <NavigationProperty Name="SoinsMaladie" Relationship="Self.FK_SM_S" FromRole="Soins" ToRole="SoinsMaladie" />
+        </EntityType>
+        <EntityType Name="SoinsMaladie">
+          <Key>
+            <PropertyRef Name="IdSoinsMaladie" />
+          </Key>
+          <Property Name="IdSoinsMaladie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSoins" Type="Int32" />
+          <Property Name="IdMaladie" Type="Int32" />
+          <NavigationProperty Name="Maladie" Relationship="Self.FK_SM_M" FromRole="SoinsMaladie" ToRole="Maladie" />
+          <NavigationProperty Name="Soins" Relationship="Self.FK_SM_S" FromRole="SoinsMaladie" ToRole="Soins" />
+        </EntityType>
+        <Association Name="FK__Animal">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="MaladieAnimal" Type="Self.MaladieAnimal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="MaladieAnimal">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Animal__IdClient__7A672E12">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Animal" Type="Self.Animal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Animal">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANI_ARDV">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="AnimalRDV" Type="Self.AnimalRDV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="AnimalRDV">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANI_ORDO">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="Ordonnance" Type="Self.Ordonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="IdAnimal" />
+            </Principal>
+            <Dependent Role="Ordonnance">
+              <PropertyRef Name="IdAnimal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RDV_ARDV">
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="1" />
+          <End Role="AnimalRDV" Type="Self.AnimalRDV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RendezVous">
+              <PropertyRef Name="idRdv" />
+            </Principal>
+            <Dependent Role="AnimalRDV">
+              <PropertyRef Name="IdRDV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Facture__IdClien__0B91BA14">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Facture" Type="Self.Facture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="Facture">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RendezVou__clien__07C12930">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="IdClient" />
+            </Principal>
+            <Dependent Role="RendezVous">
+              <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_FACTURE">
+          <End Role="Facture" Type="Self.Facture" Multiplicity="1" />
+          <End Role="ProduitFacture" Type="Self.ProduitFacture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Facture">
+              <PropertyRef Name="IdFacture" />
+            </Principal>
+            <Dependent Role="ProduitFacture">
+              <PropertyRef Name="IdFacture" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JOURNEE">
+          <End Role="Journee" Type="Self.Journee" Multiplicity="0..1" />
+          <End Role="HoraireTravail" Type="Self.HoraireTravail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journee">
+              <PropertyRef Name="IdJournee" />
+            </Principal>
+            <Dependent Role="HoraireTravail">
+              <PropertyRef Name="IdJournee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SALARIE">
+          <End Role="Salarie" Type="Self.Salarie" Multiplicity="0..1" />
+          <End Role="HoraireTravail" Type="Self.HoraireTravail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Salarie">
+              <PropertyRef Name="IdCompte" />
+            </Principal>
+            <Dependent Role="HoraireTravail">
+              <PropertyRef Name="IdSalarie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RendezVou__idJou__08B54D69">
+          <End Role="Journee" Type="Self.Journee" Multiplicity="1" />
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Journee">
+              <PropertyRef Name="IdJournee" />
+            </Principal>
+            <Dependent Role="RendezVous">
+              <PropertyRef Name="IdJournee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_SALARIE">
+          <End Role="Salarie" Type="Self.Salarie" Multiplicity="1" />
+          <End Role="Logs" Type="Self.Logs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Salarie">
+              <PropertyRef Name="IdCompte" />
+            </Principal>
+            <Dependent Role="Logs">
+              <PropertyRef Name="IdSalarie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Maladie">
+          <End Role="Maladie" Type="Self.Maladie" Multiplicity="1" />
+          <End Role="MaladieAnimal" Type="Self.MaladieAnimal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maladie">
+              <PropertyRef Name="IdMaladie" />
+            </Principal>
+            <Dependent Role="MaladieAnimal">
+              <PropertyRef Name="IdMaladie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SM_M">
+          <End Role="Maladie" Type="Self.Maladie" Multiplicity="0..1" />
+          <End Role="SoinsMaladie" Type="Self.SoinsMaladie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Maladie">
+              <PropertyRef Name="IdMaladie" />
+            </Principal>
+            <Dependent Role="SoinsMaladie">
+              <PropertyRef Name="IdMaladie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_PRODUIT">
+          <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+          <End Role="Medicament" Type="Self.Medicament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produit">
+              <PropertyRef Name="IdProduit" />
+            </Principal>
+            <Dependent Role="Medicament">
+              <PropertyRef Name="IdProduit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_FK_SOINS">
+          <End Role="Soins" Type="Self.Soins" Multiplicity="1" />
+          <End Role="Medicament" Type="Self.Medicament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Soins">
+              <PropertyRef Name="IdSoins" />
+            </Principal>
+            <Dependent Role="Medicament">
+              <PropertyRef Name="IdSoins" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProduitOr__idOrd__160F4887">
+          <End Role="Ordonnance" Type="Self.Ordonnance" Multiplicity="1" />
+          <End Role="ProduitOrdonnance" Type="Self.ProduitOrdonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ordonnance">
+              <PropertyRef Name="idOrdonnance" />
+            </Principal>
+            <Dependent Role="ProduitOrdonnance">
+              <PropertyRef Name="idOrdonnance" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RDV_ORDO">
+          <End Role="RendezVous" Type="Self.RendezVous" Multiplicity="0..1" />
+          <End Role="Ordonnance" Type="Self.Ordonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RendezVous">
+              <PropertyRef Name="idRdv" />
+            </Principal>
+            <Dependent Role="Ordonnance">
+              <PropertyRef Name="IdRdv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_REF_PRODUIT">
+          <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+          <End Role="ProduitFacture" Type="Self.ProduitFacture" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produit">
+              <PropertyRef Name="IdProduit" />
+            </Principal>
+            <Dependent Role="ProduitFacture">
+              <PropertyRef Name="IdProduit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProduitOr__idPro__151B244E">
+          <End Role="Produit" Type="Self.Produit" Multiplicity="1" />
+          <End Role="ProduitOrdonnance" Type="Self.ProduitOrdonnance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produit">
+              <PropertyRef Name="IdProduit" />
+            </Principal>
+            <Dependent Role="ProduitOrdonnance">
+              <PropertyRef Name="idProduit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="C_REF_ROLES">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Salarie" Type="Self.Salarie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="IdRoles" />
+            </Principal>
+            <Dependent Role="Salarie">
+              <PropertyRef Name="IdRoles" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SM_S">
+          <End Role="Soins" Type="Self.Soins" Multiplicity="0..1" />
+          <End Role="SoinsMaladie" Type="Self.SoinsMaladie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Soins">
+              <PropertyRef Name="IdSoins" />
+            </Principal>
+            <Dependent Role="SoinsMaladie">
+              <PropertyRef Name="IdSoins" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Animal" EntityType="Self.Animal" />
+          <EntitySet Name="AnimalRDV" EntityType="Self.AnimalRDV" />
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Facture" EntityType="Self.Facture" />
+          <EntitySet Name="HoraireTravail" EntityType="Self.HoraireTravail" />
+          <EntitySet Name="Journee" EntityType="Self.Journee" />
+          <EntitySet Name="Logs" EntityType="Self.Logs" />
+          <EntitySet Name="Maladie" EntityType="Self.Maladie" />
+          <EntitySet Name="MaladieAnimal" EntityType="Self.MaladieAnimal" />
+          <EntitySet Name="Medicament" EntityType="Self.Medicament" />
+          <EntitySet Name="Ordonnance" EntityType="Self.Ordonnance" />
+          <EntitySet Name="Produit" EntityType="Self.Produit" />
+          <EntitySet Name="ProduitFacture" EntityType="Self.ProduitFacture" />
+          <EntitySet Name="ProduitOrdonnance" EntityType="Self.ProduitOrdonnance" />
+          <EntitySet Name="RendezVous" EntityType="Self.RendezVous" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="Salarie" EntityType="Self.Salarie" />
+          <EntitySet Name="Soins" EntityType="Self.Soins" />
+          <EntitySet Name="SoinsMaladie" EntityType="Self.SoinsMaladie" />
+          <AssociationSet Name="FK__Animal" Association="Self.FK__Animal">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="MaladieAnimal" EntitySet="MaladieAnimal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Animal__IdClient__7A672E12" Association="Self.FK__Animal__IdClient__7A672E12">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Animal" EntitySet="Animal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANI_ARDV" Association="Self.FK_ANI_ARDV">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="AnimalRDV" EntitySet="AnimalRDV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANI_ORDO" Association="Self.FK_ANI_ORDO">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="Ordonnance" EntitySet="Ordonnance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RDV_ARDV" Association="Self.FK_RDV_ARDV">
+            <End Role="RendezVous" EntitySet="RendezVous" />
+            <End Role="AnimalRDV" EntitySet="AnimalRDV" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Facture__IdClien__0B91BA14" Association="Self.FK__Facture__IdClien__0B91BA14">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Facture" EntitySet="Facture" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RendezVou__clien__07C12930" Association="Self.FK__RendezVou__clien__07C12930">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="RendezVous" EntitySet="RendezVous" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_FACTURE" Association="Self.C_FK_FACTURE">
+            <End Role="Facture" EntitySet="Facture" />
+            <End Role="ProduitFacture" EntitySet="ProduitFacture" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JOURNEE" Association="Self.FK_JOURNEE">
+            <End Role="Journee" EntitySet="Journee" />
+            <End Role="HoraireTravail" EntitySet="HoraireTravail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SALARIE" Association="Self.FK_SALARIE">
+            <End Role="Salarie" EntitySet="Salarie" />
+            <End Role="HoraireTravail" EntitySet="HoraireTravail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RendezVou__idJou__08B54D69" Association="Self.FK__RendezVou__idJou__08B54D69">
+            <End Role="Journee" EntitySet="Journee" />
+            <End Role="RendezVous" EntitySet="RendezVous" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_SALARIE" Association="Self.C_FK_SALARIE">
+            <End Role="Salarie" EntitySet="Salarie" />
+            <End Role="Logs" EntitySet="Logs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Maladie" Association="Self.FK__Maladie">
+            <End Role="Maladie" EntitySet="Maladie" />
+            <End Role="MaladieAnimal" EntitySet="MaladieAnimal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SM_M" Association="Self.FK_SM_M">
+            <End Role="Maladie" EntitySet="Maladie" />
+            <End Role="SoinsMaladie" EntitySet="SoinsMaladie" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_PRODUIT" Association="Self.C_FK_PRODUIT">
+            <End Role="Produit" EntitySet="Produit" />
+            <End Role="Medicament" EntitySet="Medicament" />
+          </AssociationSet>
+          <AssociationSet Name="C_FK_SOINS" Association="Self.C_FK_SOINS">
+            <End Role="Soins" EntitySet="Soins" />
+            <End Role="Medicament" EntitySet="Medicament" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProduitOr__idOrd__160F4887" Association="Self.FK__ProduitOr__idOrd__160F4887">
+            <End Role="Ordonnance" EntitySet="Ordonnance" />
+            <End Role="ProduitOrdonnance" EntitySet="ProduitOrdonnance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RDV_ORDO" Association="Self.FK_RDV_ORDO">
+            <End Role="RendezVous" EntitySet="RendezVous" />
+            <End Role="Ordonnance" EntitySet="Ordonnance" />
+          </AssociationSet>
+          <AssociationSet Name="C_REF_PRODUIT" Association="Self.C_REF_PRODUIT">
+            <End Role="Produit" EntitySet="Produit" />
+            <End Role="ProduitFacture" EntitySet="ProduitFacture" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProduitOr__idPro__151B244E" Association="Self.FK__ProduitOr__idPro__151B244E">
+            <End Role="Produit" EntitySet="Produit" />
+            <End Role="ProduitOrdonnance" EntitySet="ProduitOrdonnance" />
+          </AssociationSet>
+          <AssociationSet Name="C_REF_ROLES" Association="Self.C_REF_ROLES">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Salarie" EntitySet="Salarie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SM_S" Association="Self.FK_SM_S">
+            <End Role="Soins" EntitySet="Soins" />
+            <End Role="SoinsMaladie" EntitySet="SoinsMaladie" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Animal">
+            <EntityTypeMapping TypeName="Model.Animal">
+              <MappingFragment StoreEntitySet="Animal">
+                <ScalarProperty Name="IdAnimal" ColumnName="IdAnimal" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="NomEspece" ColumnName="NomEspece" />
+                <ScalarProperty Name="NomRace" ColumnName="NomRace" />
+                <ScalarProperty Name="DateDeNaissance" ColumnName="DateDeNaissance" />
+                <ScalarProperty Name="Taille" ColumnName="Taille" />
+                <ScalarProperty Name="Poids" ColumnName="Poids" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnimalRDV">
+            <EntityTypeMapping TypeName="Model.AnimalRDV">
+              <MappingFragment StoreEntitySet="AnimalRDV">
+                <ScalarProperty Name="IdARdv" ColumnName="IdARdv" />
+                <ScalarProperty Name="IdAnimal" ColumnName="IdAnimal" />
+                <ScalarProperty Name="IdRDV" ColumnName="IdRDV" />
+                <ScalarProperty Name="Montant" ColumnName="Montant" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="Model.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="NomClient" ColumnName="NomClient" />
+                <ScalarProperty Name="PrenomClient" ColumnName="PrenomClient" />
+                <ScalarProperty Name="DateNaissance" ColumnName="DateNaissance" />
+                <ScalarProperty Name="NumeroTelephone" ColumnName="NumeroTelephone" />
+                <ScalarProperty Name="AdresseMail" ColumnName="AdresseMail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Facture">
+            <EntityTypeMapping TypeName="Model.Facture">
+              <MappingFragment StoreEntitySet="Facture">
+                <ScalarProperty Name="IdFacture" ColumnName="IdFacture" />
+                <ScalarProperty Name="NumeroFacture" ColumnName="NumeroFacture" />
+                <ScalarProperty Name="DateFacture" ColumnName="DateFacture" />
+                <ScalarProperty Name="Montant" ColumnName="Montant" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoraireTravail">
+            <EntityTypeMapping TypeName="Model.HoraireTravail">
+              <MappingFragment StoreEntitySet="HoraireTravail">
+                <ScalarProperty Name="IdHoraireTravail" ColumnName="IdHoraireTravail" />
+                <ScalarProperty Name="IdSalarie" ColumnName="IdSalarie" />
+                <ScalarProperty Name="IdJournee" ColumnName="IdJournee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Journee">
+            <EntityTypeMapping TypeName="Model.Journee">
+              <MappingFragment StoreEntitySet="Journee">
+                <ScalarProperty Name="IdJournee" ColumnName="IdJournee" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="Model.Logs">
+              <MappingFragment StoreEntitySet="Logs">
+                <ScalarProperty Name="IdLogs" ColumnName="IdLogs" />
+                <ScalarProperty Name="IdSalarie" ColumnName="IdSalarie" />
+                <ScalarProperty Name="DateConnexion" ColumnName="DateConnexion" />
+                <ScalarProperty Name="actions" ColumnName="actions" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Maladie">
+            <EntityTypeMapping TypeName="Model.Maladie">
+              <MappingFragment StoreEntitySet="Maladie">
+                <ScalarProperty Name="IdMaladie" ColumnName="IdMaladie" />
+                <ScalarProperty Name="NomMaladie" ColumnName="NomMaladie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaladieAnimal">
+            <EntityTypeMapping TypeName="Model.MaladieAnimal">
+              <MappingFragment StoreEntitySet="MaladieAnimal">
+                <ScalarProperty Name="IdMA" ColumnName="IdMA" />
+                <ScalarProperty Name="IdMaladie" ColumnName="IdMaladie" />
+                <ScalarProperty Name="IdAnimal" ColumnName="IdAnimal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medicament">
+            <EntityTypeMapping TypeName="Model.Medicament">
+              <MappingFragment StoreEntitySet="Medicament">
+                <ScalarProperty Name="IdMedicament" ColumnName="IdMedicament" />
+                <ScalarProperty Name="IdSoins" ColumnName="IdSoins" />
+                <ScalarProperty Name="IdProduit" ColumnName="IdProduit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ordonnance">
+            <EntityTypeMapping TypeName="Model.Ordonnance">
+              <MappingFragment StoreEntitySet="Ordonnance">
+                <ScalarProperty Name="idOrdonnance" ColumnName="idOrdonnance" />
+                <ScalarProperty Name="IdRdv" ColumnName="IdRdv" />
+                <ScalarProperty Name="IdAnimal" ColumnName="IdAnimal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produit">
+            <EntityTypeMapping TypeName="Model.Produit">
+              <MappingFragment StoreEntitySet="Produit">
+                <ScalarProperty Name="IdProduit" ColumnName="IdProduit" />
+                <ScalarProperty Name="NomProduit" ColumnName="NomProduit" />
+                <ScalarProperty Name="QuantiteEnStock" ColumnName="QuantiteEnStock" />
+                <ScalarProperty Name="ImageProduit" ColumnName="ImageProduit" />
+                <ScalarProperty Name="PrixVenteClient" ColumnName="PrixVenteClient" />
+                <ScalarProperty Name="PrixAchat" ColumnName="PrixAchat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProduitFacture">
+            <EntityTypeMapping TypeName="Model.ProduitFacture">
+              <MappingFragment StoreEntitySet="ProduitFacture">
+                <ScalarProperty Name="IdProduitFacture" ColumnName="IdProduitFacture" />
+                <ScalarProperty Name="IdFacture" ColumnName="IdFacture" />
+                <ScalarProperty Name="IdProduit" ColumnName="IdProduit" />
+                <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProduitOrdonnance">
+            <EntityTypeMapping TypeName="Model.ProduitOrdonnance">
+              <MappingFragment StoreEntitySet="ProduitOrdonnance">
+                <ScalarProperty Name="idProduitOrdonnance" ColumnName="idProduitOrdonnance" />
+                <ScalarProperty Name="idProduit" ColumnName="idProduit" />
+                <ScalarProperty Name="idOrdonnance" ColumnName="idOrdonnance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RendezVous">
+            <EntityTypeMapping TypeName="Model.RendezVous">
+              <MappingFragment StoreEntitySet="RendezVous">
+                <ScalarProperty Name="idRdv" ColumnName="idRdv" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="heureDebut" ColumnName="heureDebut" />
+                <ScalarProperty Name="heureFin" ColumnName="heureFin" />
+                <ScalarProperty Name="motif" ColumnName="motif" />
+                <ScalarProperty Name="IdJournee" ColumnName="IdJournee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="Model.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="IdRoles" ColumnName="IdRoles" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Salarie">
+            <EntityTypeMapping TypeName="Model.Salarie">
+              <MappingFragment StoreEntitySet="Salarie">
+                <ScalarProperty Name="IdCompte" ColumnName="IdCompte" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="MDP" ColumnName="MDP" />
+                <ScalarProperty Name="IdRoles" ColumnName="IdRoles" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Soins">
+            <EntityTypeMapping TypeName="Model.Soins">
+              <MappingFragment StoreEntitySet="Soins">
+                <ScalarProperty Name="IdSoins" ColumnName="IdSoins" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SoinsMaladie">
+            <EntityTypeMapping TypeName="Model.SoinsMaladie">
+              <MappingFragment StoreEntitySet="SoinsMaladie">
+                <ScalarProperty Name="IdSoinsMaladie" ColumnName="IdSoinsMaladie" />
+                <ScalarProperty Name="IdSoins" ColumnName="IdSoins" />
+                <ScalarProperty Name="IdMaladie" ColumnName="IdMaladie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
