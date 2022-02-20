@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Veto.Screen.Employee
+namespace Veto
 {
     using System;
     using System.Data.Entity;
