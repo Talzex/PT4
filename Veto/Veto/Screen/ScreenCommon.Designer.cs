@@ -29,51 +29,74 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.SideBar = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.UserLBL = new System.Windows.Forms.Label();
+            this.DisconnectBT = new System.Windows.Forms.Button();
+            this.SidePNL = new System.Windows.Forms.SplitContainer();
+            this.TopPNL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // TopPNL
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
-            this.label1.Location = new System.Drawing.Point(4, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 2;
+            this.TopPNL.Controls.Add(this.DisconnectBT);
+            this.TopPNL.Controls.SetChildIndex(this.DisconnectBT, 0);
             // 
-            // SideBar
+            // UserLBL
             // 
-            this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
-            this.SideBar.Location = new System.Drawing.Point(0, 70);
-            this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(225, 615);
-            this.SideBar.TabIndex = 3;
+            this.UserLBL.AutoSize = true;
+            this.UserLBL.BackColor = System.Drawing.Color.Transparent;
+            this.UserLBL.Location = new System.Drawing.Point(97, 41);
+            this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserLBL.Name = "UserLBL";
+            this.UserLBL.Size = new System.Drawing.Size(38, 17);
+            this.UserLBL.TabIndex = 4;
+            this.UserLBL.Text = "User";
             // 
-            // label2
+            // DisconnectBT
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(73, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.DisconnectBT.Location = new System.Drawing.Point(1302, 33);
+            this.DisconnectBT.Name = "DisconnectBT";
+            this.DisconnectBT.Size = new System.Drawing.Size(104, 32);
+            this.DisconnectBT.TabIndex = 6;
+            this.DisconnectBT.Text = "Déconnexion";
+            this.DisconnectBT.UseVisualStyleBackColor = true;
+            // 
+            // SidePNL
+            // 
+            this.SidePNL.BackColor = System.Drawing.Color.Black;
+            this.SidePNL.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SidePNL.Location = new System.Drawing.Point(0, 0);
+            this.SidePNL.Name = "SidePNL";
+            this.SidePNL.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // SidePNL.Panel1
+            // 
+            this.SidePNL.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
+            this.SidePNL.Size = new System.Drawing.Size(300, 838);
+            this.SidePNL.SplitterDistance = 441;
+            this.SidePNL.TabIndex = 7;
             // 
             // ScreenCommon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.Controls.Add(this.SidePNL);
+            this.Controls.Add(this.UserLBL);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ScreenCommon";
             this.Load += new System.EventHandler(this.EcranCommun_Load);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.SideBar, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.UserLBL, 0);
+            this.Controls.SetChildIndex(this.SidePNL, 0);
+            this.Controls.SetChildIndex(this.TopPNL, 0);
+            this.TopPNL.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
+            this.SidePNL.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,8 +104,8 @@ namespace Veto
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label SideBar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label UserLBL;
+        private System.Windows.Forms.Button DisconnectBT;
+        protected System.Windows.Forms.SplitContainer SidePNL;
     }
 }

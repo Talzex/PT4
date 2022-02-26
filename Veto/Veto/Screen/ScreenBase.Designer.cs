@@ -30,47 +30,50 @@ namespace Veto
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenBase));
-            this.TopBar = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.TopPNL = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.TopPNL.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TopBar
-            // 
-            this.TopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(90)))), ((int)(((byte)(67)))));
-            this.TopBar.Location = new System.Drawing.Point(-7, 0);
-            this.TopBar.Name = "TopBar";
-            this.TopBar.Size = new System.Drawing.Size(1919, 70);
-            this.TopBar.TabIndex = 0;
             // 
             // Logo
             // 
             this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logo.ImageLocation = "";
-            this.Logo.Location = new System.Drawing.Point(7, 5);
+            this.Logo.Location = new System.Drawing.Point(12, 8);
+            this.Logo.Margin = new System.Windows.Forms.Padding(4);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(60, 60);
+            this.Logo.Size = new System.Drawing.Size(80, 74);
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
             // 
+            // TopPNL
+            // 
+            this.TopPNL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(90)))), ((int)(((byte)(67)))));
+            this.TopPNL.Controls.Add(this.Logo);
+            this.TopPNL.Location = new System.Drawing.Point(1, 0);
+            this.TopPNL.Name = "TopPNL";
+            this.TopPNL.Size = new System.Drawing.Size(1437, 86);
+            this.TopPNL.TabIndex = 2;
+            // 
             // ScreenBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.Logo);
-            this.Controls.Add(this.TopBar);
+            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.Controls.Add(this.TopPNL);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScreenBase";
             this.Text = "ScreenBase";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            this.TopPNL.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label TopBar;
         private System.Windows.Forms.PictureBox Logo;
+        protected System.Windows.Forms.Panel TopPNL;
     }
 }
