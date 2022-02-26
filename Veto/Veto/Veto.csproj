@@ -207,6 +207,9 @@
     <EmbeddedResource Include="Screen\Admin\UserBase.resx">
       <DependentUpon>UserBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
+      <DependentUpon>ScreenEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\ScreenBase.resx">
       <DependentUpon>ScreenBase.cs</DependentUpon>
     </EmbeddedResource>

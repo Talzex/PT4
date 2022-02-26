@@ -107,7 +107,6 @@ namespace Veto
             this.Controls.Add(this.UserDescPNL);
             this.Name = "UserBase";
             this.Controls.SetChildIndex(this.TopPNL, 0);
-            this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.UserDescPNL, 0);
             this.UserDescPNL.ResumeLayout(false);
             this.UserDescPNL.PerformLayout();

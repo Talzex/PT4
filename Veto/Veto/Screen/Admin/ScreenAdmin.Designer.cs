@@ -29,32 +29,37 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddUserBTN = new System.Windows.Forms.Button();
+            this.UserBTN = new System.Windows.Forms.Button();
             this.LogsBTN = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel1.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePNL
             // 
-            this.SidePNL.Controls.Add(this.LogsBTN);
-            this.SidePNL.Controls.Add(this.AddUserBTN);
             // 
-            // AddUserBTN
+            // SidePNL.Panel1
             // 
-            this.AddUserBTN.Location = new System.Drawing.Point(56, 29);
-            this.AddUserBTN.Name = "AddUserBTN";
-            this.AddUserBTN.Size = new System.Drawing.Size(141, 32);
-            this.AddUserBTN.TabIndex = 6;
-            this.AddUserBTN.Text = "Ajouter";
-            this.AddUserBTN.UseVisualStyleBackColor = true;
+            this.SidePNL.Panel1.Controls.Add(this.LogsBTN);
+            this.SidePNL.Panel1.Controls.Add(this.UserBTN);
+            // 
+            // UserBTN
+            // 
+            this.UserBTN.Location = new System.Drawing.Point(78, 113);
+            this.UserBTN.Name = "UserBTN";
+            this.UserBTN.Size = new System.Drawing.Size(127, 35);
+            this.UserBTN.TabIndex = 8;
+            this.UserBTN.Text = "Employés";
+            this.UserBTN.UseVisualStyleBackColor = true;
             // 
             // LogsBTN
             // 
-            this.LogsBTN.Location = new System.Drawing.Point(56, 96);
+            this.LogsBTN.Location = new System.Drawing.Point(78, 180);
             this.LogsBTN.Name = "LogsBTN";
-            this.LogsBTN.Size = new System.Drawing.Size(141, 32);
-            this.LogsBTN.TabIndex = 7;
-            this.LogsBTN.Text = "Logs";
+            this.LogsBTN.Size = new System.Drawing.Size(127, 35);
+            this.LogsBTN.TabIndex = 9;
+            this.LogsBTN.Text = "Historique";
             this.LogsBTN.UseVisualStyleBackColor = true;
             // 
             // ScreenAdmin
@@ -62,6 +67,8 @@ namespace Veto
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Name = "ScreenAdmin";
+            this.SidePNL.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -70,7 +77,7 @@ namespace Veto
 
         #endregion
 
-        private System.Windows.Forms.Button AddUserBTN;
+        private System.Windows.Forms.Button UserBTN;
         private System.Windows.Forms.Button LogsBTN;
     }
 }
