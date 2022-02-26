@@ -201,6 +201,12 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screen\Admin\ScreenAdmin.resx">
+      <DependentUpon>ScreenAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Admin\UserBase.resx">
+      <DependentUpon>UserBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\ScreenBase.resx">
       <DependentUpon>ScreenBase.cs</DependentUpon>
     </EmbeddedResource>
