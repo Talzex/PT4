@@ -12,9 +12,11 @@ namespace Veto
 {
     public partial class ClientsDetails : Form
     {
-        public ClientsDetails()
+        private Client client;
+        public ClientsDetails(Client client)
         {
             InitializeComponent();
+            this.client = client;
         }
     }
 }

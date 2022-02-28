@@ -12,9 +12,17 @@ namespace Veto
 {
     public partial class ClientComponent : UserControl
     {
-        public ClientComponent()
+        private Client client;
+
+        public ClientComponent(Client client)
         {
             InitializeComponent();
+            this.client = client;
+        }
+
+        private void DetailsButton_Click(object sender, EventArgs e)
+        {
+            ClientsDetails detailsPage = new ClientsDetails(this.client);
         }
     }
 }
