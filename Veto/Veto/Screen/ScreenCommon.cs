@@ -8,11 +8,15 @@ using System.Windows.Forms;
 
 namespace Veto
 {
+
     public partial class ScreenCommon : Veto.ScreenBase
     {
-        public ScreenCommon()
+        private Salarie user;
+
+        public ScreenCommon(Salarie user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void EcranCommun_Load(object sender, EventArgs e)

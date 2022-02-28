@@ -16,7 +16,7 @@ namespace Veto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ScreenBase());
+            Application.Run(new ScreenConection());
         }
     }
 }
