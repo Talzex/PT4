@@ -23,6 +23,7 @@ namespace Veto
         private void DetailsButton_Click(object sender, EventArgs e)
         {
             ClientsDetails detailsPage = new ClientsDetails(this.client);
+            detailsPage.Show();
         }
     }
 }
