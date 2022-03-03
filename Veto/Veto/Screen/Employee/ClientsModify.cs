@@ -10,19 +10,12 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class ClientComponent : UserControl
+    public partial class ClientsModify : Form
     {
         private Client client;
-
-        public ClientComponent(Client client)
+        public ClientsModify()
         {
             InitializeComponent();
-            this.client = client;
-        }
-
-        private void DetailsButton_Click(object sender, EventArgs e)
-        {
-            //TODO afficher ClientsDetails
         }
     }
 }

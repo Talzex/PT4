@@ -120,7 +120,7 @@
             this.ModifyClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ModifyClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifyClient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ModifyClient.Location = new System.Drawing.Point(304, 405);
+            this.ModifyClient.Location = new System.Drawing.Point(568, 405);
             this.ModifyClient.Name = "ModifyClient";
             this.ModifyClient.Size = new System.Drawing.Size(85, 33);
             this.ModifyClient.TabIndex = 7;
@@ -133,7 +133,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(403, 405);
+            this.button1.Location = new System.Drawing.Point(667, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 33);
             this.button1.TabIndex = 8;
