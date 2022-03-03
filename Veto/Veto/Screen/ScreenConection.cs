@@ -33,21 +33,43 @@ namespace Veto
                 Salarie s = new Salarie();
                 if (s != null)
                 {
+                    ScreenCommon screen;
                     //Rôle admin
-                    if ()
-
-                    //
+                    if (true)
+                    {
+                        // Ouvrir fenêtre admin
+                        screen = new UserList(s);
+                    }
+                    else
+                    {
+                        // Ouvrir fenêtre employé
+                        screen = new Calendar(s);
+                    }
+                    ChangeScreen(screen);
                 }
                 else
                 {
-                    MessageBox.Show("Erreur");
+                    EmptyFields();
+                    MessageBox.Show("Pas d'utilisateur trouvé");
                 }
 
             }
             else
             {
-                MessageBox.Show("Erreur");
+                MessageBox.Show("Veuillez remplir les champs");
             }
+        }
+
+        private void EmptyFields()
+        {
+            LoginTB.Text = "";
+            PasswordTB.Text = "";
+        }
+
+
+        private void ScreenConection_Activated(object sender, EventArgs e)
+        {
+            EmptyFields();
         }
     }
 }
