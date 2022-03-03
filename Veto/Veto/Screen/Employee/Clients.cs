@@ -10,7 +10,7 @@ namespace Veto
 {
     public partial class Clients : Veto.ScreenEmployee
     {
-        public Clients()
+        public Clients(Salarie user) : base(user)
         {
             InitializeComponent();
         }

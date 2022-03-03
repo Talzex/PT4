@@ -31,18 +31,7 @@ namespace Veto
         {
             this.UserBTN = new System.Windows.Forms.Button();
             this.LogsBTN = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
-            this.SidePNL.Panel1.SuspendLayout();
-            this.SidePNL.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // SidePNL
-            // 
-            // 
-            // SidePNL.Panel1
-            // 
-            this.SidePNL.Panel1.Controls.Add(this.LogsBTN);
-            this.SidePNL.Panel1.Controls.Add(this.UserBTN);
             // 
             // UserBTN
             // 
@@ -64,12 +53,10 @@ namespace Veto
             // 
             // ScreenAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ScreenAdmin";
-            this.SidePNL.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
-            this.SidePNL.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

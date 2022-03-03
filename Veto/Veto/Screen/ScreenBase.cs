@@ -16,5 +16,14 @@ namespace Veto
         {
             InitializeComponent();
         }
+
+        protected void ChangeScreen(ScreenBase other)
+        {
+            other.Location = this.Location;
+            other.StartPosition = FormStartPosition.Manual;
+            other.FormClosing += delegate { this.Show(); };
+            other.Show();
+            this.Hide();
+        }
     }
 }

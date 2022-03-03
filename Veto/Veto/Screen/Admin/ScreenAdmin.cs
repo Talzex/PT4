@@ -6,11 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace Veto
 {
     public partial class ScreenAdmin : Veto.ScreenCommon
     {
-        public ScreenAdmin()
+        public ScreenAdmin(Salarie user) : base(user)
         {
             InitializeComponent();
         }

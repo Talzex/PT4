@@ -10,7 +10,7 @@ namespace Veto
 {
     public partial class UserAM : Veto.UserBase
     {
-        public UserAM()
+        public UserAM(Salarie user) : base(user)
         {
             InitializeComponent();
         }

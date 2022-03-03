@@ -10,7 +10,7 @@ namespace Veto
 {
     public partial class Stats : Veto.ScreenEmployee
     {
-        public Stats()
+        public Stats(Salarie user) : base(user)
         {
             InitializeComponent();
         }

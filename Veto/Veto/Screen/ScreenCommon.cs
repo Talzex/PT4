@@ -9,13 +9,15 @@ using System.Linq;
 
 namespace Veto
 {
+
     public partial class ScreenCommon : Veto.ScreenBase
     {
-        public static Entities bd = new Entities();
+        private Salarie user;
 
-        public ScreenCommon()
+        public ScreenCommon(Salarie user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void EcranCommun_Load(object sender, EventArgs e)
