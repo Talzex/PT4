@@ -13,6 +13,16 @@ namespace Veto
         public Cart()
         {
             InitializeComponent();
+            test();
+        }
+
+        private void test()
+        {
+            Produit produit = new Produit();
+            produit.NomProduit = "Medoc";
+            produit.PrixVenteClient = 15.0;
+            var elementCart = new ElementCart(produit);
+            Panel_AllProducts.Controls.Add(elementCart);
         }
     }
 }

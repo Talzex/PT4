@@ -229,19 +229,10 @@ namespace Veto
             // 
             // Panel_AllProducts
             // 
-            this.Panel_AllProducts.Controls.Add(this.elementCart);
             this.Panel_AllProducts.Location = new System.Drawing.Point(230, 139);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
             this.Panel_AllProducts.Size = new System.Drawing.Size(838, 281);
             this.Panel_AllProducts.TabIndex = 18;
-            // 
-            // elementCart
-            // 
-            this.elementCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(218)))), ((int)(((byte)(209)))));
-            this.elementCart.Location = new System.Drawing.Point(3, 3);
-            this.elementCart.Name = "elementCart";
-            this.elementCart.Size = new System.Drawing.Size(835, 65);
-            this.elementCart.TabIndex = 0;
             // 
             // button_addconsultation
             // 
@@ -330,6 +321,5 @@ namespace Veto
         private System.Windows.Forms.Button button_addnight;
         private System.Windows.Forms.Button button_addoperation;
         private System.Windows.Forms.Button button_addconsultation;
-        private Screen.Employee.ElementCart elementCart;
     }
 }

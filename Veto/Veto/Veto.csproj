@@ -67,6 +67,12 @@
     <Compile Include="Client.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ElementCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ElementCart.Designer.cs">
+      <DependentUpon>ElementCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -142,12 +148,6 @@
     <Compile Include="Screen\Employee\Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screen\Employee\ElementCart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Screen\Employee\ElementCart.Designer.cs">
-      <DependentUpon>ElementCart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screen\Employee\ScreenEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +210,9 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ElementCart.resx">
+      <DependentUpon>ElementCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Admin\ScreenAdmin.resx">
       <DependentUpon>ScreenAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screen\Employee\ElementCart.resx">
-      <DependentUpon>ElementCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>
