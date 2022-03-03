@@ -39,18 +39,29 @@ namespace Veto
             this.button_signin = new System.Windows.Forms.Button();
             this.label_cart = new System.Windows.Forms.Label();
             this.panel_bottombill = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonEllipse_previous = new Veto.ButtonEllipse();
+            this.panel_title = new System.Windows.Forms.Panel();
             this.buttonEllipse1 = new Veto.ButtonEllipse();
+            this.buttonEllipse_previous = new Veto.ButtonEllipse();
             this.Panel_AllProducts = new System.Windows.Forms.FlowLayoutPanel();
+            this.button_addconsultation = new System.Windows.Forms.Button();
+            this.button_addoperation = new System.Windows.Forms.Button();
+            this.button_addnight = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.panel_bottombill.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_title.SuspendLayout();
+            this.Panel_AllProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePNL
             // 
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.button_addnight);
+            this.SidePNL.Panel2.Controls.Add(this.button_addoperation);
+            this.SidePNL.Panel2.Controls.Add(this.button_addconsultation);
             this.SidePNL.Size = new System.Drawing.Size(225, 657);
             this.SidePNL.SplitterDistance = 345;
             // 
@@ -169,25 +180,43 @@ namespace Veto
             this.panel_bottombill.Controls.Add(this.label_total);
             this.panel_bottombill.Controls.Add(this.button_validate);
             this.panel_bottombill.Controls.Add(this.button_signin);
-            this.panel_bottombill.Location = new System.Drawing.Point(230, 460);
+            this.panel_bottombill.Location = new System.Drawing.Point(230, 426);
             this.panel_bottombill.Name = "panel_bottombill";
-            this.panel_bottombill.Size = new System.Drawing.Size(838, 221);
+            this.panel_bottombill.Size = new System.Drawing.Size(838, 219);
             this.panel_bottombill.TabIndex = 11;
             // 
-            // panel1
+            // panel_title
             // 
-            this.panel1.Controls.Add(this.buttonEllipse1);
-            this.panel1.Controls.Add(this.buttonEllipse_previous);
-            this.panel1.Controls.Add(this.label_cart);
-            this.panel1.Location = new System.Drawing.Point(230, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 58);
-            this.panel1.TabIndex = 17;
+            this.panel_title.Controls.Add(this.buttonEllipse1);
+            this.panel_title.Controls.Add(this.buttonEllipse_previous);
+            this.panel_title.Controls.Add(this.label_cart);
+            this.panel_title.Location = new System.Drawing.Point(230, 75);
+            this.panel_title.Name = "panel_title";
+            this.panel_title.Size = new System.Drawing.Size(838, 58);
+            this.panel_title.TabIndex = 17;
+            // 
+            // buttonEllipse1
+            // 
+            this.buttonEllipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEllipse1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEllipse1.ForeColor = System.Drawing.Color.White;
+            this.buttonEllipse1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonEllipse1.Location = new System.Drawing.Point(770, 3);
+            this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEllipse1.Name = "buttonEllipse1";
+            this.buttonEllipse1.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.buttonEllipse1.Size = new System.Drawing.Size(52, 52);
+            this.buttonEllipse1.TabIndex = 19;
+            this.buttonEllipse1.Text = ">";
+            this.buttonEllipse1.UseVisualStyleBackColor = false;
             // 
             // buttonEllipse_previous
             // 
             this.buttonEllipse_previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.buttonEllipse_previous.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonEllipse_previous.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse_previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEllipse_previous.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEllipse_previous.ForeColor = System.Drawing.Color.White;
             this.buttonEllipse_previous.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -198,46 +227,85 @@ namespace Veto
             this.buttonEllipse_previous.Text = "<";
             this.buttonEllipse_previous.UseVisualStyleBackColor = false;
             // 
-            // buttonEllipse1
-            // 
-            this.buttonEllipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonEllipse1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEllipse1.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonEllipse1.Location = new System.Drawing.Point(762, 5);
-            this.buttonEllipse1.Name = "buttonEllipse1";
-            this.buttonEllipse1.Size = new System.Drawing.Size(50, 50);
-            this.buttonEllipse1.TabIndex = 19;
-            this.buttonEllipse1.Text = ">";
-            this.buttonEllipse1.UseVisualStyleBackColor = false;
-            // 
             // Panel_AllProducts
             // 
+            this.Panel_AllProducts.Controls.Add(this.elementCart);
             this.Panel_AllProducts.Location = new System.Drawing.Point(230, 139);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
-            this.Panel_AllProducts.Size = new System.Drawing.Size(825, 315);
+            this.Panel_AllProducts.Size = new System.Drawing.Size(838, 281);
             this.Panel_AllProducts.TabIndex = 18;
+            // 
+            // elementCart
+            // 
+            this.elementCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(218)))), ((int)(((byte)(209)))));
+            this.elementCart.Location = new System.Drawing.Point(3, 3);
+            this.elementCart.Name = "elementCart";
+            this.elementCart.Size = new System.Drawing.Size(835, 65);
+            this.elementCart.TabIndex = 0;
+            // 
+            // button_addconsultation
+            // 
+            this.button_addconsultation.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_addconsultation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.button_addconsultation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_addconsultation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_addconsultation.ForeColor = System.Drawing.Color.White;
+            this.button_addconsultation.Location = new System.Drawing.Point(35, 3);
+            this.button_addconsultation.Name = "button_addconsultation";
+            this.button_addconsultation.Size = new System.Drawing.Size(152, 23);
+            this.button_addconsultation.TabIndex = 1;
+            this.button_addconsultation.Text = "AJOUTER CONSULTATION";
+            this.button_addconsultation.UseVisualStyleBackColor = false;
+            // 
+            // button_addoperation
+            // 
+            this.button_addoperation.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_addoperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.button_addoperation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_addoperation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_addoperation.ForeColor = System.Drawing.Color.White;
+            this.button_addoperation.Location = new System.Drawing.Point(35, 32);
+            this.button_addoperation.Name = "button_addoperation";
+            this.button_addoperation.Size = new System.Drawing.Size(152, 23);
+            this.button_addoperation.TabIndex = 2;
+            this.button_addoperation.Text = "AJOUTER OPÉRATION";
+            this.button_addoperation.UseVisualStyleBackColor = false;
+            // 
+            // button_addnight
+            // 
+            this.button_addnight.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.button_addnight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.button_addnight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_addnight.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_addnight.ForeColor = System.Drawing.Color.White;
+            this.button_addnight.Location = new System.Drawing.Point(35, 61);
+            this.button_addnight.Name = "button_addnight";
+            this.button_addnight.Size = new System.Drawing.Size(152, 23);
+            this.button_addnight.TabIndex = 3;
+            this.button_addnight.Text = "AJOUTER NUIT";
+            this.button_addnight.UseVisualStyleBackColor = false;
             // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 657);
             this.Controls.Add(this.Panel_AllProducts);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_title);
             this.Controls.Add(this.panel_bottombill);
             this.Name = "Cart";
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.panel_bottombill, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel_title, 0);
             this.Controls.SetChildIndex(this.Panel_AllProducts, 0);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.panel_bottombill.ResumeLayout(false);
             this.panel_bottombill.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_title.ResumeLayout(false);
+            this.panel_title.PerformLayout();
+            this.Panel_AllProducts.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,9 +323,13 @@ namespace Veto
         private System.Windows.Forms.Button button_signin;
         private System.Windows.Forms.Label label_cart;
         private System.Windows.Forms.Panel panel_bottombill;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_title;
         private ButtonEllipse buttonEllipse_previous;
         private ButtonEllipse buttonEllipse1;
         private System.Windows.Forms.FlowLayoutPanel Panel_AllProducts;
+        private System.Windows.Forms.Button button_addnight;
+        private System.Windows.Forms.Button button_addoperation;
+        private System.Windows.Forms.Button button_addconsultation;
+        private Screen.Employee.ElementCart elementCart;
     }
 }
