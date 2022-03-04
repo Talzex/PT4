@@ -12,7 +12,9 @@ namespace Veto
 
     public partial class ScreenCommon : Veto.ScreenBase
     {
-        private Salarie user;
+        protected Salarie user;
+
+        public ScreenCommon() { InitializeComponent(); }
 
         public ScreenCommon(Salarie user)
         {

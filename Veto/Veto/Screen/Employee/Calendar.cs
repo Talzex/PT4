@@ -10,6 +10,9 @@ namespace Veto
 {
     public partial class Calendar : Veto.ScreenEmployee
     {
+
+        public Calendar() { InitializeComponent(); }
+
         public Calendar(Salarie user) : base(user)
         {
             InitializeComponent();
