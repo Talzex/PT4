@@ -27,6 +27,9 @@ namespace Veto
             ConnectionAttempt();
         }
 
+        /// <summary>
+        /// Connection of the user
+        /// </summary>
         private void ConnectionAttempt()
         {
             if (LoginTB.Text != "" && PasswordTB.Text != "")
@@ -65,13 +68,20 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Empties the login and password fields
+        /// </summary>
         private void EmptyFields()
         {
             LoginTB.Text = "";
             PasswordTB.Text = "";
         }
 
-
+        /// <summary>
+        /// Triggers once when the form is on the screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ScreenConection_Activated(object sender, EventArgs e)
         {
             EmptyFields();

@@ -42,17 +42,6 @@ namespace Veto
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilePB)).BeginInit();
             this.SuspendLayout();
             // 
-            // TopPNL
-            // 
-            this.TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.TopPNL.Size = new System.Drawing.Size(1269, 86);
-            // 
-            // SidePNL
-            // 
-            this.SidePNL.Location = new System.Drawing.Point(86, 0);
-            this.SidePNL.Size = new System.Drawing.Size(150, 838);
-            this.SidePNL.SplitterDistance = 419;
-            // 
             // UserDescPNL
             // 
             this.UserDescPNL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(228)))), ((int)(((byte)(191)))));
@@ -119,8 +108,6 @@ namespace Veto
             this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Controls.Add(this.UserDescPNL);
             this.Name = "UserBase";
-            this.Controls.SetChildIndex(this.SidePNL, 0);
-            this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.UserDescPNL, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
