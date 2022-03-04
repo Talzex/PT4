@@ -29,10 +29,8 @@ namespace Veto
 
         private void DisconnectBT_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ScreenConection conection = new ScreenConection();
-            conection.Closed += (s, args) => this.Show();
-            conection.Show();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

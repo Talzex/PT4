@@ -49,7 +49,7 @@ namespace Veto
             // 
             // SidePNL
             // 
-            this.SidePNL.Location = new System.Drawing.Point(0, 0);
+            this.SidePNL.Location = new System.Drawing.Point(86, 0);
             this.SidePNL.Size = new System.Drawing.Size(150, 838);
             this.SidePNL.SplitterDistance = 419;
             // 
