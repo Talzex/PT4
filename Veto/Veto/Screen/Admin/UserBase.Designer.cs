@@ -36,6 +36,8 @@ namespace Veto
             this.UserLNameLBL = new System.Windows.Forms.Label();
             this.UserFNameLBL = new System.Windows.Forms.Label();
             this.UserProfilePB = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.SuspendLayout();
             this.UserDescPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilePB)).BeginInit();
             this.SuspendLayout();
@@ -106,13 +108,13 @@ namespace Veto
             this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Controls.Add(this.UserDescPNL);
             this.Name = "UserBase";
-            this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.UserDescPNL, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
+            this.SidePNL.ResumeLayout(false);
             this.UserDescPNL.ResumeLayout(false);
             this.UserDescPNL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserProfilePB)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -12,7 +12,9 @@ namespace Veto
 
     public partial class ScreenCommon : Veto.ScreenBase
     {
-        private Salarie user;
+        protected Salarie user;
+
+        public ScreenCommon() { InitializeComponent(); }
 
         public ScreenCommon(Salarie user)
         {
@@ -20,17 +22,10 @@ namespace Veto
             this.user = user;
         }
 
-        private void EcranCommun_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void DisconnectBT_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ScreenConection conection = new ScreenConection();
-            conection.Closed += (s, args) => this.Show();
-            conection.Show();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

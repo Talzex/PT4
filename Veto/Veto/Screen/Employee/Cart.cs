@@ -10,6 +10,9 @@ namespace Veto
 {
     public partial class Cart : Veto.ScreenEmployee
     {
+
+        public Cart() { InitializeComponent(); }
+
         public Cart(Salarie user) : base(user)
         {
             InitializeComponent();

@@ -10,6 +10,10 @@ namespace Veto
 {
     public partial class ScreenEmployee : Veto.ScreenCommon
     {
+
+        public ScreenEmployee() { InitializeComponent(); }
+
+
         public ScreenEmployee(Salarie user) : base(user)
         {
             InitializeComponent();

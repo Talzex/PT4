@@ -40,13 +40,16 @@ namespace Veto
             // TopPNL
             // 
             this.TopPNL.Controls.Add(this.DisconnectBT);
+            this.TopPNL.Controls.Add(this.UserLBL);
+            this.TopPNL.Controls.SetChildIndex(this.UserLBL, 0);
             this.TopPNL.Controls.SetChildIndex(this.DisconnectBT, 0);
             // 
             // UserLBL
             // 
             this.UserLBL.AutoSize = true;
             this.UserLBL.BackColor = System.Drawing.Color.Transparent;
-            this.UserLBL.Location = new System.Drawing.Point(73, 33);
+            this.UserLBL.Location = new System.Drawing.Point(100, 41);
+            this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLBL.Name = "UserLBL";
             this.UserLBL.Size = new System.Drawing.Size(29, 13);
             this.UserLBL.TabIndex = 4;
@@ -67,22 +70,20 @@ namespace Veto
             // 
             this.SidePNL.BackColor = System.Drawing.Color.Black;
             this.SidePNL.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePNL.Location = new System.Drawing.Point(0, 0);
-            this.SidePNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SidePNL.Location = new System.Drawing.Point(0, 86);
             this.SidePNL.Name = "SidePNL";
             this.SidePNL.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // SidePNL.Panel1
             // 
-            this.SidePNL.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
+            this.SidePNL.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(192)))), ((int)(((byte)(121)))));
             // 
             // SidePNL.Panel2
             // 
-            this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
-            this.SidePNL.Size = new System.Drawing.Size(225, 681);
-            this.SidePNL.SplitterDistance = 358;
-            this.SidePNL.SplitterWidth = 3;
-            this.SidePNL.TabIndex = 7;
+            this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(192)))), ((int)(((byte)(121)))));
+            this.SidePNL.Size = new System.Drawing.Size(260, 752);
+            this.SidePNL.SplitterDistance = 376;
+            this.SidePNL.TabIndex = 4;
             // 
             // ScreenCommon
             // 
@@ -90,18 +91,15 @@ namespace Veto
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.SidePNL);
-            this.Controls.Add(this.UserLBL);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ScreenCommon";
-            this.Load += new System.EventHandler(this.EcranCommun_Load);
-            this.Controls.SetChildIndex(this.UserLBL, 0);
-            this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
+            this.Controls.SetChildIndex(this.SidePNL, 0);
             this.TopPNL.ResumeLayout(false);
+            this.TopPNL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

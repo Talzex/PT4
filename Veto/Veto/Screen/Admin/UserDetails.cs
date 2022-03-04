@@ -10,6 +10,8 @@ namespace Veto
 {
     public partial class UserDetails : Veto.UserBase
     {
+        public UserDetails() { InitializeComponent(); }
+
         public UserDetails(Salarie user) : base(user)
         {
             InitializeComponent();
