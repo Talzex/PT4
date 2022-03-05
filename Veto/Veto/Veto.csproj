@@ -201,6 +201,12 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserDesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserDesign.Designer.cs">
+      <DependentUpon>UserDesign.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Screen\Admin\ScreenAdmin.resx">
       <DependentUpon>ScreenAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +246,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\UserDesign.resx">
+      <DependentUpon>UserDesign.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -275,6 +284,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBEntities\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
