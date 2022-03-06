@@ -48,29 +48,32 @@ namespace Veto
             // 
             this.UserLBL.AutoSize = true;
             this.UserLBL.BackColor = System.Drawing.Color.Transparent;
-            this.UserLBL.Location = new System.Drawing.Point(100, 41);
+            this.UserLBL.Location = new System.Drawing.Point(100, 34);
             this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLBL.Name = "UserLBL";
-            this.UserLBL.Size = new System.Drawing.Size(29, 13);
+            this.UserLBL.Size = new System.Drawing.Size(38, 17);
             this.UserLBL.TabIndex = 4;
             this.UserLBL.Text = "User";
             // 
             // DisconnectBT
             // 
-            this.DisconnectBT.Location = new System.Drawing.Point(976, 27);
-            this.DisconnectBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DisconnectBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.DisconnectBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DisconnectBT.ForeColor = System.Drawing.Color.White;
+            this.DisconnectBT.Location = new System.Drawing.Point(1212, 34);
+            this.DisconnectBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DisconnectBT.Name = "DisconnectBT";
-            this.DisconnectBT.Size = new System.Drawing.Size(78, 26);
+            this.DisconnectBT.Size = new System.Drawing.Size(191, 28);
             this.DisconnectBT.TabIndex = 6;
-            this.DisconnectBT.Text = "Déconnexion";
-            this.DisconnectBT.UseVisualStyleBackColor = true;
-            this.DisconnectBT.Click += new System.EventHandler(this.DisconnectBT_Click);
+            this.DisconnectBT.Text = "DÉCONNEXION";
+            this.DisconnectBT.UseVisualStyleBackColor = false;
             // 
             // SidePNL
             // 
             this.SidePNL.BackColor = System.Drawing.Color.Black;
             this.SidePNL.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePNL.Location = new System.Drawing.Point(0, 86);
+            this.SidePNL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SidePNL.Name = "SidePNL";
             this.SidePNL.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -80,18 +83,18 @@ namespace Veto
             // 
             // SidePNL.Panel2
             // 
-            this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(192)))), ((int)(((byte)(121)))));
-            this.SidePNL.Size = new System.Drawing.Size(260, 752);
-            this.SidePNL.SplitterDistance = 376;
-            this.SidePNL.TabIndex = 4;
+            this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
+            this.SidePNL.Size = new System.Drawing.Size(300, 752);
+            this.SidePNL.SplitterDistance = 395;
+            this.SidePNL.TabIndex = 7;
             // 
             // ScreenCommon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Controls.Add(this.SidePNL);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ScreenCommon";
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);

@@ -61,8 +61,17 @@
     <Compile Include="AnimalRDV.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ButtonEllipse.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElementCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ElementCart.Designer.cs">
+      <DependentUpon>ElementCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -201,11 +210,17 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ElementCart.resx">
+      <DependentUpon>ElementCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Admin\ScreenAdmin.resx">
       <DependentUpon>ScreenAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Admin\UserBase.resx">
       <DependentUpon>UserBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>
