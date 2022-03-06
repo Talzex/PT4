@@ -19,7 +19,17 @@ namespace Veto
         {
             InitializeComponent();
             this.employee = employee;
-            DescLBL.Text = employee.Login + "\t| " + employee.Roles;
+            DescLBL.Text = employee.Login + " | " + employee.Roles;
+        }
+
+        /// <summary>
+        /// Click on the "Détails" button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DetailsBTN_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

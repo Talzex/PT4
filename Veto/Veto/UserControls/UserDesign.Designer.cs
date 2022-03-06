@@ -36,19 +36,20 @@ namespace Veto
             // DetailsBTN
             // 
             this.DetailsBTN.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DetailsBTN.Location = new System.Drawing.Point(738, 25);
+            this.DetailsBTN.Location = new System.Drawing.Point(377, 19);
             this.DetailsBTN.Name = "DetailsBTN";
             this.DetailsBTN.Size = new System.Drawing.Size(100, 38);
             this.DetailsBTN.TabIndex = 0;
             this.DetailsBTN.Text = "Détails";
             this.DetailsBTN.UseVisualStyleBackColor = true;
+            this.DetailsBTN.Click += new System.EventHandler(this.DetailsBTN_Click);
             // 
             // DescLBL
             // 
             this.DescLBL.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.DescLBL.AutoSize = true;
             this.DescLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescLBL.Location = new System.Drawing.Point(19, 29);
+            this.DescLBL.Location = new System.Drawing.Point(19, 23);
             this.DescLBL.Name = "DescLBL";
             this.DescLBL.Size = new System.Drawing.Size(133, 25);
             this.DescLBL.TabIndex = 1;
@@ -61,8 +62,9 @@ namespace Veto
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(146)))), ((int)(((byte)(121)))));
             this.Controls.Add(this.DescLBL);
             this.Controls.Add(this.DetailsBTN);
+            this.Margin = new System.Windows.Forms.Padding(15, 20, 20, 0);
             this.Name = "UserDesign";
-            this.Size = new System.Drawing.Size(861, 87);
+            this.Size = new System.Drawing.Size(500, 75);
             this.ResumeLayout(false);
             this.PerformLayout();
 

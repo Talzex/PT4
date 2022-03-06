@@ -100,6 +100,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DBEntities\MyRole.cs" />
     <Compile Include="Ordonnance.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -213,6 +214,9 @@
     <EmbeddedResource Include="Screen\Admin\UserBase.resx">
       <DependentUpon>UserBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Admin\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,8 +289,6 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DBEntities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

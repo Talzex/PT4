@@ -50,10 +50,7 @@ namespace Veto
                         // Ouvrir fenêtre employé
                         screen = new Calendar(s);
                     }
-                    if (ChangeScreen(screen) == DialogResult.Cancel)
-                    {
-                        this.Close();
-                    }
+                    ChangeScreen(screen);
                 }
                 else
                 {
