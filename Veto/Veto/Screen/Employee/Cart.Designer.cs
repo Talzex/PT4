@@ -284,8 +284,6 @@ namespace Veto
             this.Controls.Add(this.panel_title);
             this.Controls.Add(this.panel_bottombill);
             this.Name = "Cart";
-            this.Controls.SetChildIndex(this.SidePNL, 0);
-            this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.panel_bottombill, 0);
             this.Controls.SetChildIndex(this.panel_title, 0);
             this.Controls.SetChildIndex(this.Panel_AllProducts, 0);
