@@ -20,15 +20,25 @@ namespace Veto
         {
             InitializeComponent();
             employee = new Salarie();
+            AddRoles();
         }
 
         public UserDetails(Salarie employee)
         {
             InitializeComponent();
             this.employee = employee;
+            AddRoles();
         }
 
-
+        private void AddRoles()
+        {
+            /*
+            List<Roles> roles = null;
+            foreach (Roles r in roles)
+            {
+                RoleCB.Items.Add(r);
+            }*/
+        }
 
         private void SaveBTN_Click(object sender, EventArgs e)
         {
@@ -44,14 +54,28 @@ namespace Veto
             else if (MailTB.Text == "" || !reg.IsMatch(MailTB.Text))
             {
                 MessageBox.Show("L'adresse mail ne doit pas être nul et doit être valide");
-            } else if (true)
+            } else if (RoleCB.SelectedItem == null)
             {
+                MessageBox.Show("L'utilisateur doit avoir un rôle");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            } else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Vous allez supprimer cet utiilisateur, en êtes-vous sûr ?", "Oui / Non", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                MessageBox.Show("Oui");
+            } else if (res == DialogResult.No)
+            {
+                MessageBox.Show("No");
+            }
         }
     }
 }

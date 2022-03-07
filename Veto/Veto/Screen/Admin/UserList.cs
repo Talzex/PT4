@@ -45,8 +45,14 @@ namespace Veto
             });
             foreach (Salarie s in userList)
             {
-                CenterPNL.Controls.Add(new UserDesign(s));
+                CenterPNL.Controls.Add(new UserDesign(s, CenterPNL));
             }
+        }
+
+        private void AddBTN_Click(object sender, EventArgs e)
+        {
+            UserDesign design = new UserDesign(new Salarie(), CenterPNL);
+            design.ShowModificatationForm();
         }
     }
 }

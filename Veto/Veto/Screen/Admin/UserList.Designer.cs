@@ -30,9 +30,18 @@ namespace Veto
         private void InitializeComponent()
         {
             this.CenterPNL = new System.Windows.Forms.FlowLayoutPanel();
+            this.AddBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SidePNL
+            // 
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.AddBTN);
             // 
             // CenterPNL
             // 
@@ -43,6 +52,16 @@ namespace Veto
             this.CenterPNL.Size = new System.Drawing.Size(1072, 752);
             this.CenterPNL.TabIndex = 5;
             // 
+            // AddBTN
+            // 
+            this.AddBTN.Location = new System.Drawing.Point(104, 20);
+            this.AddBTN.Name = "AddBTN";
+            this.AddBTN.Size = new System.Drawing.Size(169, 50);
+            this.AddBTN.TabIndex = 0;
+            this.AddBTN.Text = "Ajouter Employé";
+            this.AddBTN.UseVisualStyleBackColor = true;
+            this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
+            // 
             // UserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -52,6 +71,7 @@ namespace Veto
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.CenterPNL, 0);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -61,5 +81,6 @@ namespace Veto
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel CenterPNL;
+        private System.Windows.Forms.Button AddBTN;
     }
 }

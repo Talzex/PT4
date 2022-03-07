@@ -14,12 +14,14 @@ namespace Veto
     {
 
         private Salarie employee;
+        private Panel parent;
 
-        public UserDesign(Salarie employee)
+        public UserDesign(Salarie employee, Panel parentPanel)
         {
             InitializeComponent();
             this.employee = employee;
-            DescLBL.Text = employee.Login + " | " + employee.Roles;
+            parent = parentPanel;
+            UpdateElements();
         }
 
         /// <summary>
@@ -29,8 +31,32 @@ namespace Veto
         /// <param name="e"></param>
         private void DetailsBTN_Click(object sender, EventArgs e)
         {
+            ShowModificatationForm();
+        }
+
+        public void ShowModificatationForm()
+        {
             UserDetails user = new UserDetails(employee);
-            user.ShowDialog();
+            DialogResult res = user.ShowDialog();
+
+            if (res == DialogResult.OK)
+            {
+                // Sauvegarder l'utilisateur
+                if (!parent.Controls.Contains(this))
+                {
+                    parent.Controls.Add(this);
+                }
+            }
+            else
+            {
+                // Supprimer user
+                parent.Controls.Remove(this);
+            }
+        }
+
+        public void UpdateElements()
+        {
+            DescLBL.Text = employee.Login + " | " + employee.Roles;
         }
     }
 }
