@@ -35,12 +35,12 @@ namespace Veto
             if (LoginTB.Text != "" && PasswordTB.Text != "")
             {
                 // GetUser
-                Salarie s = new Salarie();
+                Salarie s = Utils.GetSalarie(LoginTB.Text.Trim(), PasswordTB.Text.Trim());
                 if (s != null)
                 {
                     ScreenCommon screen;
                     //Rôle admin
-                    if (true)
+                    if (s.IdRoles == 3)
                     {
                         // Ouvrir fenêtre admin
                         screen = new UserList(s);

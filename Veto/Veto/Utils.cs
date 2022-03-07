@@ -7,18 +7,29 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    class Utils
+    public class Utils
     {
         public static Entities entities = new Entities();
 
+        
         public static List<Client> GetClientsAll()
         {
             var clients = from data in entities.Client
                           select data;
-            return clients.ToList<Client>();
+
+            return (List<Client>) clients;
         }
+        
 
+        public static Salarie GetSalarie(String login, String password)
+        {
+            var salarieQuerry = (from data in entities.Salarie
+                                 where login == data.Login
+                                 && password == data.MDP
+                                 select data).FirstOrDefault();
 
+            return (Salarie) salarieQuerry;
+        }
     
     }
 }
