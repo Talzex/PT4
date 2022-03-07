@@ -234,6 +234,12 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="StockElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StockElement.Designer.cs">
+      <DependentUpon>StockElement.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ElementCart.resx">
       <DependentUpon>ElementCart.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\ScreenBase.resx">
       <DependentUpon>ScreenBase.cs</DependentUpon>
@@ -294,6 +303,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StockElement.resx">
+      <DependentUpon>StockElement.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
