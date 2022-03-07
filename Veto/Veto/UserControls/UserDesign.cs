@@ -29,7 +29,8 @@ namespace Veto
         /// <param name="e"></param>
         private void DetailsBTN_Click(object sender, EventArgs e)
         {
-
+            UserDetails user = new UserDetails(employee);
+            user.ShowDialog();
         }
     }
 }
