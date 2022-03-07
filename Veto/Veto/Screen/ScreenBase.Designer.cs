@@ -32,7 +32,6 @@ namespace Veto
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenBase));
             this.Logo = new System.Windows.Forms.PictureBox();
             this.TopPNL = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPNL.SuspendLayout();
             this.SuspendLayout();
@@ -55,37 +54,25 @@ namespace Veto
             this.TopPNL.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPNL.Location = new System.Drawing.Point(0, 0);
             this.TopPNL.Name = "TopPNL";
-            this.TopPNL.Size = new System.Drawing.Size(1419, 86);
+            this.TopPNL.Size = new System.Drawing.Size(1064, 86);
             this.TopPNL.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(432, 217);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "srfe";
             // 
             // ScreenBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.TopPNL);
             this.Name = "ScreenBase";
             this.Text = "ScreenBase";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.TopPNL.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox Logo;
         protected System.Windows.Forms.Panel TopPNL;
-        private System.Windows.Forms.Label label1;
     }
 }
