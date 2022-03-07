@@ -46,18 +46,18 @@ namespace Veto
             // 
             this.UserLBL.AutoSize = true;
             this.UserLBL.BackColor = System.Drawing.Color.Transparent;
-            this.UserLBL.Location = new System.Drawing.Point(97, 41);
-            this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserLBL.Location = new System.Drawing.Point(73, 33);
             this.UserLBL.Name = "UserLBL";
-            this.UserLBL.Size = new System.Drawing.Size(38, 17);
+            this.UserLBL.Size = new System.Drawing.Size(29, 13);
             this.UserLBL.TabIndex = 4;
             this.UserLBL.Text = "User";
             // 
             // DisconnectBT
             // 
-            this.DisconnectBT.Location = new System.Drawing.Point(1302, 33);
+            this.DisconnectBT.Location = new System.Drawing.Point(976, 27);
+            this.DisconnectBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DisconnectBT.Name = "DisconnectBT";
-            this.DisconnectBT.Size = new System.Drawing.Size(104, 32);
+            this.DisconnectBT.Size = new System.Drawing.Size(78, 26);
             this.DisconnectBT.TabIndex = 6;
             this.DisconnectBT.Text = "Déconnexion";
             this.DisconnectBT.UseVisualStyleBackColor = true;
@@ -67,6 +67,7 @@ namespace Veto
             this.SidePNL.BackColor = System.Drawing.Color.Black;
             this.SidePNL.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePNL.Location = new System.Drawing.Point(0, 0);
+            this.SidePNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SidePNL.Name = "SidePNL";
             this.SidePNL.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -77,18 +78,19 @@ namespace Veto
             // SidePNL.Panel2
             // 
             this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
-            this.SidePNL.Size = new System.Drawing.Size(300, 838);
-            this.SidePNL.SplitterDistance = 441;
+            this.SidePNL.Size = new System.Drawing.Size(225, 681);
+            this.SidePNL.SplitterDistance = 358;
+            this.SidePNL.SplitterWidth = 3;
             this.SidePNL.TabIndex = 7;
             // 
             // ScreenCommon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.SidePNL);
             this.Controls.Add(this.UserLBL);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ScreenCommon";
             this.Load += new System.EventHandler(this.EcranCommun_Load);
             this.Controls.SetChildIndex(this.UserLBL, 0);

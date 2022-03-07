@@ -10,6 +10,9 @@ namespace Veto
 {
     public partial class ScreenCommon : Veto.ScreenBase
     {
+
+        Entities db = new Entities();
+
         public ScreenCommon()
         {
             InitializeComponent();

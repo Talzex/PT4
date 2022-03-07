@@ -61,6 +61,7 @@
     <Compile Include="AnimalRDV.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <Compile Include="Client.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
