@@ -15,6 +15,12 @@ namespace Veto
         public ScreenBase()
         {
             InitializeComponent();
+            List<Client> clients = Utils.GetClientsAll();
+            String s = "";
+            foreach(Client c in clients)
+            {
+                label1.Text = s + c.NomClient;
+            }
         }
 
         protected DialogResult ChangeScreen(ScreenBase other)

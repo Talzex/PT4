@@ -32,6 +32,7 @@ namespace Veto
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenBase));
             this.Logo = new System.Windows.Forms.PictureBox();
             this.TopPNL = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.TopPNL.SuspendLayout();
             this.SuspendLayout();
@@ -41,10 +42,9 @@ namespace Veto
             this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logo.ImageLocation = "";
-            this.Logo.Location = new System.Drawing.Point(12, 8);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4);
+            this.Logo.Location = new System.Drawing.Point(9, 6);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(80, 74);
+            this.Logo.Size = new System.Drawing.Size(60, 60);
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
             // 
@@ -58,23 +58,34 @@ namespace Veto
             this.TopPNL.Size = new System.Drawing.Size(1419, 86);
             this.TopPNL.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(432, 217);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "srfe";
+            // 
             // ScreenBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TopPNL);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScreenBase";
             this.Text = "ScreenBase";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.TopPNL.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox Logo;
         protected System.Windows.Forms.Panel TopPNL;
+        private System.Windows.Forms.Label label1;
     }
 }
