@@ -14,13 +14,13 @@ namespace Veto
     {
 
         private Salarie employee;
-        private Panel parent;
+        private Panel panel;
 
         public UserDesign(Salarie employee, Panel parentPanel)
         {
             InitializeComponent();
             this.employee = employee;
-            parent = parentPanel;
+            panel = parentPanel;
             UpdateElements();
         }
 
@@ -42,15 +42,17 @@ namespace Veto
             if (res == DialogResult.OK)
             {
                 // Sauvegarder l'utilisateur
-                if (!parent.Controls.Contains(this))
+                if (!panel.Controls.Contains(this))
                 {
-                    parent.Controls.Add(this);
+                    panel.Controls.Add(this);
                 }
+                UserList parent = (UserList)ParentForm;
+                parent.LoadUsers();
             }
-            else
+            else if (res ==DialogResult.Abort)
             {
                 // Supprimer user
-                parent.Controls.Remove(this);
+                panel.Controls.Remove(this);
             }
         }
 

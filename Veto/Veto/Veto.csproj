@@ -67,6 +67,7 @@
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormController.cs" />
     <Compile Include="HoraireTravail.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

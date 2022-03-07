@@ -24,8 +24,9 @@ namespace Veto
         /// <summary>
         /// Loads all the users into a UserDesign
         /// </summary>
-        private void LoadUsers()
+        public void LoadUsers()
         {
+            CenterPNL.Controls.Clear();
             var userList = new List<Salarie>(); // Get all users
             userList.Add(new Salarie
             {

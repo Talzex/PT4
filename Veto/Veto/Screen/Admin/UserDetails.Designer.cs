@@ -113,7 +113,7 @@ namespace Veto
             // 
             // CancelBTN
             // 
-            this.CancelBTN.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            this.CancelBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelBTN.Location = new System.Drawing.Point(684, 204);
             this.CancelBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CancelBTN.Name = "CancelBTN";

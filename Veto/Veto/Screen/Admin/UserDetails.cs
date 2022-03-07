@@ -54,12 +54,14 @@ namespace Veto
             else if (MailTB.Text == "" || !reg.IsMatch(MailTB.Text))
             {
                 MessageBox.Show("L'adresse mail ne doit pas être nul et doit être valide");
-            } else if (RoleCB.SelectedItem == null)
+            }
+            else if (RoleCB.SelectedItem == null)
             {
                 MessageBox.Show("L'utilisateur doit avoir un rôle");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            } else
+            }
+            else
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -71,10 +73,8 @@ namespace Veto
             DialogResult res = MessageBox.Show("Vous allez supprimer cet utiilisateur, en êtes-vous sûr ?", "Oui / Non", MessageBoxButtons.YesNo);
             if (res == DialogResult.Yes)
             {
-                MessageBox.Show("Oui");
-            } else if (res == DialogResult.No)
-            {
-                MessageBox.Show("No");
+                this.DialogResult = DialogResult.Abort;
+                this.Close();
             }
         }
     }
