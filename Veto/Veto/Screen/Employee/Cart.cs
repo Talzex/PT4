@@ -10,9 +10,22 @@ namespace Veto
 {
     public partial class Cart : Veto.ScreenEmployee
     {
-        public Cart()
+
+        public Cart() { InitializeComponent(); }
+
+        public Cart(Salarie user) : base(user)
         {
             InitializeComponent();
+            test();
+        }
+
+        private void test()
+        {
+            Produit produit = new Produit();
+            produit.NomProduit = "Medoc";
+            produit.PrixVenteClient = 15.0;
+            var elementCart = new ElementCart(produit);
+            Panel_AllProducts.Controls.Add(elementCart);
         }
     }
 }

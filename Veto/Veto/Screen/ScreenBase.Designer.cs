@@ -52,10 +52,10 @@ namespace Veto
             // 
             this.TopPNL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(90)))), ((int)(((byte)(67)))));
             this.TopPNL.Controls.Add(this.Logo);
-            this.TopPNL.Location = new System.Drawing.Point(1, 0);
-            this.TopPNL.Margin = new System.Windows.Forms.Padding(2);
+            this.TopPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPNL.Location = new System.Drawing.Point(0, 0);
             this.TopPNL.Name = "TopPNL";
-            this.TopPNL.Size = new System.Drawing.Size(1078, 70);
+            this.TopPNL.Size = new System.Drawing.Size(1419, 86);
             this.TopPNL.TabIndex = 2;
             // 
             // label1

@@ -22,5 +22,15 @@ namespace Veto
                 label1.Text = s + c.NomClient;
             }
         }
+
+        protected DialogResult ChangeScreen(ScreenBase other)
+        {
+            other.Location = this.Location;
+            other.StartPosition = FormStartPosition.Manual;
+            other.FormClosing += delegate { this.Show(); };
+            this.Hide();
+            return other.ShowDialog();
+
+        }
     }
 }

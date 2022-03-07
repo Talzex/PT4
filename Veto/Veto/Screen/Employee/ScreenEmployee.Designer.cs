@@ -49,56 +49,83 @@ namespace Veto
             this.SidePNL.Panel1.Controls.Add(this.ClientsBTN);
             this.SidePNL.Panel1.Controls.Add(this.CalendarBTN);
             this.SidePNL.Panel1.Controls.Add(this.CartBTN);
+            this.SidePNL.SplitterDistance = 358;
             // 
             // CalendarBTN
             // 
-            this.CalendarBTN.Location = new System.Drawing.Point(70, 109);
+            this.CalendarBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.CalendarBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CalendarBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalendarBTN.ForeColor = System.Drawing.Color.White;
+            this.CalendarBTN.Location = new System.Drawing.Point(33, 74);
+            this.CalendarBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CalendarBTN.Name = "CalendarBTN";
-            this.CalendarBTN.Size = new System.Drawing.Size(127, 35);
+            this.CalendarBTN.Size = new System.Drawing.Size(143, 23);
             this.CalendarBTN.TabIndex = 8;
-            this.CalendarBTN.Text = "Calendrier";
-            this.CalendarBTN.UseVisualStyleBackColor = true;
+            this.CalendarBTN.Text = "CALENDRIER";
+            this.CalendarBTN.UseVisualStyleBackColor = false;
             // 
             // CartBTN
             // 
-            this.CartBTN.Location = new System.Drawing.Point(70, 232);
+            this.CartBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.CartBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CartBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CartBTN.ForeColor = System.Drawing.Color.White;
+            this.CartBTN.Location = new System.Drawing.Point(33, 209);
+            this.CartBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CartBTN.Name = "CartBTN";
-            this.CartBTN.Size = new System.Drawing.Size(127, 35);
+            this.CartBTN.Size = new System.Drawing.Size(143, 23);
             this.CartBTN.TabIndex = 9;
-            this.CartBTN.Text = "Panier";
-            this.CartBTN.UseVisualStyleBackColor = true;
+            this.CartBTN.Text = "PANIER";
+            this.CartBTN.UseVisualStyleBackColor = false;
             // 
             // ClientsBTN
             // 
-            this.ClientsBTN.Location = new System.Drawing.Point(70, 150);
+            this.ClientsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.ClientsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ClientsBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientsBTN.ForeColor = System.Drawing.Color.White;
+            this.ClientsBTN.Location = new System.Drawing.Point(33, 164);
+            this.ClientsBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ClientsBTN.Name = "ClientsBTN";
-            this.ClientsBTN.Size = new System.Drawing.Size(127, 35);
+            this.ClientsBTN.Size = new System.Drawing.Size(143, 23);
             this.ClientsBTN.TabIndex = 10;
-            this.ClientsBTN.Text = "Clients";
-            this.ClientsBTN.UseVisualStyleBackColor = true;
+            this.ClientsBTN.Text = "CLIENTS";
+            this.ClientsBTN.UseVisualStyleBackColor = false;
             // 
             // StatsBTN
             // 
-            this.StatsBTN.Location = new System.Drawing.Point(70, 273);
+            this.StatsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.StatsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StatsBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatsBTN.ForeColor = System.Drawing.Color.White;
+            this.StatsBTN.Location = new System.Drawing.Point(33, 254);
+            this.StatsBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StatsBTN.Name = "StatsBTN";
-            this.StatsBTN.Size = new System.Drawing.Size(127, 35);
+            this.StatsBTN.Size = new System.Drawing.Size(143, 23);
             this.StatsBTN.TabIndex = 9;
-            this.StatsBTN.Text = "Statistiques";
-            this.StatsBTN.UseVisualStyleBackColor = true;
+            this.StatsBTN.Text = "STATISTIQUES";
+            this.StatsBTN.UseVisualStyleBackColor = false;
             // 
             // StocksBTN
             // 
-            this.StocksBTN.Location = new System.Drawing.Point(70, 191);
+            this.StocksBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.StocksBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StocksBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StocksBTN.ForeColor = System.Drawing.Color.White;
+            this.StocksBTN.Location = new System.Drawing.Point(33, 119);
+            this.StocksBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StocksBTN.Name = "StocksBTN";
-            this.StocksBTN.Size = new System.Drawing.Size(127, 35);
+            this.StocksBTN.Size = new System.Drawing.Size(143, 23);
             this.StocksBTN.TabIndex = 9;
-            this.StocksBTN.Text = "Stocks";
-            this.StocksBTN.UseVisualStyleBackColor = true;
+            this.StocksBTN.Text = "STOCKS";
+            this.StocksBTN.UseVisualStyleBackColor = false;
             // 
             // ScreenEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "ScreenEmployee";
             this.SidePNL.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();

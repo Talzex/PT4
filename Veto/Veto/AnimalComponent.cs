@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class Calendar : Veto.ScreenEmployee
+    public partial class AnimalComponent : UserControl
     {
-
-        public Calendar() { InitializeComponent(); }
-
-        public Calendar(Salarie user) : base(user)
+        public AnimalComponent()
         {
             InitializeComponent();
         }

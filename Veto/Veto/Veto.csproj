@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -58,12 +58,45 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="AnimalComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnimalComponent.Designer.cs">
+      <DependentUpon>AnimalComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnimalRDV.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
+    <Compile Include="ButtonEllipse.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElementCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ElementCart.Designer.cs">
+      <DependentUpon>ElementCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientComponent.Designer.cs">
+      <DependentUpon>ClientComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\Employee\ClientsModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Employee\ClientsModify.Designer.cs">
+      <DependentUpon>ClientsModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\Employee\ClientsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Employee\ClientsDetails.Designer.cs">
+      <DependentUpon>ClientsDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -202,11 +235,32 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ElementCart.resx">
+      <DependentUpon>ElementCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnimalComponent.resx">
+      <DependentUpon>AnimalComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientComponent.resx">
+      <DependentUpon>ClientComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Admin\ScreenAdmin.resx">
       <DependentUpon>ScreenAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Admin\UserBase.resx">
       <DependentUpon>UserBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\ClientsDetails.resx">
+      <DependentUpon>ClientsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\ClientsModify.resx">
+      <DependentUpon>ClientsModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>

@@ -10,7 +10,9 @@ namespace Veto
 {
     public partial class UserList : Veto.ScreenAdmin
     {
-        public UserList()
+        public UserList() { InitializeComponent(); }
+
+        public UserList(Salarie user) : base(user)
         {
             InitializeComponent();
         }

@@ -29,7 +29,24 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // SidePNL
+            // 
+            this.SidePNL.SplitterDistance = 358;
+            // 
+            // Clients
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Name = "Clients";
+            ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
+            this.SidePNL.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
