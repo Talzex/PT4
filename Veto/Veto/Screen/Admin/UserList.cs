@@ -31,9 +31,11 @@ namespace Veto
             userList.Add(new Salarie
             {
                 Login = "Jean",
+                MDP = "Jeannot",
+                Mail = "truc@gmail.com",
                 Roles = new Roles
                 {
-                    Nom = "Facteur"
+                    Nom = "Facteur",
                 }
             });
             userList.Add(new Salarie

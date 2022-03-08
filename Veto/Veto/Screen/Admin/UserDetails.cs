@@ -28,6 +28,15 @@ namespace Veto
             InitializeComponent();
             this.employee = employee;
             AddRoles();
+            FillTextBoxes();
+        }
+
+        private void FillTextBoxes()
+        {
+            LoginTB.Text = employee.Login;
+            PasswordTB.Text = employee.MDP;
+            MailTB.Text = employee.Mail;
+            //RoleCB.SelectedItem = employee.Roles;
         }
 
         private void AddRoles()
