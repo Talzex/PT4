@@ -51,7 +51,6 @@ namespace Veto
             this.SidePNL.SuspendLayout();
             this.panel_bottombill.SuspendLayout();
             this.panel_title.SuspendLayout();
-            this.Panel_AllProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePNL
@@ -62,8 +61,8 @@ namespace Veto
             this.SidePNL.Panel2.Controls.Add(this.button_addnight);
             this.SidePNL.Panel2.Controls.Add(this.button_addoperation);
             this.SidePNL.Panel2.Controls.Add(this.button_addconsultation);
-            this.SidePNL.Size = new System.Drawing.Size(225, 657);
-            this.SidePNL.SplitterDistance = 345;
+            this.SidePNL.Size = new System.Drawing.Size(225, 587);
+            this.SidePNL.SplitterDistance = 308;
             // 
             // button_validate
             // 
@@ -284,6 +283,8 @@ namespace Veto
             this.Controls.Add(this.panel_title);
             this.Controls.Add(this.panel_bottombill);
             this.Name = "Cart";
+            this.Controls.SetChildIndex(this.TopPNL, 0);
+            this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel_bottombill, 0);
             this.Controls.SetChildIndex(this.panel_title, 0);
             this.Controls.SetChildIndex(this.Panel_AllProducts, 0);
@@ -294,9 +295,7 @@ namespace Veto
             this.panel_bottombill.PerformLayout();
             this.panel_title.ResumeLayout(false);
             this.panel_title.PerformLayout();
-            this.Panel_AllProducts.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

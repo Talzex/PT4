@@ -16,6 +16,16 @@ namespace Veto
         public Stock(Salarie user) : base(user)
         {
             InitializeComponent();
+            test();
+        }
+
+        private void test()
+        {
+            Produit produit = new Produit();
+            produit.NomProduit = "Medoc";
+            produit.PrixVenteClient = 15.0;
+            var stockElement = new StockElement(produit);
+            panel_Allproducts.Controls.Add(stockElement);
         }
     }
 }
