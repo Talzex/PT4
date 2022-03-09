@@ -29,12 +29,8 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.TitleLB = new System.Windows.Forms.Label();
             this.StatsCB = new System.Windows.Forms.ComboBox();
-            this.Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PreviousBT = new Veto.ButtonEllipse();
             this.NextBT = new Veto.ButtonEllipse();
@@ -42,7 +38,6 @@ namespace Veto
             this.PreviousYearLB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,23 +70,6 @@ namespace Veto
             this.StatsCB.Size = new System.Drawing.Size(121, 23);
             this.StatsCB.TabIndex = 9;
             // 
-            // Chart
-            // 
-            this.Chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            chartArea1.Name = "ChartArea1";
-            this.Chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Chart.Legends.Add(legend1);
-            this.Chart.Location = new System.Drawing.Point(16, 172);
-            this.Chart.Name = "Chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.Chart.Series.Add(series1);
-            this.Chart.Size = new System.Drawing.Size(714, 359);
-            this.Chart.TabIndex = 10;
-            this.Chart.Text = "chart1";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -100,7 +78,6 @@ namespace Veto
             this.panel1.Controls.Add(this.NextBT);
             this.panel1.Controls.Add(this.PreviousBT);
             this.panel1.Controls.Add(this.StatsCB);
-            this.panel1.Controls.Add(this.Chart);
             this.panel1.Controls.Add(this.TitleLB);
             this.panel1.Location = new System.Drawing.Point(306, 102);
             this.panel1.Name = "panel1";
@@ -170,7 +147,6 @@ namespace Veto
             this.Controls.SetChildIndex(this.panel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Chart)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -181,7 +157,6 @@ namespace Veto
 
         private System.Windows.Forms.Label TitleLB;
         private System.Windows.Forms.ComboBox StatsCB;
-        private System.Windows.Forms.DataVisualization.Charting.Chart Chart;
         private System.Windows.Forms.Panel panel1;
         private ButtonEllipse PreviousBT;
         private ButtonEllipse NextBT;
