@@ -60,7 +60,7 @@ namespace Veto
             this.DisconnectBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
             this.DisconnectBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DisconnectBT.ForeColor = System.Drawing.Color.White;
-            this.DisconnectBT.Location = new System.Drawing.Point(1212, 34);
+            this.DisconnectBT.Location = new System.Drawing.Point(851, 26);
             this.DisconnectBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DisconnectBT.Name = "DisconnectBT";
             this.DisconnectBT.Size = new System.Drawing.Size(191, 28);
@@ -84,8 +84,8 @@ namespace Veto
             // SidePNL.Panel2
             // 
             this.SidePNL.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(156)))), ((int)(((byte)(130)))));
-            this.SidePNL.Size = new System.Drawing.Size(300, 752);
-            this.SidePNL.SplitterDistance = 395;
+            this.SidePNL.Size = new System.Drawing.Size(300, 595);
+            this.SidePNL.SplitterDistance = 312;
             this.SidePNL.TabIndex = 7;
             // 
             // ScreenCommon
@@ -94,7 +94,7 @@ namespace Veto
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.SidePNL);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ScreenCommon";
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);

@@ -38,19 +38,8 @@ namespace Veto
                 Salarie s = Utils.GetSalarie(LoginTB.Text.Trim(), PasswordTB.Text.Trim());
                 if (s != null)
                 {
-                    ScreenCommon screen;
-                    //Rôle admin
-                    if (s.IdRoles == 3)
-                    {
-                        // Ouvrir fenêtre admin
-                        screen = new UserList(s);
-                    }
-                    else
-                    {
-                        // Ouvrir fenêtre employé
-                        screen = new Calendar(s);
-                    }
-                    ChangeScreen(screen);
+                    FormController.CreateScreens(s.IdRoles == 3, s);
+                    ChangeScreen(FormController.GetController().GetForm(0));
                 }
                 else
                 {

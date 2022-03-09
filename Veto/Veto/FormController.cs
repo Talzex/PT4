@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public class FormController
+    public sealed class FormController
     {
 
         private static readonly FormController formController = new FormController();
@@ -19,17 +19,18 @@ namespace Veto
 
         public static FormController GetController() { return formController; }
 
-        public void CreateScreens(bool isAdmin, Salarie user)
+        public static void CreateScreens(bool isAdmin, Salarie user)
         {
+            CloseAllForms();
             if (isAdmin)
             {
-                activeForms = new Form[] {
+                formController.activeForms = new Form[] {
                     new UserList(user)
                 };
             }
             else
             {
-                activeForms = new Form[] {
+                formController.activeForms = new Form[] {
                     new Calendar(user),
                     new Clients(user),
                     new Stock(user),
@@ -39,12 +40,20 @@ namespace Veto
             }
         }
 
-        public void CloseAllForms()
+        public static void CloseAllForms()
         {
-            foreach (Form f in activeForms)
+            if (formController.activeForms != null)
             {
-                f.Close();
+                foreach (Form f in formController.activeForms)
+                {
+                    f.Close();
+                }
             }
+        }
+
+        public Form GetForm(int i)
+        {
+            return activeForms[i];
         }
 
     }
