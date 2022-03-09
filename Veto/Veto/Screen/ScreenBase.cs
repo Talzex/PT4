@@ -12,6 +12,7 @@ namespace Veto
 {
     public partial class ScreenBase : Form
     {
+
         public ScreenBase()
         {
             InitializeComponent();

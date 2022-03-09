@@ -16,16 +16,16 @@ namespace Veto
         public Cart(Salarie user) : base(user)
         {
             InitializeComponent();
-            test();
+            afficherProduit();
         }
 
-        private void test()
+        private void afficherProduit()
         {
-            Produit produit = new Produit();
-            produit.NomProduit = "Medoc";
-            produit.PrixVenteClient = 15.0;
-            var elementCart = new ElementCart(produit);
-            Panel_AllProducts.Controls.Add(elementCart);
+            foreach (Produit produit in Utils.GetProduitsAll())
+            {
+                var elementCart = new ElementCart(produit);
+                Panel_AllProducts.Controls.Add(elementCart);
+            }
         }
     }
 }
