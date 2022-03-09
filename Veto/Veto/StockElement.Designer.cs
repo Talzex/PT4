@@ -32,8 +32,8 @@
             this.label_quantite = new System.Windows.Forms.Label();
             this.label_pricesell = new System.Windows.Forms.Label();
             this.panel_product = new System.Windows.Forms.Panel();
-            this.label_purchaseprice = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_purchaseprice = new System.Windows.Forms.Label();
             this.panel_product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             // 
             this.label_nom.AutoSize = true;
             this.label_nom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nom.Location = new System.Drawing.Point(69, 92);
+            this.label_nom.Location = new System.Drawing.Point(69, 108);
             this.label_nom.Name = "label_nom";
             this.label_nom.Size = new System.Drawing.Size(61, 21);
             this.label_nom.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.label_quantite.AutoSize = true;
             this.label_quantite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_quantite.Location = new System.Drawing.Point(50, 113);
+            this.label_quantite.Location = new System.Drawing.Point(50, 129);
             this.label_quantite.Name = "label_quantite";
             this.label_quantite.Size = new System.Drawing.Size(99, 21);
             this.label_quantite.TabIndex = 1;
@@ -81,6 +81,14 @@
             this.panel_product.Size = new System.Drawing.Size(200, 205);
             this.panel_product.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(62, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // label_purchaseprice
             // 
             this.label_purchaseprice.AutoSize = true;
@@ -90,14 +98,6 @@
             this.label_purchaseprice.Size = new System.Drawing.Size(128, 21);
             this.label_purchaseprice.TabIndex = 3;
             this.label_purchaseprice.Text = "Prix d\'achat : 10€";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(64, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // StockElement
             // 
