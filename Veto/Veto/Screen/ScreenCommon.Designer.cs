@@ -51,7 +51,7 @@ namespace Veto
             this.UserLBL.Location = new System.Drawing.Point(100, 34);
             this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLBL.Name = "UserLBL";
-            this.UserLBL.Size = new System.Drawing.Size(38, 17);
+            this.UserLBL.Size = new System.Drawing.Size(29, 13);
             this.UserLBL.TabIndex = 4;
             this.UserLBL.Text = "User";
             // 
@@ -90,9 +90,9 @@ namespace Veto
             // 
             // ScreenCommon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.SidePNL);
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "ScreenCommon";

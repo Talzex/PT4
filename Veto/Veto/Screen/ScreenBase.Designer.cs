@@ -41,10 +41,9 @@ namespace Veto
             this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logo.ImageLocation = "";
-            this.Logo.Location = new System.Drawing.Point(12, 8);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4);
+            this.Logo.Location = new System.Drawing.Point(9, 6);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(80, 74);
+            this.Logo.Size = new System.Drawing.Size(60, 60);
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
             // 
@@ -55,16 +54,15 @@ namespace Veto
             this.TopPNL.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPNL.Location = new System.Drawing.Point(0, 0);
             this.TopPNL.Name = "TopPNL";
-            this.TopPNL.Size = new System.Drawing.Size(1419, 86);
+            this.TopPNL.Size = new System.Drawing.Size(1064, 86);
             this.TopPNL.TabIndex = 2;
             // 
             // ScreenBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.TopPNL);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScreenBase";
             this.Text = "ScreenBase";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();

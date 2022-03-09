@@ -17,12 +17,22 @@ namespace Veto
             InitializeComponent();
         }
 
-        protected DialogResult ChangeScreen(ScreenBase other)
+        /// <summary>
+        /// Execute a series of action to open an other form
+        /// </summary>
+        /// <param name="other">The other Form to open</param>
+        /// <returns></returns>
+        protected DialogResult ChangeScreen(Form other)
         {
             other.Location = this.Location;
             other.StartPosition = FormStartPosition.Manual;
             other.FormClosing += delegate { this.Show(); };
             this.Hide();
+            DialogResult res = other.ShowDialog();
+            if (res == DialogResult.Cancel)
+            {
+                this.Close();
+            }
             return other.ShowDialog();
 
         }
