@@ -27,5 +27,10 @@ namespace Veto
             label_pricesell.Text = "Prix de vente : " + product.PrixVenteClient + " €";
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
         }
+
+        private void panel_product_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
