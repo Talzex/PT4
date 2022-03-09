@@ -58,32 +58,32 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="AnimalComponent.cs">
+    <Compile Include="UserControls\AnimalComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AnimalComponent.Designer.cs">
+    <Compile Include="UserControls\AnimalComponent.Designer.cs">
       <DependentUpon>AnimalComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="AnimalRDV.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
-    <Compile Include="ButtonEllipse.cs">
+    <Compile Include="CustomElements\ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ElementCart.cs">
+    <Compile Include="UserControls\ElementCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ElementCart.Designer.cs">
+    <Compile Include="UserControls\ElementCart.Designer.cs">
       <DependentUpon>ElementCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientComponent.cs">
+    <Compile Include="UserControls\ClientComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClientComponent.Designer.cs">
+    <Compile Include="UserControls\ClientComponent.Designer.cs">
       <DependentUpon>ClientComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="Screen\Employee\ClientsModify.cs">
@@ -225,13 +225,13 @@
     <Compile Include="StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ElementCart.resx">
+    <EmbeddedResource Include="UserControls\ElementCart.resx">
       <DependentUpon>ElementCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnimalComponent.resx">
+    <EmbeddedResource Include="UserControls\AnimalComponent.resx">
       <DependentUpon>AnimalComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientComponent.resx">
+    <EmbeddedResource Include="UserControls\ClientComponent.resx">
       <DependentUpon>ClientComponent.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="UserControls\UserDesign.cs">
