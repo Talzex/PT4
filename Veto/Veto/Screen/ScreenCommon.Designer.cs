@@ -96,6 +96,7 @@ namespace Veto
             this.Controls.Add(this.SidePNL);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ScreenCommon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScreenCommon_FormClosing);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.TopPNL.ResumeLayout(false);

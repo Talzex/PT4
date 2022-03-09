@@ -21,37 +21,27 @@ namespace Veto
 
         private void CalendarBTN_Click(object sender, EventArgs e)
         {
-            ChangeCurrentScreen(0);
+            FormController.GetController().ActivateForm(0);
         }
 
         private void StocksBTN_Click(object sender, EventArgs e)
         {
-            ChangeCurrentScreen(2);
-
+            FormController.GetController().ActivateForm(2);
         }
 
         private void ClientsBTN_Click(object sender, EventArgs e)
         {
-            ChangeCurrentScreen(1);
-
+            FormController.GetController().ActivateForm(1);
         }
 
         private void CartBTN_Click(object sender, EventArgs e)
         {
-            ChangeCurrentScreen(3);
-
+            FormController.GetController().ActivateForm(3);
         }
 
         private void StatsBTN_Click(object sender, EventArgs e)
         {
-            ChangeCurrentScreen(4);
-
-        }
-
-        private void ChangeCurrentScreen(int screenIndex)
-        {
-            Form f = FormController.GetController().GetForm(screenIndex);
-            ChangeScreen(f);
+            FormController.GetController().ActivateForm(4);
         }
 
     }

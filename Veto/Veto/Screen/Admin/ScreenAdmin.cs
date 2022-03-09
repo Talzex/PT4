@@ -22,8 +22,7 @@ namespace Veto
 
         private void UserBTN_Click(object sender, EventArgs e)
         {
-            Form f = FormController.GetController().GetForm(0);
-            ChangeScreen(f);
+            FormController.GetController().ActivateForm(0);
         }
 
         private void LogsBTN_Click(object sender, EventArgs e)
