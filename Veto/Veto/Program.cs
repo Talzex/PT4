@@ -16,7 +16,7 @@ namespace Veto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cart(new Salarie()));
+            Application.Run(new UserList());
         }
     }
 }
