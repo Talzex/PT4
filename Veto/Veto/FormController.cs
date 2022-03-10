@@ -57,6 +57,7 @@ namespace Veto
                 formController.activeForm = Program.mainScreen;
                 foreach (Form f in formController.allForms)
                 {
+                    f.DialogResult = DialogResult.OK;
                     f.Close();
                 }
             }
@@ -68,32 +69,39 @@ namespace Veto
         /// <param name="i">The index of the form to show</param>
         public void ActivateForm(int i)
         {
-            Form other = allForms[i];
-            if (activeForm == null || other != activeForm)
+            if (i >= 0 && i < allForms.Length)
             {
-                other.Location = activeForm.Location;
-                other.StartPosition = FormStartPosition.Manual;
-                other.Show();
-                activeForm.Hide();
-                activeForm = other;
+                Form other = allForms[i];
+                if (activeForm == null || other != activeForm)
+                {
+                    other.Location = activeForm.Location;
+                    other.StartPosition = FormStartPosition.Manual;
+                    activeForm.Hide();
+                    other.Show();
+                    activeForm = other;
+                }
             }
         }
 
         /// <summary>
         /// Closes the app
         /// </summary>
-        public static void ScreenClosed()
+        public static void ScreenClosed(DialogResult result)
         {
-            Program.mainScreen.Close();
+            if (result != DialogResult.OK)
+                Program.mainScreen.Close();
         }
-        
+
         /// <summary>
         /// Disconnect the user
         /// </summary>
         public static void Disconnect()
         {
-            CloseAllForms();
+            Program.mainScreen.Location = formController.activeForm.Location;
+            Program.mainScreen.StartPosition = FormStartPosition.Manual;
+            formController.activeForm.Hide();
             Program.mainScreen.Show();
+            CloseAllForms();
         }
 
     }

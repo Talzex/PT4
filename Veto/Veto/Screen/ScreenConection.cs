@@ -38,8 +38,8 @@ namespace Veto
                 Salarie s = Utils.GetSalarie(LoginTB.Text.Trim(), PasswordTB.Text.Trim());
                 if (s != null)
                 {
-                    this.Hide();
                     FormController.CreateScreens(s.IdRoles == 3, s);
+                    this.Hide();
                 }
                 else
                 {

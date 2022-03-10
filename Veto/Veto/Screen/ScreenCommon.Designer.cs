@@ -67,6 +67,7 @@ namespace Veto
             this.DisconnectBT.TabIndex = 6;
             this.DisconnectBT.Text = "DÉCONNEXION";
             this.DisconnectBT.UseVisualStyleBackColor = false;
+            this.DisconnectBT.Click += new System.EventHandler(this.DisconnectBT_Click);
             // 
             // SidePNL
             // 

@@ -23,14 +23,14 @@ namespace Veto
             UserLBL.Text = user.Login;
         }
 
+        private void ScreenCommon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormController.ScreenClosed(this.DialogResult);
+        }
+
         private void DisconnectBT_Click(object sender, EventArgs e)
         {
             FormController.Disconnect();
-        }
-
-        private void ScreenCommon_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            FormController.ScreenClosed();
         }
     }
 }
