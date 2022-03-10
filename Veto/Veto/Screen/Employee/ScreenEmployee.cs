@@ -18,5 +18,31 @@ namespace Veto
         {
             InitializeComponent();
         }
+
+        private void CalendarBTN_Click(object sender, EventArgs e)
+        {
+            FormController.GetController().ActivateForm(0);
+        }
+
+        private void StocksBTN_Click(object sender, EventArgs e)
+        {
+            FormController.GetController().ActivateForm(2);
+        }
+
+        private void ClientsBTN_Click(object sender, EventArgs e)
+        {
+            FormController.GetController().ActivateForm(1);
+        }
+
+        private void CartBTN_Click(object sender, EventArgs e)
+        {
+            FormController.GetController().ActivateForm(3);
+        }
+
+        private void StatsBTN_Click(object sender, EventArgs e)
+        {
+            FormController.GetController().ActivateForm(4);
+        }
+
     }
 }

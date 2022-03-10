@@ -23,12 +23,15 @@ namespace Veto
         /// </summary>
         /// <param name="other">The other Form to open</param>
         /// <returns></returns>
-        protected DialogResult ChangeScreen(Form other)
+        protected DialogResult ChangeScreen(Form other, bool hide)
         {
             other.Location = this.Location;
             other.StartPosition = FormStartPosition.Manual;
             other.FormClosing += delegate { this.Show(); };
-            this.Hide();
+            if (hide)
+                this.Hide();
+            else
+                this.Close();
             DialogResult res = other.ShowDialog();
             if (res == DialogResult.Cancel)
             {

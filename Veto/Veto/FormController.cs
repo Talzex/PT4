@@ -7,29 +7,36 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public class FormController
+    public sealed class FormController
     {
 
         private static readonly FormController formController = new FormController();
 
-        private Form[] activeForms;
+        private Form[] allForms;
+        private Form activeForm;
 
 
-        private FormController() { }
+        private FormController() { activeForm = Program.mainScreen; }
 
         public static FormController GetController() { return formController; }
 
-        public void CreateScreens(bool isAdmin, Salarie user)
+        /// <summary>
+        /// Create all the screens that the given user can access
+        /// </summary>
+        /// <param name="isAdmin">If the user is an admin</param>
+        /// <param name="user">The user that is connected</param>
+        public static void CreateScreens(bool isAdmin, Salarie user)
         {
+            CloseAllForms();
             if (isAdmin)
             {
-                activeForms = new Form[] {
+                formController.allForms = new Form[] {
                     new UserList(user)
                 };
             }
             else
             {
-                activeForms = new Form[] {
+                formController.allForms = new Form[] {
                     new Calendar(user),
                     new Clients(user),
                     new Stock(user),
@@ -37,14 +44,64 @@ namespace Veto
                     new Stats(user)
                 };
             }
+            formController.ActivateForm(0);
         }
 
-        public void CloseAllForms()
+        /// <summary>
+        /// Closes all the forms that where created
+        /// </summary>
+        public static void CloseAllForms()
         {
-            foreach (Form f in activeForms)
+            if (formController.allForms != null)
             {
-                f.Close();
+                formController.activeForm = Program.mainScreen;
+                foreach (Form f in formController.allForms)
+                {
+                    f.DialogResult = DialogResult.OK;
+                    f.Close();
+                }
             }
+        }
+
+        /// <summary>
+        /// Displays the form
+        /// </summary>
+        /// <param name="i">The index of the form to show</param>
+        public void ActivateForm(int i)
+        {
+            if (i >= 0 && i < allForms.Length)
+            {
+                Form other = allForms[i];
+                if (activeForm == null || other != activeForm)
+                {
+                    other.Location = activeForm.Location;
+                    other.StartPosition = FormStartPosition.Manual;
+                    activeForm.Hide();
+                    other.Show();
+                    activeForm = other;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Closes the app
+        /// </summary>
+        public static void ScreenClosed(DialogResult result)
+        {
+            if (result != DialogResult.OK)
+                Program.mainScreen.Close();
+        }
+
+        /// <summary>
+        /// Disconnect the user
+        /// </summary>
+        public static void Disconnect()
+        {
+            Program.mainScreen.Location = formController.activeForm.Location;
+            Program.mainScreen.StartPosition = FormStartPosition.Manual;
+            formController.activeForm.Hide();
+            Program.mainScreen.Show();
+            CloseAllForms();
         }
 
     }
