@@ -55,7 +55,7 @@ namespace Veto
             this.panel1.Controls.Add(this.PreviousBTN);
             this.panel1.Controls.Add(this.label_stock);
             this.panel1.Location = new System.Drawing.Point(307, 92);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1112, 208);
             this.panel1.TabIndex = 8;
@@ -69,7 +69,7 @@ namespace Veto
             "Nom Croissant",
             "Nom Décroissant"});
             this.comboBoxFilter.Location = new System.Drawing.Point(861, 132);
-            this.comboBoxFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFilter.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(160, 24);
             this.comboBoxFilter.TabIndex = 10;
@@ -88,7 +88,7 @@ namespace Veto
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(87, 133);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(225, 22);
             this.textBox1.TabIndex = 9;
@@ -120,7 +120,7 @@ namespace Veto
             this.PreviousBTN.ForeColor = System.Drawing.Color.White;
             this.PreviousBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.PreviousBTN.Location = new System.Drawing.Point(12, 139);
-            this.PreviousBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PreviousBTN.Margin = new System.Windows.Forms.Padding(4);
             this.PreviousBTN.Name = "PreviousBTN";
             this.PreviousBTN.Size = new System.Drawing.Size(67, 62);
             this.PreviousBTN.TabIndex = 19;
@@ -142,7 +142,7 @@ namespace Veto
             // panel_Allproducts
             // 
             this.panel_Allproducts.Location = new System.Drawing.Point(319, 308);
-            this.panel_Allproducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_Allproducts.Margin = new System.Windows.Forms.Padding(4);
             this.panel_Allproducts.Name = "panel_Allproducts";
             this.panel_Allproducts.Size = new System.Drawing.Size(1088, 516);
             this.panel_Allproducts.TabIndex = 9;
@@ -153,8 +153,9 @@ namespace Veto
             this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Controls.Add(this.panel_Allproducts);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Stock";
+            this.Activated += new System.EventHandler(this.Stock_Activated);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel1, 0);

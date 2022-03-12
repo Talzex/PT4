@@ -23,9 +23,8 @@ namespace Veto
         public Stock(Salarie user) : base(user)
         {
             InitializeComponent();
-            LoadProducts();
             test();
-            allProducts = null; // Liste de tous les produits
+            allProducts = Utils.GetProduitsAll();
         }
 
         // Remove function
@@ -58,7 +57,12 @@ namespace Veto
         /// <param name="e"></param>
         private void PreviousBTN_Click(object sender, EventArgs e)
         {
-
+            page--;
+            NextBTN.Enabled = true;
+            if (page == 0)
+            {
+                PreviousBTN.Enabled = false;
+            }
         }
 
         /// <summary>
@@ -68,7 +72,28 @@ namespace Veto
         /// <param name="e"></param>
         private void NextBTN_Click(object sender, EventArgs e)
         {
+            page++;
+            PreviousBTN.Enabled = true;
+            if ((page+1) * elementsPerPage >= allProducts.Count)
+            {
+                NextBTN.Enabled = false;
+            }
+        }
 
+        /// <summary>
+        /// Every time the form is shown on screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Stock_Activated(object sender, EventArgs e)
+        {
+            page = 0;
+            PreviousBTN.Enabled = false;
+            if (allProducts.Count <= elementsPerPage)
+            {
+                NextBTN.Enabled = false;
+            }
+            LoadProducts();
         }
     }
 }

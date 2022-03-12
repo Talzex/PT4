@@ -16,10 +16,10 @@ namespace Veto
         public Cart(Salarie user) : base(user)
         {
             InitializeComponent();
-            afficherProduit();
+            AfficherProduit();
         }
 
-        private void afficherProduit()
+        private void AfficherProduit()
         {
             foreach (Produit produit in Utils.GetProduitsAll())
             {
