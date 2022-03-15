@@ -104,5 +104,16 @@ namespace Veto
             CloseAllForms();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="nb"></param>
+        public static void AddItemToCart(Produit p, int nb)
+        {
+            Cart cart = (Cart)formController.allForms[3];
+            cart.AddProduct(p, nb);
+        }
+
     }
 }

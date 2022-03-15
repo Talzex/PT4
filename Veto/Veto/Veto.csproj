@@ -58,6 +58,7 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DBEntities\MyProduit.cs" />
     <Compile Include="UserControls\AnimalComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -17,22 +17,12 @@ namespace Veto
         public Stock()
         {
             InitializeComponent();
-            test();
         }
 
         public Stock(Salarie user) : base(user)
         {
             InitializeComponent();
-            test();
             allProducts = Utils.GetProduitsAll();
-        }
-
-        // Remove function
-        private void test()
-        {
-            Produit produit = new Produit();
-            produit.NomProduit = "Medoc";
-            produit.PrixVenteClient = 15.0;
         }
 
         /// <summary>
@@ -40,10 +30,11 @@ namespace Veto
         /// </summary>
         private void LoadProducts()
         {
-            for (int i = page * elementsPerPage; i < page * (elementsPerPage + 1); i++)
+            for (int i = page * elementsPerPage; i < (page+1) * elementsPerPage; i++)
             {
                 if (i < allProducts.Count)
                 {
+                    Console.WriteLine(allProducts[i]);
                     var stockElement = new StockElement(allProducts[i]);
                     panel_Allproducts.Controls.Add(stockElement);
                 }
@@ -74,7 +65,7 @@ namespace Veto
         {
             page++;
             PreviousBTN.Enabled = true;
-            if ((page+1) * elementsPerPage >= allProducts.Count)
+            if ((page + 1) * elementsPerPage >= allProducts.Count)
             {
                 NextBTN.Enabled = false;
             }

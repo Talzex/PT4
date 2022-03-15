@@ -12,11 +12,12 @@ namespace Veto
 {
     public partial class StockElement : UserControl
     {
-        Produit product = new Produit();
+        Produit product;
+
         public StockElement(Produit product)
         {
-            this.product = product;
             InitializeComponent();
+            this.product = product;
             MAJProduit(product);
         }
 
@@ -26,6 +27,11 @@ namespace Veto
             label_quantite.Text = "Quantité : " + product.QuantiteEnStock;
             label_pricesell.Text = "Prix de vente : " + product.PrixVenteClient + " €";
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FormController.AddItemToCart(product,1);
         }
     }
 }

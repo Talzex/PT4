@@ -13,7 +13,7 @@ namespace Veto
     public partial class ElementCart : UserControl
     {
         Produit product = new Produit();
-        public ElementCart(Produit product)
+        public ElementCart(Produit product, int nb)
         {
             InitializeComponent();
             this.product = product;
