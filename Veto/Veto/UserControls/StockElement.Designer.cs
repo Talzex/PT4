@@ -80,6 +80,7 @@
             this.panel_product.Name = "panel_product";
             this.panel_product.Size = new System.Drawing.Size(200, 205);
             this.panel_product.TabIndex = 3;
+            this.panel_product.Click += new System.EventHandler(this.panel_product_Click);
             // 
             // pictureBox1
             // 
