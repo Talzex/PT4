@@ -20,12 +20,17 @@ namespace Veto
         {
             InitializeComponent();
             this.user = user;
+            UserLBL.Text = user.Login;
+        }
+
+        private void ScreenCommon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormController.ScreenClosed(this.DialogResult);
         }
 
         private void DisconnectBT_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            FormController.Disconnect();
         }
     }
 }

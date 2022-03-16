@@ -35,7 +35,7 @@ namespace Veto
             this.SidePNL.Panel1.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // SidePNL
             // 
             // 
@@ -43,7 +43,8 @@ namespace Veto
             // 
             this.SidePNL.Panel1.Controls.Add(this.LogsBTN);
             this.SidePNL.Panel1.Controls.Add(this.UserBTN);
-
+            this.SidePNL.Size = new System.Drawing.Size(300, 595);
+            this.SidePNL.SplitterDistance = 312;
             // 
             // UserBTN
             // 
@@ -53,6 +54,7 @@ namespace Veto
             this.UserBTN.TabIndex = 8;
             this.UserBTN.Text = "Employés";
             this.UserBTN.UseVisualStyleBackColor = true;
+            this.UserBTN.Click += new System.EventHandler(this.UserBTN_Click);
             // 
             // LogsBTN
             // 
@@ -62,18 +64,18 @@ namespace Veto
             this.LogsBTN.TabIndex = 9;
             this.LogsBTN.Text = "Historique";
             this.LogsBTN.UseVisualStyleBackColor = true;
+            this.LogsBTN.Click += new System.EventHandler(this.LogsBTN_Click);
             // 
             // ScreenAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ScreenAdmin";
             this.SidePNL.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
