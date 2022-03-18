@@ -10,7 +10,7 @@ namespace Veto
 {
     public partial class Stock : Veto.ScreenEmployee
     {
-
+        
         public Stock() { InitializeComponent(); }
 
         public Stock(Salarie user) : base(user)
@@ -27,5 +27,11 @@ namespace Veto
             var stockElement = new StockElement(produit);
             panel_Allproducts.Controls.Add(stockElement);
         }
+
+        private void addProductBTN_Click(object sender, EventArgs e)
+        {
+            StockAjout stockAjout = new StockAjout();
+            stockAjout.Show();
+    }
     }
 }

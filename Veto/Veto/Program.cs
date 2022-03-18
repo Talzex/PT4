@@ -21,7 +21,7 @@ namespace Veto
 
             Utils.ChargerEntities();
             
-            mainScreen = new ScreenConection();
+            mainScreen = new Stock(new Salarie());
             Application.Run(mainScreen);
         }
     }
