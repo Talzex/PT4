@@ -7,10 +7,14 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public class Utils
+    public static class Utils
     {
-        public static Entities entities = new Entities();
+        private static Entities entities;
 
+        public static void ChargerEntities()
+        {
+            entities = new Entities();
+        }
         
         public static List<Client> GetClientsAll()
         {
@@ -45,6 +49,18 @@ namespace Veto
                            select data).ToList();
 
             return (List<Produit>) produits;
+        }
+
+        public static void SaveClient(Client client)
+        {
+            entities.Client.Add(client);
+            entities.SaveChanges();
+        }
+
+        public static void RemoveClient(Client client)
+        {
+            entities.Client.Remove(client);
+            entities.SaveChanges();
         }
     }
 }

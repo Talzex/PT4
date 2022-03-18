@@ -219,10 +219,10 @@
     <Compile Include="SoinsMaladie.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="StockElement.cs">
+    <Compile Include="UserControls\StockElement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StockElement.Designer.cs">
+    <Compile Include="UserControls\StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UserControls\ElementCart.resx">
@@ -303,7 +303,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StockElement.resx">
+    <EmbeddedResource Include="UserControls\StockElement.resx">
       <DependentUpon>StockElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserDesign.resx">

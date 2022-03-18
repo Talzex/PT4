@@ -8,6 +8,7 @@ namespace Veto
 {
     static class Program
     {
+
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -16,7 +17,8 @@ namespace Veto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserList());
+            Utils.ChargerEntities();
+            Application.Run(new ScreenConection());
         }
     }
 }
