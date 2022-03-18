@@ -37,10 +37,20 @@ namespace Veto
             this.buttonEllipse_previous = new Veto.ButtonEllipse();
             this.label_stock = new System.Windows.Forms.Label();
             this.panel_Allproducts = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SidePNL
+            // 
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.button1);
+            this.SidePNL.Size = new System.Drawing.Size(229, 595);
             // 
             // panel1
             // 
@@ -50,9 +60,10 @@ namespace Veto
             this.panel1.Controls.Add(this.buttonEllipse1);
             this.panel1.Controls.Add(this.buttonEllipse_previous);
             this.panel1.Controls.Add(this.label_stock);
-            this.panel1.Location = new System.Drawing.Point(230, 75);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(229, 86);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 169);
+            this.panel1.Size = new System.Drawing.Size(835, 169);
             this.panel1.TabIndex = 8;
             // 
             // comboBoxFilter
@@ -129,10 +140,23 @@ namespace Veto
             // 
             // panel_Allproducts
             // 
-            this.panel_Allproducts.Location = new System.Drawing.Point(239, 250);
+            this.panel_Allproducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Allproducts.Location = new System.Drawing.Point(229, 255);
             this.panel_Allproducts.Name = "panel_Allproducts";
-            this.panel_Allproducts.Size = new System.Drawing.Size(816, 419);
+            this.panel_Allproducts.Size = new System.Drawing.Size(835, 426);
             this.panel_Allproducts.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(33, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "AJOUTER  AU CATALOGUE";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Stock
             // 
@@ -145,6 +169,7 @@ namespace Veto
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -163,5 +188,6 @@ namespace Veto
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.Panel panel_Allproducts;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,7 @@ namespace Veto
 {
     static class Program
     {
+        public static Form mainScreen;
 
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -17,8 +18,11 @@ namespace Veto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Utils.ChargerEntities();
-            Application.Run(new ScreenConection());
+            
+            mainScreen = new ScreenConection();
+            Application.Run(mainScreen);
         }
     }
 }

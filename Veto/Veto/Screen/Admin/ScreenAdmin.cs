@@ -19,5 +19,15 @@ namespace Veto
             InitializeComponent();
             //SidePNL.Visible = true;
         }
+
+        private void UserBTN_Click(object sender, EventArgs e)
+        {
+            FormController.GetController().ActivateForm(0);
+        }
+
+        private void LogsBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
