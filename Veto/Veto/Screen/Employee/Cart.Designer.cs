@@ -46,12 +46,19 @@ namespace Veto
             this.button_addconsultation = new System.Windows.Forms.Button();
             this.button_addoperation = new System.Windows.Forms.Button();
             this.button_addnight = new System.Windows.Forms.Button();
+            this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.panel_bottombill.SuspendLayout();
             this.panel_title.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Controls.Add(this.panel_title);
+            this.CenterPNL.Location = new System.Drawing.Point(0, 0);
+            this.CenterPNL.Size = new System.Drawing.Size(1064, 657);
             // 
             // SidePNL
             // 
@@ -78,6 +85,7 @@ namespace Veto
             this.button_validate.TabIndex = 8;
             this.button_validate.Text = "VALIDER";
             this.button_validate.UseVisualStyleBackColor = false;
+            this.button_validate.Click += new System.EventHandler(this.button_validate_Click);
             // 
             // button_bill
             // 
@@ -91,6 +99,7 @@ namespace Veto
             this.button_bill.TabIndex = 9;
             this.button_bill.Text = "IMPRIMER FACTURE";
             this.button_bill.UseVisualStyleBackColor = false;
+            this.button_bill.Click += new System.EventHandler(this.button_bill_Click);
             // 
             // button_empty
             // 
@@ -104,6 +113,7 @@ namespace Veto
             this.button_empty.TabIndex = 10;
             this.button_empty.Text = "VIDER";
             this.button_empty.UseVisualStyleBackColor = false;
+            this.button_empty.Click += new System.EventHandler(this.button_empty_Click);
             // 
             // label_discount
             // 
@@ -147,6 +157,7 @@ namespace Veto
             this.button_login.TabIndex = 14;
             this.button_login.Text = "IDENTIFIER";
             this.button_login.UseVisualStyleBackColor = false;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // button_signin
             // 
@@ -181,9 +192,10 @@ namespace Veto
             this.panel_bottombill.Controls.Add(this.label_total);
             this.panel_bottombill.Controls.Add(this.button_validate);
             this.panel_bottombill.Controls.Add(this.button_signin);
-            this.panel_bottombill.Location = new System.Drawing.Point(230, 426);
+            this.panel_bottombill.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_bottombill.Location = new System.Drawing.Point(225, 438);
             this.panel_bottombill.Name = "panel_bottombill";
-            this.panel_bottombill.Size = new System.Drawing.Size(838, 219);
+            this.panel_bottombill.Size = new System.Drawing.Size(839, 219);
             this.panel_bottombill.TabIndex = 11;
             // 
             // panel_title
@@ -191,9 +203,9 @@ namespace Veto
             this.panel_title.Controls.Add(this.NextBTN);
             this.panel_title.Controls.Add(this.PreviousBTN);
             this.panel_title.Controls.Add(this.label_cart);
-            this.panel_title.Location = new System.Drawing.Point(230, 75);
+            this.panel_title.Location = new System.Drawing.Point(335, 125);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(838, 58);
+            this.panel_title.Size = new System.Drawing.Size(838, 66);
             this.panel_title.TabIndex = 17;
             // 
             // NextBTN
@@ -230,9 +242,9 @@ namespace Veto
             // 
             // Panel_AllProducts
             // 
-            this.Panel_AllProducts.Location = new System.Drawing.Point(230, 139);
+            this.Panel_AllProducts.Location = new System.Drawing.Point(230, 205);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
-            this.Panel_AllProducts.Size = new System.Drawing.Size(838, 281);
+            this.Panel_AllProducts.Size = new System.Drawing.Size(838, 215);
             this.Panel_AllProducts.TabIndex = 18;
             // 
             // button_addconsultation
@@ -282,16 +294,16 @@ namespace Veto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 657);
             this.Controls.Add(this.Panel_AllProducts);
-            this.Controls.Add(this.panel_title);
             this.Controls.Add(this.panel_bottombill);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cart";
             this.Activated += new System.EventHandler(this.Cart_Activated);
+            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel_bottombill, 0);
-            this.Controls.SetChildIndex(this.panel_title, 0);
             this.Controls.SetChildIndex(this.Panel_AllProducts, 0);
+            this.CenterPNL.ResumeLayout(false);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);

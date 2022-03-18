@@ -54,7 +54,7 @@ namespace Veto
             this.panel1.Controls.Add(this.NextBTN);
             this.panel1.Controls.Add(this.PreviousBTN);
             this.panel1.Controls.Add(this.label_stock);
-            this.panel1.Location = new System.Drawing.Point(230, 75);
+            this.panel1.Location = new System.Drawing.Point(385, 131);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 169);
             this.panel1.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace Veto
             // 
             // panel_Allproducts
             // 
-            this.panel_Allproducts.Location = new System.Drawing.Point(239, 250);
+            this.panel_Allproducts.Location = new System.Drawing.Point(1033, 471);
             this.panel_Allproducts.Name = "panel_Allproducts";
             this.panel_Allproducts.Size = new System.Drawing.Size(816, 419);
             this.panel_Allproducts.TabIndex = 9;
@@ -144,15 +144,15 @@ namespace Veto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.panel_Allproducts);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_Allproducts);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Stock";
             this.Activated += new System.EventHandler(this.Stock_Activated);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel_Allproducts, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

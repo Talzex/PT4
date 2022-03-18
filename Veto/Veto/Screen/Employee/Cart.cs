@@ -24,7 +24,7 @@ namespace Veto
         /// <summary>
         /// Displays the products in the cart
         /// </summary>
-        private void AfficherProduit()
+        private void DisplayProducts()
         {
             Panel_AllProducts.Controls.Clear();
             foreach (Produit product in cart.Keys)
@@ -42,7 +42,7 @@ namespace Veto
         /// <param name="e"></param>
         private void Cart_Activated(object sender, EventArgs e)
         {
-            AfficherProduit();
+            DisplayProducts();
         }
 
         /// <summary>
@@ -99,6 +99,27 @@ namespace Veto
                 }
             }
             return false;
+        }
+
+        private void button_login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_validate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_bill_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_empty_Click(object sender, EventArgs e)
+        {
+            cart.Clear();
+            DisplayProducts();
         }
     }
 }

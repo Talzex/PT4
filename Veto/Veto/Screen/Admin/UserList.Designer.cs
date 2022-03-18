@@ -29,8 +29,8 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.CenterPNL = new System.Windows.Forms.FlowLayoutPanel();
             this.AddBTN = new System.Windows.Forms.Button();
+            this.CenterPNL = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -43,29 +43,29 @@ namespace Veto
             // 
             this.SidePNL.Panel2.Controls.Add(this.AddBTN);
             // 
-            // CenterPNL
-            // 
-            this.CenterPNL.AutoScroll = true;
-            this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CenterPNL.Location = new System.Drawing.Point(347, 86);
-            this.CenterPNL.Name = "CenterPNL";
-            this.CenterPNL.Size = new System.Drawing.Size(1072, 752);
-            this.CenterPNL.TabIndex = 5;
-            // 
             // AddBTN
             // 
-            this.AddBTN.Location = new System.Drawing.Point(104, 20);
+            this.AddBTN.Location = new System.Drawing.Point(78, 16);
+            this.AddBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddBTN.Name = "AddBTN";
-            this.AddBTN.Size = new System.Drawing.Size(169, 50);
+            this.AddBTN.Size = new System.Drawing.Size(127, 41);
             this.AddBTN.TabIndex = 0;
             this.AddBTN.Text = "Ajouter Employé";
             this.AddBTN.UseVisualStyleBackColor = true;
             this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
             // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CenterPNL.Location = new System.Drawing.Point(300, 86);
+            this.CenterPNL.Name = "CenterPNL";
+            this.CenterPNL.Size = new System.Drawing.Size(764, 595);
+            this.CenterPNL.TabIndex = 8;
+            // 
             // UserList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.CenterPNL);
             this.Name = "UserList";
             this.Controls.SetChildIndex(this.TopPNL, 0);
@@ -79,8 +79,7 @@ namespace Veto
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel CenterPNL;
         private System.Windows.Forms.Button AddBTN;
+        private System.Windows.Forms.Panel CenterPNL;
     }
 }
