@@ -18,10 +18,13 @@ namespace Veto
         {
             InitializeComponent();
             this.product = product;
-            MAJProduit(product);
+            UpdateDisplay();
         }
 
-        private void MAJProduit(Produit product)
+        /// <summary>
+        /// Updates the display element
+        /// </summary>
+        private void UpdateDisplay()
         {
             label_nom.Text = product.NomProduit;
             label_quantite.Text = "Quantité : " + product.QuantiteEnStock;
@@ -29,6 +32,11 @@ namespace Veto
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
         }
 
+        /// <summary>
+        /// Click on the Product's image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FormController.AddItemToCart(product,1);

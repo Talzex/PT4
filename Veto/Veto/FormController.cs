@@ -105,14 +105,26 @@ namespace Veto
         }
 
         /// <summary>
-        /// 
+        /// Adds a certain quantity of a product to the cart
         /// </summary>
-        /// <param name="p"></param>
-        /// <param name="nb"></param>
-        public static void AddItemToCart(Produit p, int nb)
+        /// <param name="p">The product to add</param>
+        /// <param name="nb">The quantity of the product</param>
+        public static int AddItemToCart(Produit p, int nb)
         {
             Cart cart = (Cart)formController.allForms[3];
-            cart.AddProduct(p, nb);
+            return cart.AddProduct(p, nb);
+        }
+
+        /// <summary>
+        /// Removes  a certain quantity of a product from the cart
+        /// </summary>
+        /// <param name="p">The product to remove</param>
+        /// <param name="nb">The quantity to remove</param>
+        /// <returns>If the quantity i</returns>
+        public static bool RemoveItemFromCart(Produit p, int nb)
+        {
+            Cart cart = (Cart)formController.allForms[3];
+            return cart.RemoveProduct(p, nb);
         }
 
     }

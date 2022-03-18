@@ -26,6 +26,7 @@ namespace Veto
         /// </summary>
         private void AfficherProduit()
         {
+            Panel_AllProducts.Controls.Clear();
             foreach (Produit product in cart.Keys)
             {
                 int nb; cart.TryGetValue(product, out nb);
@@ -44,16 +45,60 @@ namespace Veto
             AfficherProduit();
         }
 
-        public void AddProduct(Produit p, int nb)
+        /// <summary>
+        /// Adds a product with a certain quantity to the cart (if it's possible)
+        /// </summary>
+        /// <param name="p">The product to add</param>
+        /// <param name="nb">The quantity to add</param>
+        /// <returns>The quantity in the cart</returns>
+        public int AddProduct(Produit p, int nb)
         {
+
             if (!cart.ContainsKey(p))
             {
+                if (nb <= 0) return 0;
+                if (nb > p.QuantiteEnStock)
+                {
+                    nb = p.QuantiteEnStock;
+                }
                 cart.Add(p, nb);
+                return nb;
             }
             else
             {
-                cart[p] += nb;
+                if (nb > 0)
+                {
+                    if (nb + cart[p] > p.QuantiteEnStock)
+                    {
+                        nb = p.QuantiteEnStock - cart[p];
+                    }
+                    cart[p] += nb;
+                }
+                return cart[p];
             }
+        }
+
+        /// <summary>
+        /// Removes a certain quantity of a product from the cart (if it's possible)
+        /// </summary>
+        /// <param name="p">The product to remove</param>
+        /// <param name="nb">The quantity to remove</param>
+        /// <returns>If the display should be removed (when the new quantity is under or equal to 0)</returns>
+        public bool RemoveProduct(Produit p, int nb)
+        {
+            if (nb > 0)
+            {
+                if (cart.ContainsKey(p))
+                {
+                    cart[p] -= nb;
+                    if (cart[p] <= 0)
+                    {
+                        cart.Remove(p);
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

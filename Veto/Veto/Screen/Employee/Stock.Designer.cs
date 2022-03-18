@@ -54,10 +54,9 @@ namespace Veto
             this.panel1.Controls.Add(this.NextBTN);
             this.panel1.Controls.Add(this.PreviousBTN);
             this.panel1.Controls.Add(this.label_stock);
-            this.panel1.Location = new System.Drawing.Point(307, 92);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(230, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 208);
+            this.panel1.Size = new System.Drawing.Size(834, 169);
             this.panel1.TabIndex = 8;
             // 
             // comboBoxFilter
@@ -68,29 +67,26 @@ namespace Veto
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(861, 132);
-            this.comboBoxFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxFilter.Location = new System.Drawing.Point(646, 107);
             this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(748, 128);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(561, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 28);
+            this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 21;
             this.label1.Text = "Trier par : ";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 133);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(65, 108);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 22);
+            this.textBox1.Size = new System.Drawing.Size(170, 20);
             this.textBox1.TabIndex = 9;
             // 
             // NextBTN
@@ -101,11 +97,11 @@ namespace Veto
             this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextBTN.ForeColor = System.Drawing.Color.White;
             this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NextBTN.Location = new System.Drawing.Point(1031, 138);
+            this.NextBTN.Location = new System.Drawing.Point(773, 112);
             this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
             this.NextBTN.Name = "NextBTN";
-            this.NextBTN.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.NextBTN.Size = new System.Drawing.Size(69, 64);
+            this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.NextBTN.Size = new System.Drawing.Size(52, 52);
             this.NextBTN.TabIndex = 20;
             this.NextBTN.Text = ">";
             this.NextBTN.UseVisualStyleBackColor = false;
@@ -119,10 +115,9 @@ namespace Veto
             this.PreviousBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreviousBTN.ForeColor = System.Drawing.Color.White;
             this.PreviousBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.PreviousBTN.Location = new System.Drawing.Point(12, 139);
-            this.PreviousBTN.Margin = new System.Windows.Forms.Padding(4);
+            this.PreviousBTN.Location = new System.Drawing.Point(9, 113);
             this.PreviousBTN.Name = "PreviousBTN";
-            this.PreviousBTN.Size = new System.Drawing.Size(67, 62);
+            this.PreviousBTN.Size = new System.Drawing.Size(50, 50);
             this.PreviousBTN.TabIndex = 19;
             this.PreviousBTN.Text = "<";
             this.PreviousBTN.UseVisualStyleBackColor = false;
@@ -132,34 +127,32 @@ namespace Veto
             // 
             this.label_stock.AutoSize = true;
             this.label_stock.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_stock.Location = new System.Drawing.Point(391, 21);
-            this.label_stock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_stock.Location = new System.Drawing.Point(293, 17);
             this.label_stock.Name = "label_stock";
-            this.label_stock.Size = new System.Drawing.Size(313, 46);
+            this.label_stock.Size = new System.Drawing.Size(253, 37);
             this.label_stock.TabIndex = 17;
             this.label_stock.Text = "Gestion des stocks";
             // 
             // panel_Allproducts
             // 
-            this.panel_Allproducts.Location = new System.Drawing.Point(319, 308);
-            this.panel_Allproducts.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_Allproducts.Location = new System.Drawing.Point(239, 250);
             this.panel_Allproducts.Name = "panel_Allproducts";
-            this.panel_Allproducts.Size = new System.Drawing.Size(1088, 516);
+            this.panel_Allproducts.Size = new System.Drawing.Size(816, 419);
             this.panel_Allproducts.TabIndex = 9;
             // 
             // Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1419, 838);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.panel_Allproducts);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Stock";
             this.Activated += new System.EventHandler(this.Stock_Activated);
-            this.Controls.SetChildIndex(this.TopPNL, 0);
-            this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            this.Controls.SetChildIndex(this.TopPNL, 0);
+            this.Controls.SetChildIndex(this.SidePNL, 0);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
