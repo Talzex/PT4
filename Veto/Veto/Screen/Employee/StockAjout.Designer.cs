@@ -62,6 +62,7 @@
             this.NameProduct.Name = "NameProduct";
             this.NameProduct.Size = new System.Drawing.Size(100, 20);
             this.NameProduct.TabIndex = 1;
+            this.NameProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameProduct_KeyPress);
             // 
             // SellPriceProduct
             // 
@@ -69,6 +70,7 @@
             this.SellPriceProduct.Name = "SellPriceProduct";
             this.SellPriceProduct.Size = new System.Drawing.Size(100, 20);
             this.SellPriceProduct.TabIndex = 3;
+            this.SellPriceProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SellPriceProduct_KeyPress);
             // 
             // QuantityProduct
             // 
@@ -76,6 +78,7 @@
             this.QuantityProduct.Name = "QuantityProduct";
             this.QuantityProduct.Size = new System.Drawing.Size(100, 20);
             this.QuantityProduct.TabIndex = 2;
+            this.QuantityProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QuantityProduct_KeyPress);
             // 
             // PurchasePriceProduct
             // 
@@ -83,6 +86,7 @@
             this.PurchasePriceProduct.Name = "PurchasePriceProduct";
             this.PurchasePriceProduct.Size = new System.Drawing.Size(100, 20);
             this.PurchasePriceProduct.TabIndex = 4;
+            this.PurchasePriceProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PurchasePriceProduct_KeyPress);
             // 
             // label_name
             // 
@@ -148,6 +152,7 @@
             this.ConfirmProductBTN.TabIndex = 6;
             this.ConfirmProductBTN.Text = "VALIDER";
             this.ConfirmProductBTN.UseVisualStyleBackColor = false;
+            this.ConfirmProductBTN.Click += new System.EventHandler(this.ConfirmProductBTN_Click);
             // 
             // CancelBTN
             // 

@@ -32,5 +32,56 @@ namespace Veto
             }
             
         }
+
+        private void ConfirmProductBTN_Click(object sender, EventArgs e)
+        {
+            AddProducts();
+            this.Close();
+        }
+
+        /// <summary>
+        /// Method to add a product to the stock
+        /// </summary>
+        private void AddProducts()
+        {
+            if (!NameProduct.Text.Trim().Equals("") && !QuantityProduct.Text.Trim().Equals("") &&
+               !PurchasePriceProduct.Text.Trim().Equals("") && !SellPriceProduct.Text.Trim().Equals("") &&
+               PictureBox.Image != null)
+            {
+                Produit produit = new Produit();
+
+                produit.NomProduit = NameProduct.Text;
+                produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
+                produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);
+                produit.PrixVenteClient = double.Parse(SellPriceProduct.Text);
+                produit.ImageProduit = Utils.ImageToByte(PictureBox.Image);
+
+                Utils.SaveProduct(produit);
+                Console.WriteLine("Insertion FAITE");
+
+            }
+        }
+
+
+
+        private void QuantityProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void SellPriceProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != ',');
+        }
+
+        private void PurchasePriceProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != ',');
+        }
+
+        private void NameProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }
