@@ -29,7 +29,7 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ManagementPNL = new System.Windows.Forms.Panel();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,27 +37,36 @@ namespace Veto
             this.PreviousBTN = new Veto.ButtonEllipse();
             this.label_stock = new System.Windows.Forms.Label();
             this.panel_Allproducts = new System.Windows.Forms.Panel();
+            this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ManagementPNL.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Controls.Add(this.ManagementPNL);
+            this.CenterPNL.Controls.Add(this.panel_Allproducts);
+            CenterPNL.Controls.SetChildIndex(this.ManagementPNL, 0);
+            CenterPNL.Controls.SetChildIndex(this.panel_Allproducts, 0);
             // 
             // SidePNL
             // 
             this.SidePNL.SplitterDistance = 440;
             // 
-            // panel1
+            // ManagementPNL
             // 
-            this.panel1.Controls.Add(this.comboBoxFilter);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.NextBTN);
-            this.panel1.Controls.Add(this.PreviousBTN);
-            this.panel1.Controls.Add(this.label_stock);
-            this.panel1.Location = new System.Drawing.Point(385, 131);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 169);
-            this.panel1.TabIndex = 8;
+            this.ManagementPNL.Controls.Add(this.comboBoxFilter);
+            this.ManagementPNL.Controls.Add(this.label1);
+            this.ManagementPNL.Controls.Add(this.textBox1);
+            this.ManagementPNL.Controls.Add(this.NextBTN);
+            this.ManagementPNL.Controls.Add(this.PreviousBTN);
+            this.ManagementPNL.Controls.Add(this.label_stock);
+            this.ManagementPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ManagementPNL.Location = new System.Drawing.Point(0, 0);
+            this.ManagementPNL.Name = "ManagementPNL";
+            this.ManagementPNL.Size = new System.Drawing.Size(764, 169);
+            this.ManagementPNL.TabIndex = 8;
             // 
             // comboBoxFilter
             // 
@@ -67,7 +76,7 @@ namespace Veto
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(646, 107);
+            this.comboBoxFilter.Location = new System.Drawing.Point(551, 55);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter.TabIndex = 10;
@@ -76,7 +85,7 @@ namespace Veto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(561, 104);
+            this.label1.Location = new System.Drawing.Point(450, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 21;
@@ -97,7 +106,7 @@ namespace Veto
             this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextBTN.ForeColor = System.Drawing.Color.White;
             this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NextBTN.Location = new System.Drawing.Point(773, 112);
+            this.NextBTN.Location = new System.Drawing.Point(703, 108);
             this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
             this.NextBTN.Name = "NextBTN";
             this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -135,35 +144,31 @@ namespace Veto
             // 
             // panel_Allproducts
             // 
-            this.panel_Allproducts.Location = new System.Drawing.Point(1033, 471);
+            this.panel_Allproducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Allproducts.Location = new System.Drawing.Point(0, 0);
             this.panel_Allproducts.Name = "panel_Allproducts";
-            this.panel_Allproducts.Size = new System.Drawing.Size(816, 419);
+            this.panel_Allproducts.Size = new System.Drawing.Size(764, 595);
             this.panel_Allproducts.TabIndex = 9;
             // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel_Allproducts);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Stock";
             this.Activated += new System.EventHandler(this.Stock_Activated);
-            this.Controls.SetChildIndex(this.panel_Allproducts, 0);
-            this.Controls.SetChildIndex(this.TopPNL, 0);
-            this.Controls.SetChildIndex(this.SidePNL, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
+            this.CenterPNL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ManagementPNL.ResumeLayout(false);
+            this.ManagementPNL.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ManagementPNL;
         private System.Windows.Forms.Label label_stock;
         private ButtonEllipse PreviousBTN;
         private ButtonEllipse NextBTN;

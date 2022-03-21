@@ -43,6 +43,7 @@ namespace Veto
             // SidePNL
             // 
             // 
+            this.SidePNL.Dock = System.Windows.Forms.DockStyle.Left;
             // SidePNL.Panel1
             // 
             this.SidePNL.Panel1.Controls.Add(this.StocksBTN);

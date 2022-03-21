@@ -56,13 +56,14 @@ namespace Veto
             // 
             // CenterPNL
             // 
+            this.CenterPNL.Controls.Add(this.Panel_AllProducts);
             this.CenterPNL.Controls.Add(this.panel_title);
-            this.CenterPNL.Location = new System.Drawing.Point(0, 0);
-            this.CenterPNL.Size = new System.Drawing.Size(1064, 657);
+            this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CenterPNL.Location = new System.Drawing.Point(225, 86);
+            this.CenterPNL.Size = new System.Drawing.Size(839, 595);
             // 
             // SidePNL
             // 
-            this.SidePNL.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             // 
             // SidePNL.Panel2
             // 
@@ -203,9 +204,10 @@ namespace Veto
             this.panel_title.Controls.Add(this.NextBTN);
             this.panel_title.Controls.Add(this.PreviousBTN);
             this.panel_title.Controls.Add(this.label_cart);
-            this.panel_title.Location = new System.Drawing.Point(335, 125);
+            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_title.Location = new System.Drawing.Point(0, 0);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(838, 66);
+            this.panel_title.Size = new System.Drawing.Size(839, 155);
             this.panel_title.TabIndex = 17;
             // 
             // NextBTN
@@ -242,9 +244,10 @@ namespace Veto
             // 
             // Panel_AllProducts
             // 
-            this.Panel_AllProducts.Location = new System.Drawing.Point(230, 205);
+            this.Panel_AllProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_AllProducts.Location = new System.Drawing.Point(0, 155);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
-            this.Panel_AllProducts.Size = new System.Drawing.Size(838, 215);
+            this.Panel_AllProducts.Size = new System.Drawing.Size(839, 440);
             this.Panel_AllProducts.TabIndex = 18;
             // 
             // button_addconsultation
@@ -293,16 +296,14 @@ namespace Veto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 657);
-            this.Controls.Add(this.Panel_AllProducts);
             this.Controls.Add(this.panel_bottombill);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cart";
             this.Activated += new System.EventHandler(this.Cart_Activated);
-            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
+            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.panel_bottombill, 0);
-            this.Controls.SetChildIndex(this.Panel_AllProducts, 0);
             this.CenterPNL.ResumeLayout(false);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
