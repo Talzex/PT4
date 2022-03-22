@@ -31,7 +31,7 @@ namespace Veto
         {
             this.NextBT = new Veto.ButtonEllipse();
             this.PrevBT = new Veto.ButtonEllipse();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.RdvLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -96,12 +96,12 @@ namespace Veto
             this.PrevBT.UseVisualStyleBackColor = false;
             this.PrevBT.Click += new System.EventHandler(this.PrevBT_Click);
             // 
-            // flowLayoutPanel1
+            // RdvLayout
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(320, 181);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(735, 488);
-            this.flowLayoutPanel1.TabIndex = 23;
+            this.RdvLayout.Location = new System.Drawing.Point(320, 181);
+            this.RdvLayout.Name = "RdvLayout";
+            this.RdvLayout.Size = new System.Drawing.Size(735, 488);
+            this.RdvLayout.TabIndex = 23;
             // 
             // label1
             // 
@@ -291,13 +291,13 @@ namespace Veto
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.RdvLayout);
             this.Controls.Add(this.NextBT);
             this.Controls.Add(this.PrevBT);
             this.Name = "Calendar";
             this.Controls.SetChildIndex(this.PrevBT, 0);
             this.Controls.SetChildIndex(this.NextBT, 0);
-            this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.RdvLayout, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
@@ -325,7 +325,7 @@ namespace Veto
 
         private ButtonEllipse NextBT;
         private ButtonEllipse PrevBT;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel RdvLayout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
