@@ -52,6 +52,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Adds an employee
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBTN_Click(object sender, EventArgs e)
         {
             UserDesign design = new UserDesign(new Salarie(), CenterPNL);

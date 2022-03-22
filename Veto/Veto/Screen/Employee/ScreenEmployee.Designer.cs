@@ -34,6 +34,7 @@ namespace Veto
             this.ClientsBTN = new System.Windows.Forms.Button();
             this.StatsBTN = new System.Windows.Forms.Button();
             this.StocksBTN = new System.Windows.Forms.Button();
+            this.CenterPNL = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel1.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -42,6 +43,7 @@ namespace Veto
             // SidePNL
             // 
             // 
+            this.SidePNL.Dock = System.Windows.Forms.DockStyle.Left;
             // SidePNL.Panel1
             // 
             this.SidePNL.Panel1.Controls.Add(this.StocksBTN);
@@ -49,7 +51,6 @@ namespace Veto
             this.SidePNL.Panel1.Controls.Add(this.ClientsBTN);
             this.SidePNL.Panel1.Controls.Add(this.CalendarBTN);
             this.SidePNL.Panel1.Controls.Add(this.CartBTN);
-            this.SidePNL.Size = new System.Drawing.Size(300, 595);
             this.SidePNL.SplitterDistance = 358;
             // 
             // CalendarBTN
@@ -127,12 +128,24 @@ namespace Veto
             this.StocksBTN.UseVisualStyleBackColor = false;
             this.StocksBTN.Click += new System.EventHandler(this.StocksBTN_Click);
             // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CenterPNL.Location = new System.Drawing.Point(300, 86);
+            this.CenterPNL.Name = "CenterPNL";
+            this.CenterPNL.Size = new System.Drawing.Size(764, 595);
+            this.CenterPNL.TabIndex = 8;
+            // 
             // ScreenEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.CenterPNL);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "ScreenEmployee";
+            this.Controls.SetChildIndex(this.TopPNL, 0);
+            this.Controls.SetChildIndex(this.SidePNL, 0);
+            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.SidePNL.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
@@ -147,5 +160,6 @@ namespace Veto
         private System.Windows.Forms.Button StatsBTN;
         private System.Windows.Forms.Button ClientsBTN;
         private System.Windows.Forms.Button CartBTN;
+        protected System.Windows.Forms.Panel CenterPNL;
     }
 }

@@ -29,19 +29,20 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ManagementPNL = new System.Windows.Forms.Panel();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonEllipse1 = new Veto.ButtonEllipse();
-            this.buttonEllipse_previous = new Veto.ButtonEllipse();
+            this.NextBTN = new Veto.ButtonEllipse();
+            this.PreviousBTN = new Veto.ButtonEllipse();
             this.label_stock = new System.Windows.Forms.Label();
             this.panel_Allproducts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ManagementPNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePNL
@@ -65,6 +66,30 @@ namespace Veto
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 169);
             this.panel1.TabIndex = 8;
+            // CenterPNL
+            // 
+            this.CenterPNL.Controls.Add(this.ManagementPNL);
+            this.CenterPNL.Controls.Add(this.panel_Allproducts);
+            CenterPNL.Controls.SetChildIndex(this.ManagementPNL, 0);
+            CenterPNL.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            // 
+            // SidePNL
+            // 
+            this.SidePNL.SplitterDistance = 440;
+            // 
+            // ManagementPNL
+            // 
+            this.ManagementPNL.Controls.Add(this.comboBoxFilter);
+            this.ManagementPNL.Controls.Add(this.label1);
+            this.ManagementPNL.Controls.Add(this.textBox1);
+            this.ManagementPNL.Controls.Add(this.NextBTN);
+            this.ManagementPNL.Controls.Add(this.PreviousBTN);
+            this.ManagementPNL.Controls.Add(this.label_stock);
+            this.ManagementPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ManagementPNL.Location = new System.Drawing.Point(0, 0);
+            this.ManagementPNL.Name = "ManagementPNL";
+            this.ManagementPNL.Size = new System.Drawing.Size(764, 169);
+            this.ManagementPNL.TabIndex = 8;
             // 
             // comboBoxFilter
             // 
@@ -74,7 +99,7 @@ namespace Veto
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(646, 107);
+            this.comboBoxFilter.Location = new System.Drawing.Point(551, 55);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter.TabIndex = 10;
@@ -83,7 +108,7 @@ namespace Veto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(561, 104);
+            this.label1.Location = new System.Drawing.Point(450, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 21;
@@ -96,37 +121,39 @@ namespace Veto
             this.textBox1.Size = new System.Drawing.Size(170, 20);
             this.textBox1.TabIndex = 9;
             // 
-            // buttonEllipse1
+            // NextBTN
             // 
-            this.buttonEllipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
-            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEllipse1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEllipse1.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonEllipse1.Location = new System.Drawing.Point(773, 112);
-            this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEllipse1.Name = "buttonEllipse1";
-            this.buttonEllipse1.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.buttonEllipse1.Size = new System.Drawing.Size(52, 52);
-            this.buttonEllipse1.TabIndex = 20;
-            this.buttonEllipse1.Text = ">";
-            this.buttonEllipse1.UseVisualStyleBackColor = false;
+            this.NextBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.NextBTN.FlatAppearance.BorderSize = 0;
+            this.NextBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextBTN.ForeColor = System.Drawing.Color.White;
+            this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NextBTN.Location = new System.Drawing.Point(703, 108);
+            this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
+            this.NextBTN.Name = "NextBTN";
+            this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.NextBTN.Size = new System.Drawing.Size(52, 52);
+            this.NextBTN.TabIndex = 20;
+            this.NextBTN.Text = ">";
+            this.NextBTN.UseVisualStyleBackColor = false;
+            this.NextBTN.Click += new System.EventHandler(this.NextBTN_Click);
             // 
-            // buttonEllipse_previous
+            // PreviousBTN
             // 
-            this.buttonEllipse_previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.buttonEllipse_previous.FlatAppearance.BorderSize = 0;
-            this.buttonEllipse_previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEllipse_previous.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEllipse_previous.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse_previous.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonEllipse_previous.Location = new System.Drawing.Point(9, 113);
-            this.buttonEllipse_previous.Name = "buttonEllipse_previous";
-            this.buttonEllipse_previous.Size = new System.Drawing.Size(50, 50);
-            this.buttonEllipse_previous.TabIndex = 19;
-            this.buttonEllipse_previous.Text = "<";
-            this.buttonEllipse_previous.UseVisualStyleBackColor = false;
+            this.PreviousBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.PreviousBTN.FlatAppearance.BorderSize = 0;
+            this.PreviousBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousBTN.ForeColor = System.Drawing.Color.White;
+            this.PreviousBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PreviousBTN.Location = new System.Drawing.Point(9, 113);
+            this.PreviousBTN.Name = "PreviousBTN";
+            this.PreviousBTN.Size = new System.Drawing.Size(50, 50);
+            this.PreviousBTN.TabIndex = 19;
+            this.PreviousBTN.Text = "<";
+            this.PreviousBTN.UseVisualStyleBackColor = false;
+            this.PreviousBTN.Click += new System.EventHandler(this.PreviousBTN_Click);
             // 
             // label_stock
             // 
@@ -162,28 +189,29 @@ namespace Veto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.panel_Allproducts);
-            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Stock";
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel_Allproducts, 0);
             this.SidePNL.Panel2.ResumeLayout(false);
+            this.Activated += new System.EventHandler(this.Stock_Activated);
+            this.CenterPNL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ManagementPNL.ResumeLayout(false);
+            this.ManagementPNL.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ManagementPNL;
         private System.Windows.Forms.Label label_stock;
-        private ButtonEllipse buttonEllipse_previous;
-        private ButtonEllipse buttonEllipse1;
+        private ButtonEllipse PreviousBTN;
+        private ButtonEllipse NextBTN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBoxFilter;
