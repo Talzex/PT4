@@ -34,7 +34,6 @@ namespace Veto
             {
                 if (i < allProducts.Count)
                 {
-                    Console.WriteLine(allProducts[i]);
                     var stockElement = new StockElement(allProducts[i]);
                     panel_Allproducts.Controls.Add(stockElement);
                 }

@@ -32,13 +32,12 @@ namespace Veto
             this.button_validate = new System.Windows.Forms.Button();
             this.button_bill = new System.Windows.Forms.Button();
             this.button_empty = new System.Windows.Forms.Button();
-            this.label_discount = new System.Windows.Forms.Label();
             this.label_total = new System.Windows.Forms.Label();
             this.label_customer = new System.Windows.Forms.Label();
             this.button_login = new System.Windows.Forms.Button();
-            this.button_signin = new System.Windows.Forms.Button();
             this.label_cart = new System.Windows.Forms.Label();
             this.panel_bottombill = new System.Windows.Forms.Panel();
+            this.ClientsCB = new System.Windows.Forms.ComboBox();
             this.panel_title = new System.Windows.Forms.Panel();
             this.NextBTN = new Veto.ButtonEllipse();
             this.PreviousBTN = new Veto.ButtonEllipse();
@@ -116,35 +115,25 @@ namespace Veto
             this.button_empty.UseVisualStyleBackColor = false;
             this.button_empty.Click += new System.EventHandler(this.button_empty_Click);
             // 
-            // label_discount
-            // 
-            this.label_discount.AutoSize = true;
-            this.label_discount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_discount.Location = new System.Drawing.Point(13, 123);
-            this.label_discount.Name = "label_discount";
-            this.label_discount.Size = new System.Drawing.Size(78, 21);
-            this.label_discount.TabIndex = 11;
-            this.label_discount.Text = "Remise : -";
-            // 
             // label_total
             // 
             this.label_total.AutoSize = true;
             this.label_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_total.Location = new System.Drawing.Point(13, 91);
             this.label_total.Name = "label_total";
-            this.label_total.Size = new System.Drawing.Size(118, 21);
+            this.label_total.Size = new System.Drawing.Size(56, 21);
             this.label_total.TabIndex = 12;
-            this.label_total.Text = "Total : 120.95€";
+            this.label_total.Text = "Total :";
             // 
             // label_customer
             // 
             this.label_customer.AutoSize = true;
             this.label_customer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_customer.Location = new System.Drawing.Point(13, 13);
+            this.label_customer.Location = new System.Drawing.Point(13, 12);
             this.label_customer.Name = "label_customer";
-            this.label_customer.Size = new System.Drawing.Size(91, 21);
+            this.label_customer.Size = new System.Drawing.Size(95, 21);
             this.label_customer.TabIndex = 13;
-            this.label_customer.Text = "Client : xxx1";
+            this.label_customer.Text = "Aucun client";
             // 
             // button_login
             // 
@@ -152,26 +141,13 @@ namespace Veto
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_login.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.ForeColor = System.Drawing.Color.White;
-            this.button_login.Location = new System.Drawing.Point(110, 14);
+            this.button_login.Location = new System.Drawing.Point(268, 12);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(123, 23);
             this.button_login.TabIndex = 14;
             this.button_login.Text = "IDENTIFIER";
             this.button_login.UseVisualStyleBackColor = false;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
-            // 
-            // button_signin
-            // 
-            this.button_signin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(97)))), ((int)(((byte)(50)))));
-            this.button_signin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_signin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_signin.ForeColor = System.Drawing.Color.White;
-            this.button_signin.Location = new System.Drawing.Point(239, 14);
-            this.button_signin.Name = "button_signin";
-            this.button_signin.Size = new System.Drawing.Size(123, 23);
-            this.button_signin.TabIndex = 15;
-            this.button_signin.Text = "CREER UN COMPTE";
-            this.button_signin.UseVisualStyleBackColor = false;
             // 
             // label_cart
             // 
@@ -185,19 +161,26 @@ namespace Veto
             // 
             // panel_bottombill
             // 
+            this.panel_bottombill.Controls.Add(this.ClientsCB);
             this.panel_bottombill.Controls.Add(this.label_customer);
             this.panel_bottombill.Controls.Add(this.button_login);
             this.panel_bottombill.Controls.Add(this.button_empty);
-            this.panel_bottombill.Controls.Add(this.label_discount);
             this.panel_bottombill.Controls.Add(this.button_bill);
             this.panel_bottombill.Controls.Add(this.label_total);
             this.panel_bottombill.Controls.Add(this.button_validate);
-            this.panel_bottombill.Controls.Add(this.button_signin);
             this.panel_bottombill.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_bottombill.Location = new System.Drawing.Point(225, 438);
             this.panel_bottombill.Name = "panel_bottombill";
             this.panel_bottombill.Size = new System.Drawing.Size(839, 219);
             this.panel_bottombill.TabIndex = 11;
+            // 
+            // ClientsCB
+            // 
+            this.ClientsCB.FormattingEnabled = true;
+            this.ClientsCB.Location = new System.Drawing.Point(10, 37);
+            this.ClientsCB.Name = "ClientsCB";
+            this.ClientsCB.Size = new System.Drawing.Size(121, 21);
+            this.ClientsCB.TabIndex = 16;
             // 
             // panel_title
             // 
@@ -321,11 +304,9 @@ namespace Veto
         private System.Windows.Forms.Button button_validate;
         private System.Windows.Forms.Button button_bill;
         private System.Windows.Forms.Button button_empty;
-        private System.Windows.Forms.Label label_discount;
         private System.Windows.Forms.Label label_total;
         private System.Windows.Forms.Label label_customer;
         private System.Windows.Forms.Button button_login;
-        private System.Windows.Forms.Button button_signin;
         private System.Windows.Forms.Label label_cart;
         private System.Windows.Forms.Panel panel_bottombill;
         private System.Windows.Forms.Panel panel_title;
@@ -335,5 +316,6 @@ namespace Veto
         private System.Windows.Forms.Button button_addnight;
         private System.Windows.Forms.Button button_addoperation;
         private System.Windows.Forms.Button button_addconsultation;
+        private System.Windows.Forms.ComboBox ClientsCB;
     }
 }
