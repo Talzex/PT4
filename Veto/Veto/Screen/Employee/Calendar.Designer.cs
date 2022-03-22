@@ -48,7 +48,7 @@ namespace Veto
             this.MondayLB = new System.Windows.Forms.Label();
             this.DaysPanel = new System.Windows.Forms.Panel();
             this.WeekLB = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddRdvBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -60,7 +60,7 @@ namespace Veto
             // 
             // SidePNL.Panel2
             // 
-            this.SidePNL.Panel2.Controls.Add(this.button1);
+            this.SidePNL.Panel2.Controls.Add(this.AddRdvBT);
             // 
             // NextBT
             // 
@@ -262,19 +262,19 @@ namespace Veto
             this.WeekLB.TabIndex = 39;
             this.WeekLB.Text = "Semaine du ";
             // 
-            // button1
+            // AddRdvBT
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(69, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "NOUVEAU RENDEZ-VOUS";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AddRdvBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddRdvBT.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AddRdvBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddRdvBT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRdvBT.ForeColor = System.Drawing.Color.White;
+            this.AddRdvBT.Location = new System.Drawing.Point(69, 22);
+            this.AddRdvBT.Name = "AddRdvBT";
+            this.AddRdvBT.Size = new System.Drawing.Size(151, 38);
+            this.AddRdvBT.TabIndex = 0;
+            this.AddRdvBT.Text = "NOUVEAU RENDEZ-VOUS";
+            this.AddRdvBT.UseVisualStyleBackColor = false;
             // 
             // Calendar
             // 
@@ -342,6 +342,6 @@ namespace Veto
         private System.Windows.Forms.Label MondayLB;
         private System.Windows.Forms.Panel DaysPanel;
         private System.Windows.Forms.Label WeekLB;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddRdvBT;
     }
 }
