@@ -69,6 +69,7 @@ namespace Veto
             this.NextBT.TabIndex = 22;
             this.NextBT.Text = ">";
             this.NextBT.UseVisualStyleBackColor = false;
+            this.NextBT.Click += new System.EventHandler(this.NextBT_Click);
             // 
             // PrevBT
             // 
@@ -84,6 +85,7 @@ namespace Veto
             this.PrevBT.TabIndex = 21;
             this.PrevBT.Text = "<";
             this.PrevBT.UseVisualStyleBackColor = false;
+            this.PrevBT.Click += new System.EventHandler(this.PrevBT_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -188,9 +190,8 @@ namespace Veto
             this.WednesdayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WednesdayLB.Location = new System.Drawing.Point(332, 8);
             this.WednesdayLB.Name = "WednesdayLB";
-            this.WednesdayLB.Size = new System.Drawing.Size(61, 17);
+            this.WednesdayLB.Size = new System.Drawing.Size(0, 17);
             this.WednesdayLB.TabIndex = 35;
-            this.WednesdayLB.Text = "Mercredi";
             // 
             // ThursdayLB
             // 
@@ -198,9 +199,8 @@ namespace Veto
             this.ThursdayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThursdayLB.Location = new System.Drawing.Point(492, 8);
             this.ThursdayLB.Name = "ThursdayLB";
-            this.ThursdayLB.Size = new System.Drawing.Size(39, 17);
+            this.ThursdayLB.Size = new System.Drawing.Size(0, 17);
             this.ThursdayLB.TabIndex = 36;
-            this.ThursdayLB.Text = "Jeudi";
             // 
             // TuesdayLB
             // 
@@ -208,9 +208,8 @@ namespace Veto
             this.TuesdayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TuesdayLB.Location = new System.Drawing.Point(196, 8);
             this.TuesdayLB.Name = "TuesdayLB";
-            this.TuesdayLB.Size = new System.Drawing.Size(43, 17);
+            this.TuesdayLB.Size = new System.Drawing.Size(0, 17);
             this.TuesdayLB.TabIndex = 34;
-            this.TuesdayLB.Text = "Mardi";
             // 
             // FridayLB
             // 
@@ -218,9 +217,8 @@ namespace Veto
             this.FridayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FridayLB.Location = new System.Drawing.Point(633, 8);
             this.FridayLB.Name = "FridayLB";
-            this.FridayLB.Size = new System.Drawing.Size(61, 17);
+            this.FridayLB.Size = new System.Drawing.Size(0, 17);
             this.FridayLB.TabIndex = 37;
-            this.FridayLB.Text = "Vendredi";
             // 
             // MondayLB
             // 
@@ -229,9 +227,8 @@ namespace Veto
             this.MondayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MondayLB.Location = new System.Drawing.Point(55, 8);
             this.MondayLB.Name = "MondayLB";
-            this.MondayLB.Size = new System.Drawing.Size(41, 17);
+            this.MondayLB.Size = new System.Drawing.Size(0, 17);
             this.MondayLB.TabIndex = 33;
-            this.MondayLB.Text = "Lundi";
             this.MondayLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DaysPanel
@@ -252,9 +249,9 @@ namespace Veto
             this.WeekLB.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeekLB.Location = new System.Drawing.Point(567, 108);
             this.WeekLB.Name = "WeekLB";
-            this.WeekLB.Size = new System.Drawing.Size(116, 25);
+            this.WeekLB.Size = new System.Drawing.Size(121, 25);
             this.WeekLB.TabIndex = 39;
-            this.WeekLB.Text = "Semaine du";
+            this.WeekLB.Text = "Semaine du ";
             // 
             // Calendar
             // 

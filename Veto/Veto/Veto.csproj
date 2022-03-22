@@ -231,6 +231,9 @@
     <Compile Include="UserControls\StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screen\Employee\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>
