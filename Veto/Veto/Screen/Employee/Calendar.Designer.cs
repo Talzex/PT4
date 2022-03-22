@@ -48,10 +48,19 @@ namespace Veto
             this.MondayLB = new System.Windows.Forms.Label();
             this.DaysPanel = new System.Windows.Forms.Panel();
             this.WeekLB = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.DaysPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SidePNL
+            // 
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.button1);
             // 
             // NextBT
             // 
@@ -253,6 +262,20 @@ namespace Veto
             this.WeekLB.TabIndex = 39;
             this.WeekLB.Text = "Semaine du ";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(69, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 38);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "NOUVEAU RENDEZ-VOUS";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +311,7 @@ namespace Veto
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.WeekLB, 0);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.DaysPanel.ResumeLayout(false);
@@ -318,5 +342,6 @@ namespace Veto
         private System.Windows.Forms.Label MondayLB;
         private System.Windows.Forms.Panel DaysPanel;
         private System.Windows.Forms.Label WeekLB;
+        private System.Windows.Forms.Button button1;
     }
 }
