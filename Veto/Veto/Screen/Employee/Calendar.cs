@@ -23,6 +23,11 @@ namespace Veto
             DisplayDates(firstDayOfWeek);
         }
 
+        /// <summary>
+        /// Return the first day of the week with the current day
+        /// </summary>
+        /// <param name="now">The current day</param>
+        /// <returns>DateTime of the first day of the week</returns>
         private DateTime FirstDayOfWeek(DateTime now)
         {
             var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
@@ -35,6 +40,10 @@ namespace Veto
             return now.AddDays(-diff).Date;
         }
 
+        /// <summary>
+        /// Display all the dates in the screen
+        /// </summary>
+        /// <param name="firstDay">The first day of the week</param>
         private void DisplayDates(DateTime firstDay)
         {
             this.WeekLB.Text = "Semaine du " + this.firstDayOfWeek.ToString("dd/MM/yyyy");
@@ -45,17 +54,25 @@ namespace Veto
             this.FridayLB.Text = "Vendredi " + firstDay.AddDays(4).ToString("dd");
         }
 
+        /// <summary>
+        /// Display the next week
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextBT_Click(object sender, EventArgs e)
         {
             this.firstDayOfWeek = this.firstDayOfWeek.AddDays(7);
-            Console.WriteLine(this.firstDayOfWeek);
             DisplayDates(this.firstDayOfWeek);
         }
 
+        /// <summary>
+        /// Display the previous week
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PrevBT_Click(object sender, EventArgs e)
         {
             this.firstDayOfWeek = this.firstDayOfWeek.AddDays(-7);
-            Console.WriteLine(this.firstDayOfWeek);
             DisplayDates(this.firstDayOfWeek);
         }
     }
