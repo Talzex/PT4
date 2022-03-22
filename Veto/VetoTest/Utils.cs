@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using Veto;
 
-namespace Veto
+namespace VetoTest
 {
-    /// <summary>
-    /// Class with all the queries of the project
-    /// </summary>
-    public static class Utils
+    internal class Utils
     {
         private static Entities entities;
 
@@ -22,7 +18,7 @@ namespace Veto
         {
             entities = new Entities();
         }
-        
+
         /// <summary>
         /// Query which return all the clients
         /// </summary>
@@ -30,11 +26,11 @@ namespace Veto
         public static List<Client> GetClientsAll()
         {
             var clients = (from data in entities.Client
-                          select data).ToList();
+                           select data).ToList();
 
-            return (List<Client>) clients;
+            return (List<Client>)clients;
         }
-        
+
         /// <summary>
         /// Query which get a employee
         /// </summary>
@@ -43,14 +39,14 @@ namespace Veto
         /// <returns>The employee</returns>
         public static Salarie GetSalarie(String login, String password)
         {
-            var employeeQuerry = (from data in entities.Salarie
+            var salarieQuerry = (from data in entities.Salarie
                                  where login == data.Login
                                  && password == data.MDP
                                  select data).FirstOrDefault();
 
-            return (Salarie)employeeQuerry;
+            return (Salarie)salarieQuerry;
         }
-    
+
         /// <summary>
         /// Query which return all the roles
         /// </summary>
@@ -58,9 +54,9 @@ namespace Veto
         public static List<Roles> GetRolesAll()
         {
             var roles = (from data in entities.Roles
-                        select data).ToList();
+                         select data).ToList();
 
-            return (List<Roles>) roles;
+            return (List<Roles>)roles;
         }
 
         /// <summary>
@@ -70,7 +66,7 @@ namespace Veto
         public static List<Produit> GetProduitsAll()
         {
             var products = (from data in entities.Produit
-                           select data).ToList();
+                            select data).ToList();
 
             return (List<Produit>)products;
         }
@@ -130,21 +126,21 @@ namespace Veto
         /// <summary>
         /// Query which modify a product
         /// </summary>
-        /// <param name="product">the product</param>
-        /// <param name="nameProduct">the product's name</param>
-        /// <param name="quantity"></param>
+        /// <param name="produit">the product</param>
+        /// <param name="nomProduit">the product's name</param>
+        /// <param name="quantite"></param>
         /// <param name="image">the product's image</param>
-        /// <param name="salePrice">Selling price</param>
-        /// <param name="purchasePrice">purchase price</param>
-        public static void ModifyProduct(Produit product, String nameProduct, int quantity, Bitmap image, float salePrice, float purchasePrice)
+        /// <param name="prixVente">Selling price</param>
+        /// <param name="prixAchat">purchase price</param>
+        public static void ModifyProduct(Produit produit, String nomProduit, int quantite, Bitmap image, float prixVente, float prixAchat)
         {
-            if (product != null)
+            if (produit != null)
             {
-                product.NomProduit = nameProduct;
-                product.QuantiteEnStock = quantity;
-                product.ImageProduit = ImageToByte(image);
-                product.PrixVenteClient = salePrice;
-                product.PrixAchat = purchasePrice;
+                produit.NomProduit = nomProduit;
+                produit.QuantiteEnStock = quantite;
+                produit.ImageProduit = ImageToByte(image);
+                produit.PrixVenteClient = prixVente;
+                produit.PrixAchat = prixAchat;
                 entities.SaveChanges();
             }
         }
@@ -161,20 +157,9 @@ namespace Veto
         }
 
         /// <summary>
-        /// Convert a byte[] into a bitmap
-        /// </summary>
-        /// <param name="img">the byte[]</param>
-        /// <returns>the bitmap</returns>
-        public static Image ByteToImage(byte[] img)
-        {
-            ImageConverter converter = new ImageConverter();
-            return (Image)converter.ConvertTo(img, typeof(Image));
-        }
-
-        /// <summary>
         /// Query which return products thanks to a search
         /// </summary>
-        /// <param name="search">the search</param>
+        /// <param name="product">the search</param>
         /// <returns>the products</returns>
         public static List<Produit> SearchProduct(String search)
         {
@@ -270,7 +255,7 @@ namespace Veto
         /// <param name="quantity">the quantity</param>
         public static void RemoveQuantityProduct(Produit product, int quantity)
         {
-            if (product != null)
+            if (product != null && quantity != null)
             {
                 if (product.QuantiteEnStock - quantity >= 0)
                 {
