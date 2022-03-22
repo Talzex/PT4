@@ -32,12 +32,12 @@ namespace Veto
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxResearch = new System.Windows.Forms.TextBox();
             this.buttonEllipse1 = new Veto.ButtonEllipse();
             this.buttonEllipse_previous = new Veto.ButtonEllipse();
             this.label_stock = new System.Windows.Forms.Label();
-            this.panel_Allproducts = new System.Windows.Forms.Panel();
             this.addProductBTN = new System.Windows.Forms.Button();
+            this.all_productsPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -56,7 +56,7 @@ namespace Veto
             // 
             this.panel1.Controls.Add(this.comboBoxFilter);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxResearch);
             this.panel1.Controls.Add(this.buttonEllipse1);
             this.panel1.Controls.Add(this.buttonEllipse_previous);
             this.panel1.Controls.Add(this.label_stock);
@@ -78,6 +78,7 @@ namespace Veto
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter.TabIndex = 10;
+            this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -89,12 +90,13 @@ namespace Veto
             this.label1.TabIndex = 21;
             this.label1.Text = "Trier par : ";
             // 
-            // textBox1
+            // textBoxResearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxResearch.Location = new System.Drawing.Point(65, 108);
+            this.textBoxResearch.Name = "textBoxResearch";
+            this.textBoxResearch.Size = new System.Drawing.Size(170, 20);
+            this.textBoxResearch.TabIndex = 9;
+            this.textBoxResearch.TextChanged += new System.EventHandler(this.textBoxResearch_TextChanged);
             // 
             // buttonEllipse1
             // 
@@ -138,14 +140,6 @@ namespace Veto
             this.label_stock.TabIndex = 17;
             this.label_stock.Text = "Gestion des stocks";
             // 
-            // panel_Allproducts
-            // 
-            this.panel_Allproducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Allproducts.Location = new System.Drawing.Point(229, 255);
-            this.panel_Allproducts.Name = "panel_Allproducts";
-            this.panel_Allproducts.Size = new System.Drawing.Size(835, 426);
-            this.panel_Allproducts.TabIndex = 9;
-            // 
             // addProductBTN
             // 
             this.addProductBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
@@ -159,17 +153,24 @@ namespace Veto
             this.addProductBTN.UseVisualStyleBackColor = false;
             this.addProductBTN.Click += new System.EventHandler(this.addProductBTN_Click);
             // 
+            // all_productsPanel
+            // 
+            this.all_productsPanel.Location = new System.Drawing.Point(229, 255);
+            this.all_productsPanel.Name = "all_productsPanel";
+            this.all_productsPanel.Size = new System.Drawing.Size(835, 426);
+            this.all_productsPanel.TabIndex = 9;
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.panel_Allproducts);
+            this.Controls.Add(this.all_productsPanel);
             this.Controls.Add(this.panel1);
             this.Name = "Stock";
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            this.Controls.SetChildIndex(this.all_productsPanel, 0);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
@@ -186,9 +187,9 @@ namespace Veto
         private ButtonEllipse buttonEllipse_previous;
         private ButtonEllipse buttonEllipse1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxResearch;
         private System.Windows.Forms.ComboBox comboBoxFilter;
-        private System.Windows.Forms.Panel panel_Allproducts;
         private System.Windows.Forms.Button addProductBTN;
+        private System.Windows.Forms.FlowLayoutPanel all_productsPanel;
     }
 }

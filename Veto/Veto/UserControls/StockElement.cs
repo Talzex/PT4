@@ -15,8 +15,8 @@ namespace Veto
         Produit product = new Produit();
         public StockElement(Produit product)
         {
-            this.product = product;
             InitializeComponent();
+            this.product = product;
             MAJProduit(product);
         }
 
@@ -28,9 +28,15 @@ namespace Veto
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
         }
 
-        private void panel_product_Click(object sender, EventArgs e)
+        private void buttonModify_Click(object sender, EventArgs e)
         {
-           
+            StockAjout stockAjout = new StockAjout(product);
+            stockAjout.Show();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            Utils.RemoveProduct(product);
         }
     }
 }

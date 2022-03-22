@@ -160,6 +160,7 @@ namespace Veto
             return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
 
+
         /// <summary>
         /// Query which return products thanks to a search
         /// </summary>
