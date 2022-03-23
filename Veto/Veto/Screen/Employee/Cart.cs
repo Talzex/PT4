@@ -145,6 +145,22 @@ namespace Veto
         }
 
         /// <summary>
+        /// Saves the bill in the "Bills" repository
+        /// </summary>
+        /// <param name="content">The string content of the bill</param>
+        /// <param name="now">The date at which the bill was generated</param>
+        private void SaveFile(string content, DateTime now, Facture f)
+        {
+            string folder = Path.Combine(Application.StartupPath, "Bills");
+            Directory.CreateDirectory(folder);
+
+            string fileName = now.ToString("yyyy-MM-dd") + "_" + f.IdFacture + "-" + f.Client.NomClient + "-" + f.Client.PrenomClient + ".txt";
+            File.WriteAllText(Path.Combine("Bills", fileName), content);
+
+            filePath = Path.Combine(folder, fileName);
+        }
+
+        /// <summary>
         /// Creates and saves a bill for the Items in the cart
         /// </summary>
         /// <param name="sender"></param>
@@ -159,6 +175,8 @@ namespace Veto
                 f.NumeroFacture = f.IdFacture;
                 f.DateFacture = now;
                 f.Montant = (int)total;
+                f.IdClient = buyer.IdClient;
+                f.Client = buyer;
 
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("Date d'émission " + now.ToString());
@@ -171,7 +189,7 @@ namespace Veto
                 sb.AppendLine("Acheteur : " + buyer.ToString());
 
                 List<ProduitFacture> productsBill = new List<ProduitFacture>();
-                foreach(Produit p in cart.Keys)
+                foreach (Produit p in cart.Keys)
                 {
                     ProduitFacture pf = new ProduitFacture();
                     pf.Quantite = cart[p];
@@ -186,7 +204,7 @@ namespace Veto
                 sb.AppendLine("Réduction en cas de paiement anticipé : 0€");
                 sb.AppendLine("Pénalité en cas de retard de paiement : Mort (ou 40€)");
 
-                Console.WriteLine(sb.ToString());
+                SaveFile(sb.ToString(), now, f);
             }
         }
 
