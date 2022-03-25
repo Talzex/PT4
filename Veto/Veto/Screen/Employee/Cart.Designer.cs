@@ -45,6 +45,7 @@ namespace Veto
             this.button_addconsultation = new System.Windows.Forms.Button();
             this.button_addoperation = new System.Windows.Forms.Button();
             this.button_addnight = new System.Windows.Forms.Button();
+            this.PrinterCB = new System.Windows.Forms.ComboBox();
             this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
@@ -161,6 +162,7 @@ namespace Veto
             // 
             // panel_bottombill
             // 
+            this.panel_bottombill.Controls.Add(this.PrinterCB);
             this.panel_bottombill.Controls.Add(this.ClientsCB);
             this.panel_bottombill.Controls.Add(this.label_customer);
             this.panel_bottombill.Controls.Add(this.button_login);
@@ -275,6 +277,14 @@ namespace Veto
             this.button_addnight.Text = "AJOUTER NUIT";
             this.button_addnight.UseVisualStyleBackColor = false;
             // 
+            // PrinterCB
+            // 
+            this.PrinterCB.FormattingEnabled = true;
+            this.PrinterCB.Location = new System.Drawing.Point(315, 185);
+            this.PrinterCB.Name = "PrinterCB";
+            this.PrinterCB.Size = new System.Drawing.Size(121, 21);
+            this.PrinterCB.TabIndex = 17;
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,5 +327,6 @@ namespace Veto
         private System.Windows.Forms.Button button_addoperation;
         private System.Windows.Forms.Button button_addconsultation;
         private System.Windows.Forms.ComboBox ClientsCB;
+        private System.Windows.Forms.ComboBox PrinterCB;
     }
 }
