@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Printing;
 
 namespace Veto
 {
@@ -26,6 +27,8 @@ namespace Veto
             cart = new Dictionary<Produit, int>();
             ClientsCB.Items.AddRange(Utils.GetClientsAll().ToArray());
             total = 0;
+            foreach (string printer in PrinterSettings.InstalledPrinters)
+                PrinterCB.Items.Add(printer);
         }
 
         /// <summary>
@@ -221,7 +224,8 @@ namespace Veto
             }
             else
             {
-                //Imprimer
+                BillPrint bp = new BillPrint(filePath);
+                bp.LaunchPrint();
             }
         }
 
@@ -237,5 +241,6 @@ namespace Veto
         }
 
         #endregion
+        
     }
 }
