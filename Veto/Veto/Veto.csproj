@@ -59,7 +59,13 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="BillPrint.cs" />
+    <Compile Include="UserControls\ClientDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ClientDisplay.Designer.cs">
+      <DependentUpon>ClientDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\BillPrint.cs" />
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,7 +117,7 @@
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="FormController.cs" />
+    <Compile Include="Scripts\FormController.cs" />
     <Compile Include="HoraireTravail.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -235,6 +241,9 @@
     <Compile Include="UserControls\StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\ClientDisplay.resx">
+      <DependentUpon>ClientDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,8 +367,6 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
