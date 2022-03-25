@@ -75,5 +75,11 @@ namespace Veto
             this.firstDayOfWeek = this.firstDayOfWeek.AddDays(-7);
             DisplayDates(this.firstDayOfWeek);
         }
+
+        private void AddRdvBT_Click(object sender, EventArgs e)
+        {
+            CalendarDetails calendar = new CalendarDetails();
+            calendar.Show();
+        }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Screen\Employee\CalendarDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Employee\CalendarDetails.Designer.cs">
+      <DependentUpon>CalendarDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </Compile>
     <EmbeddedResource Include="Screen\Employee\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Employee\CalendarDetails.resx">
+      <DependentUpon>CalendarDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>

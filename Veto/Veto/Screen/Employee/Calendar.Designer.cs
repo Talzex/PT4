@@ -275,6 +275,7 @@ namespace Veto
             this.AddRdvBT.TabIndex = 0;
             this.AddRdvBT.Text = "NOUVEAU RENDEZ-VOUS";
             this.AddRdvBT.UseVisualStyleBackColor = false;
+            this.AddRdvBT.Click += new System.EventHandler(this.AddRdvBT_Click);
             // 
             // Calendar
             // 
