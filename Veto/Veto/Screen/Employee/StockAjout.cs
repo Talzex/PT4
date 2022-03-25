@@ -12,7 +12,7 @@ namespace Veto
 {
     public partial class StockAjout : Form
     {
-        Produit product;
+        Produit product = new Produit();
         public StockAjout(Produit produit)
         {
             InitializeComponent();
@@ -60,8 +60,29 @@ namespace Veto
         /// <param name="e"></param>
         private void ConfirmProductBTN_Click(object sender, EventArgs e)
         {
-            Utils.SaveProduct(AddProducts());
-            this.Close();
+            Boolean identique = false;
+            foreach (Produit produit in Utils.GetProduitsAll())
+            {
+                if (produit.NomProduit.Equals(AddProducts().NomProduit))
+                {
+                    identique = true;
+                }
+            }
+            if (identique)
+            {
+                String message = "Vous ne pouvez pas utiliser ce nom, il est déjà utilisé";
+                String caption = "Erreur du nom du produit";
+                var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+
+            } else 
+            {
+                Utils.SaveProduct(AddProducts());
+                this.Close();
+            }
+            
+            
+
+
         }
 
         /// <summary>
@@ -70,11 +91,10 @@ namespace Veto
         private Produit AddProducts()
         {
             Produit produit = new Produit();
-            if (!NameProduct.Text.Trim().Equals("") && !QuantityProduct.Text.Trim().Equals("") &&
-               !PurchasePriceProduct.Text.Trim().Equals("") && !SellPriceProduct.Text.Trim().Equals("") &&
-               PictureBox.Image != null)
+            if (string.IsNullOrWhiteSpace(NameProduct.Text))
             {
                 
+            Console.WriteLine(string.Format("[{truc}]", NameProduct.Text));
                 produit.NomProduit = NameProduct.Text;
                 produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
                 produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);

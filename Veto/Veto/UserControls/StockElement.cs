@@ -32,11 +32,21 @@ namespace Veto
         {
             StockAjout stockAjout = new StockAjout(product);
             stockAjout.Show();
+            MAJProduit(product);
+            
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            Utils.RemoveProduct(product);
+            String message = "Êtes vous sûr de vouloir le supprimer";
+            String caption = "Suppression Produits";
+            var messageBox =  MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+            if(messageBox == DialogResult.Yes)
+            {
+                Parent.Controls.Remove(this);
+                Utils.RemoveProduct(product);
+            }
+            
         }
     }
 }

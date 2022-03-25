@@ -25,7 +25,11 @@ namespace Veto
         private void addProductBTN_Click(object sender, EventArgs e)
         {
             StockAjout stockAjout = new StockAjout(null);
-            stockAjout.Show();
+            if(stockAjout.ShowDialog() == DialogResult.Yes)
+            {
+                showProduct();
+            }
+           
         }
 
         /// <summary>
@@ -33,6 +37,7 @@ namespace Veto
         /// </summary>
         private void showProduct()
         {
+            all_productsPanel.Controls.Clear();
             foreach (Produit produit in Utils.GetProduitsAll())
             {
                 var stockElement = new StockElement(produit);
