@@ -35,7 +35,7 @@ namespace Veto
             if (LoginTB.Text != "" && PasswordTB.Text != "")
             {
                 // GetUser
-                Salarie s = Utils.GetSalarie(LoginTB.Text.Trim(), PasswordTB.Text.Trim());
+                Salarie s = Utils.GetEmployee(LoginTB.Text.Trim(), PasswordTB.Text.Trim());
                 if (s != null)
                 {
                     FormController.CreateScreens(s.IdRoles == 3, s);

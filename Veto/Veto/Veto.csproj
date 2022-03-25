@@ -235,6 +235,15 @@
     <Compile Include="UserControls\StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils_Care.cs" />
+    <Compile Include="Utils_Client.cs" />
+    <Compile Include="Utils_Deseas.cs" />
+    <Compile Include="Utils_Employee.cs" />
+    <Compile Include="Utils_Image.cs" />
+    <Compile Include="Utils_Invoice.cs" />
+    <Compile Include="Utils_Product.cs" />
+    <Compile Include="Utils_RDV.cs" />
+    <Compile Include="Utils_Role.cs" />
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>
