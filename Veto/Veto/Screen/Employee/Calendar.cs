@@ -76,6 +76,11 @@ namespace Veto
             DisplayDates(this.firstDayOfWeek);
         }
 
+        /// <summary>
+        /// Display the window to add an appointment
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddRdvBT_Click(object sender, EventArgs e)
         {
             CalendarDetails calendar = new CalendarDetails();
