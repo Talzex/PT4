@@ -60,29 +60,37 @@ namespace Veto
         /// <param name="e"></param>
         private void ConfirmProductBTN_Click(object sender, EventArgs e)
         {
-            Boolean identique = false;
-            foreach (Produit produit in Utils.GetProduitsAll())
+            Produit Newproduit = null;
+            
+            if (!String.IsNullOrEmpty(NameProduct.Text) && !String.IsNullOrEmpty(QuantityProduct.Text) && !String.IsNullOrEmpty(PurchasePriceProduct.Text)
+                && !String.IsNullOrEmpty(SellPriceProduct.Text) && PictureBox.Image != null)
             {
-                if (produit.NomProduit.Equals(AddProducts().NomProduit))
+                Newproduit = AddProducts();
+            } else
+            {
+                String message = "Tout les champs ne sont pas remplis";
+                String caption = "Erreur du formulaire d'ajout/modification";
+                var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+            }
+            if(Newproduit != null)
+            {
+                if (SameProducts(Newproduit))
                 {
-                    identique = true;
+                    String message = "Vous ne pouvez pas utiliser ce nom, il est déjà utilisé";
+                    String caption = "Erreur du nom du produit";
+                    var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+
+                } else if (Price(Newproduit)){
+                    String message = "Le prix d'achat doit être inférieur ou égal au prix de vente";
+                    String caption = "Erreur du prix produit";
+                    var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+                }
+                else
+                {
+                    Utils.SaveProduct(AddProducts());
+                    this.Close();
                 }
             }
-            if (identique)
-            {
-                String message = "Vous ne pouvez pas utiliser ce nom, il est déjà utilisé";
-                String caption = "Erreur du nom du produit";
-                var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
-
-            } else 
-            {
-                Utils.SaveProduct(AddProducts());
-                this.Close();
-            }
-            
-            
-
-
         }
 
         /// <summary>
@@ -91,18 +99,37 @@ namespace Veto
         private Produit AddProducts()
         {
             Produit produit = new Produit();
-            if (string.IsNullOrWhiteSpace(NameProduct.Text))
-            {
-                
-            Console.WriteLine(string.Format("[{truc}]", NameProduct.Text));
-                produit.NomProduit = NameProduct.Text;
-                produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
-                produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);
-                produit.PrixVenteClient = double.Parse(SellPriceProduct.Text);
-                produit.ImageProduit = Utils.ImageToByte(PictureBox.Image);
-            }
+            produit.NomProduit = NameProduct.Text;
+            produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
+            produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);
+            produit.PrixVenteClient = double.Parse(SellPriceProduct.Text);
+            produit.ImageProduit = Utils.ImageToByte(PictureBox.Image);
             return produit;
         }
+
+        /// <summary>
+        /// Method to verify if there is a product with the same name in the DataBase
+        /// </summary>
+        /// <param name="NewProduit">The product to verify</param>
+        /// <returns>Returns true if there is the same name, no otherwise</returns>
+        private Boolean SameProducts(Produit NewProduit)
+        {
+            Boolean identique = false;
+            foreach (Produit produit in Utils.GetProduitsAll())
+            {
+                if (produit.NomProduit.Equals(NewProduit.NomProduit))
+                {
+                    identique = true;
+                }
+            }
+            return identique;
+        }
+
+        private Boolean Price(Produit NewProduit)
+        {
+            return NewProduit.PrixVenteClient <= NewProduit.PrixAchat;
+        }
+
         /// <summary>
         /// Method to reduce key possibilities, in that case only number 
         /// </summary>
