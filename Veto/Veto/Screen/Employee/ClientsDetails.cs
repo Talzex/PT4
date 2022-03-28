@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -72,10 +73,9 @@ namespace Veto
         /// <param name="e"></param>
         private void ValidateBTN_Click(object sender, EventArgs e)
         {
-            Regex reg = new Regex(@"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$", RegexOptions.IgnoreCase);
             if (LNameTB.Text != "" && FNameTB.Text != "" &&
                 MailTB.Text != "" && PhoneTB.Text != "" &&
-                reg.IsMatch(MailTB.Text))
+                IsValidMail(MailTB.Text) && PhoneTB.Text.Length == 10)
             {
                 client.AdresseMail = MailTB.Text;
                 client.NomClient = LNameTB.Text;
@@ -103,6 +103,24 @@ namespace Veto
             {
                 DialogResult = DialogResult.Abort;
                 Close();
+            }
+        }
+
+        private void PhoneTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private bool IsValidMail(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
             }
         }
     }
