@@ -31,23 +31,26 @@
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.EmailLabel = new System.Windows.Forms.Label();
-            this.ClientCodeLabel = new System.Windows.Forms.Label();
-            this.AddressLabel = new System.Windows.Forms.Label();
             this.TelephoneLabel = new System.Windows.Forms.Label();
-            this.AddAnimalButton = new System.Windows.Forms.Button();
-            this.ModifyClient = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.AddAnimalBTN = new System.Windows.Forms.Button();
+            this.ValidateBTN = new System.Windows.Forms.Button();
+            this.DeleteBTN = new System.Windows.Forms.Button();
+            this.NumberLBL = new System.Windows.Forms.Label();
+            this.LNameTB = new System.Windows.Forms.TextBox();
+            this.FNameTB = new System.Windows.Forms.TextBox();
+            this.MailTB = new System.Windows.Forms.TextBox();
+            this.PhoneTB = new System.Windows.Forms.TextBox();
+            this.AnimalsPNL = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.Location = new System.Drawing.Point(42, 9);
+            this.LastNameLabel.Location = new System.Drawing.Point(83, 5);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(50, 21);
+            this.LastNameLabel.Size = new System.Drawing.Size(62, 28);
             this.LastNameLabel.TabIndex = 0;
             this.LastNameLabel.Text = "Nom:";
             // 
@@ -55,9 +58,10 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(42, 49);
+            this.FirstNameLabel.Location = new System.Drawing.Point(56, 61);
+            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(71, 21);
+            this.FirstNameLabel.Size = new System.Drawing.Size(89, 28);
             this.FirstNameLabel.TabIndex = 1;
             this.FirstNameLabel.Text = "Prénom:";
             // 
@@ -65,118 +69,135 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(42, 92);
+            this.EmailLabel.Location = new System.Drawing.Point(345, 61);
+            this.EmailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(52, 21);
+            this.EmailLabel.Size = new System.Drawing.Size(65, 28);
             this.EmailLabel.TabIndex = 2;
             this.EmailLabel.Text = "Email:";
-            // 
-            // ClientCodeLabel
-            // 
-            this.ClientCodeLabel.AutoSize = true;
-            this.ClientCodeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientCodeLabel.Location = new System.Drawing.Point(40, 138);
-            this.ClientCodeLabel.Name = "ClientCodeLabel";
-            this.ClientCodeLabel.Size = new System.Drawing.Size(97, 21);
-            this.ClientCodeLabel.TabIndex = 3;
-            this.ClientCodeLabel.Text = "Code client:";
-            // 
-            // AddressLabel
-            // 
-            this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressLabel.Location = new System.Drawing.Point(387, 92);
-            this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(73, 21);
-            this.AddressLabel.TabIndex = 4;
-            this.AddressLabel.Text = "Adresse:";
             // 
             // TelephoneLabel
             // 
             this.TelephoneLabel.AutoSize = true;
             this.TelephoneLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelephoneLabel.Location = new System.Drawing.Point(387, 49);
+            this.TelephoneLabel.Location = new System.Drawing.Point(298, 6);
+            this.TelephoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TelephoneLabel.Name = "TelephoneLabel";
-            this.TelephoneLabel.Size = new System.Drawing.Size(90, 21);
+            this.TelephoneLabel.Size = new System.Drawing.Size(112, 28);
             this.TelephoneLabel.TabIndex = 5;
             this.TelephoneLabel.Text = "Téléphone:";
             // 
-            // AddAnimalButton
+            // AddAnimalBTN
             // 
-            this.AddAnimalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.AddAnimalButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddAnimalButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddAnimalButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddAnimalButton.Location = new System.Drawing.Point(26, 405);
-            this.AddAnimalButton.Name = "AddAnimalButton";
-            this.AddAnimalButton.Size = new System.Drawing.Size(111, 33);
-            this.AddAnimalButton.TabIndex = 6;
-            this.AddAnimalButton.Text = "Ajouter animal";
-            this.AddAnimalButton.UseVisualStyleBackColor = false;
+            this.AddAnimalBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddAnimalBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddAnimalBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddAnimalBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.AddAnimalBTN.Location = new System.Drawing.Point(35, 498);
+            this.AddAnimalBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddAnimalBTN.Name = "AddAnimalBTN";
+            this.AddAnimalBTN.Size = new System.Drawing.Size(148, 41);
+            this.AddAnimalBTN.TabIndex = 6;
+            this.AddAnimalBTN.Text = "Ajouter animal";
+            this.AddAnimalBTN.UseVisualStyleBackColor = false;
+            this.AddAnimalBTN.Click += new System.EventHandler(this.AddAnimalBTN_Click);
             // 
-            // ModifyClient
+            // ValidateBTN
             // 
-            this.ModifyClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.ModifyClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ModifyClient.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModifyClient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ModifyClient.Location = new System.Drawing.Point(568, 405);
-            this.ModifyClient.Name = "ModifyClient";
-            this.ModifyClient.Size = new System.Drawing.Size(85, 33);
-            this.ModifyClient.TabIndex = 7;
-            this.ModifyClient.Text = "Modifier";
-            this.ModifyClient.UseVisualStyleBackColor = false;
+            this.ValidateBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.ValidateBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ValidateBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValidateBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ValidateBTN.Location = new System.Drawing.Point(757, 498);
+            this.ValidateBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ValidateBTN.Name = "ValidateBTN";
+            this.ValidateBTN.Size = new System.Drawing.Size(113, 41);
+            this.ValidateBTN.TabIndex = 7;
+            this.ValidateBTN.Text = "Valider";
+            this.ValidateBTN.UseVisualStyleBackColor = false;
+            this.ValidateBTN.Click += new System.EventHandler(this.ValidateBTN_Click);
             // 
-            // button1
+            // DeleteBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(667, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 33);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Supprimer";
-            this.button1.UseVisualStyleBackColor = false;
+            this.DeleteBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DeleteBTN.Location = new System.Drawing.Point(889, 498);
+            this.DeleteBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(113, 41);
+            this.DeleteBTN.TabIndex = 8;
+            this.DeleteBTN.Text = "Supprimer";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
+            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
-            // label1
+            // NumberLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 369);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nombre:";
+            this.NumberLBL.AutoSize = true;
+            this.NumberLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumberLBL.Location = new System.Drawing.Point(29, 454);
+            this.NumberLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NumberLBL.Name = "NumberLBL";
+            this.NumberLBL.Size = new System.Drawing.Size(89, 28);
+            this.NumberLBL.TabIndex = 9;
+            this.NumberLBL.Text = "Nombre:";
             // 
-            // label2
+            // LNameTB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(186, 369);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 21);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Remise:";
+            this.LNameTB.Location = new System.Drawing.Point(152, 12);
+            this.LNameTB.Name = "LNameTB";
+            this.LNameTB.Size = new System.Drawing.Size(100, 22);
+            this.LNameTB.TabIndex = 11;
+            // 
+            // FNameTB
+            // 
+            this.FNameTB.Location = new System.Drawing.Point(152, 67);
+            this.FNameTB.Name = "FNameTB";
+            this.FNameTB.Size = new System.Drawing.Size(100, 22);
+            this.FNameTB.TabIndex = 12;
+            // 
+            // MailTB
+            // 
+            this.MailTB.Location = new System.Drawing.Point(417, 67);
+            this.MailTB.Name = "MailTB";
+            this.MailTB.Size = new System.Drawing.Size(100, 22);
+            this.MailTB.TabIndex = 13;
+            // 
+            // PhoneTB
+            // 
+            this.PhoneTB.Location = new System.Drawing.Point(417, 11);
+            this.PhoneTB.Name = "PhoneTB";
+            this.PhoneTB.Size = new System.Drawing.Size(100, 22);
+            this.PhoneTB.TabIndex = 14;
+            // 
+            // AnimalsPNL
+            // 
+            this.AnimalsPNL.Location = new System.Drawing.Point(34, 114);
+            this.AnimalsPNL.Name = "AnimalsPNL";
+            this.AnimalsPNL.Size = new System.Drawing.Size(968, 337);
+            this.AnimalsPNL.TabIndex = 15;
             // 
             // ClientsDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(219)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ModifyClient);
-            this.Controls.Add(this.AddAnimalButton);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.AnimalsPNL);
+            this.Controls.Add(this.PhoneTB);
+            this.Controls.Add(this.MailTB);
+            this.Controls.Add(this.FNameTB);
+            this.Controls.Add(this.LNameTB);
+            this.Controls.Add(this.NumberLBL);
+            this.Controls.Add(this.DeleteBTN);
+            this.Controls.Add(this.ValidateBTN);
+            this.Controls.Add(this.AddAnimalBTN);
             this.Controls.Add(this.TelephoneLabel);
-            this.Controls.Add(this.AddressLabel);
-            this.Controls.Add(this.ClientCodeLabel);
             this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.LastNameLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ClientsDetails";
             this.Text = "Détails";
             this.ResumeLayout(false);
@@ -189,13 +210,15 @@
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Label EmailLabel;
-        private System.Windows.Forms.Label ClientCodeLabel;
-        private System.Windows.Forms.Label AddressLabel;
         private System.Windows.Forms.Label TelephoneLabel;
-        private System.Windows.Forms.Button AddAnimalButton;
-        private System.Windows.Forms.Button ModifyClient;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button AddAnimalBTN;
+        private System.Windows.Forms.Button ValidateBTN;
+        private System.Windows.Forms.Button DeleteBTN;
+        private System.Windows.Forms.Label NumberLBL;
+        private System.Windows.Forms.TextBox LNameTB;
+        private System.Windows.Forms.TextBox FNameTB;
+        private System.Windows.Forms.TextBox MailTB;
+        private System.Windows.Forms.TextBox PhoneTB;
+        private System.Windows.Forms.FlowLayoutPanel AnimalsPNL;
     }
 }

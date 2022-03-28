@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -39,6 +39,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -64,12 +65,15 @@
     <Compile Include="Screen\Employee\CalendarDetails.Designer.cs">
       <DependentUpon>CalendarDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\BillPrint.cs" />
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screen\Employee\StockAjout.Designer.cs">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBEntities\MyProduit.cs" />
+    <Compile Include="DBEntities\MyClient.cs" />
     <Compile Include="UserControls\AnimalComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,12 +102,6 @@
     <Compile Include="UserControls\ClientComponent.Designer.cs">
       <DependentUpon>ClientComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screen\Employee\ClientsModify.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screen\Employee\ClientsModify.Designer.cs">
-      <DependentUpon>ClientsModify.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screen\Employee\ClientsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,7 +111,7 @@
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="FormController.cs" />
+    <Compile Include="Scripts\FormController.cs" />
     <Compile Include="HoraireTravail.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -243,6 +241,15 @@
     <EmbeddedResource Include="Screen\Employee\CalendarDetails.resx">
       <DependentUpon>CalendarDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Utils_Care.cs" />
+    <Compile Include="Utils_Client.cs" />
+    <Compile Include="Utils_Deseas.cs" />
+    <Compile Include="Utils_Employee.cs" />
+    <Compile Include="Utils_Image.cs" />
+    <Compile Include="Utils_Invoice.cs" />
+    <Compile Include="Utils_Product.cs" />
+    <Compile Include="Utils_RDV.cs" />
+    <Compile Include="Utils_Role.cs" />
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,9 +291,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ClientsDetails.resx">
       <DependentUpon>ClientsDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screen\Employee\ClientsModify.resx">
-      <DependentUpon>ClientsModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>

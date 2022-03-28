@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockElement));
             this.label_nom = new System.Windows.Forms.Label();
             this.label_quantite = new System.Windows.Forms.Label();
             this.label_pricesell = new System.Windows.Forms.Label();
             this.panel_product = new System.Windows.Forms.Panel();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonModify = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_purchaseprice = new System.Windows.Forms.Label();
             this.panel_product.SuspendLayout();
@@ -42,7 +45,7 @@
             // 
             this.label_nom.AutoSize = true;
             this.label_nom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nom.Location = new System.Drawing.Point(69, 108);
+            this.label_nom.Location = new System.Drawing.Point(69, 85);
             this.label_nom.Name = "label_nom";
             this.label_nom.Size = new System.Drawing.Size(61, 21);
             this.label_nom.TabIndex = 0;
@@ -52,7 +55,7 @@
             // 
             this.label_quantite.AutoSize = true;
             this.label_quantite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_quantite.Location = new System.Drawing.Point(50, 129);
+            this.label_quantite.Location = new System.Drawing.Point(50, 110);
             this.label_quantite.Name = "label_quantite";
             this.label_quantite.Size = new System.Drawing.Size(99, 21);
             this.label_quantite.TabIndex = 1;
@@ -62,7 +65,7 @@
             // 
             this.label_pricesell.AutoSize = true;
             this.label_pricesell.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_pricesell.Location = new System.Drawing.Point(31, 153);
+            this.label_pricesell.Location = new System.Drawing.Point(31, 134);
             this.label_pricesell.Name = "label_pricesell";
             this.label_pricesell.Size = new System.Drawing.Size(137, 21);
             this.label_pricesell.TabIndex = 2;
@@ -70,6 +73,8 @@
             // 
             // panel_product
             // 
+            this.panel_product.Controls.Add(this.buttonDelete);
+            this.panel_product.Controls.Add(this.buttonModify);
             this.panel_product.Controls.Add(this.pictureBox1);
             this.panel_product.Controls.Add(this.label_purchaseprice);
             this.panel_product.Controls.Add(this.label_nom);
@@ -80,11 +85,38 @@
             this.panel_product.Name = "panel_product";
             this.panel_product.Size = new System.Drawing.Size(200, 205);
             this.panel_product.TabIndex = 3;
-            this.panel_product.Click += new System.EventHandler(this.panel_product_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.Location = new System.Drawing.Point(122, 179);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.TabIndex = 6;
+            this.buttonDelete.Text = "SUPPRIMER";
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // buttonModify
+            // 
+            this.buttonModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.buttonModify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonModify.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModify.ForeColor = System.Drawing.Color.White;
+            this.buttonModify.Location = new System.Drawing.Point(3, 179);
+            this.buttonModify.Name = "buttonModify";
+            this.buttonModify.Size = new System.Drawing.Size(75, 23);
+            this.buttonModify.TabIndex = 5;
+            this.buttonModify.Text = "MODIFIER";
+            this.buttonModify.UseVisualStyleBackColor = false;
+            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(62, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(62, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.TabIndex = 4;
@@ -94,7 +126,7 @@
             // 
             this.label_purchaseprice.AutoSize = true;
             this.label_purchaseprice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_purchaseprice.Location = new System.Drawing.Point(36, 177);
+            this.label_purchaseprice.Location = new System.Drawing.Point(36, 156);
             this.label_purchaseprice.Name = "label_purchaseprice";
             this.label_purchaseprice.Size = new System.Drawing.Size(128, 21);
             this.label_purchaseprice.TabIndex = 3;
@@ -124,5 +156,7 @@
         private System.Windows.Forms.Panel panel_product;
         private System.Windows.Forms.Label label_purchaseprice;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonModify;
     }
 }

@@ -12,9 +12,27 @@ namespace Veto
 {
     public partial class AnimalComponent : UserControl
     {
-        public AnimalComponent()
+        private Animal animal;
+
+        public AnimalComponent(Animal a)
         {
             InitializeComponent();
+            animal = a;
+            UpdateLabels();
+        }
+
+        private void DetailsBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Updates the labels
+        /// </summary>
+        private void UpdateLabels()
+        {
+            NameLabel.Text = animal.Nom;
+            AgeLBL.Text = "Age : " + (DateTime.Now - animal.DateDeNaissance).ToString();
         }
     }
 }
