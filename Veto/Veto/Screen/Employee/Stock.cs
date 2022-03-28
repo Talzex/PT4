@@ -37,11 +37,11 @@ namespace Veto
         /// </summary>
         private void showProduct()
         {
-            all_productsPanel.Controls.Clear();
+            panel_Allproducts.Controls.Clear();
             foreach (Produit produit in Utils.GetProduitsAll())
             {
                 var stockElement = new StockElement(produit);
-                all_productsPanel.Controls.Add(stockElement);
+                panel_Allproducts.Controls.Add(stockElement);
             }
         }
 
@@ -52,11 +52,11 @@ namespace Veto
         /// <param name="e"></param>
         private void textBoxResearch_TextChanged(object sender, EventArgs e)
         {
-            all_productsPanel.Controls.Clear();
+            panel_Allproducts.Controls.Clear();
             foreach (Produit produit in Utils.SearchProduct(textBoxResearch.Text))
             {
                 var stockElement = new StockElement(produit);
-                all_productsPanel.Controls.Add(stockElement);
+                panel_Allproducts.Controls.Add(stockElement);
             }
         }
 
@@ -68,38 +68,48 @@ namespace Veto
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
            int comboBoxIndex = comboBoxFilter.SelectedIndex;
-            all_productsPanel.Controls.Clear();
+            panel_Allproducts.Controls.Clear();
             switch (comboBoxIndex)
             {
                 case 0:
                     foreach (Produit produit in Utils.QuantityProductDESC())
                     {
                         var stockElement = new StockElement(produit);
-                        all_productsPanel.Controls.Add(stockElement);
+                        panel_Allproducts.Controls.Add(stockElement);
                     }
                     break;
                 case 1:
                     foreach (Produit produit in Utils.QuantityProductASC())
                     {
                         var stockElement = new StockElement(produit);
-                        all_productsPanel.Controls.Add(stockElement);
+                        panel_Allproducts.Controls.Add(stockElement);
                     }
                     break;
                 case 2:
                     foreach (Produit produit in Utils.NameProductASC())
                     {
                         var stockElement = new StockElement(produit);
-                        all_productsPanel.Controls.Add(stockElement);
+                        panel_Allproducts.Controls.Add(stockElement);
                     }
                     break;
                 case 3:
                     foreach (Produit produit in Utils.NameProductDESC())
                     {
                         var stockElement = new StockElement(produit);
-                        all_productsPanel.Controls.Add(stockElement);
+                        panel_Allproducts.Controls.Add(stockElement);
                     }
                     break;
             }
+        }
+
+        private void PreviousBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextBTN_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
