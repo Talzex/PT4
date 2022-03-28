@@ -29,7 +29,7 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ControllerPNL = new System.Windows.Forms.Panel();
             this.TitleLBL = new System.Windows.Forms.Label();
             this.PrevPageBTN = new Veto.ButtonEllipse();
             this.NextPageBTN = new Veto.ButtonEllipse();
@@ -39,13 +39,13 @@ namespace Veto
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ControllerPNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // CenterPNL
             // 
             this.CenterPNL.Controls.Add(this.ItemsPNL);
-            this.CenterPNL.Controls.Add(this.panel1);
+            this.CenterPNL.Controls.Add(this.ControllerPNL);
             // 
             // SidePNL
             // 
@@ -54,16 +54,16 @@ namespace Veto
             // 
             this.SidePNL.Panel2.Controls.Add(this.AddClientBTN);
             // 
-            // panel1
+            // ControllerPNL
             // 
-            this.panel1.Controls.Add(this.TitleLBL);
-            this.panel1.Controls.Add(this.PrevPageBTN);
-            this.panel1.Controls.Add(this.NextPageBTN);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(764, 100);
-            this.panel1.TabIndex = 0;
+            this.ControllerPNL.Controls.Add(this.TitleLBL);
+            this.ControllerPNL.Controls.Add(this.PrevPageBTN);
+            this.ControllerPNL.Controls.Add(this.NextPageBTN);
+            this.ControllerPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ControllerPNL.Location = new System.Drawing.Point(0, 0);
+            this.ControllerPNL.Name = "ControllerPNL";
+            this.ControllerPNL.Size = new System.Drawing.Size(764, 100);
+            this.ControllerPNL.TabIndex = 0;
             // 
             // TitleLBL
             // 
@@ -134,15 +134,15 @@ namespace Veto
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ControllerPNL.ResumeLayout(false);
+            this.ControllerPNL.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ControllerPNL;
         private ButtonEllipse PrevPageBTN;
         private ButtonEllipse NextPageBTN;
         private System.Windows.Forms.Label TitleLBL;

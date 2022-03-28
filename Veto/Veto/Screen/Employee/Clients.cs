@@ -14,7 +14,8 @@ namespace Veto
         private List<Client> allClients;
 
         private int page;
-        private int pageSize = 4;
+        private int pageSize = 5;
+
 
         public Clients() { InitializeComponent(); }
 
@@ -32,11 +33,11 @@ namespace Veto
             {
                 allClients = Utils.GetClientsAll();
             }
-
             ItemsPNL.Controls.Clear();
             for (int i = page * pageSize; i < (page + 1) * pageSize && i < allClients.Count; i++)
             {
-                ItemsPNL.Controls.Add(new ClientComponent(allClients[i]));
+                var component = new ClientComponent(allClients[i]);
+                ItemsPNL.Controls.Add(component);
             }
         }
 
@@ -50,7 +51,7 @@ namespace Veto
             ReloadPage();
         }
 
-        private void ReloadPage()
+        public void ReloadPage()
         {
             page = 0;
             allClients = Utils.GetClientsAll();

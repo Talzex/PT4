@@ -32,9 +32,9 @@ namespace Veto
             DialogResult result = cd.ShowDialog();
             if (result == DialogResult.Abort)
             {
-                Parent.Controls.Remove(this);
                 Utils.RemoveClient(client);
-            } else if (result == DialogResult.OK)
+            }
+            else if (result == DialogResult.OK)
             {
                 UpdateDisplay();
             }

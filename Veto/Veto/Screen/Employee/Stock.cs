@@ -11,7 +11,7 @@ namespace Veto
     public partial class Stock : Veto.ScreenEmployee
     {
         private int page;
-        private readonly int elementsPerPage = 6;
+        private readonly int elementsPerPage = 8;
         private List<Produit> allProducts;
 
         public Stock(Salarie user) : base(user)
