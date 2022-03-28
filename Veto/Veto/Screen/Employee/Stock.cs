@@ -18,6 +18,7 @@ namespace Veto
         {
             InitializeComponent();
             allProducts = Utils.GetProduitsAll();
+            showProduct();
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace Veto
             StockAjout stockAjout = new StockAjout(null);
             if(stockAjout.ShowDialog() == DialogResult.Yes)
             {
-               LoadProducts();
+                showProduct();
             }
            
         }

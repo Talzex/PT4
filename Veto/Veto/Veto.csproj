@@ -96,12 +96,6 @@
     <Compile Include="UserControls\ClientComponent.Designer.cs">
       <DependentUpon>ClientComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screen\Employee\ClientsModify.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screen\Employee\ClientsModify.Designer.cs">
-      <DependentUpon>ClientsModify.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screen\Employee\ClientsDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,9 +279,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ClientsDetails.resx">
       <DependentUpon>ClientsDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screen\Employee\ClientsModify.resx">
-      <DependentUpon>ClientsModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\ScreenEmployee.resx">
       <DependentUpon>ScreenEmployee.cs</DependentUpon>

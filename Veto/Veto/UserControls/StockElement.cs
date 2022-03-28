@@ -24,7 +24,7 @@ namespace Veto
         /// <summary>
         /// Updates the display element
         /// </summary>
-        private void UpdateDisplay()
+        private void MAJProduit(Produit product)
         {
             label_nom.Text = product.NomProduit;
             label_quantite.Text = "Quantité : " + product.QuantiteEnStock;
