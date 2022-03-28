@@ -33,7 +33,7 @@ namespace Veto
         {
             InitializeComponent();
             this.client = client;
-            animals = null; // Requete
+            animals = Utils.ClientAnimals(client); // Requete
             UpdateDisplay();
         }
 
@@ -73,11 +73,15 @@ namespace Veto
         private void ValidateBTN_Click(object sender, EventArgs e)
         {
             Regex reg = new Regex(@"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$", RegexOptions.IgnoreCase);
-            if (LNameTB.Text != "" || FNameTB.Text != "" ||
-                MailTB.Text != "" || PhoneTB.Text != "" ||
-                !reg.IsMatch(MailTB.Text))
+            if (LNameTB.Text != "" && FNameTB.Text != "" &&
+                MailTB.Text != "" && PhoneTB.Text != "" &&
+                reg.IsMatch(MailTB.Text))
             {
-                // Sauvegarder
+                client.AdresseMail = MailTB.Text;
+                client.NomClient = LNameTB.Text;
+                client.PrenomClient = FNameTB.Text;
+                client.NumeroTelephone = PhoneTB.Text;
+                Utils.SaveClient(client);
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -95,9 +99,8 @@ namespace Veto
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Vous allez supprimer le client. En êtes vous sûr ?",
-                "Suppression", MessageBoxButtons.YesNo) == DialogResult.OK)
+                "Suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //Supprimer
                 DialogResult = DialogResult.Abort;
                 Close();
             }
