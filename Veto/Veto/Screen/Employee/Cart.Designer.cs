@@ -32,26 +32,35 @@ namespace Veto
             this.button_validate = new System.Windows.Forms.Button();
             this.button_bill = new System.Windows.Forms.Button();
             this.button_empty = new System.Windows.Forms.Button();
-            this.label_discount = new System.Windows.Forms.Label();
             this.label_total = new System.Windows.Forms.Label();
             this.label_customer = new System.Windows.Forms.Label();
             this.button_login = new System.Windows.Forms.Button();
-            this.button_signin = new System.Windows.Forms.Button();
             this.label_cart = new System.Windows.Forms.Label();
             this.panel_bottombill = new System.Windows.Forms.Panel();
+            this.ClientsCB = new System.Windows.Forms.ComboBox();
             this.panel_title = new System.Windows.Forms.Panel();
-            this.buttonEllipse1 = new Veto.ButtonEllipse();
-            this.buttonEllipse_previous = new Veto.ButtonEllipse();
+            this.NextBTN = new Veto.ButtonEllipse();
+            this.PreviousBTN = new Veto.ButtonEllipse();
             this.Panel_AllProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.button_addconsultation = new System.Windows.Forms.Button();
             this.button_addoperation = new System.Windows.Forms.Button();
             this.button_addnight = new System.Windows.Forms.Button();
+            this.PrinterCB = new System.Windows.Forms.ComboBox();
+            this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.panel_bottombill.SuspendLayout();
             this.panel_title.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Controls.Add(this.Panel_AllProducts);
+            this.CenterPNL.Controls.Add(this.panel_title);
+            this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CenterPNL.Location = new System.Drawing.Point(225, 86);
+            this.CenterPNL.Size = new System.Drawing.Size(839, 595);
             // 
             // SidePNL
             // 
@@ -61,8 +70,9 @@ namespace Veto
             this.SidePNL.Panel2.Controls.Add(this.button_addnight);
             this.SidePNL.Panel2.Controls.Add(this.button_addoperation);
             this.SidePNL.Panel2.Controls.Add(this.button_addconsultation);
-            this.SidePNL.Size = new System.Drawing.Size(225, 587);
-            this.SidePNL.SplitterDistance = 308;
+            this.SidePNL.Size = new System.Drawing.Size(225, 571);
+            this.SidePNL.SplitterDistance = 298;
+            this.SidePNL.SplitterWidth = 6;
             // 
             // button_validate
             // 
@@ -76,6 +86,7 @@ namespace Veto
             this.button_validate.TabIndex = 8;
             this.button_validate.Text = "VALIDER";
             this.button_validate.UseVisualStyleBackColor = false;
+            this.button_validate.Click += new System.EventHandler(this.button_validate_Click);
             // 
             // button_bill
             // 
@@ -89,6 +100,7 @@ namespace Veto
             this.button_bill.TabIndex = 9;
             this.button_bill.Text = "IMPRIMER FACTURE";
             this.button_bill.UseVisualStyleBackColor = false;
+            this.button_bill.Click += new System.EventHandler(this.button_bill_Click);
             // 
             // button_empty
             // 
@@ -102,16 +114,7 @@ namespace Veto
             this.button_empty.TabIndex = 10;
             this.button_empty.Text = "VIDER";
             this.button_empty.UseVisualStyleBackColor = false;
-            // 
-            // label_discount
-            // 
-            this.label_discount.AutoSize = true;
-            this.label_discount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_discount.Location = new System.Drawing.Point(13, 123);
-            this.label_discount.Name = "label_discount";
-            this.label_discount.Size = new System.Drawing.Size(78, 21);
-            this.label_discount.TabIndex = 11;
-            this.label_discount.Text = "Remise : -";
+            this.button_empty.Click += new System.EventHandler(this.button_empty_Click);
             // 
             // label_total
             // 
@@ -119,19 +122,19 @@ namespace Veto
             this.label_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_total.Location = new System.Drawing.Point(13, 91);
             this.label_total.Name = "label_total";
-            this.label_total.Size = new System.Drawing.Size(118, 21);
+            this.label_total.Size = new System.Drawing.Size(56, 21);
             this.label_total.TabIndex = 12;
-            this.label_total.Text = "Total : 120.95€";
+            this.label_total.Text = "Total :";
             // 
             // label_customer
             // 
             this.label_customer.AutoSize = true;
             this.label_customer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_customer.Location = new System.Drawing.Point(13, 13);
+            this.label_customer.Location = new System.Drawing.Point(13, 12);
             this.label_customer.Name = "label_customer";
-            this.label_customer.Size = new System.Drawing.Size(91, 21);
+            this.label_customer.Size = new System.Drawing.Size(95, 21);
             this.label_customer.TabIndex = 13;
-            this.label_customer.Text = "Client : xxx1";
+            this.label_customer.Text = "Aucun client";
             // 
             // button_login
             // 
@@ -139,25 +142,13 @@ namespace Veto
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_login.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_login.ForeColor = System.Drawing.Color.White;
-            this.button_login.Location = new System.Drawing.Point(110, 14);
+            this.button_login.Location = new System.Drawing.Point(268, 12);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(123, 23);
             this.button_login.TabIndex = 14;
             this.button_login.Text = "IDENTIFIER";
             this.button_login.UseVisualStyleBackColor = false;
-            // 
-            // button_signin
-            // 
-            this.button_signin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(97)))), ((int)(((byte)(50)))));
-            this.button_signin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_signin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_signin.ForeColor = System.Drawing.Color.White;
-            this.button_signin.Location = new System.Drawing.Point(239, 14);
-            this.button_signin.Name = "button_signin";
-            this.button_signin.Size = new System.Drawing.Size(123, 23);
-            this.button_signin.TabIndex = 15;
-            this.button_signin.Text = "CREER UN COMPTE";
-            this.button_signin.UseVisualStyleBackColor = false;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // label_cart
             // 
@@ -171,66 +162,77 @@ namespace Veto
             // 
             // panel_bottombill
             // 
+            this.panel_bottombill.Controls.Add(this.PrinterCB);
+            this.panel_bottombill.Controls.Add(this.ClientsCB);
             this.panel_bottombill.Controls.Add(this.label_customer);
             this.panel_bottombill.Controls.Add(this.button_login);
             this.panel_bottombill.Controls.Add(this.button_empty);
-            this.panel_bottombill.Controls.Add(this.label_discount);
             this.panel_bottombill.Controls.Add(this.button_bill);
             this.panel_bottombill.Controls.Add(this.label_total);
             this.panel_bottombill.Controls.Add(this.button_validate);
-            this.panel_bottombill.Controls.Add(this.button_signin);
-            this.panel_bottombill.Location = new System.Drawing.Point(230, 426);
+            this.panel_bottombill.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_bottombill.Location = new System.Drawing.Point(225, 438);
             this.panel_bottombill.Name = "panel_bottombill";
-            this.panel_bottombill.Size = new System.Drawing.Size(838, 219);
+            this.panel_bottombill.Size = new System.Drawing.Size(839, 219);
             this.panel_bottombill.TabIndex = 11;
+            // 
+            // ClientsCB
+            // 
+            this.ClientsCB.FormattingEnabled = true;
+            this.ClientsCB.Location = new System.Drawing.Point(10, 37);
+            this.ClientsCB.Name = "ClientsCB";
+            this.ClientsCB.Size = new System.Drawing.Size(121, 21);
+            this.ClientsCB.TabIndex = 16;
             // 
             // panel_title
             // 
-            this.panel_title.Controls.Add(this.buttonEllipse1);
-            this.panel_title.Controls.Add(this.buttonEllipse_previous);
+            this.panel_title.Controls.Add(this.NextBTN);
+            this.panel_title.Controls.Add(this.PreviousBTN);
             this.panel_title.Controls.Add(this.label_cart);
-            this.panel_title.Location = new System.Drawing.Point(230, 75);
+            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_title.Location = new System.Drawing.Point(0, 0);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(838, 58);
+            this.panel_title.Size = new System.Drawing.Size(839, 155);
             this.panel_title.TabIndex = 17;
             // 
-            // buttonEllipse1
+            // NextBTN
             // 
-            this.buttonEllipse1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
-            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEllipse1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEllipse1.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonEllipse1.Location = new System.Drawing.Point(770, 3);
-            this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEllipse1.Name = "buttonEllipse1";
-            this.buttonEllipse1.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.buttonEllipse1.Size = new System.Drawing.Size(52, 52);
-            this.buttonEllipse1.TabIndex = 19;
-            this.buttonEllipse1.Text = ">";
-            this.buttonEllipse1.UseVisualStyleBackColor = false;
+            this.NextBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.NextBTN.FlatAppearance.BorderSize = 0;
+            this.NextBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextBTN.ForeColor = System.Drawing.Color.White;
+            this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NextBTN.Location = new System.Drawing.Point(770, 3);
+            this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
+            this.NextBTN.Name = "NextBTN";
+            this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.NextBTN.Size = new System.Drawing.Size(52, 52);
+            this.NextBTN.TabIndex = 19;
+            this.NextBTN.Text = ">";
+            this.NextBTN.UseVisualStyleBackColor = false;
             // 
-            // buttonEllipse_previous
+            // PreviousBTN
             // 
-            this.buttonEllipse_previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.buttonEllipse_previous.FlatAppearance.BorderSize = 0;
-            this.buttonEllipse_previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEllipse_previous.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEllipse_previous.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse_previous.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonEllipse_previous.Location = new System.Drawing.Point(3, 5);
-            this.buttonEllipse_previous.Name = "buttonEllipse_previous";
-            this.buttonEllipse_previous.Size = new System.Drawing.Size(50, 50);
-            this.buttonEllipse_previous.TabIndex = 18;
-            this.buttonEllipse_previous.Text = "<";
-            this.buttonEllipse_previous.UseVisualStyleBackColor = false;
+            this.PreviousBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.PreviousBTN.FlatAppearance.BorderSize = 0;
+            this.PreviousBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousBTN.ForeColor = System.Drawing.Color.White;
+            this.PreviousBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PreviousBTN.Location = new System.Drawing.Point(3, 5);
+            this.PreviousBTN.Name = "PreviousBTN";
+            this.PreviousBTN.Size = new System.Drawing.Size(50, 50);
+            this.PreviousBTN.TabIndex = 18;
+            this.PreviousBTN.Text = "<";
+            this.PreviousBTN.UseVisualStyleBackColor = false;
             // 
             // Panel_AllProducts
             // 
-            this.Panel_AllProducts.Location = new System.Drawing.Point(230, 139);
+            this.Panel_AllProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_AllProducts.Location = new System.Drawing.Point(0, 155);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
-            this.Panel_AllProducts.Size = new System.Drawing.Size(838, 281);
+            this.Panel_AllProducts.Size = new System.Drawing.Size(839, 440);
             this.Panel_AllProducts.TabIndex = 18;
             // 
             // button_addconsultation
@@ -275,19 +277,27 @@ namespace Veto
             this.button_addnight.Text = "AJOUTER NUIT";
             this.button_addnight.UseVisualStyleBackColor = false;
             // 
+            // PrinterCB
+            // 
+            this.PrinterCB.FormattingEnabled = true;
+            this.PrinterCB.Location = new System.Drawing.Point(315, 185);
+            this.PrinterCB.Name = "PrinterCB";
+            this.PrinterCB.Size = new System.Drawing.Size(121, 21);
+            this.PrinterCB.TabIndex = 17;
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 657);
-            this.Controls.Add(this.Panel_AllProducts);
-            this.Controls.Add(this.panel_title);
             this.Controls.Add(this.panel_bottombill);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cart";
+            this.Activated += new System.EventHandler(this.Cart_Activated);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
+            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.panel_bottombill, 0);
-            this.Controls.SetChildIndex(this.panel_title, 0);
-            this.Controls.SetChildIndex(this.Panel_AllProducts, 0);
+            this.CenterPNL.ResumeLayout(false);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
@@ -304,19 +314,19 @@ namespace Veto
         private System.Windows.Forms.Button button_validate;
         private System.Windows.Forms.Button button_bill;
         private System.Windows.Forms.Button button_empty;
-        private System.Windows.Forms.Label label_discount;
         private System.Windows.Forms.Label label_total;
         private System.Windows.Forms.Label label_customer;
         private System.Windows.Forms.Button button_login;
-        private System.Windows.Forms.Button button_signin;
         private System.Windows.Forms.Label label_cart;
         private System.Windows.Forms.Panel panel_bottombill;
         private System.Windows.Forms.Panel panel_title;
-        private ButtonEllipse buttonEllipse_previous;
-        private ButtonEllipse buttonEllipse1;
+        private ButtonEllipse PreviousBTN;
+        private ButtonEllipse NextBTN;
         private System.Windows.Forms.FlowLayoutPanel Panel_AllProducts;
         private System.Windows.Forms.Button button_addnight;
         private System.Windows.Forms.Button button_addoperation;
         private System.Windows.Forms.Button button_addconsultation;
+        private System.Windows.Forms.ComboBox ClientsCB;
+        private System.Windows.Forms.ComboBox PrinterCB;
     }
 }

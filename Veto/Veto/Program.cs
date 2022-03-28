@@ -19,7 +19,7 @@ namespace Veto
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Utils.ChargerEntities();
+            Utils.LoadEntities();
             
             mainScreen = new Stock(new Salarie());
             Application.Run(mainScreen);

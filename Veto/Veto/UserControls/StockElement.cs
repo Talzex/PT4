@@ -12,7 +12,8 @@ namespace Veto
 {
     public partial class StockElement : UserControl
     {
-        Produit product = new Produit();
+        Produit product;
+
         public StockElement(Produit product)
         {
             InitializeComponent();
@@ -20,7 +21,10 @@ namespace Veto
             MAJProduit(product);
         }
 
-        private void MAJProduit(Produit product)
+        /// <summary>
+        /// Updates the display element
+        /// </summary>
+        private void UpdateDisplay()
         {
             label_nom.Text = product.NomProduit;
             label_quantite.Text = "Quantité : " + product.QuantiteEnStock;

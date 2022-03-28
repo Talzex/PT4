@@ -23,11 +23,21 @@ namespace Veto
             UserLBL.Text = user.Login;
         }
 
+        /// <summary>
+        /// Before the screen is closed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ScreenCommon_FormClosing(object sender, FormClosingEventArgs e)
         {
             FormController.ScreenClosed(this.DialogResult);
         }
 
+        /// <summary>
+        /// Click on the "Deconnexion" button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DisconnectBT_Click(object sender, EventArgs e)
         {
             FormController.Disconnect();

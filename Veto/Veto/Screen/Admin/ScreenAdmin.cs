@@ -20,11 +20,21 @@ namespace Veto
             //SidePNL.Visible = true;
         }
 
+        /// <summary>
+        /// Shows the screen that lists all the employees
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UserBTN_Click(object sender, EventArgs e)
         {
             FormController.GetController().ActivateForm(0);
         }
 
+        /// <summary>
+        /// Shows the screen that lists the logs (Not implemented)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LogsBTN_Click(object sender, EventArgs e)
         {
 

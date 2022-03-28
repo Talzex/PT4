@@ -31,6 +31,9 @@ namespace Veto
             FillTextBoxes();
         }
 
+        /// <summary>
+        /// Loads the employees' infos in the textboxes
+        /// </summary>
         private void FillTextBoxes()
         {
             LoginTB.Text = employee.Login;
@@ -39,6 +42,9 @@ namespace Veto
             //RoleCB.SelectedItem = employee.Roles;
         }
 
+        /// <summary>
+        /// Adds the availbles roles into the combobox
+        /// </summary>
         private void AddRoles()
         {
             /*
@@ -49,6 +55,11 @@ namespace Veto
             }*/
         }
 
+        /// <summary>
+        /// Saves the employee's infos if they are correct
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveBTN_Click(object sender, EventArgs e)
         {
             Regex reg = new Regex(@"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$", RegexOptions.IgnoreCase);
@@ -77,6 +88,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Deletes the employee
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Vous allez supprimer cet utiilisateur, en êtes-vous sûr ?", "Oui / Non", MessageBoxButtons.YesNo);

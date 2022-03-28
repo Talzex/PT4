@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockElement));
             this.label_nom = new System.Windows.Forms.Label();
             this.label_quantite = new System.Windows.Forms.Label();
             this.label_pricesell = new System.Windows.Forms.Label();
@@ -120,6 +121,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(75, 75);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_purchaseprice
             // 

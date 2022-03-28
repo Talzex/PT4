@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace Veto
 {
-    public partial class ClientsModify : Form
+    public partial class Schedule : UserControl
     {
-        private Client client;
-        public ClientsModify()
+        public Schedule()
         {
             InitializeComponent();
         }

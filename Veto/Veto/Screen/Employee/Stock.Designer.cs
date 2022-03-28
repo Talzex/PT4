@@ -1,5 +1,4 @@
-﻿
-namespace Veto
+﻿namespace Veto
 {
     partial class Stock
     {
@@ -39,15 +38,18 @@ namespace Veto
             this.addProductBTN = new System.Windows.Forms.Button();
             this.panel_Allproducts = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
-            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.ManagementPNL.SuspendLayout();
             this.SuspendLayout();
             // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Controls.Add(this.ManagementPNL);
+            this.CenterPNL.Controls.Add(this.panel_Allproducts);
+            CenterPNL.Controls.SetChildIndex(this.ManagementPNL, 0);
+            CenterPNL.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            // 
             // SidePNL
-            // 
-            // 
-            // SidePNL.Panel2
             // 
             this.SidePNL.Panel2.Controls.Add(this.addProductBTN);
             this.SidePNL.Size = new System.Drawing.Size(229, 595);
@@ -74,7 +76,7 @@ namespace Veto
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(646, 107);
+            this.comboBoxFilter.Location = new System.Drawing.Point(551, 55);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter.TabIndex = 10;
@@ -84,7 +86,7 @@ namespace Veto
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(561, 104);
+            this.label1.Location = new System.Drawing.Point(450, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 21;
@@ -159,7 +161,7 @@ namespace Veto
             // 
             this.panel_Allproducts.Location = new System.Drawing.Point(229, 255);
             this.panel_Allproducts.Name = "panel_Allproducts";
-            this.panel_Allproducts.Size = new System.Drawing.Size(835, 426);
+            this.panel_Allproducts.Size = new System.Drawing.Size(764, 595);
             this.panel_Allproducts.TabIndex = 9;
             // 
             // Stock
