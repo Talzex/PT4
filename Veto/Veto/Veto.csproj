@@ -59,7 +59,7 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="BillPrint.cs" />
+    <Compile Include="Scripts\BillPrint.cs" />
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,7 +111,7 @@
     <Compile Include="Facture.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="FormController.cs" />
+    <Compile Include="Scripts\FormController.cs" />
     <Compile Include="HoraireTravail.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -367,8 +367,6 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

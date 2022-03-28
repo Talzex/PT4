@@ -18,11 +18,30 @@ namespace Veto
         {
             InitializeComponent();
             this.client = client;
+            UpdateDisplay();
         }
 
         private void DetailsButton_Click(object sender, EventArgs e)
         {
-            //TODO afficher ClientsDetails
+            ClientsDetails cd = new ClientsDetails(client);
+            DialogResult result = cd.ShowDialog();
+            if (result == DialogResult.Abort)
+            {
+                Parent.Controls.Remove(this);
+            } else if (result == DialogResult.OK)
+            {
+                UpdateDisplay();
+            }
+        }
+
+        /// <summary>
+        /// Updates the labels
+        /// </summary>
+        public void UpdateDisplay()
+        {
+            NameLBL.Text = client.ToString();
+            TelLBL.Text = "Téléphone : " + client.NumeroTelephone;
+            EmailLBL.Text = "Email : " + client.AdresseMail;
         }
     }
 }
