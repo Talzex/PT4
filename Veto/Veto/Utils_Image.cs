@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +28,9 @@ namespace Veto
         /// <returns>the bitmap</returns>
         public static Image ByteToImage(byte[] img)
         {
-            ImageConverter converter = new ImageConverter();
-            return (Image)converter.ConvertTo(img, typeof(Image));
+            MemoryStream ms = new MemoryStream(img);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 }

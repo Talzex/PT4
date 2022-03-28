@@ -56,7 +56,7 @@ namespace Veto
         /// <param name="image">the product's image</param>
         /// <param name="salePrice">Selling price</param>
         /// <param name="purchasePrice">purchase price</param>
-        public static void ModifyProduct(Produit product, String nameProduct, int quantity, Bitmap image, float salePrice, float purchasePrice)
+        public static void ModifyProduct(Produit product, String nameProduct, int quantity, Image image, double salePrice, double purchasePrice)
         {
             if (product != null)
             {

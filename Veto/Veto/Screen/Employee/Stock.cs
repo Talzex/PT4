@@ -41,11 +41,11 @@ namespace Veto
         /// </summary>
         private void showProduct()
         {
-            panel_Allproducts.Controls.Clear();
+            AllProductsPNL.Controls.Clear();
             foreach (Produit produit in Utils.GetProduitsAll())
             {
                 var stockElement = new StockElement(produit);
-                panel_Allproducts.Controls.Add(stockElement);
+                AllProductsPNL.Controls.Add(stockElement);
             }
         }
 
@@ -59,7 +59,7 @@ namespace Veto
                 if (i < allProducts.Count)
                 {
                     var stockElement = new StockElement(allProducts[i]);
-                    panel_Allproducts.Controls.Add(stockElement);
+                    AllProductsPNL.Controls.Add(stockElement);
                 }
             }
         }
@@ -86,11 +86,11 @@ namespace Veto
         /// <param name="e"></param>
         private void textBoxResearch_TextChanged(object sender, EventArgs e)
         {
-            panel_Allproducts.Controls.Clear();
-            foreach (Produit produit in Utils.SearchProduct(textBoxResearch.Text))
+            AllProductsPNL.Controls.Clear();
+            foreach (Produit produit in Utils.SearchProduct(TextBoxResearch.Text))
             {
                 var stockElement = new StockElement(produit);
-                panel_Allproducts.Controls.Add(stockElement);
+                AllProductsPNL.Controls.Add(stockElement);
             }
         }
 
@@ -115,36 +115,36 @@ namespace Veto
         /// <param name="e"></param>
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-           int comboBoxIndex = comboBoxFilter.SelectedIndex;
-            panel_Allproducts.Controls.Clear();
+           int comboBoxIndex = FilterBox.SelectedIndex;
+            AllProductsPNL.Controls.Clear();
             switch (comboBoxIndex)
             {
                 case 0:
                     foreach (Produit produit in Utils.QuantityProductDESC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
                 case 1:
                     foreach (Produit produit in Utils.QuantityProductASC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
                 case 2:
                     foreach (Produit produit in Utils.NameProductASC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
                 case 3:
                     foreach (Produit produit in Utils.NameProductDESC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
             }
