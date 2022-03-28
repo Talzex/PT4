@@ -12,6 +12,8 @@ namespace Veto
 {
     public partial class CalendarDetails : Form
     {
+        private RendezVous rdv = null;
+
         public CalendarDetails()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace Veto
         public CalendarDetails(RendezVous rdv)
         {
             InitializeComponent();
+            this.rdv = rdv;
             this.ClientsList.SelectedItem = rdv.Client;
             this.AnimalsList.SelectedItem = rdv.AnimalRDV;
             this.BeginHour.Value = rdv.heureDebut.Hours;
@@ -45,13 +48,36 @@ namespace Veto
         /// <param name="e"></param>
         private void ValidateBT_Click(object sender, EventArgs e)
         {
-            RendezVous rdv = new RendezVous();
-            rdv.Client = (Client)this.ClientsList.SelectedItem;
-            rdv.AnimalRDV = (ICollection<AnimalRDV>)(Animal)this.AnimalsList.SelectedItem;
-            rdv.heureDebut = new TimeSpan((int)this.BeginHour.Value, 0, 0);
-            rdv.heureFin = new TimeSpan((int)this.EndHour.Value, 0, 0);
-            rdv
+            Journee journee = null;
+            if (Utils.GetDay(Date.SelectionRange.Start) == null)
+            {
+                journee = new Journee();
+                journee.Date = Date.SelectionRange.Start;
+                Utils.SaveDay(journee);
+            }
+            else
+            {
+                journee = Utils.GetDay(Date.SelectionRange.Start);
+            }
 
+            if (this.rdv == null)
+            {
+                rdv = new RendezVous();
+                rdv.Client = (Client)this.ClientsList.SelectedItem;
+                rdv.AnimalRDV = (ICollection<AnimalRDV>)(Animal)this.AnimalsList.SelectedItem;
+                rdv.heureDebut = new TimeSpan((int)this.BeginHour.Value, 0, 0);
+                rdv.heureFin = new TimeSpan((int)this.EndHour.Value, 0, 0);
+                rdv.motif = ReasonTB.Text;
+                rdv.Journee = journee;
+                Utils.SaveRDV(rdv);
+            }
+            else
+            {
+                Client client = (Client)this.ClientsList.SelectedItem;
+                Animal animal = (Animal)(ICollection<AnimalRDV>)this.AnimalsList.SelectedItem;
+                Utils.ModifyRDV(rdv, client.IdClient, animal,
+                    new TimeSpan((int)this.BeginHour.Value, 0, 0), new TimeSpan((int)this.EndHour.Value, 0, 0), ReasonTB.Text.ToString(), journee.IdJournee);
+            }
         }
     }
 }
