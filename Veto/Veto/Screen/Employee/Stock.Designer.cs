@@ -31,12 +31,12 @@
             this.ManagementPNL = new System.Windows.Forms.Panel();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxResearch = new System.Windows.Forms.TextBox();
             this.NextBTN = new Veto.ButtonEllipse();
             this.PreviousBTN = new Veto.ButtonEllipse();
             this.label_stock = new System.Windows.Forms.Label();
-            this.panel_Allproducts = new System.Windows.Forms.Panel();
-            this.CenterPNL.SuspendLayout();
+            this.addProductBTN = new System.Windows.Forms.Button();
+            this.panel_Allproducts = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.SuspendLayout();
             this.ManagementPNL.SuspendLayout();
@@ -51,20 +51,21 @@
             // 
             // SidePNL
             // 
-            this.SidePNL.SplitterDistance = 440;
+            this.SidePNL.Panel2.Controls.Add(this.addProductBTN);
+            this.SidePNL.Size = new System.Drawing.Size(229, 595);
             // 
             // ManagementPNL
             // 
             this.ManagementPNL.Controls.Add(this.comboBoxFilter);
             this.ManagementPNL.Controls.Add(this.label1);
-            this.ManagementPNL.Controls.Add(this.textBox1);
+            this.ManagementPNL.Controls.Add(this.textBoxResearch);
             this.ManagementPNL.Controls.Add(this.NextBTN);
             this.ManagementPNL.Controls.Add(this.PreviousBTN);
             this.ManagementPNL.Controls.Add(this.label_stock);
             this.ManagementPNL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ManagementPNL.Location = new System.Drawing.Point(0, 0);
+            this.ManagementPNL.Location = new System.Drawing.Point(229, 86);
             this.ManagementPNL.Name = "ManagementPNL";
-            this.ManagementPNL.Size = new System.Drawing.Size(764, 169);
+            this.ManagementPNL.Size = new System.Drawing.Size(835, 169);
             this.ManagementPNL.TabIndex = 8;
             // 
             // comboBoxFilter
@@ -79,6 +80,7 @@
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter.TabIndex = 10;
+            this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -90,12 +92,13 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Trier par : ";
             // 
-            // textBox1
+            // textBoxResearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxResearch.Location = new System.Drawing.Point(65, 108);
+            this.textBoxResearch.Name = "textBoxResearch";
+            this.textBoxResearch.Size = new System.Drawing.Size(170, 20);
+            this.textBoxResearch.TabIndex = 9;
+            this.textBoxResearch.TextChanged += new System.EventHandler(this.textBoxResearch_TextChanged);
             // 
             // NextBTN
             // 
@@ -105,7 +108,7 @@
             this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextBTN.ForeColor = System.Drawing.Color.White;
             this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NextBTN.Location = new System.Drawing.Point(703, 108);
+            this.NextBTN.Location = new System.Drawing.Point(773, 112);
             this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
             this.NextBTN.Name = "NextBTN";
             this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -141,10 +144,22 @@
             this.label_stock.TabIndex = 17;
             this.label_stock.Text = "Gestion des stocks";
             // 
+            // addProductBTN
+            // 
+            this.addProductBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.addProductBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addProductBTN.ForeColor = System.Drawing.Color.White;
+            this.addProductBTN.Location = new System.Drawing.Point(33, 15);
+            this.addProductBTN.Name = "addProductBTN";
+            this.addProductBTN.Size = new System.Drawing.Size(155, 23);
+            this.addProductBTN.TabIndex = 0;
+            this.addProductBTN.Text = "AJOUTER  AU CATALOGUE";
+            this.addProductBTN.UseVisualStyleBackColor = false;
+            this.addProductBTN.Click += new System.EventHandler(this.addProductBTN_Click);
+            // 
             // panel_Allproducts
             // 
-            this.panel_Allproducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Allproducts.Location = new System.Drawing.Point(0, 0);
+            this.panel_Allproducts.Location = new System.Drawing.Point(229, 255);
             this.panel_Allproducts.Name = "panel_Allproducts";
             this.panel_Allproducts.Size = new System.Drawing.Size(764, 595);
             this.panel_Allproducts.TabIndex = 9;
@@ -153,10 +168,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.panel_Allproducts);
+            this.Controls.Add(this.ManagementPNL);
             this.Name = "Stock";
-            this.Activated += new System.EventHandler(this.Stock_Activated);
-            this.CenterPNL.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.TopPNL, 0);
+            this.Controls.SetChildIndex(this.SidePNL, 0);
+            this.Controls.SetChildIndex(this.ManagementPNL, 0);
+            this.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.ManagementPNL.ResumeLayout(false);
@@ -172,8 +191,9 @@
         private ButtonEllipse PreviousBTN;
         private ButtonEllipse NextBTN;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxResearch;
         private System.Windows.Forms.ComboBox comboBoxFilter;
-        private System.Windows.Forms.Panel panel_Allproducts;
+        private System.Windows.Forms.Button addProductBTN;
+        private System.Windows.Forms.FlowLayoutPanel panel_Allproducts;
     }
 }

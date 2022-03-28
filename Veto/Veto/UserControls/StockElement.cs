@@ -18,7 +18,7 @@ namespace Veto
         {
             InitializeComponent();
             this.product = product;
-            UpdateDisplay();
+            MAJProduit(product);
         }
 
         /// <summary>
@@ -32,14 +32,25 @@ namespace Veto
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
         }
 
-        /// <summary>
-        /// Click on the Product's image
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void buttonModify_Click(object sender, EventArgs e)
         {
-            FormController.AddItemToCart(product,1);
+            StockAjout stockAjout = new StockAjout(product);
+            stockAjout.Show();
+            MAJProduit(product);
+            
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            String message = "Êtes vous sûr de vouloir le supprimer";
+            String caption = "Suppression Produits";
+            var messageBox =  MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+            if(messageBox == DialogResult.Yes)
+            {
+                Parent.Controls.Remove(this);
+                Utils.RemoveProduct(product);
+            }
+            
         }
     }
 }
