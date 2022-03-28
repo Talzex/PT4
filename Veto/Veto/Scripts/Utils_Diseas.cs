@@ -15,6 +15,7 @@ namespace Veto
         public static List<Maladie> GetDeseasAll()
         {
             var deseas = (from data in entities.Maladie
+                          orderby data.NomMaladie ascending
                           select data).ToList();
 
             return (List<Maladie>)deseas;

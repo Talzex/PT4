@@ -59,5 +59,27 @@ namespace Veto
                            select data).ToList();
             return (List<Animal>)animals;
         }
+
+        /// <summary>
+        /// Query which modify a client
+        /// </summary>
+        /// <param name="client">the client</param>
+        /// <param name="nameClient">his name</param>
+        /// <param name="firstNameClient">his surname</param>
+        /// <param name="birthDate">his birth date</param>
+        /// <param name="phoneNumber">his phone number</param>
+        /// <param name="mail">his mail</param>
+        public static void ModifyClient(Client client, String nameClient, String firstNameClient, DateTime birthDate, String phoneNumber, String mail)
+        {
+            if (client != null)
+            {
+                client.NomClient = nameClient;
+                client.PrenomClient = firstNameClient;
+                client.DateNaissance = birthDate;
+                client.NumeroTelephone = phoneNumber;
+                client.AdresseMail = mail;
+                entities.SaveChanges();
+            }
+        }
     }
 }

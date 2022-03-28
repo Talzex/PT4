@@ -31,6 +31,7 @@ namespace Veto
         public static List<Salarie> GetEmployeeAll()
         {
             var employees = (from data in entities.Salarie
+                             orderby data.Login ascending
                              select data).ToList();
 
             return (List<Salarie>)employees;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -83,7 +83,7 @@
     <Compile Include="AnimalRDV.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Utils.cs" />
+    <Compile Include="Scripts\Utils.cs" />
     <Compile Include="CustomElements\ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -241,15 +241,16 @@
     <EmbeddedResource Include="Screen\Employee\CalendarDetails.resx">
       <DependentUpon>CalendarDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Utils_Care.cs" />
-    <Compile Include="Utils_Client.cs" />
-    <Compile Include="Utils_Deseas.cs" />
-    <Compile Include="Utils_Employee.cs" />
-    <Compile Include="Utils_Image.cs" />
-    <Compile Include="Utils_Invoice.cs" />
-    <Compile Include="Utils_Product.cs" />
-    <Compile Include="Utils_RDV.cs" />
-    <Compile Include="Utils_Role.cs" />
+    <Compile Include="Scripts\Utils_Care.cs" />
+    <Compile Include="Scripts\Utils_Client.cs" />
+    <Compile Include="Scripts\Utils_Day.cs" />
+    <Compile Include="Scripts\Utils_Diseas.cs" />
+    <Compile Include="Scripts\Utils_Employee.cs" />
+    <Compile Include="Scripts\Utils_Image.cs" />
+    <Compile Include="Scripts\Utils_Invoice.cs" />
+    <Compile Include="Scripts\Utils_Product.cs" />
+    <Compile Include="Scripts\Utils_RDV.cs" />
+    <Compile Include="Scripts\Utils_Role.cs" />
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>

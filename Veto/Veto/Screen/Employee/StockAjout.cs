@@ -115,7 +115,7 @@ namespace Veto
         private Boolean SameProducts(Produit NewProduit)
         {
             Boolean identique = false;
-            foreach (Produit produit in Utils.GetProduitsAll())
+            foreach (Produit produit in Utils.GetProductsAll())
             {
                 if (produit.NomProduit.Equals(NewProduit.NomProduit))
                 {
