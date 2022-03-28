@@ -47,13 +47,18 @@ namespace Veto
         /// <param name="e"></param>
         private void Clients_Activated(object sender, EventArgs e)
         {
+            ReloadPage();
+        }
+
+        private void ReloadPage()
+        {
             page = 0;
+            RefreshItems();
             PrevPageBTN.Enabled = false;
             if (allClients.Count <= pageSize)
             {
                 NextPageBTN.Enabled = false;
             }
-            RefreshItems();
         }
 
         /// <summary>
@@ -90,6 +95,16 @@ namespace Veto
 
             PrevPageBTN.Enabled = true;
             RefreshItems();
+        }
+
+        private void AddClientBTN_Click(object sender, EventArgs e)
+        {
+            ClientsDetails form = new ClientsDetails();
+            DialogResult result = form.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                ReloadPage();
+            }
         }
     }
 }

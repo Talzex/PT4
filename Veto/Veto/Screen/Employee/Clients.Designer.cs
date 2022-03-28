@@ -34,8 +34,10 @@ namespace Veto
             this.PrevPageBTN = new Veto.ButtonEllipse();
             this.NextPageBTN = new Veto.ButtonEllipse();
             this.ItemsPNL = new System.Windows.Forms.FlowLayoutPanel();
+            this.AddClientBTN = new System.Windows.Forms.Button();
             this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +46,13 @@ namespace Veto
             // 
             this.CenterPNL.Controls.Add(this.ItemsPNL);
             this.CenterPNL.Controls.Add(this.panel1);
+            // 
+            // SidePNL
+            // 
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.AddClientBTN);
             // 
             // panel1
             // 
@@ -102,6 +111,19 @@ namespace Veto
             this.ItemsPNL.Size = new System.Drawing.Size(764, 495);
             this.ItemsPNL.TabIndex = 1;
             // 
+            // AddClientBTN
+            // 
+            this.AddClientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddClientBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddClientBTN.ForeColor = System.Drawing.Color.White;
+            this.AddClientBTN.Location = new System.Drawing.Point(33, 28);
+            this.AddClientBTN.Name = "AddClientBTN";
+            this.AddClientBTN.Size = new System.Drawing.Size(143, 23);
+            this.AddClientBTN.TabIndex = 0;
+            this.AddClientBTN.Text = "Ajouter Client";
+            this.AddClientBTN.UseVisualStyleBackColor = false;
+            this.AddClientBTN.Click += new System.EventHandler(this.AddClientBTN_Click);
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +131,7 @@ namespace Veto
             this.Name = "Clients";
             this.Activated += new System.EventHandler(this.Clients_Activated);
             this.CenterPNL.ResumeLayout(false);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -124,5 +147,6 @@ namespace Veto
         private ButtonEllipse NextPageBTN;
         private System.Windows.Forms.Label TitleLBL;
         private System.Windows.Forms.FlowLayoutPanel ItemsPNL;
+        private System.Windows.Forms.Button AddClientBTN;
     }
 }

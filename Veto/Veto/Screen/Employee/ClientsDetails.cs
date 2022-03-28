@@ -33,7 +33,7 @@ namespace Veto
         {
             InitializeComponent();
             this.client = client;
-            animals = null; // Requete
+            animals = Utils.ClientAnimals(client); // Requete
             UpdateDisplay();
         }
 
@@ -77,7 +77,11 @@ namespace Veto
                 MailTB.Text != "" || PhoneTB.Text != "" ||
                 !reg.IsMatch(MailTB.Text))
             {
-                // Sauvegarder
+                client.AdresseMail = MailTB.Text;
+                client.NomClient = LNameTB.Text;
+                client.PrenomClient = FNameTB.Text;
+                client.NumeroTelephone = PhoneTB.Text;
+                Utils.SaveClient(client);
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -97,7 +101,6 @@ namespace Veto
             if (MessageBox.Show("Vous allez supprimer le client. En êtes vous sûr ?",
                 "Suppression", MessageBoxButtons.YesNo) == DialogResult.OK)
             {
-                //Supprimer
                 DialogResult = DialogResult.Abort;
                 Close();
             }
