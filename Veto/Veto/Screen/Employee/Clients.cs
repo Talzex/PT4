@@ -14,7 +14,7 @@ namespace Veto
         private List<Client> allClients;
 
         private int page;
-        private int pageSize;
+        private int pageSize = 4;
 
         public Clients() { InitializeComponent(); }
 
@@ -34,7 +34,7 @@ namespace Veto
             }
 
             ItemsPNL.Controls.Clear();
-            for (int i = page * pageSize; i < (page + 1) * pageSize || i < allClients.Count; i++)
+            for (int i = page * pageSize; i < (page + 1) * pageSize && i < allClients.Count; i++)
             {
                 ItemsPNL.Controls.Add(new ClientComponent(allClients[i]));
             }
@@ -53,6 +53,7 @@ namespace Veto
         private void ReloadPage()
         {
             page = 0;
+            allClients = Utils.GetClientsAll();
             RefreshItems();
             PrevPageBTN.Enabled = false;
             if (allClients.Count <= pageSize)
@@ -97,6 +98,11 @@ namespace Veto
             RefreshItems();
         }
 
+        /// <summary>
+        /// Click on the "Ajouter un client" Button. Adds a new client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddClientBTN_Click(object sender, EventArgs e)
         {
             ClientsDetails form = new ClientsDetails();

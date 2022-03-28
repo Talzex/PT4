@@ -73,9 +73,9 @@ namespace Veto
         private void ValidateBTN_Click(object sender, EventArgs e)
         {
             Regex reg = new Regex(@"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$", RegexOptions.IgnoreCase);
-            if (LNameTB.Text != "" || FNameTB.Text != "" ||
-                MailTB.Text != "" || PhoneTB.Text != "" ||
-                !reg.IsMatch(MailTB.Text))
+            if (LNameTB.Text != "" && FNameTB.Text != "" &&
+                MailTB.Text != "" && PhoneTB.Text != "" &&
+                reg.IsMatch(MailTB.Text))
             {
                 client.AdresseMail = MailTB.Text;
                 client.NomClient = LNameTB.Text;
@@ -99,7 +99,7 @@ namespace Veto
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Vous allez supprimer le client. En êtes vous sûr ?",
-                "Suppression", MessageBoxButtons.YesNo) == DialogResult.OK)
+                "Suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 DialogResult = DialogResult.Abort;
                 Close();

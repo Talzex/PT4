@@ -21,14 +21,19 @@ namespace Veto
             UpdateDisplay();
         }
 
+        /// <summary>
+        /// Click on the "Détails" Button. Shows a new form with the client's details
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DetailsButton_Click(object sender, EventArgs e)
         {
             ClientsDetails cd = new ClientsDetails(client);
             DialogResult result = cd.ShowDialog();
             if (result == DialogResult.Abort)
             {
-                Utils.RemoveClient(client);
                 Parent.Controls.Remove(this);
+                Utils.RemoveClient(client);
             } else if (result == DialogResult.OK)
             {
                 UpdateDisplay();
