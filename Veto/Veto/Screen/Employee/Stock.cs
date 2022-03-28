@@ -17,7 +17,7 @@ namespace Veto
         public Stock(Salarie user) : base(user)
         {
             InitializeComponent();
-            allProducts = Utils.GetProduitsAll();
+            allProducts = Utils.GetProductsAll();
             showProduct();
         }
 
@@ -42,7 +42,7 @@ namespace Veto
         private void showProduct()
         {
             panel_Allproducts.Controls.Clear();
-            foreach (Produit produit in Utils.GetProduitsAll())
+            foreach (Produit produit in Utils.GetProductsAll())
             {
                 var stockElement = new StockElement(produit);
                 panel_Allproducts.Controls.Add(stockElement);
