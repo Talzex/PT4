@@ -59,18 +59,6 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ClientsInfos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClientsInfos.Designer.cs">
-      <DependentUpon>ClientsInfos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ClientDisplay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ClientDisplay.Designer.cs">
-      <DependentUpon>ClientDisplay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Scripts\BillPrint.cs" />
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
@@ -247,12 +235,6 @@
     <Compile Include="UserControls\StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClientsInfos.resx">
-      <DependentUpon>ClientsInfos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ClientDisplay.resx">
-      <DependentUpon>ClientDisplay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>
