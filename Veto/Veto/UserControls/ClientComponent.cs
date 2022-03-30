@@ -13,11 +13,13 @@ namespace Veto
     public partial class ClientComponent : UserControl
     {
         private Client client;
+        private Panel parent;
 
-        public ClientComponent(Client client)
+        public ClientComponent(Client client, Panel parent)
         {
             InitializeComponent();
             this.client = client;
+            this.parent = parent;
             UpdateDisplay();
         }
 
@@ -33,6 +35,8 @@ namespace Veto
             if (result == DialogResult.Abort)
             {
                 Utils.RemoveClient(client);
+                Clients pf = parent.FindForm() as Clients;
+                pf.ReloadPage();
             }
             else if (result == DialogResult.OK)
             {
