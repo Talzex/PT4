@@ -27,7 +27,7 @@ namespace Veto
         /// <summary>
         /// Loads the Items in the center panel
         /// </summary>
-        public void RefreshItems()
+        private void RefreshItems()
         {
             if (allClients == null)
             {
@@ -36,7 +36,7 @@ namespace Veto
             ItemsPNL.Controls.Clear();
             for (int i = page * pageSize; i < (page + 1) * pageSize && i < allClients.Count; i++)
             {
-                var component = new ClientComponent(allClients[i]);
+                var component = new ClientComponent(allClients[i], ItemsPNL);
                 ItemsPNL.Controls.Add(component);
             }
         }
