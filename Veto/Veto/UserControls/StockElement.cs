@@ -26,10 +26,10 @@ namespace Veto
         /// </summary>
         public void MAJProduit()
         {
-            label_nom.Text = product.NomProduit;
-            label_quantite.Text = "Quantité : " + product.QuantiteEnStock;
-            label_pricesell.Text = "Prix de vente : " + product.PrixVenteClient + " €";
-            label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
+            NameLBL.Text = product.NomProduit;
+            QuantityLBL.Text = "Quantité : " + product.QuantiteEnStock;
+            SellPriceLBL.Text = "Prix de vente : " + product.PrixVenteClient + " €";
+            PurchasePriceLBL.Text = "Prix d'achat : " + product.PrixAchat + " €";
             if (product.ImageProduit != null)
             {
                 ImageProductPBOX.Image = Utils.ByteToImage(product.ImageProduit);
@@ -68,6 +68,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Method to add a product to the cart
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ImageProductPBOX_Click(object sender, EventArgs e)
         {
             FormController.AddItemToCart(product, 1);

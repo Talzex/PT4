@@ -25,7 +25,7 @@ namespace Veto
         }
 
         /// <summary>
-        /// Click on the "Détails" button
+        /// Click on the "Détails" Button. Shows a new form with the user's details
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -34,6 +34,9 @@ namespace Veto
             ShowModificatationForm();
         }
 
+        /// <summary>
+        /// Form with the user's details
+        /// </summary>
         public void ShowModificatationForm()
         {
             UserDetails user = new UserDetails(employee);
@@ -56,6 +59,9 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Update the elements
+        /// </summary>
         public void UpdateElements()
         {
             DescLBL.Text = employee.Login + " | " + employee.Roles;
