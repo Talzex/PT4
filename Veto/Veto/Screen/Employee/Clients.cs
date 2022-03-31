@@ -106,7 +106,8 @@ namespace Veto
         /// <param name="e"></param>
         private void AddClientBTN_Click(object sender, EventArgs e)
         {
-            ClientsDetails form = new ClientsDetails();
+            Client c = null;
+            ClientsDetails form = new ClientsDetails(c);
             DialogResult result = form.ShowDialog();
             if (result == DialogResult.OK)
             {

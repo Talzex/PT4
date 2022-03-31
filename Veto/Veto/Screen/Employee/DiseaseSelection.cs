@@ -17,7 +17,7 @@ namespace Veto
         public DiseaseSelection()
         {
             InitializeComponent();
-            DiseasesLB.Items.AddRange(Utils.GetDeseasAll().ToArray());            
+            DiseasesLB.Items.AddRange(Utils.GetDiseaseAll().ToArray());            
         }
 
         private void DiseasesLB_MouseDoubleClick(object sender, MouseEventArgs e)
