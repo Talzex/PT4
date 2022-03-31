@@ -23,7 +23,16 @@ namespace Veto
 
         private void DetailsBTN_Click(object sender, EventArgs e)
         {
-
+            AnimalDetails ad = new AnimalDetails(animal);
+            DialogResult res = ad.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                UpdateLabels();
+            }
+            else if (res == DialogResult.Abort)
+            {
+                Parent.Controls.Remove(this);
+            }
         }
 
         /// <summary>
@@ -32,7 +41,9 @@ namespace Veto
         private void UpdateLabels()
         {
             NameLabel.Text = animal.Nom;
-            AgeLBL.Text = "Age : " + (DateTime.Now - animal.DateDeNaissance).ToString();
+            SpecieLBL.Text = "Espèce : " + animal.NomEspece;
+            DateTime birth = (DateTime)(animal.DateDeNaissance);
+            AgeLBL.Text = "Age : " + (DateTime.Now.Year - birth.Year);
         }
     }
 }

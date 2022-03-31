@@ -263,6 +263,7 @@
     <EmbeddedResource Include="Screen\Employee\CalendarDetails.resx">
       <DependentUpon>CalendarDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Scripts\Utils_Animal.cs" />
     <Compile Include="Scripts\Utils_Care.cs" />
     <Compile Include="Scripts\Utils_Client.cs" />
     <Compile Include="Scripts\Utils_Day.cs" />

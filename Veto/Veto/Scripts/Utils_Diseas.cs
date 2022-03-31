@@ -8,11 +8,12 @@ namespace Veto
 {
     public static partial class Utils
     {
+
         /// <summary>
         /// Query which return all the deseas
         /// </summary>
         /// <returns>All the deseas</returns>
-        public static List<Maladie> GetDeseasAll()
+        public static List<Maladie> GetDiseaseAll()
         {
             var deseas = (from data in entities.Maladie
                           orderby data.NomMaladie ascending
@@ -26,49 +27,46 @@ namespace Veto
         /// </summary>
         /// <param name="a"> The animal </param>
         /// <returns>All the deseas of this animal</returns>
-        public static List<Maladie> getDeseasAnimal(Animal a)
+        public static List<Maladie> GetDiseasesAnimal(Animal a)
         {
-            var deseasId = (from data in entities.MaladieAnimal
-                          where data.IdAnimal == a.IdAnimal
-                          select data.IdMaladie);
-            var deseas = (from data in entities.Maladie
-                          where deseasId.Contains(data.IdMaladie)
+            var diseaseId = (from data in entities.MaladieAnimal
+                            where data.IdAnimal == a.IdAnimal
+                            select data.IdMaladie);
+            var disease = (from data in entities.Maladie
+                          where diseaseId.Contains(data.IdMaladie)
                           select data).ToList();
-            return (List <Maladie>) deseas;
+            return (List<Maladie>)disease;
         }
 
         /// <summary>
-        /// Add a deseas to an animal
+        /// Adds a disease to an animal
         /// </summary>
-        /// <param name="maladie"> The deseas</param>
+        /// <param name="disease"> The disease</param>
         /// <param name="animal"> The animal</param>
-        public static void addDeseasAnimal(Maladie maladie, Animal animal)
+        public static MaladieAnimal AddDiseaseAnimal(Maladie disease, Animal animal)
         {
-            if (maladie != null && animal != null)
+            if (disease != null && animal != null)
             {
-                MaladieAnimal maladieAnimal = new MaladieAnimal
+                MaladieAnimal da = new MaladieAnimal
                 {
-                    IdMaladie = maladie.IdMaladie,
+                    IdMaladie = disease.IdMaladie,
                     IdAnimal = animal.IdAnimal
                 };
-                entities.MaladieAnimal.Add(maladieAnimal);
+                entities.MaladieAnimal.Add(da);
                 entities.SaveChanges();
+                return da;
             }
+            return null;
         }
 
         /// <summary>
-        /// remove a deseas to an animal
+        /// Remove a deseas to an animal
         /// </summary>
         /// <param name="maladie"> The deseas </param>
         /// <param name="animal"> The animal </param>
-        public static void removeDeseasAnimal(Maladie maladie, Animal animal)
+        public static void RemoveDiseaseAnimal(MaladieAnimal disease)
         {
-            var animalDeseas = (from data in entities.MaladieAnimal
-                                where data.IdMaladie == maladie.IdMaladie && data.IdAnimal == animal.IdAnimal
-                                select data);
-
-
-            entities.MaladieAnimal.Remove((MaladieAnimal) animalDeseas);
+            entities.MaladieAnimal.Remove(disease);
             entities.SaveChanges();
         }
     }

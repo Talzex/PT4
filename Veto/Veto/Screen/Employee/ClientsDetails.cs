@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Veto
@@ -16,15 +9,7 @@ namespace Veto
     {
         private Client client;
         private List<Animal> animals;
-
-        /// <summary>
-        /// Create a new Client
-        /// </summary>
-        public ClientsDetails()
-        {
-            InitializeComponent();
-            client = new Client();
-        }
+        private bool create;
 
         /// <summary>
         /// Show details of clients
@@ -33,9 +18,21 @@ namespace Veto
         public ClientsDetails(Client client)
         {
             InitializeComponent();
-            this.client = client;
-            animals = Utils.ClientAnimals(client); // Requete
-            UpdateDisplay();
+
+            if (client != null)
+            {
+                this.client = client;
+                create = false;
+                animals = Utils.ClientAnimals(client);
+                UpdateDisplay();
+            }
+            else
+            {
+                create = true;
+                this.client = new Client();
+                animals = new List<Animal>();
+                AddAnimalBTN.Enabled = false;
+            }
         }
 
         /// <summary>
@@ -47,6 +44,7 @@ namespace Veto
             FNameTB.Text = client.PrenomClient;
             MailTB.Text = client.AdresseMail;
             PhoneTB.Text = client.NumeroTelephone;
+            BirthCAL.SelectionStart = (DateTime)client.DateNaissance;
             if (animals.Count > 0)
             {
                 foreach (Animal a in animals)
@@ -64,15 +62,11 @@ namespace Veto
         private void AddAnimalBTN_Click(object sender, EventArgs e)
         {
             Animal a = new Animal();
-            AnimalDetails f = new AnimalDetails(a);
+            AnimalDetails f = new AnimalDetails(a, client);
             DialogResult res = f.ShowDialog();
             if (res == DialogResult.OK)
             {
-
-            }
-            else if (res == DialogResult.Abort)
-            {
-
+                AnimalsPNL.Controls.Add(new AnimalComponent(a));
             }
         }
 
@@ -87,11 +81,20 @@ namespace Veto
                 MailTB.Text != "" && PhoneTB.Text != "" &&
                 IsValidMail(MailTB.Text) && PhoneTB.Text.Length == 10)
             {
-                client.AdresseMail = MailTB.Text;
-                client.NomClient = LNameTB.Text;
-                client.PrenomClient = FNameTB.Text;
-                client.NumeroTelephone = PhoneTB.Text;
-                Utils.SaveClient(client);
+                if (create)
+                {
+                    client.AdresseMail = MailTB.Text;
+                    client.NomClient = LNameTB.Text;
+                    client.PrenomClient = FNameTB.Text;
+                    client.NumeroTelephone = PhoneTB.Text;
+                    client.DateNaissance = BirthCAL.SelectionStart;
+                    Utils.SaveClient(client);
+                }
+                else
+                {
+                    Utils.ModifyClient(client, LNameTB.Text, FNameTB.Text, BirthCAL.SelectionStart, PhoneTB.Text, MailTB.Text);
+                }
+
                 DialogResult = DialogResult.OK;
                 Close();
             }
