@@ -116,11 +116,11 @@ namespace Veto
             this.AddClientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
             this.AddClientBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddClientBTN.ForeColor = System.Drawing.Color.White;
-            this.AddClientBTN.Location = new System.Drawing.Point(33, 28);
+            this.AddClientBTN.Location = new System.Drawing.Point(54, 24);
             this.AddClientBTN.Name = "AddClientBTN";
-            this.AddClientBTN.Size = new System.Drawing.Size(143, 23);
+            this.AddClientBTN.Size = new System.Drawing.Size(191, 23);
             this.AddClientBTN.TabIndex = 0;
-            this.AddClientBTN.Text = "Ajouter Client";
+            this.AddClientBTN.Text = "AJOUTER CLIENT";
             this.AddClientBTN.UseVisualStyleBackColor = false;
             this.AddClientBTN.Click += new System.EventHandler(this.AddClientBTN_Click);
             // 
