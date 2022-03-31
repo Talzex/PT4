@@ -13,6 +13,8 @@ namespace Veto
         private DateTime currentDate;
         private DateTime firstDayOfWeek;
 
+        private List<RendezVous> rendezVous;
+
         public Calendar() { InitializeComponent(); }
 
         public Calendar(Salarie user) : base(user)
@@ -20,7 +22,9 @@ namespace Veto
             InitializeComponent();
             this.currentDate = DateTime.Now;
             this.firstDayOfWeek = FirstDayOfWeek(currentDate);
+            rendezVous = new List<RendezVous>();
             DisplayDates(firstDayOfWeek);
+            DisplayRDV();
         }
 
         /// <summary>
@@ -63,6 +67,7 @@ namespace Veto
         {
             this.firstDayOfWeek = this.firstDayOfWeek.AddDays(7);
             DisplayDates(this.firstDayOfWeek);
+            DisplayRDV();
         }
 
         /// <summary>
@@ -74,6 +79,7 @@ namespace Veto
         {
             this.firstDayOfWeek = this.firstDayOfWeek.AddDays(-7);
             DisplayDates(this.firstDayOfWeek);
+            DisplayRDV();
         }
 
         /// <summary>
@@ -85,6 +91,44 @@ namespace Veto
         {
             CalendarDetails calendar = new CalendarDetails();
             calendar.Show();
+        }
+
+        /// <summary>
+        /// Every time the form is shown on screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Calendar_Activated(object sender, EventArgs e)
+        {
+            DisplayRDV();
+        }
+
+        /// <summary>
+        /// Displays the products in the cart
+        /// </summary>
+        private void DisplayRDV()
+        {
+            Schedule element = null;
+            rendezVous = Utils.WeeklyRDV(firstDayOfWeek);
+            RdvLayout.Controls.Clear();
+            foreach (RendezVous rdv in rendezVous)
+            {
+                for (int i = 9; i < 18; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if (rdv.heureDebut.Hours == i && firstDayOfWeek.Day+j == rdv.Journee.Date.Day)
+                        {
+                            element = new Schedule(rdv, Utils.getAnimalRDV(rdv).Animal);
+                        }
+                        else
+                        {
+                            element = new Schedule();
+                        }
+                        RdvLayout.Controls.Add(element);
+                    }
+                }
+            }
         }
     }
 }

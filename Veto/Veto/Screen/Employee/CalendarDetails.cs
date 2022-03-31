@@ -27,6 +27,7 @@ namespace Veto
             this.AnimalsList.SelectedItem = rdv.AnimalRDV;
             this.BeginHour.Value = rdv.heureDebut.Hours;
             this.EndHour.Value = rdv.heureFin.Hours;
+            this.ReasonTB.Text = rdv.motif;
             this.Date.SelectionRange.Start = rdv.Journee.Date;
         }
 
@@ -78,6 +79,8 @@ namespace Veto
                 Utils.ModifyRDV(rdv, client.IdClient, animal,
                     new TimeSpan((int)this.BeginHour.Value, 0, 0), new TimeSpan((int)this.EndHour.Value, 0, 0), ReasonTB.Text.ToString(), journee.IdJournee);
             }
+
+            this.Close();
         }
     }
 }

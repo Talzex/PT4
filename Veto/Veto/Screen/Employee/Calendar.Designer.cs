@@ -55,6 +55,11 @@ namespace Veto
             this.DaysPanel.SuspendLayout();
             this.SuspendLayout();
             // 
+            // CenterPNL
+            // 
+            this.CenterPNL.Location = new System.Drawing.Point(0, 0);
+            this.CenterPNL.Size = new System.Drawing.Size(1064, 681);
+            // 
             // SidePNL
             // 
             // 
@@ -296,6 +301,8 @@ namespace Veto
             this.Controls.Add(this.NextBT);
             this.Controls.Add(this.PrevBT);
             this.Name = "Calendar";
+            this.Activated += new System.EventHandler(this.Calendar_Activated);
+            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.PrevBT, 0);
             this.Controls.SetChildIndex(this.NextBT, 0);
             this.Controls.SetChildIndex(this.RdvLayout, 0);

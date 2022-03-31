@@ -17,7 +17,7 @@ namespace Veto
         public AnimalComponent(Animal a)
         {
             InitializeComponent();
-            animal = a;
+            this.animal = a;
             UpdateLabels();
         }
 

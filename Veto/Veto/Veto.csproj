@@ -99,6 +99,12 @@
     <Compile Include="UserControls\AnimalComponent.Designer.cs">
       <DependentUpon>AnimalComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ScheduleComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ScheduleComponent.Designer.cs">
+      <DependentUpon>ScheduleComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnimalRDV.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AnimalComponent.resx">
       <DependentUpon>AnimalComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ScheduleComponent.resx">
+      <DependentUpon>ScheduleComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ClientComponent.resx">
       <DependentUpon>ClientComponent.cs</DependentUpon>
