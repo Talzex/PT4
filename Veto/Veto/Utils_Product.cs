@@ -56,13 +56,13 @@ namespace Veto
         /// <param name="image">the product's image</param>
         /// <param name="salePrice">Selling price</param>
         /// <param name="purchasePrice">purchase price</param>
-        public static void ModifyProduct(Produit product, String nameProduct, int quantity, Image image, double salePrice, double purchasePrice)
+        public static void ModifyProduct(Produit product, String nameProduct, int quantity, byte[] image, double salePrice, double purchasePrice)
         {
             if (product != null)
             {
                 product.NomProduit = nameProduct;
                 product.QuantiteEnStock = quantity;
-                product.ImageProduit = ImageToByte(image);
+                product.ImageProduit = image;
                 product.PrixVenteClient = salePrice;
                 product.PrixAchat = purchasePrice;
                 entities.SaveChanges();

@@ -69,7 +69,7 @@ namespace Veto
             if (!String.IsNullOrEmpty(NameProduct.Text) && !String.IsNullOrEmpty(QuantityProduct.Text) && !String.IsNullOrEmpty(PurchasePriceProduct.Text)
                 && !String.IsNullOrEmpty(SellPriceProduct.Text) && PictureBox.Image != null)
             {
-                Newproduit = AddProducts();
+                Newproduit = AddModifyProducts();
             }
             else
             {
@@ -103,16 +103,16 @@ namespace Veto
                 {
                     if(product != null)
                     {
-                        Console.WriteLine("Je Modifie");
                         Utils.ModifyProduct(Newproduit, Newproduit.NomProduit,
-                            Newproduit.QuantiteEnStock, Utils.ByteToImage(Newproduit.ImageProduit),
-                            Newproduit.PrixVenteClient, Newproduit.PrixAchat);
-                        
+                        Newproduit.QuantiteEnStock, Newproduit.ImageProduit,
+                        Newproduit.PrixVenteClient, Newproduit.PrixAchat);
+                        StockElement stockElement = new StockElement(Newproduit);
+                        stockElement.MAJProduit(Newproduit);
+
                     } else
                     {
-                        Utils.SaveProduct(AddProducts());
+                        Utils.SaveProduct(AddModifyProducts());
                     }
-                    Refresh();
                     this.Close();
                 }
             }
@@ -121,9 +121,17 @@ namespace Veto
         /// <summary>
         /// Method to add or modify the product to the stock
         /// </summary>
-        private Produit AddProducts()
+        private Produit AddModifyProducts()
         {
-            Produit produit = new Produit();
+            Produit produit = null;
+            if (product == null)
+            {
+                 produit = new Produit(); // Add
+            } else
+            {
+                produit = product; // Modify
+            }
+            
             produit.NomProduit = NameProduct.Text;
             produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
             produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);

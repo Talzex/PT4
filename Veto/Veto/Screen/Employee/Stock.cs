@@ -18,7 +18,7 @@ namespace Veto
         {
             InitializeComponent();
             allProducts = Utils.GetProduitsAll();
-            showProduct();
+            LoadProducts();
         }
 
         /// <summary>
@@ -31,22 +31,9 @@ namespace Veto
             StockAjout stockAjout = new StockAjout(null);
             if(stockAjout.ShowDialog() == DialogResult.Yes)
             {
-                showProduct();
+                LoadProducts();
             }
            
-        }
-
-        /// <summary>
-        /// Method to show all products without filter
-        /// </summary>
-        private void showProduct()
-        {
-            AllProductsPNL.Controls.Clear();
-            foreach (Produit produit in Utils.GetProduitsAll())
-            {
-                var stockElement = new StockElement(produit);
-                AllProductsPNL.Controls.Add(stockElement);
-            }
         }
 
         /// <summary>
