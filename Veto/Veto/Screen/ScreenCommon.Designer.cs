@@ -48,10 +48,11 @@ namespace Veto
             // 
             this.UserLBL.AutoSize = true;
             this.UserLBL.BackColor = System.Drawing.Color.Transparent;
+            this.UserLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserLBL.Location = new System.Drawing.Point(100, 34);
             this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLBL.Name = "UserLBL";
-            this.UserLBL.Size = new System.Drawing.Size(29, 13);
+            this.UserLBL.Size = new System.Drawing.Size(42, 21);
             this.UserLBL.TabIndex = 4;
             this.UserLBL.Text = "User";
             // 
