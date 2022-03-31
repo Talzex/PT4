@@ -29,32 +29,41 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ControllerPNL = new System.Windows.Forms.Panel();
             this.TitleLBL = new System.Windows.Forms.Label();
             this.PrevPageBTN = new Veto.ButtonEllipse();
             this.NextPageBTN = new Veto.ButtonEllipse();
             this.ItemsPNL = new System.Windows.Forms.FlowLayoutPanel();
+            this.AddClientBTN = new System.Windows.Forms.Button();
             this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ControllerPNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // CenterPNL
             // 
             this.CenterPNL.Controls.Add(this.ItemsPNL);
-            this.CenterPNL.Controls.Add(this.panel1);
+            this.CenterPNL.Controls.Add(this.ControllerPNL);
             // 
-            // panel1
+            // SidePNL
             // 
-            this.panel1.Controls.Add(this.TitleLBL);
-            this.panel1.Controls.Add(this.PrevPageBTN);
-            this.panel1.Controls.Add(this.NextPageBTN);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(764, 100);
-            this.panel1.TabIndex = 0;
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.AddClientBTN);
+            // 
+            // ControllerPNL
+            // 
+            this.ControllerPNL.Controls.Add(this.TitleLBL);
+            this.ControllerPNL.Controls.Add(this.PrevPageBTN);
+            this.ControllerPNL.Controls.Add(this.NextPageBTN);
+            this.ControllerPNL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ControllerPNL.Location = new System.Drawing.Point(0, 0);
+            this.ControllerPNL.Name = "ControllerPNL";
+            this.ControllerPNL.Size = new System.Drawing.Size(764, 100);
+            this.ControllerPNL.TabIndex = 0;
             // 
             // TitleLBL
             // 
@@ -102,6 +111,19 @@ namespace Veto
             this.ItemsPNL.Size = new System.Drawing.Size(764, 495);
             this.ItemsPNL.TabIndex = 1;
             // 
+            // AddClientBTN
+            // 
+            this.AddClientBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddClientBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddClientBTN.ForeColor = System.Drawing.Color.White;
+            this.AddClientBTN.Location = new System.Drawing.Point(33, 28);
+            this.AddClientBTN.Name = "AddClientBTN";
+            this.AddClientBTN.Size = new System.Drawing.Size(143, 23);
+            this.AddClientBTN.TabIndex = 0;
+            this.AddClientBTN.Text = "Ajouter Client";
+            this.AddClientBTN.UseVisualStyleBackColor = false;
+            this.AddClientBTN.Click += new System.EventHandler(this.AddClientBTN_Click);
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,20 +131,22 @@ namespace Veto
             this.Name = "Clients";
             this.Activated += new System.EventHandler(this.Clients_Activated);
             this.CenterPNL.ResumeLayout(false);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ControllerPNL.ResumeLayout(false);
+            this.ControllerPNL.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ControllerPNL;
         private ButtonEllipse PrevPageBTN;
         private ButtonEllipse NextPageBTN;
         private System.Windows.Forms.Label TitleLBL;
         private System.Windows.Forms.FlowLayoutPanel ItemsPNL;
+        private System.Windows.Forms.Button AddClientBTN;
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Veto
         {
             InitializeComponent();
             this.client = client;
-            animals = null; // Requete
+            animals = Utils.ClientAnimals(client); // Requete
             UpdateDisplay();
         }
 
@@ -62,7 +63,17 @@ namespace Veto
         /// <param name="e"></param>
         private void AddAnimalBTN_Click(object sender, EventArgs e)
         {
+            Animal a = new Animal();
+            AnimalDetails f = new AnimalDetails(a);
+            DialogResult res = f.ShowDialog();
+            if (res == DialogResult.OK)
+            {
 
+            }
+            else if (res == DialogResult.Abort)
+            {
+
+            }
         }
 
         /// <summary>
@@ -72,12 +83,15 @@ namespace Veto
         /// <param name="e"></param>
         private void ValidateBTN_Click(object sender, EventArgs e)
         {
-            Regex reg = new Regex(@"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$", RegexOptions.IgnoreCase);
-            if (LNameTB.Text != "" || FNameTB.Text != "" ||
-                MailTB.Text != "" || PhoneTB.Text != "" ||
-                !reg.IsMatch(MailTB.Text))
+            if (LNameTB.Text != "" && FNameTB.Text != "" &&
+                MailTB.Text != "" && PhoneTB.Text != "" &&
+                IsValidMail(MailTB.Text) && PhoneTB.Text.Length == 10)
             {
-                // Sauvegarder
+                client.AdresseMail = MailTB.Text;
+                client.NomClient = LNameTB.Text;
+                client.PrenomClient = FNameTB.Text;
+                client.NumeroTelephone = PhoneTB.Text;
+                Utils.SaveClient(client);
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -95,11 +109,28 @@ namespace Veto
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Vous allez supprimer le client. En êtes vous sûr ?",
-                "Suppression", MessageBoxButtons.YesNo) == DialogResult.OK)
+                "Suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //Supprimer
                 DialogResult = DialogResult.Abort;
                 Close();
+            }
+        }
+
+        private void PhoneTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar);
+        }
+
+        private bool IsValidMail(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
             }
         }
     }

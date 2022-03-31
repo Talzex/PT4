@@ -22,6 +22,5 @@ namespace Veto
         {
             entities = new Entities();
         }
-
     }
 }

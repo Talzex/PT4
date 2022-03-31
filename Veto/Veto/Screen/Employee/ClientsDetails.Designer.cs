@@ -47,10 +47,9 @@
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.Location = new System.Drawing.Point(83, 5);
-            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LastNameLabel.Location = new System.Drawing.Point(62, 4);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(62, 28);
+            this.LastNameLabel.Size = new System.Drawing.Size(50, 21);
             this.LastNameLabel.TabIndex = 0;
             this.LastNameLabel.Text = "Nom:";
             // 
@@ -58,10 +57,9 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(56, 61);
-            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FirstNameLabel.Location = new System.Drawing.Point(42, 50);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(89, 28);
+            this.FirstNameLabel.Size = new System.Drawing.Size(71, 21);
             this.FirstNameLabel.TabIndex = 1;
             this.FirstNameLabel.Text = "Prénom:";
             // 
@@ -69,10 +67,9 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(345, 61);
-            this.EmailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EmailLabel.Location = new System.Drawing.Point(259, 50);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(65, 28);
+            this.EmailLabel.Size = new System.Drawing.Size(52, 21);
             this.EmailLabel.TabIndex = 2;
             this.EmailLabel.Text = "Email:";
             // 
@@ -80,10 +77,9 @@
             // 
             this.TelephoneLabel.AutoSize = true;
             this.TelephoneLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelephoneLabel.Location = new System.Drawing.Point(298, 6);
-            this.TelephoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TelephoneLabel.Location = new System.Drawing.Point(224, 5);
             this.TelephoneLabel.Name = "TelephoneLabel";
-            this.TelephoneLabel.Size = new System.Drawing.Size(112, 28);
+            this.TelephoneLabel.Size = new System.Drawing.Size(90, 21);
             this.TelephoneLabel.TabIndex = 5;
             this.TelephoneLabel.Text = "Téléphone:";
             // 
@@ -93,10 +89,9 @@
             this.AddAnimalBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddAnimalBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddAnimalBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.AddAnimalBTN.Location = new System.Drawing.Point(35, 498);
-            this.AddAnimalBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddAnimalBTN.Location = new System.Drawing.Point(26, 405);
             this.AddAnimalBTN.Name = "AddAnimalBTN";
-            this.AddAnimalBTN.Size = new System.Drawing.Size(148, 41);
+            this.AddAnimalBTN.Size = new System.Drawing.Size(111, 33);
             this.AddAnimalBTN.TabIndex = 6;
             this.AddAnimalBTN.Text = "Ajouter animal";
             this.AddAnimalBTN.UseVisualStyleBackColor = false;
@@ -108,10 +103,9 @@
             this.ValidateBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ValidateBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValidateBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ValidateBTN.Location = new System.Drawing.Point(757, 498);
-            this.ValidateBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ValidateBTN.Location = new System.Drawing.Point(568, 405);
             this.ValidateBTN.Name = "ValidateBTN";
-            this.ValidateBTN.Size = new System.Drawing.Size(113, 41);
+            this.ValidateBTN.Size = new System.Drawing.Size(85, 33);
             this.ValidateBTN.TabIndex = 7;
             this.ValidateBTN.Text = "Valider";
             this.ValidateBTN.UseVisualStyleBackColor = false;
@@ -123,10 +117,9 @@
             this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DeleteBTN.Location = new System.Drawing.Point(889, 498);
-            this.DeleteBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteBTN.Location = new System.Drawing.Point(667, 405);
             this.DeleteBTN.Name = "DeleteBTN";
-            this.DeleteBTN.Size = new System.Drawing.Size(113, 41);
+            this.DeleteBTN.Size = new System.Drawing.Size(85, 33);
             this.DeleteBTN.TabIndex = 8;
             this.DeleteBTN.Text = "Supprimer";
             this.DeleteBTN.UseVisualStyleBackColor = false;
@@ -136,54 +129,59 @@
             // 
             this.NumberLBL.AutoSize = true;
             this.NumberLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberLBL.Location = new System.Drawing.Point(29, 454);
-            this.NumberLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NumberLBL.Location = new System.Drawing.Point(22, 369);
             this.NumberLBL.Name = "NumberLBL";
-            this.NumberLBL.Size = new System.Drawing.Size(89, 28);
+            this.NumberLBL.Size = new System.Drawing.Size(71, 21);
             this.NumberLBL.TabIndex = 9;
             this.NumberLBL.Text = "Nombre:";
             // 
             // LNameTB
             // 
-            this.LNameTB.Location = new System.Drawing.Point(152, 12);
+            this.LNameTB.Location = new System.Drawing.Point(114, 10);
+            this.LNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LNameTB.Name = "LNameTB";
-            this.LNameTB.Size = new System.Drawing.Size(100, 22);
+            this.LNameTB.Size = new System.Drawing.Size(76, 20);
             this.LNameTB.TabIndex = 11;
             // 
             // FNameTB
             // 
-            this.FNameTB.Location = new System.Drawing.Point(152, 67);
+            this.FNameTB.Location = new System.Drawing.Point(114, 54);
+            this.FNameTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FNameTB.Name = "FNameTB";
-            this.FNameTB.Size = new System.Drawing.Size(100, 22);
+            this.FNameTB.Size = new System.Drawing.Size(76, 20);
             this.FNameTB.TabIndex = 12;
             // 
             // MailTB
             // 
-            this.MailTB.Location = new System.Drawing.Point(417, 67);
+            this.MailTB.Location = new System.Drawing.Point(313, 54);
+            this.MailTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MailTB.Name = "MailTB";
-            this.MailTB.Size = new System.Drawing.Size(100, 22);
+            this.MailTB.Size = new System.Drawing.Size(76, 20);
             this.MailTB.TabIndex = 13;
             // 
             // PhoneTB
             // 
-            this.PhoneTB.Location = new System.Drawing.Point(417, 11);
+            this.PhoneTB.Location = new System.Drawing.Point(313, 9);
+            this.PhoneTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhoneTB.Name = "PhoneTB";
-            this.PhoneTB.Size = new System.Drawing.Size(100, 22);
+            this.PhoneTB.Size = new System.Drawing.Size(76, 20);
             this.PhoneTB.TabIndex = 14;
+            this.PhoneTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneTB_KeyPress);
             // 
             // AnimalsPNL
             // 
-            this.AnimalsPNL.Location = new System.Drawing.Point(34, 114);
+            this.AnimalsPNL.Location = new System.Drawing.Point(26, 93);
+            this.AnimalsPNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AnimalsPNL.Name = "AnimalsPNL";
-            this.AnimalsPNL.Size = new System.Drawing.Size(968, 337);
+            this.AnimalsPNL.Size = new System.Drawing.Size(726, 274);
             this.AnimalsPNL.TabIndex = 15;
             // 
             // ClientsDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(219)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AnimalsPNL);
             this.Controls.Add(this.PhoneTB);
             this.Controls.Add(this.MailTB);
@@ -197,7 +195,6 @@
             this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.LastNameLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ClientsDetails";
             this.Text = "Détails";
             this.ResumeLayout(false);

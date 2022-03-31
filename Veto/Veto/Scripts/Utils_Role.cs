@@ -15,6 +15,7 @@ namespace Veto
         public static List<Roles> GetRolesAll()
         {
             var roles = (from data in entities.Roles
+                         orderby data.Nom ascending
                          select data).ToList();
 
             return (List<Roles>)roles;

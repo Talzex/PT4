@@ -13,7 +13,7 @@ namespace Veto
         /// Query which return all the products
         /// </summary>
         /// <returns>All the products</returns>
-        public static List<Produit> GetProduitsAll()
+        public static List<Produit> GetProductsAll()
         {
             var products = (from data in entities.Produit
                             select data).ToList();

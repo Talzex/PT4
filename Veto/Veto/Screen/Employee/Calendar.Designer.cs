@@ -31,7 +31,7 @@ namespace Veto
         {
             this.NextBT = new Veto.ButtonEllipse();
             this.PrevBT = new Veto.ButtonEllipse();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.RdvLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,10 +48,19 @@ namespace Veto
             this.MondayLB = new System.Windows.Forms.Label();
             this.DaysPanel = new System.Windows.Forms.Panel();
             this.WeekLB = new System.Windows.Forms.Label();
+            this.AddRdvBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
+            this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
             this.DaysPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SidePNL
+            // 
+            // 
+            // SidePNL.Panel2
+            // 
+            this.SidePNL.Panel2.Controls.Add(this.AddRdvBT);
             // 
             // NextBT
             // 
@@ -69,6 +78,7 @@ namespace Veto
             this.NextBT.TabIndex = 22;
             this.NextBT.Text = ">";
             this.NextBT.UseVisualStyleBackColor = false;
+            this.NextBT.Click += new System.EventHandler(this.NextBT_Click);
             // 
             // PrevBT
             // 
@@ -84,13 +94,14 @@ namespace Veto
             this.PrevBT.TabIndex = 21;
             this.PrevBT.Text = "<";
             this.PrevBT.UseVisualStyleBackColor = false;
+            this.PrevBT.Click += new System.EventHandler(this.PrevBT_Click);
             // 
-            // flowLayoutPanel1
+            // RdvLayout
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(320, 181);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(735, 488);
-            this.flowLayoutPanel1.TabIndex = 23;
+            this.RdvLayout.Location = new System.Drawing.Point(320, 181);
+            this.RdvLayout.Name = "RdvLayout";
+            this.RdvLayout.Size = new System.Drawing.Size(735, 488);
+            this.RdvLayout.TabIndex = 23;
             // 
             // label1
             // 
@@ -188,9 +199,8 @@ namespace Veto
             this.WednesdayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WednesdayLB.Location = new System.Drawing.Point(332, 8);
             this.WednesdayLB.Name = "WednesdayLB";
-            this.WednesdayLB.Size = new System.Drawing.Size(61, 17);
+            this.WednesdayLB.Size = new System.Drawing.Size(0, 17);
             this.WednesdayLB.TabIndex = 35;
-            this.WednesdayLB.Text = "Mercredi";
             // 
             // ThursdayLB
             // 
@@ -198,9 +208,8 @@ namespace Veto
             this.ThursdayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThursdayLB.Location = new System.Drawing.Point(492, 8);
             this.ThursdayLB.Name = "ThursdayLB";
-            this.ThursdayLB.Size = new System.Drawing.Size(39, 17);
+            this.ThursdayLB.Size = new System.Drawing.Size(0, 17);
             this.ThursdayLB.TabIndex = 36;
-            this.ThursdayLB.Text = "Jeudi";
             // 
             // TuesdayLB
             // 
@@ -208,9 +217,8 @@ namespace Veto
             this.TuesdayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TuesdayLB.Location = new System.Drawing.Point(196, 8);
             this.TuesdayLB.Name = "TuesdayLB";
-            this.TuesdayLB.Size = new System.Drawing.Size(43, 17);
+            this.TuesdayLB.Size = new System.Drawing.Size(0, 17);
             this.TuesdayLB.TabIndex = 34;
-            this.TuesdayLB.Text = "Mardi";
             // 
             // FridayLB
             // 
@@ -218,9 +226,8 @@ namespace Veto
             this.FridayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FridayLB.Location = new System.Drawing.Point(633, 8);
             this.FridayLB.Name = "FridayLB";
-            this.FridayLB.Size = new System.Drawing.Size(61, 17);
+            this.FridayLB.Size = new System.Drawing.Size(0, 17);
             this.FridayLB.TabIndex = 37;
-            this.FridayLB.Text = "Vendredi";
             // 
             // MondayLB
             // 
@@ -229,9 +236,8 @@ namespace Veto
             this.MondayLB.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MondayLB.Location = new System.Drawing.Point(55, 8);
             this.MondayLB.Name = "MondayLB";
-            this.MondayLB.Size = new System.Drawing.Size(41, 17);
+            this.MondayLB.Size = new System.Drawing.Size(0, 17);
             this.MondayLB.TabIndex = 33;
-            this.MondayLB.Text = "Lundi";
             this.MondayLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DaysPanel
@@ -252,9 +258,24 @@ namespace Veto
             this.WeekLB.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeekLB.Location = new System.Drawing.Point(567, 108);
             this.WeekLB.Name = "WeekLB";
-            this.WeekLB.Size = new System.Drawing.Size(116, 25);
+            this.WeekLB.Size = new System.Drawing.Size(121, 25);
             this.WeekLB.TabIndex = 39;
-            this.WeekLB.Text = "Semaine du";
+            this.WeekLB.Text = "Semaine du ";
+            // 
+            // AddRdvBT
+            // 
+            this.AddRdvBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddRdvBT.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AddRdvBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddRdvBT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRdvBT.ForeColor = System.Drawing.Color.White;
+            this.AddRdvBT.Location = new System.Drawing.Point(69, 22);
+            this.AddRdvBT.Name = "AddRdvBT";
+            this.AddRdvBT.Size = new System.Drawing.Size(151, 38);
+            this.AddRdvBT.TabIndex = 0;
+            this.AddRdvBT.Text = "NOUVEAU RENDEZ-VOUS";
+            this.AddRdvBT.UseVisualStyleBackColor = false;
+            this.AddRdvBT.Click += new System.EventHandler(this.AddRdvBT_Click);
             // 
             // Calendar
             // 
@@ -271,13 +292,13 @@ namespace Veto
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.RdvLayout);
             this.Controls.Add(this.NextBT);
             this.Controls.Add(this.PrevBT);
             this.Name = "Calendar";
             this.Controls.SetChildIndex(this.PrevBT, 0);
             this.Controls.SetChildIndex(this.NextBT, 0);
-            this.Controls.SetChildIndex(this.flowLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.RdvLayout, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
@@ -291,6 +312,7 @@ namespace Veto
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.WeekLB, 0);
+            this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
             this.DaysPanel.ResumeLayout(false);
@@ -304,7 +326,7 @@ namespace Veto
 
         private ButtonEllipse NextBT;
         private ButtonEllipse PrevBT;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel RdvLayout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -321,5 +343,6 @@ namespace Veto
         private System.Windows.Forms.Label MondayLB;
         private System.Windows.Forms.Panel DaysPanel;
         private System.Windows.Forms.Label WeekLB;
+        private System.Windows.Forms.Button AddRdvBT;
     }
 }
