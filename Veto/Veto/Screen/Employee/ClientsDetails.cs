@@ -63,7 +63,17 @@ namespace Veto
         /// <param name="e"></param>
         private void AddAnimalBTN_Click(object sender, EventArgs e)
         {
+            Animal a = new Animal();
+            AnimalDetails f = new AnimalDetails(a);
+            DialogResult res = f.ShowDialog();
+            if (res == DialogResult.OK)
+            {
 
+            }
+            else if (res == DialogResult.Abort)
+            {
+
+            }
         }
 
         /// <summary>

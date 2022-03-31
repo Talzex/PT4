@@ -13,12 +13,12 @@ namespace Veto
         public UserList()
         {
             InitializeComponent();
-            LoadUsers();
         }
 
         public UserList(Salarie user) : base(user)
         {
             InitializeComponent();
+            LoadUsers();
         }
 
         /// <summary>
@@ -27,25 +27,7 @@ namespace Veto
         public void LoadUsers()
         {
             CenterPNL.Controls.Clear();
-            var userList = new List<Salarie>(); // Get all users
-            userList.Add(new Salarie
-            {
-                Login = "Jean",
-                MDP = "Jeannot",
-                Mail = "truc@gmail.com",
-                Roles = new Roles
-                {
-                    Nom = "Facteur",
-                }
-            });
-            userList.Add(new Salarie
-            {
-                Login = "Michel",
-                Roles = new Roles
-                {
-                    Nom = "Médecin"
-                }
-            });
+            var userList = Utils.GetEmployeeAll();
             foreach (Salarie s in userList)
             {
                 CenterPNL.Controls.Add(new UserDesign(s, CenterPNL));

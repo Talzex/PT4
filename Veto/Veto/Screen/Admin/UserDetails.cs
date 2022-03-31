@@ -39,20 +39,19 @@ namespace Veto
             LoginTB.Text = employee.Login;
             PasswordTB.Text = employee.MDP;
             MailTB.Text = employee.Mail;
-            //RoleCB.SelectedItem = employee.Roles;
+            RoleCB.SelectedItem = employee.Roles;
         }
 
         /// <summary>
         /// Adds the availbles roles into the combobox
         /// </summary>
         private void AddRoles()
-        {
-            /*
-            List<Roles> roles = null;
+        {            
+            List<Roles> roles = Utils.GetRolesAll();
             foreach (Roles r in roles)
             {
                 RoleCB.Items.Add(r);
-            }*/
+            }
         }
 
         /// <summary>
