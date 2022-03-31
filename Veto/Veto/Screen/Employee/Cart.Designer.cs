@@ -37,6 +37,7 @@ namespace Veto
             this.button_login = new System.Windows.Forms.Button();
             this.label_cart = new System.Windows.Forms.Label();
             this.panel_bottombill = new System.Windows.Forms.Panel();
+            this.PrinterCB = new System.Windows.Forms.ComboBox();
             this.ClientsCB = new System.Windows.Forms.ComboBox();
             this.panel_title = new System.Windows.Forms.Panel();
             this.NextBTN = new Veto.ButtonEllipse();
@@ -45,7 +46,6 @@ namespace Veto
             this.button_addconsultation = new System.Windows.Forms.Button();
             this.button_addoperation = new System.Windows.Forms.Button();
             this.button_addnight = new System.Windows.Forms.Button();
-            this.PrinterCB = new System.Windows.Forms.ComboBox();
             this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
@@ -176,6 +176,14 @@ namespace Veto
             this.panel_bottombill.Size = new System.Drawing.Size(839, 219);
             this.panel_bottombill.TabIndex = 11;
             // 
+            // PrinterCB
+            // 
+            this.PrinterCB.FormattingEnabled = true;
+            this.PrinterCB.Location = new System.Drawing.Point(315, 185);
+            this.PrinterCB.Name = "PrinterCB";
+            this.PrinterCB.Size = new System.Drawing.Size(121, 21);
+            this.PrinterCB.TabIndex = 17;
+            // 
             // ClientsCB
             // 
             this.ClientsCB.FormattingEnabled = true;
@@ -229,6 +237,7 @@ namespace Veto
             // 
             // Panel_AllProducts
             // 
+            this.Panel_AllProducts.AutoScroll = true;
             this.Panel_AllProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_AllProducts.Location = new System.Drawing.Point(0, 155);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
@@ -276,14 +285,6 @@ namespace Veto
             this.button_addnight.TabIndex = 3;
             this.button_addnight.Text = "AJOUTER NUIT";
             this.button_addnight.UseVisualStyleBackColor = false;
-            // 
-            // PrinterCB
-            // 
-            this.PrinterCB.FormattingEnabled = true;
-            this.PrinterCB.Location = new System.Drawing.Point(315, 185);
-            this.PrinterCB.Name = "PrinterCB";
-            this.PrinterCB.Size = new System.Drawing.Size(121, 21);
-            this.PrinterCB.TabIndex = 17;
             // 
             // Cart
             // 

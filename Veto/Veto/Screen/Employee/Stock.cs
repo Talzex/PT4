@@ -17,8 +17,8 @@ namespace Veto
         public Stock(Salarie user) : base(user)
         {
             InitializeComponent();
-            allProducts = Utils.GetProduitsAll();
-            LoadProducts();
+            allProducts = Utils.GetProductsAll();
+            ResetItems();
         }
 
         /// <summary>
@@ -29,13 +29,12 @@ namespace Veto
         private void addProductBTN_Click(object sender, EventArgs e)
         {
             StockAjout stockAjout = new StockAjout(null);
-            if(stockAjout.ShowDialog() == DialogResult.Yes)
+            if (stockAjout.ShowDialog() == DialogResult.OK)
             {
-                allProducts = Utils.GetProduitsAll();
+                allProducts = Utils.GetProductsAll();
                 LoadProducts();
-                
             }
-           
+
         }
 
         /// <summary>
@@ -44,13 +43,10 @@ namespace Veto
         private void LoadProducts()
         {
             AllProductsPNL.Controls.Clear();
-            for (int i = page * elementsPerPage; i < (page+1) * elementsPerPage; i++)
+            for (int i = page * elementsPerPage; i < (page + 1) * elementsPerPage && i < allProducts.Count; i++)
             {
-                if (i < allProducts.Count)
-                {
-                    var stockElement = new StockElement(allProducts[i]);
-                    AllProductsPNL.Controls.Add(stockElement);
-                }
+                var stockElement = new StockElement(allProducts[i]);
+                AllProductsPNL.Controls.Add(stockElement);
             }
         }
 
@@ -67,6 +63,7 @@ namespace Veto
             {
                 PreviousBTN.Enabled = false;
             }
+            LoadProducts();
         }
 
         /// <summary>
@@ -96,6 +93,7 @@ namespace Veto
             {
                 NextBTN.Enabled = false;
             }
+            LoadProducts();
         }
 
         /// <summary>
@@ -105,7 +103,7 @@ namespace Veto
         /// <param name="e"></param>
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-           int comboBoxIndex = FilterBox.SelectedIndex;
+            int comboBoxIndex = FilterBox.SelectedIndex;
             AllProductsPNL.Controls.Clear();
             switch (comboBoxIndex)
             {
@@ -146,9 +144,14 @@ namespace Veto
         /// <param name="e"></param>
         private void Stock_Activated(object sender, EventArgs e)
         {
+            ResetItems();
+        }
+
+        private void ResetItems()
+        {
             page = 0;
             PreviousBTN.Enabled = false;
-            if (allProducts.Count <= elementsPerPage)
+            if (allProducts.Count < elementsPerPage)
             {
                 NextBTN.Enabled = false;
             }

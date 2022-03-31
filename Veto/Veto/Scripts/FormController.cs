@@ -77,6 +77,7 @@ namespace Veto
                     other.Location = activeForm.Location;
                     other.StartPosition = FormStartPosition.Manual;
                     activeForm.Hide();
+                    other.Activate();
                     other.Show();
                     activeForm = other;
                 }

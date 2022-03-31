@@ -56,6 +56,7 @@ namespace Veto
             // 
             // CenterPNL
             // 
+            this.CenterPNL.AutoScroll = true;
             this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CenterPNL.Location = new System.Drawing.Point(300, 86);
             this.CenterPNL.Name = "CenterPNL";
