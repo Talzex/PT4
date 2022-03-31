@@ -59,10 +59,10 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="AnimalDetails.cs">
+    <Compile Include="Screen\Employee\AnimalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnimalDetails.Designer.cs">
+    <Compile Include="Screen\Employee\AnimalDetails.Designer.cs">
       <DependentUpon>AnimalDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Screen\Employee\CalendarDetails.cs">
@@ -72,12 +72,19 @@
       <DependentUpon>CalendarDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\BillPrint.cs" />
+    <Compile Include="Scripts\MyMaladieAnimal.cs" />
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screen\Employee\StockAjout.Designer.cs">
       <DependentUpon>StockAjout.cs</DependentUpon>
+    </Compile>    
+    <Compile Include="DiseaseSelection.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DiseaseSelection.Designer.cs">
+      <DependentUpon>DiseaseSelection.cs</DependentUpon>
+    </Compile> 
     <Compile Include="DBEntities\MyProduit.cs" />
     <Compile Include="DBEntities\MyClient.cs" />
     <Compile Include="UserControls\AnimalComponent.cs">
@@ -241,7 +248,7 @@
     <Compile Include="UserControls\StockElement.Designer.cs">
       <DependentUpon>StockElement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AnimalDetails.resx">
+    <EmbeddedResource Include="Screen\Employee\AnimalDetails.resx">
       <DependentUpon>AnimalDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screen\Employee\Calendar.resx">
@@ -262,6 +269,9 @@
     <Compile Include="Scripts\Utils_Role.cs" />
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiseaseSelection.resx">
+      <DependentUpon>DiseaseSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ElementCart.resx">
       <DependentUpon>ElementCart.cs</DependentUpon>
