@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.ManagementPNL = new System.Windows.Forms.Panel();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.FilterBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxResearch = new System.Windows.Forms.TextBox();
+            this.TextBoxResearch = new System.Windows.Forms.TextBox();
             this.NextBTN = new Veto.ButtonEllipse();
             this.PreviousBTN = new Veto.ButtonEllipse();
-            this.label_stock = new System.Windows.Forms.Label();
-            this.addProductBTN = new System.Windows.Forms.Button();
-            this.panel_Allproducts = new System.Windows.Forms.FlowLayoutPanel();
+            this.Stock_Title = new System.Windows.Forms.Label();
+            this.AddProductBTN = new System.Windows.Forms.Button();
+            this.AllProductsPNL = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -53,36 +53,36 @@
             // 
             // SidePNL.Panel2
             // 
-            this.SidePNL.Panel2.Controls.Add(this.addProductBTN);
+            this.SidePNL.Panel2.Controls.Add(this.AddProductBTN);
             this.SidePNL.Size = new System.Drawing.Size(229, 595);
             // 
             // ManagementPNL
             // 
-            this.ManagementPNL.Controls.Add(this.comboBoxFilter);
+            this.ManagementPNL.Controls.Add(this.FilterBox);
             this.ManagementPNL.Controls.Add(this.label1);
-            this.ManagementPNL.Controls.Add(this.textBoxResearch);
+            this.ManagementPNL.Controls.Add(this.TextBoxResearch);
             this.ManagementPNL.Controls.Add(this.NextBTN);
             this.ManagementPNL.Controls.Add(this.PreviousBTN);
-            this.ManagementPNL.Controls.Add(this.label_stock);
+            this.ManagementPNL.Controls.Add(this.Stock_Title);
             this.ManagementPNL.Dock = System.Windows.Forms.DockStyle.Top;
             this.ManagementPNL.Location = new System.Drawing.Point(229, 86);
             this.ManagementPNL.Name = "ManagementPNL";
             this.ManagementPNL.Size = new System.Drawing.Size(835, 169);
             this.ManagementPNL.TabIndex = 8;
             // 
-            // comboBoxFilter
+            // FilterBox
             // 
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Items.AddRange(new object[] {
+            this.FilterBox.FormattingEnabled = true;
+            this.FilterBox.Items.AddRange(new object[] {
             "Quantité Décroissant",
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(632, 108);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxFilter.TabIndex = 10;
-            this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
+            this.FilterBox.Location = new System.Drawing.Point(632, 108);
+            this.FilterBox.Name = "FilterBox";
+            this.FilterBox.Size = new System.Drawing.Size(121, 21);
+            this.FilterBox.TabIndex = 10;
+            this.FilterBox.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -94,13 +94,13 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Trier par : ";
             // 
-            // textBoxResearch
+            // TextBoxResearch
             // 
-            this.textBoxResearch.Location = new System.Drawing.Point(65, 108);
-            this.textBoxResearch.Name = "textBoxResearch";
-            this.textBoxResearch.Size = new System.Drawing.Size(170, 20);
-            this.textBoxResearch.TabIndex = 9;
-            this.textBoxResearch.TextChanged += new System.EventHandler(this.textBoxResearch_TextChanged);
+            this.TextBoxResearch.Location = new System.Drawing.Point(65, 108);
+            this.TextBoxResearch.Name = "TextBoxResearch";
+            this.TextBoxResearch.Size = new System.Drawing.Size(170, 20);
+            this.TextBoxResearch.TabIndex = 9;
+            this.TextBoxResearch.TextChanged += new System.EventHandler(this.textBoxResearch_TextChanged);
             // 
             // NextBTN
             // 
@@ -136,48 +136,48 @@
             this.PreviousBTN.UseVisualStyleBackColor = false;
             this.PreviousBTN.Click += new System.EventHandler(this.PreviousBTN_Click);
             // 
-            // label_stock
+            // Stock_Title
             // 
-            this.label_stock.AutoSize = true;
-            this.label_stock.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_stock.Location = new System.Drawing.Point(293, 17);
-            this.label_stock.Name = "label_stock";
-            this.label_stock.Size = new System.Drawing.Size(253, 37);
-            this.label_stock.TabIndex = 17;
-            this.label_stock.Text = "Gestion des stocks";
+            this.Stock_Title.AutoSize = true;
+            this.Stock_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stock_Title.Location = new System.Drawing.Point(293, 17);
+            this.Stock_Title.Name = "Stock_Title";
+            this.Stock_Title.Size = new System.Drawing.Size(253, 37);
+            this.Stock_Title.TabIndex = 17;
+            this.Stock_Title.Text = "Gestion des stocks";
             // 
-            // addProductBTN
+            // AddProductBTN
             // 
-            this.addProductBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.addProductBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addProductBTN.ForeColor = System.Drawing.Color.White;
-            this.addProductBTN.Location = new System.Drawing.Point(33, 15);
-            this.addProductBTN.Name = "addProductBTN";
-            this.addProductBTN.Size = new System.Drawing.Size(155, 23);
-            this.addProductBTN.TabIndex = 0;
-            this.addProductBTN.Text = "AJOUTER  AU CATALOGUE";
-            this.addProductBTN.UseVisualStyleBackColor = false;
-            this.addProductBTN.Click += new System.EventHandler(this.addProductBTN_Click);
+            this.AddProductBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddProductBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddProductBTN.ForeColor = System.Drawing.Color.White;
+            this.AddProductBTN.Location = new System.Drawing.Point(33, 15);
+            this.AddProductBTN.Name = "AddProductBTN";
+            this.AddProductBTN.Size = new System.Drawing.Size(155, 23);
+            this.AddProductBTN.TabIndex = 0;
+            this.AddProductBTN.Text = "AJOUTER  AU CATALOGUE";
+            this.AddProductBTN.UseVisualStyleBackColor = false;
+            this.AddProductBTN.Click += new System.EventHandler(this.addProductBTN_Click);
             // 
-            // panel_Allproducts
+            // AllProductsPNL
             // 
-            this.panel_Allproducts.Location = new System.Drawing.Point(229, 255);
-            this.panel_Allproducts.Name = "panel_Allproducts";
-            this.panel_Allproducts.Size = new System.Drawing.Size(835, 426);
-            this.panel_Allproducts.TabIndex = 9;
+            this.AllProductsPNL.Location = new System.Drawing.Point(229, 255);
+            this.AllProductsPNL.Name = "AllProductsPNL";
+            this.AllProductsPNL.Size = new System.Drawing.Size(835, 426);
+            this.AllProductsPNL.TabIndex = 9;
             // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.panel_Allproducts);
+            this.Controls.Add(this.AllProductsPNL);
             this.Controls.Add(this.ManagementPNL);
             this.Name = "Stock";
             this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.ManagementPNL, 0);
-            this.Controls.SetChildIndex(this.panel_Allproducts, 0);
+            this.Controls.SetChildIndex(this.AllProductsPNL, 0);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
@@ -190,13 +190,13 @@
         #endregion
 
         private System.Windows.Forms.Panel ManagementPNL;
-        private System.Windows.Forms.Label label_stock;
+        private System.Windows.Forms.Label Stock_Title;
         private ButtonEllipse PreviousBTN;
         private ButtonEllipse NextBTN;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxResearch;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
-        private System.Windows.Forms.Button addProductBTN;
-        private System.Windows.Forms.FlowLayoutPanel panel_Allproducts;
+        private System.Windows.Forms.TextBox TextBoxResearch;
+        private System.Windows.Forms.ComboBox FilterBox;
+        private System.Windows.Forms.Button AddProductBTN;
+        private System.Windows.Forms.FlowLayoutPanel AllProductsPNL;
     }
 }

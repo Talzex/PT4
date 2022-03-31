@@ -24,22 +24,38 @@ namespace Veto
         /// <summary>
         /// Updates the display element
         /// </summary>
-        private void MAJProduit(Produit product)
+        public void MAJProduit(Produit product)
         {
             label_nom.Text = product.NomProduit;
             label_quantite.Text = "Quantité : " + product.QuantiteEnStock;
             label_pricesell.Text = "Prix de vente : " + product.PrixVenteClient + " €";
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
+            if(product.ImageProduit != null)
+            {
+                ImageProductPBOX.Image = Utils.ByteToImage(product.ImageProduit);
+            }
+            
         }
 
+        /// <summary>
+        /// Method to modify a product thanks to the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModify_Click(object sender, EventArgs e)
         {
             StockAjout stockAjout = new StockAjout(product);
             stockAjout.Show();
-            MAJProduit(product);
+            this.Parent.Refresh();
+            Refresh();
             
         }
 
+        /// <summary>
+        /// Method to delete a product from DataBase
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             String message = "Êtes vous sûr de vouloir le supprimer";
@@ -50,7 +66,6 @@ namespace Veto
                 Parent.Controls.Remove(this);
                 Utils.RemoveProduct(product);
             }
-            
         }
     }
 }

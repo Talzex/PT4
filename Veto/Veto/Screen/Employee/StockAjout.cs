@@ -22,8 +22,9 @@ namespace Veto
                 QuantityProduct.Text = produit.QuantiteEnStock.ToString();
                 PurchasePriceProduct.Text = produit.PrixAchat.ToString();
                 SellPriceProduct.Text = produit.PrixVenteClient.ToString();
+                PictureBox.Image = Utils.ByteToImage(produit.ImageProduit);
             }
-            this.product = produit;
+            product = produit;
             
         }
 
@@ -61,33 +62,55 @@ namespace Veto
         private void ConfirmProductBTN_Click(object sender, EventArgs e)
         {
             Produit Newproduit = null;
-            
+            String message = "";
+            String caption = "";
+
+
             if (!String.IsNullOrEmpty(NameProduct.Text) && !String.IsNullOrEmpty(QuantityProduct.Text) && !String.IsNullOrEmpty(PurchasePriceProduct.Text)
                 && !String.IsNullOrEmpty(SellPriceProduct.Text) && PictureBox.Image != null)
             {
-                Newproduit = AddProducts();
-            } else
+                Newproduit = AddModifyProducts();
+            }
+            else
             {
-                String message = "Tout les champs ne sont pas remplis";
-                String caption = "Erreur du formulaire d'ajout/modification";
+                message = "Tout les champs ne sont pas remplis";
+                caption = "Erreur du formulaire d'ajout/modification";
                 var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
             }
-            if(Newproduit != null)
+            if (Newproduit != null)
             {
                 if (SameProducts(Newproduit))
                 {
-                    String message = "Vous ne pouvez pas utiliser ce nom, il est déjà utilisé";
-                    String caption = "Erreur du nom du produit";
+                    message = "Vous ne pouvez pas utiliser ce nom, il est déjà utilisé";
+                    caption = "Erreur du nom du produit";
                     var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
 
-                } else if (Price(Newproduit)){
-                    String message = "Le prix d'achat doit être inférieur ou égal au prix de vente";
-                    String caption = "Erreur du prix produit";
+                }
+
+                else if (Price(Newproduit))
+                {
+                    message = "Le prix d'achat doit être inférieur ou égal au prix de vente";
+                    caption = "Erreur du prix produit";
+                    var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+                }
+                else if (ZeroPrice(Newproduit))
+                {
+                    message = "Le prix d'achat ou le prix de vente, ne peuvent pas être égal à zéro";
+                    caption = "Erreur valeur prix du produit";
                     var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
                 }
                 else
                 {
-                    Utils.SaveProduct(AddProducts());
+                    if(product != null)
+                    {
+                        Utils.ModifyProduct(Newproduit, Newproduit.NomProduit,
+                        Newproduit.QuantiteEnStock, Newproduit.ImageProduit,
+                        Newproduit.PrixVenteClient, Newproduit.PrixAchat);
+                    }
+                    else
+                    {
+                        Utils.SaveProduct(AddModifyProducts());
+                    }
                     this.Close();
                 }
             }
@@ -96,9 +119,17 @@ namespace Veto
         /// <summary>
         /// Method to add or modify the product to the stock
         /// </summary>
-        private Produit AddProducts()
+        private Produit AddModifyProducts()
         {
-            Produit produit = new Produit();
+            Produit produit = null;
+            if (product == null)
+            {
+                 produit = new Produit(); // Add
+            } else
+            {
+                produit = product; // Modify
+            }
+            
             produit.NomProduit = NameProduct.Text;
             produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
             produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);
@@ -111,23 +142,44 @@ namespace Veto
         /// Method to verify if there is a product with the same name in the DataBase
         /// </summary>
         /// <param name="NewProduit">The product to verify</param>
-        /// <returns>Returns true if there is the same name, no otherwise</returns>
+        /// <returns>ReturnS true if there is the same name, no otherwise</returns>
         private Boolean SameProducts(Produit NewProduit)
         {
             Boolean identique = false;
             foreach (Produit produit in Utils.GetProductsAll())
             {
-                if (produit.NomProduit.Equals(NewProduit.NomProduit))
+                if(product != null)
                 {
-                    identique = true;
+                    if (produit.NomProduit.Equals(NewProduit.NomProduit) && !produit.NomProduit.Equals(product.NomProduit))
+                    {
+                        identique = true;
+                    }
+                }
+                else 
+                {
+                    if (produit.NomProduit.Equals(NewProduit.NomProduit))
+                    {
+                        identique = true;
+                    }
                 }
             }
             return identique;
         }
 
+        /// <summary>
+        /// Method to verify that the price sell is higher than purchase price
+        /// </summary>
+        /// <param name="NewProduit">The product to verify</param>
+        /// <returns>Returns true if it is not respected, false otherwise</returns>
         private Boolean Price(Produit NewProduit)
         {
             return NewProduit.PrixVenteClient <= NewProduit.PrixAchat;
+        }
+
+        private Boolean ZeroPrice(Produit NewProduit)
+        {
+            return ((SellPriceProduct.Text.StartsWith("0") && !SellPriceProduct.Text.Contains(",")) ||
+                (PurchasePriceProduct.Text.StartsWith("0") && !SellPriceProduct.Text.Contains(",")));
         }
 
         /// <summary>

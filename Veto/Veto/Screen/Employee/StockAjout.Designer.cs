@@ -50,11 +50,11 @@
             this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(119, 9);
+            this.TitleLabel.Location = new System.Drawing.Point(72, 9);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(128, 21);
+            this.TitleLabel.Size = new System.Drawing.Size(222, 21);
             this.TitleLabel.TabIndex = 0;
-            this.TitleLabel.Text = "Ajouter produit";
+            this.TitleLabel.Text = "Ajouter ou modifier produit";
             // 
             // NameProduct
             // 

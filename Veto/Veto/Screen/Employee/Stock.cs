@@ -17,8 +17,8 @@ namespace Veto
         public Stock(Salarie user) : base(user)
         {
             InitializeComponent();
-            allProducts = Utils.GetProductsAll();
-            showProduct();
+            allProducts = Utils.GetProduitsAll();
+            LoadProducts();
         }
 
         /// <summary>
@@ -31,22 +31,11 @@ namespace Veto
             StockAjout stockAjout = new StockAjout(null);
             if(stockAjout.ShowDialog() == DialogResult.Yes)
             {
-                showProduct();
+                allProducts = Utils.GetProduitsAll();
+                LoadProducts();
+                
             }
            
-        }
-
-        /// <summary>
-        /// Method to show all products without filter
-        /// </summary>
-        private void showProduct()
-        {
-            panel_Allproducts.Controls.Clear();
-            foreach (Produit produit in Utils.GetProductsAll())
-            {
-                var stockElement = new StockElement(produit);
-                panel_Allproducts.Controls.Add(stockElement);
-            }
         }
 
         /// <summary>
@@ -54,12 +43,13 @@ namespace Veto
         /// </summary>
         private void LoadProducts()
         {
+            AllProductsPNL.Controls.Clear();
             for (int i = page * elementsPerPage; i < (page+1) * elementsPerPage; i++)
             {
                 if (i < allProducts.Count)
                 {
                     var stockElement = new StockElement(allProducts[i]);
-                    panel_Allproducts.Controls.Add(stockElement);
+                    AllProductsPNL.Controls.Add(stockElement);
                 }
             }
         }
@@ -86,11 +76,11 @@ namespace Veto
         /// <param name="e"></param>
         private void textBoxResearch_TextChanged(object sender, EventArgs e)
         {
-            panel_Allproducts.Controls.Clear();
-            foreach (Produit produit in Utils.SearchProduct(textBoxResearch.Text))
+            AllProductsPNL.Controls.Clear();
+            foreach (Produit produit in Utils.SearchProduct(TextBoxResearch.Text))
             {
                 var stockElement = new StockElement(produit);
-                panel_Allproducts.Controls.Add(stockElement);
+                AllProductsPNL.Controls.Add(stockElement);
             }
         }
 
@@ -115,36 +105,36 @@ namespace Veto
         /// <param name="e"></param>
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-           int comboBoxIndex = comboBoxFilter.SelectedIndex;
-            panel_Allproducts.Controls.Clear();
+           int comboBoxIndex = FilterBox.SelectedIndex;
+            AllProductsPNL.Controls.Clear();
             switch (comboBoxIndex)
             {
                 case 0:
                     foreach (Produit produit in Utils.QuantityProductDESC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
                 case 1:
                     foreach (Produit produit in Utils.QuantityProductASC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
                 case 2:
                     foreach (Produit produit in Utils.NameProductASC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
                 case 3:
                     foreach (Produit produit in Utils.NameProductDESC())
                     {
                         var stockElement = new StockElement(produit);
-                        panel_Allproducts.Controls.Add(stockElement);
+                        AllProductsPNL.Controls.Add(stockElement);
                     }
                     break;
             }

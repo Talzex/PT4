@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockElement));
             this.label_nom = new System.Windows.Forms.Label();
             this.label_quantite = new System.Windows.Forms.Label();
             this.label_pricesell = new System.Windows.Forms.Label();
             this.panel_product = new System.Windows.Forms.Panel();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonModify = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ImageProductPBOX = new System.Windows.Forms.PictureBox();
             this.label_purchaseprice = new System.Windows.Forms.Label();
             this.panel_product.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageProductPBOX)).BeginInit();
             this.SuspendLayout();
             // 
             // label_nom
@@ -75,7 +74,7 @@
             // 
             this.panel_product.Controls.Add(this.buttonDelete);
             this.panel_product.Controls.Add(this.buttonModify);
-            this.panel_product.Controls.Add(this.pictureBox1);
+            this.panel_product.Controls.Add(this.ImageProductPBOX);
             this.panel_product.Controls.Add(this.label_purchaseprice);
             this.panel_product.Controls.Add(this.label_nom);
             this.panel_product.Controls.Add(this.label_pricesell);
@@ -114,13 +113,14 @@
             this.buttonModify.UseVisualStyleBackColor = false;
             this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
             // 
-            // pictureBox1
+            // ImageProductPBOX
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(62, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.ImageProductPBOX.Location = new System.Drawing.Point(62, 5);
+            this.ImageProductPBOX.Name = "ImageProductPBOX";
+            this.ImageProductPBOX.Size = new System.Drawing.Size(75, 75);
+            this.ImageProductPBOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImageProductPBOX.TabIndex = 4;
+            this.ImageProductPBOX.TabStop = false;
             // 
             // label_purchaseprice
             // 
@@ -143,7 +143,7 @@
             this.Size = new System.Drawing.Size(200, 205);
             this.panel_product.ResumeLayout(false);
             this.panel_product.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageProductPBOX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,7 +155,7 @@
         private System.Windows.Forms.Label label_pricesell;
         private System.Windows.Forms.Panel panel_product;
         private System.Windows.Forms.Label label_purchaseprice;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ImageProductPBOX;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonModify;
     }
