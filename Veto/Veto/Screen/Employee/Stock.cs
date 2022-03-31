@@ -11,7 +11,7 @@ namespace Veto
     public partial class Stock : Veto.ScreenEmployee
     {
         private int page;
-        private readonly int elementsPerPage = 6;
+        private readonly int elementsPerPage = 8;
         private List<Produit> allProducts;
 
         public Stock(Salarie user) : base(user)
@@ -31,7 +31,9 @@ namespace Veto
             StockAjout stockAjout = new StockAjout(null);
             if(stockAjout.ShowDialog() == DialogResult.Yes)
             {
+                allProducts = Utils.GetProduitsAll();
                 LoadProducts();
+                
             }
            
         }
@@ -41,6 +43,7 @@ namespace Veto
         /// </summary>
         private void LoadProducts()
         {
+            AllProductsPNL.Controls.Clear();
             for (int i = page * elementsPerPage; i < (page+1) * elementsPerPage; i++)
             {
                 if (i < allProducts.Count)

@@ -46,6 +46,7 @@ namespace Veto
         {
             StockAjout stockAjout = new StockAjout(product);
             stockAjout.Show();
+            this.Parent.Refresh();
             Refresh();
             
         }

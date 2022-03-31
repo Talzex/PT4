@@ -106,10 +106,8 @@ namespace Veto
                         Utils.ModifyProduct(Newproduit, Newproduit.NomProduit,
                         Newproduit.QuantiteEnStock, Newproduit.ImageProduit,
                         Newproduit.PrixVenteClient, Newproduit.PrixAchat);
-                        StockElement stockElement = new StockElement(Newproduit);
-                        stockElement.MAJProduit(Newproduit);
-
-                    } else
+                    }
+                    else
                     {
                         Utils.SaveProduct(AddModifyProducts());
                     }
