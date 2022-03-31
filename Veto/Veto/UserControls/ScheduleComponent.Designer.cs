@@ -42,6 +42,7 @@
             this.ClientLB.TabIndex = 0;
             this.ClientLB.Text = "Client : ";
             this.ClientLB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ClientLB.Click += new System.EventHandler(this.Schedule_Click);
             // 
             // AnimalLB
             // 
@@ -53,6 +54,7 @@
             this.AnimalLB.TabIndex = 1;
             this.AnimalLB.Text = "Animal : ";
             this.AnimalLB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AnimalLB.Click += new System.EventHandler(this.Schedule_Click);
             // 
             // Schedule
             // 

@@ -104,6 +104,7 @@ namespace Veto
             // RdvLayout
             // 
             this.RdvLayout.Location = new System.Drawing.Point(320, 181);
+            this.RdvLayout.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
             this.RdvLayout.Name = "RdvLayout";
             this.RdvLayout.Size = new System.Drawing.Size(735, 488);
             this.RdvLayout.TabIndex = 23;

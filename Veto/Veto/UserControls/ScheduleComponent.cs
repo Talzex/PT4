@@ -29,8 +29,7 @@ namespace Veto
             this.rdv = null;
             this.animal = null;
             MAJSchedule(rdv, animal);
-            Color c = Color.FromArgb(251, 239, 218);
-            this.BackColor = (c);
+            this.BackColor = Color.FromArgb(251,239,218);
         }
 
         /// <summary>
@@ -59,6 +58,5 @@ namespace Veto
                 MAJSchedule(rdv, animal);
             }
         }
-
     }
 }
