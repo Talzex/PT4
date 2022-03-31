@@ -39,11 +39,12 @@ namespace Veto
         /// </summary>
         /// <param name="monday">date of the beginn of the current week</param>
         /// /// <returns>the list of rdv</returns>
-        public static List<RendezVous> WeeklyRDV(TimeSpan monday)
+        public static List<RendezVous> WeeklyRDV(DateTime monday)
         {
             System.TimeSpan week = new System.TimeSpan(7, 0, 0, 0);
+            DateTime sunday = monday.Add(week);
             var rdv = (from data in entities.RendezVous
-                       where data.heureDebut >= monday && data.heureFin < monday.Add(week)
+                       where data.Journee.Date >= monday && data.Journee.Date < sunday
                        orderby data.heureDebut ascending
                        select data).ToList();
 
@@ -72,6 +73,20 @@ namespace Veto
                 rendezVous.IdJournee = idDay;
                 entities.SaveChanges();
             }
+        }
+
+        /// <summary>
+        /// Query which return the animal of the rdv
+        /// </summary>
+        /// <param name="rdv">the rdv</param>
+        /// <returns>the animal</returns>
+        public static AnimalRDV getAnimalRDV(RendezVous rdv)
+        {
+            var animal = (from data in entities.AnimalRDV
+                          where data.IdRDV == rdv.idRdv
+                          select data).FirstOrDefault();
+
+            return (AnimalRDV) animal;
         }
     }
 }
