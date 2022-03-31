@@ -13,7 +13,7 @@ namespace Veto
         /// <summary>
         /// Convert a bitmap into a byte[]
         /// </summary>
-        /// <param name="img">the bitmap</param>
+        /// <param name="img">the Image</param>
         /// <returns>the byte[]</returns>
         public static byte[] ImageToByte(Image img)
         {
@@ -22,10 +22,10 @@ namespace Veto
         }
 
         /// <summary>
-        /// Convert a byte[] into a bitmap
+        /// Convert a byte[] into a Image
         /// </summary>
         /// <param name="img">the byte[]</param>
-        /// <returns>the bitmap</returns>
+        /// <returns>the Image</returns>
         public static Image ByteToImage(byte[] img)
         {
             MemoryStream ms = new MemoryStream(img);
