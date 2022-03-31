@@ -14,9 +14,9 @@ namespace Veto
     {
 
         private Salarie employee;
-        private Panel panel;
+        private FlowLayoutPanel panel;
 
-        public UserDesign(Salarie employee, Panel parentPanel)
+        public UserDesign(Salarie employee, FlowLayoutPanel parentPanel)
         {
             InitializeComponent();
             this.employee = employee;

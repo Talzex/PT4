@@ -14,19 +14,13 @@ namespace Veto
     {
 
         private Animal animal;
-        private List<MaladieAnimal> diseases;
 
         public AnimalDetails(Animal animal)
         {
             InitializeComponent();
             this.animal = animal;
-            diseases = new List<MaladieAnimal>();
             if (animal.Nom != null)
             {
-                foreach (MaladieAnimal a in animal.MaladieAnimal)
-                {
-                    diseases.Add(a);
-                }
                 UpdateItems();
             }
         }
@@ -39,18 +33,22 @@ namespace Veto
             HeightNUM.Value = (decimal)animal.Taille;
             WeightNUM.Value = (decimal)animal.Poids;
             BirthCAL.SelectionStart = (DateTime)animal.DateDeNaissance;
-            DiseasesLB.Items.AddRange(diseases.ToArray());
+            DiseasesLB.Items.AddRange(animal.MaladieAnimal.ToArray());
         }
 
         private void AddDiseasesBTN_Click(object sender, EventArgs e)
         {
-
+            DiseaseSelection f = new DiseaseSelection();
+            f.ShowDialog();
+            Maladie d = (Maladie)f.DiseasesLB.SelectedItem;
+            // Création de l'animal maladie
+            // Ajout à la listbox
         }
 
         private void RmDiseaseBTN_Click(object sender, EventArgs e)
         {
             MaladieAnimal disease = (MaladieAnimal)DiseasesLB.SelectedItem;
-            diseases.Remove(disease);
+            animal.MaladieAnimal.Remove(disease);
             // Supprimer
         }
 
@@ -66,12 +64,17 @@ namespace Veto
 
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Vous allez tuer cet animal, êtes vous sûrs ?", "Suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                DialogResult = DialogResult.Abort;
+                Close();
+            }
         }
 
         private void CancelBTN_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.None;
+            Close();
         }
     }
 }

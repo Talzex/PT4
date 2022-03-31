@@ -59,6 +59,7 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="MyMaladie.cs" />
     <Compile Include="Screen\Employee\AnimalDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,19 +73,19 @@
       <DependentUpon>CalendarDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\BillPrint.cs" />
-    <Compile Include="Scripts\MyMaladieAnimal.cs" />
+    <Compile Include="DBEntities\MyMaladieAnimal.cs" />
     <Compile Include="Screen\Employee\StockAjout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screen\Employee\StockAjout.Designer.cs">
       <DependentUpon>StockAjout.cs</DependentUpon>
-    </Compile>    
-    <Compile Include="DiseaseSelection.cs">
+    </Compile>
+    <Compile Include="Screen\Employee\DiseaseSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DiseaseSelection.Designer.cs">
+    <Compile Include="Screen\Employee\DiseaseSelection.Designer.cs">
       <DependentUpon>DiseaseSelection.cs</DependentUpon>
-    </Compile> 
+    </Compile>
     <Compile Include="DBEntities\MyProduit.cs" />
     <Compile Include="DBEntities\MyClient.cs" />
     <Compile Include="UserControls\AnimalComponent.cs">
@@ -270,7 +271,7 @@
     <EmbeddedResource Include="Screen\Employee\StockAjout.resx">
       <DependentUpon>StockAjout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DiseaseSelection.resx">
+    <EmbeddedResource Include="Screen\Employee\DiseaseSelection.resx">
       <DependentUpon>DiseaseSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ElementCart.resx">
