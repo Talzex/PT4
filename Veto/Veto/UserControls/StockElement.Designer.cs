@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockElement));
             this.label_nom = new System.Windows.Forms.Label();
             this.label_quantite = new System.Windows.Forms.Label();
             this.label_pricesell = new System.Windows.Forms.Label();
@@ -115,12 +116,15 @@
             // 
             // ImageProductPBOX
             // 
+            this.ImageProductPBOX.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageProductPBOX.BackgroundImage")));
+            this.ImageProductPBOX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ImageProductPBOX.Location = new System.Drawing.Point(62, 5);
             this.ImageProductPBOX.Name = "ImageProductPBOX";
             this.ImageProductPBOX.Size = new System.Drawing.Size(75, 75);
             this.ImageProductPBOX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageProductPBOX.TabIndex = 4;
             this.ImageProductPBOX.TabStop = false;
+            this.ImageProductPBOX.Click += new System.EventHandler(this.ImageProductPBOX_Click);
             // 
             // label_purchaseprice
             // 

@@ -208,6 +208,9 @@ namespace Veto
                 sb.AppendLine("Pénalité en cas de retard de paiement : Mort (ou 40€)");
 
                 SaveFile(sb.ToString(), now, f);
+            } else
+            {
+                MessageBox.Show("Le panier ne doit pas être videet un client doit être authentifié ! ");
             }
         }
 

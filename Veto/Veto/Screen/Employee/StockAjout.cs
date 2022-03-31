@@ -16,16 +16,19 @@ namespace Veto
         public StockAjout(Produit produit)
         {
             InitializeComponent();
-            if(produit != null)
+            if (produit != null)
             {
                 NameProduct.Text = produit.NomProduit;
                 QuantityProduct.Text = produit.QuantiteEnStock.ToString();
                 PurchasePriceProduct.Text = produit.PrixAchat.ToString();
                 SellPriceProduct.Text = produit.PrixVenteClient.ToString();
-                PictureBox.Image = Utils.ByteToImage(produit.ImageProduit);
+                if (produit.ImageProduit != null)
+                {
+                    PictureBox.Image = Utils.ByteToImage(produit.ImageProduit);
+                }
             }
             product = produit;
-            
+
         }
 
         /// <summary>
@@ -47,11 +50,11 @@ namespace Veto
         {
             OpenFileDialog.Title = "Sélectionner une image";
             OpenFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif";
-            if(OpenFileDialog.ShowDialog() == DialogResult.OK)
+            if (OpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 PictureBox.Image = new Bitmap(OpenFileDialog.FileName);
             }
-            
+
         }
 
         /// <summary>
@@ -67,7 +70,7 @@ namespace Veto
 
 
             if (!String.IsNullOrEmpty(NameProduct.Text) && !String.IsNullOrEmpty(QuantityProduct.Text) && !String.IsNullOrEmpty(PurchasePriceProduct.Text)
-                && !String.IsNullOrEmpty(SellPriceProduct.Text) && PictureBox.Image != null)
+                && !String.IsNullOrEmpty(SellPriceProduct.Text))
             {
                 Newproduit = AddModifyProducts();
             }
@@ -101,7 +104,7 @@ namespace Veto
                 }
                 else
                 {
-                    if(product != null)
+                    if (product != null)
                     {
                         Utils.ModifyProduct(Newproduit, Newproduit.NomProduit,
                         Newproduit.QuantiteEnStock, Newproduit.ImageProduit,
@@ -111,6 +114,7 @@ namespace Veto
                     {
                         Utils.SaveProduct(AddModifyProducts());
                     }
+                    DialogResult = DialogResult.OK;
                     this.Close();
                 }
             }
@@ -124,17 +128,21 @@ namespace Veto
             Produit produit = null;
             if (product == null)
             {
-                 produit = new Produit(); // Add
-            } else
+                produit = new Produit(); // Add
+            }
+            else
             {
                 produit = product; // Modify
             }
-            
+
             produit.NomProduit = NameProduct.Text;
             produit.QuantiteEnStock = Int32.Parse(QuantityProduct.Text);
             produit.PrixAchat = double.Parse(PurchasePriceProduct.Text);
             produit.PrixVenteClient = double.Parse(SellPriceProduct.Text);
-            produit.ImageProduit = Utils.ImageToByte(PictureBox.Image);
+            if (produit.ImageProduit != null)
+            {
+                produit.ImageProduit = Utils.ImageToByte(PictureBox.Image);
+            }
             return produit;
         }
 
@@ -148,14 +156,14 @@ namespace Veto
             Boolean identique = false;
             foreach (Produit produit in Utils.GetProductsAll())
             {
-                if(product != null)
+                if (product != null)
                 {
                     if (produit.NomProduit.Equals(NewProduit.NomProduit) && !produit.NomProduit.Equals(product.NomProduit))
                     {
                         identique = true;
                     }
                 }
-                else 
+                else
                 {
                     if (produit.NomProduit.Equals(NewProduit.NomProduit))
                     {

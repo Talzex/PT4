@@ -18,23 +18,23 @@ namespace Veto
         {
             InitializeComponent();
             this.product = product;
-            MAJProduit(product);
+            MAJProduit();
         }
 
         /// <summary>
         /// Updates the display element
         /// </summary>
-        public void MAJProduit(Produit product)
+        public void MAJProduit()
         {
             label_nom.Text = product.NomProduit;
             label_quantite.Text = "Quantité : " + product.QuantiteEnStock;
             label_pricesell.Text = "Prix de vente : " + product.PrixVenteClient + " €";
             label_purchaseprice.Text = "Prix d'achat : " + product.PrixAchat + " €";
-            if(product.ImageProduit != null)
+            if (product.ImageProduit != null)
             {
                 ImageProductPBOX.Image = Utils.ByteToImage(product.ImageProduit);
             }
-            
+
         }
 
         /// <summary>
@@ -45,10 +45,10 @@ namespace Veto
         private void buttonModify_Click(object sender, EventArgs e)
         {
             StockAjout stockAjout = new StockAjout(product);
-            stockAjout.Show();
-            this.Parent.Refresh();
-            Refresh();
-            
+            if (stockAjout.ShowDialog() == DialogResult.OK)
+            {
+                MAJProduit();
+            }
         }
 
         /// <summary>
@@ -60,12 +60,17 @@ namespace Veto
         {
             String message = "Êtes vous sûr de vouloir le supprimer";
             String caption = "Suppression Produits";
-            var messageBox =  MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
-            if(messageBox == DialogResult.Yes)
+            var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+            if (messageBox == DialogResult.Yes)
             {
                 Parent.Controls.Remove(this);
                 Utils.RemoveProduct(product);
             }
+        }
+
+        private void ImageProductPBOX_Click(object sender, EventArgs e)
+        {
+            FormController.AddItemToCart(product, 1);
         }
     }
 }
