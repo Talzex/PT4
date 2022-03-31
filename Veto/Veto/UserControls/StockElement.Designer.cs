@@ -33,8 +33,8 @@
             this.label_quantite = new System.Windows.Forms.Label();
             this.label_pricesell = new System.Windows.Forms.Label();
             this.panel_product = new System.Windows.Forms.Panel();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonModify = new System.Windows.Forms.Button();
+            this.DeleteBTN = new System.Windows.Forms.Button();
+            this.ModifyBTN = new System.Windows.Forms.Button();
             this.ImageProductPBOX = new System.Windows.Forms.PictureBox();
             this.label_purchaseprice = new System.Windows.Forms.Label();
             this.panel_product.SuspendLayout();
@@ -73,8 +73,8 @@
             // 
             // panel_product
             // 
-            this.panel_product.Controls.Add(this.buttonDelete);
-            this.panel_product.Controls.Add(this.buttonModify);
+            this.panel_product.Controls.Add(this.DeleteBTN);
+            this.panel_product.Controls.Add(this.ModifyBTN);
             this.panel_product.Controls.Add(this.ImageProductPBOX);
             this.panel_product.Controls.Add(this.label_purchaseprice);
             this.panel_product.Controls.Add(this.label_nom);
@@ -86,33 +86,33 @@
             this.panel_product.Size = new System.Drawing.Size(200, 205);
             this.panel_product.TabIndex = 3;
             // 
-            // buttonDelete
+            // DeleteBTN
             // 
-            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(122, 179);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
-            this.buttonDelete.TabIndex = 6;
-            this.buttonDelete.Text = "SUPPRIMER";
-            this.buttonDelete.UseVisualStyleBackColor = false;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.DeleteBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.Location = new System.Drawing.Point(122, 179);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(75, 23);
+            this.DeleteBTN.TabIndex = 6;
+            this.DeleteBTN.Text = "SUPPRIMER";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
+            this.DeleteBTN.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // buttonModify
+            // ModifyBTN
             // 
-            this.buttonModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.buttonModify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonModify.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModify.ForeColor = System.Drawing.Color.White;
-            this.buttonModify.Location = new System.Drawing.Point(3, 179);
-            this.buttonModify.Name = "buttonModify";
-            this.buttonModify.Size = new System.Drawing.Size(75, 23);
-            this.buttonModify.TabIndex = 5;
-            this.buttonModify.Text = "MODIFIER";
-            this.buttonModify.UseVisualStyleBackColor = false;
-            this.buttonModify.Click += new System.EventHandler(this.buttonModify_Click);
+            this.ModifyBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.ModifyBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ModifyBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModifyBTN.ForeColor = System.Drawing.Color.White;
+            this.ModifyBTN.Location = new System.Drawing.Point(3, 179);
+            this.ModifyBTN.Name = "ModifyBTN";
+            this.ModifyBTN.Size = new System.Drawing.Size(75, 23);
+            this.ModifyBTN.TabIndex = 5;
+            this.ModifyBTN.Text = "MODIFIER";
+            this.ModifyBTN.UseVisualStyleBackColor = false;
+            this.ModifyBTN.Click += new System.EventHandler(this.buttonModify_Click);
             // 
             // ImageProductPBOX
             // 
@@ -160,7 +160,7 @@
         private System.Windows.Forms.Panel panel_product;
         private System.Windows.Forms.Label label_purchaseprice;
         private System.Windows.Forms.PictureBox ImageProductPBOX;
-        private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.Button buttonModify;
+        private System.Windows.Forms.Button DeleteBTN;
+        private System.Windows.Forms.Button ModifyBTN;
     }
 }

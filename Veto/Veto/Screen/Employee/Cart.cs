@@ -45,7 +45,7 @@ namespace Veto
                 Panel_AllProducts.Controls.Add(elementCart);
                 total += nb * product.PrixVenteClient;
             }
-            label_total.Text = "Total : " + total;
+            TotalLBL.Text = "Total : " + total;
         }
 
 
@@ -86,7 +86,7 @@ namespace Veto
                 }
                 returnValue = cart[p];
             }
-            label_total.Text = "Total : " + total;
+            TotalLBL.Text = "Total : " + total;
             return returnValue;
         }
 
@@ -115,7 +115,7 @@ namespace Veto
                 }
                 total -= nbRemove * p.PrixVenteClient;
             }
-            label_total.Text = "Total : " + total;
+            TotalLBL.Text = "Total : " + total;
             return returnValue;
         }
 
@@ -143,7 +143,7 @@ namespace Veto
             if (ClientsCB.SelectedItem != null)
             {
                 buyer = (Client)ClientsCB.SelectedItem;
-                label_customer.Text = buyer.ToString();
+                CustomerLBL.Text = buyer.ToString();
             }
         }
 

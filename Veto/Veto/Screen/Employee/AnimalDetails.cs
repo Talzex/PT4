@@ -35,6 +35,9 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Method to update animal's informations
+        /// </summary>
         private void UpdateItems()
         {
             NameTB.Text = animal.Nom;
@@ -46,6 +49,11 @@ namespace Veto
             DiseasesLB.Items.AddRange(animal.MaladieAnimal.ToArray());
         }
 
+        /// <summary>
+        /// Method to add a disease to the animal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddDiseasesBTN_Click(object sender, EventArgs e)
         {
             DiseaseSelection f = new DiseaseSelection();
@@ -55,6 +63,11 @@ namespace Veto
             DiseasesLB.Items.Add(da);
         }
 
+        /// <summary>
+        /// Method to remove a disease to the animal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RmDiseaseBTN_Click(object sender, EventArgs e)
         {
             MaladieAnimal disease = (MaladieAnimal)DiseasesLB.SelectedItem;
@@ -63,6 +76,11 @@ namespace Veto
             Utils.RemoveDiseaseAnimal(disease);
         }
 
+        /// <summary>
+        /// Method to save the animal's details
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveBTN_Click(object sender, EventArgs e)
         {
             if (NameTB.Text != "" && HeightNUM.Value != 0 &&
@@ -89,6 +107,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Method to remove an animal from the DB
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Vous allez tuer cet animal, êtes vous sûrs ?", "Suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -99,6 +122,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Method to close the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelBTN_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.None;

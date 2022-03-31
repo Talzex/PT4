@@ -74,7 +74,7 @@ namespace Veto
         private void textBoxResearch_TextChanged(object sender, EventArgs e)
         {
             AllProductsPNL.Controls.Clear();
-            foreach (Produit produit in Utils.SearchProduct(TextBoxResearch.Text))
+            foreach (Produit produit in Utils.SearchProduct(ResearchTB.Text))
             {
                 var stockElement = new StockElement(produit);
                 AllProductsPNL.Controls.Add(stockElement);
@@ -103,7 +103,7 @@ namespace Veto
         /// <param name="e"></param>
         private void comboBoxFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int comboBoxIndex = FilterBox.SelectedIndex;
+            int comboBoxIndex = FilterCB.SelectedIndex;
             AllProductsPNL.Controls.Clear();
             switch (comboBoxIndex)
             {

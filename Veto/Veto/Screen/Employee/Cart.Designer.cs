@@ -29,12 +29,12 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_validate = new System.Windows.Forms.Button();
-            this.button_bill = new System.Windows.Forms.Button();
-            this.button_empty = new System.Windows.Forms.Button();
-            this.label_total = new System.Windows.Forms.Label();
-            this.label_customer = new System.Windows.Forms.Label();
-            this.button_login = new System.Windows.Forms.Button();
+            this.ValidateBTN = new System.Windows.Forms.Button();
+            this.BillBTN = new System.Windows.Forms.Button();
+            this.EmptyBTN = new System.Windows.Forms.Button();
+            this.TotalLBL = new System.Windows.Forms.Label();
+            this.CustomerLBL = new System.Windows.Forms.Label();
+            this.LoginBTN = new System.Windows.Forms.Button();
             this.label_cart = new System.Windows.Forms.Label();
             this.panel_bottombill = new System.Windows.Forms.Panel();
             this.PrinterCB = new System.Windows.Forms.ComboBox();
@@ -52,12 +52,12 @@ namespace Veto
             this.SidePNL.SuspendLayout();
             this.panel_bottombill.SuspendLayout();
             this.panel_title.SuspendLayout();
+            this.Panel_AllProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // CenterPNL
             // 
             this.CenterPNL.Controls.Add(this.Panel_AllProducts);
-            this.CenterPNL.Controls.Add(this.panel_title);
             this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Top;
             this.CenterPNL.Location = new System.Drawing.Point(225, 86);
             this.CenterPNL.Size = new System.Drawing.Size(839, 595);
@@ -74,81 +74,81 @@ namespace Veto
             this.SidePNL.SplitterDistance = 298;
             this.SidePNL.SplitterWidth = 6;
             // 
-            // button_validate
+            // ValidateBTN
             // 
-            this.button_validate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.button_validate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_validate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_validate.ForeColor = System.Drawing.Color.White;
-            this.button_validate.Location = new System.Drawing.Point(17, 183);
-            this.button_validate.Name = "button_validate";
-            this.button_validate.Size = new System.Drawing.Size(143, 23);
-            this.button_validate.TabIndex = 8;
-            this.button_validate.Text = "VALIDER";
-            this.button_validate.UseVisualStyleBackColor = false;
-            this.button_validate.Click += new System.EventHandler(this.button_validate_Click);
+            this.ValidateBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.ValidateBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ValidateBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValidateBTN.ForeColor = System.Drawing.Color.White;
+            this.ValidateBTN.Location = new System.Drawing.Point(17, 183);
+            this.ValidateBTN.Name = "ValidateBTN";
+            this.ValidateBTN.Size = new System.Drawing.Size(143, 23);
+            this.ValidateBTN.TabIndex = 8;
+            this.ValidateBTN.Text = "VALIDER";
+            this.ValidateBTN.UseVisualStyleBackColor = false;
+            this.ValidateBTN.Click += new System.EventHandler(this.button_validate_Click);
             // 
-            // button_bill
+            // BillBTN
             // 
-            this.button_bill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.button_bill.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_bill.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_bill.ForeColor = System.Drawing.Color.White;
-            this.button_bill.Location = new System.Drawing.Point(166, 183);
-            this.button_bill.Name = "button_bill";
-            this.button_bill.Size = new System.Drawing.Size(143, 23);
-            this.button_bill.TabIndex = 9;
-            this.button_bill.Text = "IMPRIMER FACTURE";
-            this.button_bill.UseVisualStyleBackColor = false;
-            this.button_bill.Click += new System.EventHandler(this.button_bill_Click);
+            this.BillBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.BillBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BillBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BillBTN.ForeColor = System.Drawing.Color.White;
+            this.BillBTN.Location = new System.Drawing.Point(166, 183);
+            this.BillBTN.Name = "BillBTN";
+            this.BillBTN.Size = new System.Drawing.Size(143, 23);
+            this.BillBTN.TabIndex = 9;
+            this.BillBTN.Text = "IMPRIMER FACTURE";
+            this.BillBTN.UseVisualStyleBackColor = false;
+            this.BillBTN.Click += new System.EventHandler(this.button_bill_Click);
             // 
-            // button_empty
+            // EmptyBTN
             // 
-            this.button_empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.button_empty.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_empty.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_empty.ForeColor = System.Drawing.Color.White;
-            this.button_empty.Location = new System.Drawing.Point(682, 183);
-            this.button_empty.Name = "button_empty";
-            this.button_empty.Size = new System.Drawing.Size(143, 23);
-            this.button_empty.TabIndex = 10;
-            this.button_empty.Text = "VIDER";
-            this.button_empty.UseVisualStyleBackColor = false;
-            this.button_empty.Click += new System.EventHandler(this.button_empty_Click);
+            this.EmptyBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.EmptyBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EmptyBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmptyBTN.ForeColor = System.Drawing.Color.White;
+            this.EmptyBTN.Location = new System.Drawing.Point(682, 183);
+            this.EmptyBTN.Name = "EmptyBTN";
+            this.EmptyBTN.Size = new System.Drawing.Size(143, 23);
+            this.EmptyBTN.TabIndex = 10;
+            this.EmptyBTN.Text = "VIDER";
+            this.EmptyBTN.UseVisualStyleBackColor = false;
+            this.EmptyBTN.Click += new System.EventHandler(this.button_empty_Click);
             // 
-            // label_total
+            // TotalLBL
             // 
-            this.label_total.AutoSize = true;
-            this.label_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_total.Location = new System.Drawing.Point(13, 91);
-            this.label_total.Name = "label_total";
-            this.label_total.Size = new System.Drawing.Size(56, 21);
-            this.label_total.TabIndex = 12;
-            this.label_total.Text = "Total :";
+            this.TotalLBL.AutoSize = true;
+            this.TotalLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLBL.Location = new System.Drawing.Point(13, 91);
+            this.TotalLBL.Name = "TotalLBL";
+            this.TotalLBL.Size = new System.Drawing.Size(56, 21);
+            this.TotalLBL.TabIndex = 12;
+            this.TotalLBL.Text = "Total :";
             // 
-            // label_customer
+            // CustomerLBL
             // 
-            this.label_customer.AutoSize = true;
-            this.label_customer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_customer.Location = new System.Drawing.Point(13, 12);
-            this.label_customer.Name = "label_customer";
-            this.label_customer.Size = new System.Drawing.Size(95, 21);
-            this.label_customer.TabIndex = 13;
-            this.label_customer.Text = "Aucun client";
+            this.CustomerLBL.AutoSize = true;
+            this.CustomerLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerLBL.Location = new System.Drawing.Point(13, 12);
+            this.CustomerLBL.Name = "CustomerLBL";
+            this.CustomerLBL.Size = new System.Drawing.Size(95, 21);
+            this.CustomerLBL.TabIndex = 13;
+            this.CustomerLBL.Text = "Aucun client";
             // 
-            // button_login
+            // LoginBTN
             // 
-            this.button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(97)))), ((int)(((byte)(50)))));
-            this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_login.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.ForeColor = System.Drawing.Color.White;
-            this.button_login.Location = new System.Drawing.Point(268, 12);
-            this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(123, 23);
-            this.button_login.TabIndex = 14;
-            this.button_login.Text = "IDENTIFIER";
-            this.button_login.UseVisualStyleBackColor = false;
-            this.button_login.Click += new System.EventHandler(this.button_login_Click);
+            this.LoginBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(97)))), ((int)(((byte)(50)))));
+            this.LoginBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LoginBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBTN.ForeColor = System.Drawing.Color.White;
+            this.LoginBTN.Location = new System.Drawing.Point(268, 12);
+            this.LoginBTN.Name = "LoginBTN";
+            this.LoginBTN.Size = new System.Drawing.Size(123, 23);
+            this.LoginBTN.TabIndex = 14;
+            this.LoginBTN.Text = "IDENTIFIER";
+            this.LoginBTN.UseVisualStyleBackColor = false;
+            this.LoginBTN.Click += new System.EventHandler(this.button_login_Click);
             // 
             // label_cart
             // 
@@ -164,12 +164,12 @@ namespace Veto
             // 
             this.panel_bottombill.Controls.Add(this.PrinterCB);
             this.panel_bottombill.Controls.Add(this.ClientsCB);
-            this.panel_bottombill.Controls.Add(this.label_customer);
-            this.panel_bottombill.Controls.Add(this.button_login);
-            this.panel_bottombill.Controls.Add(this.button_empty);
-            this.panel_bottombill.Controls.Add(this.button_bill);
-            this.panel_bottombill.Controls.Add(this.label_total);
-            this.panel_bottombill.Controls.Add(this.button_validate);
+            this.panel_bottombill.Controls.Add(this.CustomerLBL);
+            this.panel_bottombill.Controls.Add(this.LoginBTN);
+            this.panel_bottombill.Controls.Add(this.EmptyBTN);
+            this.panel_bottombill.Controls.Add(this.BillBTN);
+            this.panel_bottombill.Controls.Add(this.TotalLBL);
+            this.panel_bottombill.Controls.Add(this.ValidateBTN);
             this.panel_bottombill.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_bottombill.Location = new System.Drawing.Point(225, 438);
             this.panel_bottombill.Name = "panel_bottombill";
@@ -198,7 +198,7 @@ namespace Veto
             this.panel_title.Controls.Add(this.PreviousBTN);
             this.panel_title.Controls.Add(this.label_cart);
             this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_title.Location = new System.Drawing.Point(0, 0);
+            this.panel_title.Location = new System.Drawing.Point(3, 3);
             this.panel_title.Name = "panel_title";
             this.panel_title.Size = new System.Drawing.Size(839, 155);
             this.panel_title.TabIndex = 17;
@@ -238,10 +238,11 @@ namespace Veto
             // Panel_AllProducts
             // 
             this.Panel_AllProducts.AutoScroll = true;
+            this.Panel_AllProducts.Controls.Add(this.panel_title);
             this.Panel_AllProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_AllProducts.Location = new System.Drawing.Point(0, 155);
+            this.Panel_AllProducts.Location = new System.Drawing.Point(0, 0);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
-            this.Panel_AllProducts.Size = new System.Drawing.Size(839, 440);
+            this.Panel_AllProducts.Size = new System.Drawing.Size(839, 595);
             this.Panel_AllProducts.TabIndex = 18;
             // 
             // button_addconsultation
@@ -251,9 +252,9 @@ namespace Veto
             this.button_addconsultation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_addconsultation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_addconsultation.ForeColor = System.Drawing.Color.White;
-            this.button_addconsultation.Location = new System.Drawing.Point(35, 3);
+            this.button_addconsultation.Location = new System.Drawing.Point(12, 19);
             this.button_addconsultation.Name = "button_addconsultation";
-            this.button_addconsultation.Size = new System.Drawing.Size(152, 23);
+            this.button_addconsultation.Size = new System.Drawing.Size(191, 23);
             this.button_addconsultation.TabIndex = 1;
             this.button_addconsultation.Text = "AJOUTER CONSULTATION";
             this.button_addconsultation.UseVisualStyleBackColor = false;
@@ -265,9 +266,9 @@ namespace Veto
             this.button_addoperation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_addoperation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_addoperation.ForeColor = System.Drawing.Color.White;
-            this.button_addoperation.Location = new System.Drawing.Point(35, 32);
+            this.button_addoperation.Location = new System.Drawing.Point(12, 48);
             this.button_addoperation.Name = "button_addoperation";
-            this.button_addoperation.Size = new System.Drawing.Size(152, 23);
+            this.button_addoperation.Size = new System.Drawing.Size(191, 23);
             this.button_addoperation.TabIndex = 2;
             this.button_addoperation.Text = "AJOUTER OPÉRATION";
             this.button_addoperation.UseVisualStyleBackColor = false;
@@ -279,9 +280,9 @@ namespace Veto
             this.button_addnight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_addnight.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_addnight.ForeColor = System.Drawing.Color.White;
-            this.button_addnight.Location = new System.Drawing.Point(35, 61);
+            this.button_addnight.Location = new System.Drawing.Point(12, 77);
             this.button_addnight.Name = "button_addnight";
-            this.button_addnight.Size = new System.Drawing.Size(152, 23);
+            this.button_addnight.Size = new System.Drawing.Size(191, 23);
             this.button_addnight.TabIndex = 3;
             this.button_addnight.Text = "AJOUTER NUIT";
             this.button_addnight.UseVisualStyleBackColor = false;
@@ -306,18 +307,19 @@ namespace Veto
             this.panel_bottombill.PerformLayout();
             this.panel_title.ResumeLayout(false);
             this.panel_title.PerformLayout();
+            this.Panel_AllProducts.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button_validate;
-        private System.Windows.Forms.Button button_bill;
-        private System.Windows.Forms.Button button_empty;
-        private System.Windows.Forms.Label label_total;
-        private System.Windows.Forms.Label label_customer;
-        private System.Windows.Forms.Button button_login;
+        private System.Windows.Forms.Button ValidateBTN;
+        private System.Windows.Forms.Button BillBTN;
+        private System.Windows.Forms.Button EmptyBTN;
+        private System.Windows.Forms.Label TotalLBL;
+        private System.Windows.Forms.Label CustomerLBL;
+        private System.Windows.Forms.Button LoginBTN;
         private System.Windows.Forms.Label label_cart;
         private System.Windows.Forms.Panel panel_bottombill;
         private System.Windows.Forms.Panel panel_title;

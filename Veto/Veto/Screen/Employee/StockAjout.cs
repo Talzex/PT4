@@ -76,7 +76,7 @@ namespace Veto
             }
             else
             {
-                message = "Tout les champs ne sont pas remplis";
+                message = "Tous les champs ne sont pas remplis";
                 caption = "Erreur du formulaire d'ajout/modification";
                 var messageBox = MessageBox.Show(message, caption, MessageBoxButtons.OK);
             }
@@ -147,7 +147,7 @@ namespace Veto
         }
 
         /// <summary>
-        /// Method to verify if there is a product with the same name in the DataBase
+        /// Method to verify if there is a product with the same name in the DB
         /// </summary>
         /// <param name="NewProduit">The product to verify</param>
         /// <returns>ReturnS true if there is the same name, no otherwise</returns>
