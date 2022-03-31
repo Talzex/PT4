@@ -30,7 +30,7 @@ namespace Veto
         private void InitializeComponent()
         {
             this.UserLBL = new System.Windows.Forms.Label();
-            this.DisconnectBT = new System.Windows.Forms.Button();
+            this.DisconnectBTN = new System.Windows.Forms.Button();
             this.SidePNL = new System.Windows.Forms.SplitContainer();
             this.TopPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
@@ -39,35 +39,36 @@ namespace Veto
             // 
             // TopPNL
             // 
-            this.TopPNL.Controls.Add(this.DisconnectBT);
+            this.TopPNL.Controls.Add(this.DisconnectBTN);
             this.TopPNL.Controls.Add(this.UserLBL);
             this.TopPNL.Controls.SetChildIndex(this.UserLBL, 0);
-            this.TopPNL.Controls.SetChildIndex(this.DisconnectBT, 0);
+            this.TopPNL.Controls.SetChildIndex(this.DisconnectBTN, 0);
             // 
             // UserLBL
             // 
             this.UserLBL.AutoSize = true;
             this.UserLBL.BackColor = System.Drawing.Color.Transparent;
+            this.UserLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserLBL.Location = new System.Drawing.Point(100, 34);
             this.UserLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserLBL.Name = "UserLBL";
-            this.UserLBL.Size = new System.Drawing.Size(29, 13);
+            this.UserLBL.Size = new System.Drawing.Size(42, 21);
             this.UserLBL.TabIndex = 4;
             this.UserLBL.Text = "User";
             // 
-            // DisconnectBT
+            // DisconnectBTN
             // 
-            this.DisconnectBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.DisconnectBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DisconnectBT.ForeColor = System.Drawing.Color.White;
-            this.DisconnectBT.Location = new System.Drawing.Point(851, 26);
-            this.DisconnectBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DisconnectBT.Name = "DisconnectBT";
-            this.DisconnectBT.Size = new System.Drawing.Size(191, 28);
-            this.DisconnectBT.TabIndex = 6;
-            this.DisconnectBT.Text = "DÉCONNEXION";
-            this.DisconnectBT.UseVisualStyleBackColor = false;
-            this.DisconnectBT.Click += new System.EventHandler(this.DisconnectBT_Click);
+            this.DisconnectBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.DisconnectBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DisconnectBTN.ForeColor = System.Drawing.Color.White;
+            this.DisconnectBTN.Location = new System.Drawing.Point(851, 26);
+            this.DisconnectBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DisconnectBTN.Name = "DisconnectBTN";
+            this.DisconnectBTN.Size = new System.Drawing.Size(191, 28);
+            this.DisconnectBTN.TabIndex = 6;
+            this.DisconnectBTN.Text = "DÉCONNEXION";
+            this.DisconnectBTN.UseVisualStyleBackColor = false;
+            this.DisconnectBTN.Click += new System.EventHandler(this.DisconnectBT_Click);
             // 
             // SidePNL
             // 
@@ -111,7 +112,7 @@ namespace Veto
         #endregion
 
         private System.Windows.Forms.Label UserLBL;
-        private System.Windows.Forms.Button DisconnectBT;
+        private System.Windows.Forms.Button DisconnectBTN;
         protected System.Windows.Forms.SplitContainer SidePNL;
     }
 }
