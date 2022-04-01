@@ -38,6 +38,9 @@ namespace Veto
             this.montantTB.Text = a.Montant.ToString();
         }
 
+        /// <summary>
+        /// Method to client in clientList
+        /// </summary>
         private void fillClients()
         {
              List<Client> clients = Utils.GetClientsAll();
@@ -116,7 +119,11 @@ namespace Veto
 
           
         }
-
+        /// <summary>
+        /// Method to add an animal related to a client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClientsList_SelectedIndexChanged(object sender, EventArgs e)
         {
             AnimalsList.Items.Clear();
@@ -128,6 +135,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Method to check, if schedule hour respect format
+        /// </summary>
+        /// <param name="rdv"></param>
+        /// <returns></returns>
         private bool valid(RendezVous rdv)
         {
             bool valid = true;
