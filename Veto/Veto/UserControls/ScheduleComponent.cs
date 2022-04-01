@@ -48,7 +48,7 @@ namespace Veto
             if (rdv != null && animal != null)
             {
                 ClientLB.Text = "Client : " + rdv.Client.NomClient;
-                AnimalLB.Text = "Animal : " + animal.NomEspece;
+                AnimalLB.Text = "Animal : " + animal.Nom;
             }
             else
             {
