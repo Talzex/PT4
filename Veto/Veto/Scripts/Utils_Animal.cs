@@ -49,6 +49,11 @@ namespace Veto
         /// <param name="animal">the animal to remove</param>
         public static void RemoveAnimal(Animal animal)
         {
+            MaladieAnimal[] diseases = animal.MaladieAnimal.ToArray();
+            for (int i = 0; i<diseases.Length;i++)
+            {
+                entities.MaladieAnimal.Remove(diseases[i]);
+            }
             entities.Animal.Remove(animal);
             entities.SaveChanges();
         }

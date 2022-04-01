@@ -29,6 +29,11 @@ namespace Veto
         {
             if (rdv != null)
             {
+                AnimalRDV[] ard = rdv.AnimalRDV.ToArray();
+                for (int i = 0; i < ard.Length; i++)
+                {
+                    entities.AnimalRDV.Remove(ard[i]);
+                }
                 entities.RendezVous.Remove(rdv);
                 entities.SaveChanges();
             }

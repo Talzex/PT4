@@ -56,8 +56,17 @@ namespace Veto
 
         }
 
+        /// <summary>
+        /// Deletes an employee with it's logs
+        /// </summary>
+        /// <param name="e">The employee to remove</param>
         public static void DeleteEmployee(Salarie e)
         {
+            Logs[] employeeLogs = e.Logs.ToArray();
+            for (int i = 0; i< employeeLogs.Length; i++)
+            {
+                entities.Logs.Remove(employeeLogs[i]);
+            }
             entities.Salarie.Remove(e);
             entities.SaveChanges();
         }
