@@ -64,110 +64,123 @@ namespace Veto
             this.UserDescPNL.Controls.Add(this.UserProfilePB);
             this.UserDescPNL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UserDescPNL.Location = new System.Drawing.Point(0, 0);
-            this.UserDescPNL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UserDescPNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserDescPNL.Name = "UserDescPNL";
-            this.UserDescPNL.Size = new System.Drawing.Size(800, 247);
+            this.UserDescPNL.Size = new System.Drawing.Size(600, 201);
             this.UserDescPNL.TabIndex = 7;
             // 
             // PasswordTB
             // 
-            this.PasswordTB.Location = new System.Drawing.Point(607, 16);
-            this.PasswordTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordTB.Location = new System.Drawing.Point(455, 13);
             this.PasswordTB.Name = "PasswordTB";
-            this.PasswordTB.Size = new System.Drawing.Size(132, 22);
+            this.PasswordTB.Size = new System.Drawing.Size(100, 20);
             this.PasswordTB.TabIndex = 13;
             // 
             // PasswordLBL
             // 
             this.PasswordLBL.AutoSize = true;
-            this.PasswordLBL.Location = new System.Drawing.Point(504, 20);
+            this.PasswordLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLBL.Location = new System.Drawing.Point(378, 16);
+            this.PasswordLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLBL.Name = "PasswordLBL";
-            this.PasswordLBL.Size = new System.Drawing.Size(94, 17);
+            this.PasswordLBL.Size = new System.Drawing.Size(75, 13);
             this.PasswordLBL.TabIndex = 12;
             this.PasswordLBL.Text = "Mot de Passe";
             // 
             // RoleCB
             // 
             this.RoleCB.FormattingEnabled = true;
-            this.RoleCB.Location = new System.Drawing.Point(273, 156);
-            this.RoleCB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RoleCB.Location = new System.Drawing.Point(205, 127);
             this.RoleCB.Name = "RoleCB";
-            this.RoleCB.Size = new System.Drawing.Size(132, 24);
+            this.RoleCB.Size = new System.Drawing.Size(100, 21);
             this.RoleCB.TabIndex = 11;
             // 
             // MailTB
             // 
-            this.MailTB.Location = new System.Drawing.Point(273, 86);
-            this.MailTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MailTB.Location = new System.Drawing.Point(205, 70);
             this.MailTB.Name = "MailTB";
-            this.MailTB.Size = new System.Drawing.Size(132, 22);
+            this.MailTB.Size = new System.Drawing.Size(100, 20);
             this.MailTB.TabIndex = 9;
             // 
             // LoginTB
             // 
-            this.LoginTB.Location = new System.Drawing.Point(273, 12);
-            this.LoginTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginTB.Location = new System.Drawing.Point(205, 10);
             this.LoginTB.Name = "LoginTB";
-            this.LoginTB.Size = new System.Drawing.Size(132, 22);
+            this.LoginTB.Size = new System.Drawing.Size(100, 20);
             this.LoginTB.TabIndex = 8;
             // 
             // CancelBTN
             // 
+            this.CancelBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
             this.CancelBTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelBTN.Location = new System.Drawing.Point(684, 204);
-            this.CancelBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CancelBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CancelBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBTN.ForeColor = System.Drawing.Color.White;
+            this.CancelBTN.Location = new System.Drawing.Point(513, 166);
             this.CancelBTN.Name = "CancelBTN";
-            this.CancelBTN.Size = new System.Drawing.Size(100, 28);
+            this.CancelBTN.Size = new System.Drawing.Size(75, 23);
             this.CancelBTN.TabIndex = 7;
-            this.CancelBTN.Text = "Annuler";
-            this.CancelBTN.UseVisualStyleBackColor = true;
+            this.CancelBTN.Text = "ANNULER";
+            this.CancelBTN.UseVisualStyleBackColor = false;
             // 
             // DeleteBTN
             // 
-            this.DeleteBTN.Location = new System.Drawing.Point(197, 204);
-            this.DeleteBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.Location = new System.Drawing.Point(158, 166);
             this.DeleteBTN.Name = "DeleteBTN";
-            this.DeleteBTN.Size = new System.Drawing.Size(100, 28);
+            this.DeleteBTN.Size = new System.Drawing.Size(75, 23);
             this.DeleteBTN.TabIndex = 6;
-            this.DeleteBTN.Text = "Supprimer";
-            this.DeleteBTN.UseVisualStyleBackColor = true;
+            this.DeleteBTN.Text = "SUPPRIMER";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // SaveBTN
             // 
-            this.SaveBTN.Location = new System.Drawing.Point(73, 204);
-            this.SaveBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaveBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SaveBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBTN.ForeColor = System.Drawing.Color.White;
+            this.SaveBTN.Location = new System.Drawing.Point(55, 166);
             this.SaveBTN.Name = "SaveBTN";
-            this.SaveBTN.Size = new System.Drawing.Size(116, 28);
+            this.SaveBTN.Size = new System.Drawing.Size(97, 23);
             this.SaveBTN.TabIndex = 5;
-            this.SaveBTN.Text = "Sauvegarder";
-            this.SaveBTN.UseVisualStyleBackColor = true;
+            this.SaveBTN.Text = "SAUVEGARDER";
+            this.SaveBTN.UseVisualStyleBackColor = false;
             this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
             // 
             // UserRoleLBL
             // 
             this.UserRoleLBL.AutoSize = true;
-            this.UserRoleLBL.Location = new System.Drawing.Point(193, 160);
+            this.UserRoleLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserRoleLBL.Location = new System.Drawing.Point(145, 130);
+            this.UserRoleLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserRoleLBL.Name = "UserRoleLBL";
-            this.UserRoleLBL.Size = new System.Drawing.Size(37, 17);
+            this.UserRoleLBL.Size = new System.Drawing.Size(30, 13);
             this.UserRoleLBL.TabIndex = 4;
             this.UserRoleLBL.Text = "Rôle";
             // 
             // UserLNameLBL
             // 
             this.UserLNameLBL.AutoSize = true;
-            this.UserLNameLBL.Location = new System.Drawing.Point(193, 90);
+            this.UserLNameLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLNameLBL.Location = new System.Drawing.Point(145, 73);
+            this.UserLNameLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserLNameLBL.Name = "UserLNameLBL";
-            this.UserLNameLBL.Size = new System.Drawing.Size(33, 17);
+            this.UserLNameLBL.Size = new System.Drawing.Size(29, 13);
             this.UserLNameLBL.TabIndex = 2;
             this.UserLNameLBL.Text = "Mail";
             // 
             // UserFNameLBL
             // 
             this.UserFNameLBL.AutoSize = true;
-            this.UserFNameLBL.Location = new System.Drawing.Point(193, 16);
+            this.UserFNameLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserFNameLBL.Location = new System.Drawing.Point(145, 13);
+            this.UserFNameLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserFNameLBL.Name = "UserFNameLBL";
-            this.UserFNameLBL.Size = new System.Drawing.Size(43, 17);
+            this.UserFNameLBL.Size = new System.Drawing.Size(36, 13);
             this.UserFNameLBL.TabIndex = 1;
             this.UserFNameLBL.Text = "Login";
             // 
@@ -176,22 +189,21 @@ namespace Veto
             this.UserProfilePB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UserProfilePB.BackgroundImage")));
             this.UserProfilePB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserProfilePB.InitialImage = ((System.Drawing.Image)(resources.GetObject("UserProfilePB.InitialImage")));
-            this.UserProfilePB.Location = new System.Drawing.Point(15, 16);
-            this.UserProfilePB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UserProfilePB.Location = new System.Drawing.Point(11, 13);
+            this.UserProfilePB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserProfilePB.Name = "UserProfilePB";
-            this.UserProfilePB.Size = new System.Drawing.Size(160, 160);
+            this.UserProfilePB.Size = new System.Drawing.Size(120, 130);
             this.UserProfilePB.TabIndex = 0;
             this.UserProfilePB.TabStop = false;
             // 
             // UserDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(219)))), ((int)(((byte)(209)))));
-            this.ClientSize = new System.Drawing.Size(800, 247);
+            this.ClientSize = new System.Drawing.Size(600, 201);
             this.Controls.Add(this.UserDescPNL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserDetails";
             this.Text = "UserDetails";
             this.UserDescPNL.ResumeLayout(false);

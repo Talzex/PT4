@@ -43,28 +43,33 @@ namespace Veto
             // 
             this.SidePNL.Panel1.Controls.Add(this.LogsBTN);
             this.SidePNL.Panel1.Controls.Add(this.UserBTN);
-            this.SidePNL.Size = new System.Drawing.Size(300, 595);
-            this.SidePNL.SplitterDistance = 312;
             // 
             // UserBTN
             // 
+            this.UserBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.UserBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UserBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserBTN.ForeColor = System.Drawing.Color.White;
             this.UserBTN.Location = new System.Drawing.Point(78, 113);
             this.UserBTN.Name = "UserBTN";
             this.UserBTN.Size = new System.Drawing.Size(127, 35);
             this.UserBTN.TabIndex = 8;
-            this.UserBTN.Text = "Employés";
-            this.UserBTN.UseVisualStyleBackColor = true;
+            this.UserBTN.Text = "EMPLOYÉS";
+            this.UserBTN.UseVisualStyleBackColor = false;
             this.UserBTN.Click += new System.EventHandler(this.UserBTN_Click);
             // 
             // LogsBTN
             // 
+            this.LogsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.LogsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LogsBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogsBTN.ForeColor = System.Drawing.Color.White;
             this.LogsBTN.Location = new System.Drawing.Point(78, 180);
             this.LogsBTN.Name = "LogsBTN";
             this.LogsBTN.Size = new System.Drawing.Size(127, 35);
             this.LogsBTN.TabIndex = 9;
-            this.LogsBTN.Text = "Historique";
-            this.LogsBTN.UseVisualStyleBackColor = true;
-            this.LogsBTN.Click += new System.EventHandler(this.LogsBTN_Click);
+            this.LogsBTN.Text = "HISTORIQUE";
+            this.LogsBTN.UseVisualStyleBackColor = false;
             // 
             // ScreenAdmin
             // 
