@@ -37,24 +37,18 @@ namespace Veto
         /// <summary>
         /// Form with the user's details
         /// </summary>
-        public void ShowModificatationForm()
+        private void ShowModificatationForm()
         {
             UserDetails user = new UserDetails(employee);
             DialogResult res = user.ShowDialog();
 
             if (res == DialogResult.OK)
             {
-                // Sauvegarder l'utilisateur
-                if (!panel.Controls.Contains(this))
-                {
-                    panel.Controls.Add(this);
-                }
-                UserList parent = (UserList)ParentForm;
-                parent.LoadUsers();
+                UpdateElements();
             }
-            else if (res ==DialogResult.Abort)
+            else if (res == DialogResult.Abort)
             {
-                // Supprimer user
+                Utils.DeleteEmployee(employee);
                 panel.Controls.Remove(this);
             }
         }

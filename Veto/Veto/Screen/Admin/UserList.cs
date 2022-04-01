@@ -41,8 +41,13 @@ namespace Veto
         /// <param name="e"></param>
         private void AddBTN_Click(object sender, EventArgs e)
         {
-            UserDesign design = new UserDesign(new Salarie(), CenterPNL);
-            design.ShowModificatationForm();
+            Salarie employee = null;
+            UserDetails f = new UserDetails(employee);
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                UserDesign design = new UserDesign(employee, CenterPNL);
+                CenterPNL.Controls.Add(design);
+            }
         }
     }
 }

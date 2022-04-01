@@ -36,5 +36,30 @@ namespace Veto
 
             return (List<Salarie>)employees;
         }
+
+        /// <summary>
+        /// Adds an employee to the database
+        /// </summary>
+        /// <param name="e"></param>
+        public static void SaveEmployee(Salarie e)
+        {
+            entities.Salarie.Add(e);
+            entities.SaveChanges();
+        }
+
+        /// <summary>
+        /// Modify an employee
+        /// </summary>
+        /// <param name="e"></param>
+        public static void ModifyEmployee(Salarie e)
+        {
+
+        }
+
+        public static void DeleteEmployee(Salarie e)
+        {
+            entities.Salarie.Remove(e);
+            entities.SaveChanges();
+        }
     }
 }
