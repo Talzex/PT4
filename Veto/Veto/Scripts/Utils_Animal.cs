@@ -43,7 +43,10 @@ namespace Veto
             entities.SaveChanges();
         }
 
-
+        /// <summary>
+        /// Remove the animal from the DB
+        /// </summary>
+        /// <param name="animal">the animal to remove</param>
         public static void RemoveAnimal(Animal animal)
         {
             entities.Animal.Remove(animal);
