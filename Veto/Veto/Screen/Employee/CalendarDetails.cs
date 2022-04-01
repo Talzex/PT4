@@ -90,7 +90,7 @@ namespace Veto
                 rdv.Journee = journee;
                 
 
-                if (valid(rdv))
+                if (valid(journee))
                 {
                     Utils.SaveRDV(rdv);
                     Animal animal = Utils.getAnimal(rdv.Client, (String)AnimalsList.SelectedItem);
@@ -106,7 +106,7 @@ namespace Veto
             else
             {
 
-                if (valid(rdv))
+                if (valid(rdv.Journee))
                 {
                     Animal animal = Utils.getAnimal(rdv.Client, (String)AnimalsList.SelectedItem);
                     Client client = (Client)ClientsList.SelectedItem;
@@ -140,7 +140,7 @@ namespace Veto
         /// </summary>
         /// <param name="rdv"></param>
         /// <returns></returns>
-        private bool valid(RendezVous rdv)
+        private bool valid(Journee j)
         {
             bool valid = true;
 
@@ -154,11 +154,15 @@ namespace Veto
             List<RendezVous> rdvs = Utils.getAllRDV();
             foreach (RendezVous r in rdvs)
             {
-                if (r.Journee.Date.Equals(rdv.Journee.Date) && r.heureDebut.Equals(rdv.heureDebut) && r.idRdv != rdv.idRdv)
+                if (r.idRdv != rdv.idRdv)
                 {
-                    valid = false;
-                    error.BackColor = Color.Red;
-                    error.Text = "Il existe déjà un RDV pour ce créneau !";
+                    if (r.Journee.Date.Equals(j.Date) && (((int)BeginHour.Value >= r.heureDebut.Hours && (int)BeginHour.Value < r.heureFin.Hours) 
+                        || ((int)EndHour.Value >= r.heureDebut.Hours && (int)EndHour.Value < r.heureFin.Hours)))
+                    {
+                        valid = false;
+                        error.BackColor = Color.Red;
+                        error.Text = "Il existe déjà un RDV pour ce créneau !";
+                    }
                 }
             }
 

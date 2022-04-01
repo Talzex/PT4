@@ -114,24 +114,40 @@ namespace Veto
         {
             Schedule element = null;
             rendezVous = Utils.WeeklyRDV(firstDayOfWeek);
+            int nb = rendezVous.Count;
+            int total = 0;
+            bool trouve = false;
             RDVLYT.Controls.Clear();
 
                 for (int i = 9; i < 18; i++)
                 {
                     for (int j = 0; j < 5; j++)
                     {
-                        foreach (RendezVous rdv in rendezVous)
+                        if (!(nb == total))
                         {
-                        TimeSpan time = new TimeSpan(j,0, 0, 0);
-                            if (rdv.heureDebut.Hours == i && firstDayOfWeek.Add(time).Day == rdv.Journee.Date.Day)
+
+                            foreach (RendezVous rdv in rendezVous)
                             {
-                                element = new Schedule(rdv, Utils.getAnimalRDV(rdv).Animal);
+                               
+
+                                    TimeSpan time = new TimeSpan(j, 0, 0, 0);
+                                    if ((rdv.heureDebut.Hours <= i && rdv.heureFin.Hours > i) && firstDayOfWeek.Add(time).Day == rdv.Journee.Date.Day)
+                                    {
+                                        element = new Schedule(rdv, Utils.getAnimalRDV(rdv).Animal);
+                                        total++;
+                                        trouve = true;
+                                    }
+
+                                   
+                                
                             }
-                            else
+
+                            if(!trouve)
                             {
                                 element = new Schedule();
                             }
                             RDVLYT.Controls.Add(element);
+                            trouve = false;
                         }
                     }
                 }
