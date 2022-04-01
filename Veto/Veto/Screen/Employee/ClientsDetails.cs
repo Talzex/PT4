@@ -119,11 +119,21 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Method to reduce key possibilities, in that case only number
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PhoneTB_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar);
         }
 
+        /// <summary>
+        /// Method to check the format of an email
+        /// </summary>
+        /// <param name="emailaddress"></param>
+        /// <returns></returns>
         private bool IsValidMail(string emailaddress)
         {
             try

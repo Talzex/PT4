@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LastNameLabel = new System.Windows.Forms.Label();
-            this.FirstNameLabel = new System.Windows.Forms.Label();
-            this.EmailLabel = new System.Windows.Forms.Label();
-            this.TelephoneLabel = new System.Windows.Forms.Label();
+            this.LastNameLBL = new System.Windows.Forms.Label();
+            this.FirstNameLBL = new System.Windows.Forms.Label();
+            this.EmailLBL = new System.Windows.Forms.Label();
+            this.PhoneLBL = new System.Windows.Forms.Label();
             this.AddAnimalBTN = new System.Windows.Forms.Button();
             this.ValidateBTN = new System.Windows.Forms.Button();
             this.DeleteBTN = new System.Windows.Forms.Button();
@@ -45,45 +45,45 @@
             this.BirthLBL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // LastNameLabel
+            // LastNameLBL
             // 
-            this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.Location = new System.Drawing.Point(62, 4);
-            this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(50, 21);
-            this.LastNameLabel.TabIndex = 0;
-            this.LastNameLabel.Text = "Nom:";
+            this.LastNameLBL.AutoSize = true;
+            this.LastNameLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLBL.Location = new System.Drawing.Point(62, 4);
+            this.LastNameLBL.Name = "LastNameLBL";
+            this.LastNameLBL.Size = new System.Drawing.Size(50, 21);
+            this.LastNameLBL.TabIndex = 0;
+            this.LastNameLBL.Text = "Nom:";
             // 
-            // FirstNameLabel
+            // FirstNameLBL
             // 
-            this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(42, 50);
-            this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(71, 21);
-            this.FirstNameLabel.TabIndex = 1;
-            this.FirstNameLabel.Text = "Prénom:";
+            this.FirstNameLBL.AutoSize = true;
+            this.FirstNameLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLBL.Location = new System.Drawing.Point(42, 50);
+            this.FirstNameLBL.Name = "FirstNameLBL";
+            this.FirstNameLBL.Size = new System.Drawing.Size(71, 21);
+            this.FirstNameLBL.TabIndex = 1;
+            this.FirstNameLBL.Text = "Prénom:";
             // 
-            // EmailLabel
+            // EmailLBL
             // 
-            this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(259, 50);
-            this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(52, 21);
-            this.EmailLabel.TabIndex = 2;
-            this.EmailLabel.Text = "Email:";
+            this.EmailLBL.AutoSize = true;
+            this.EmailLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLBL.Location = new System.Drawing.Point(259, 50);
+            this.EmailLBL.Name = "EmailLBL";
+            this.EmailLBL.Size = new System.Drawing.Size(52, 21);
+            this.EmailLBL.TabIndex = 2;
+            this.EmailLBL.Text = "Email:";
             // 
-            // TelephoneLabel
+            // PhoneLBL
             // 
-            this.TelephoneLabel.AutoSize = true;
-            this.TelephoneLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelephoneLabel.Location = new System.Drawing.Point(224, 5);
-            this.TelephoneLabel.Name = "TelephoneLabel";
-            this.TelephoneLabel.Size = new System.Drawing.Size(90, 21);
-            this.TelephoneLabel.TabIndex = 5;
-            this.TelephoneLabel.Text = "Téléphone:";
+            this.PhoneLBL.AutoSize = true;
+            this.PhoneLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneLBL.Location = new System.Drawing.Point(224, 5);
+            this.PhoneLBL.Name = "PhoneLBL";
+            this.PhoneLBL.Size = new System.Drawing.Size(90, 21);
+            this.PhoneLBL.TabIndex = 5;
+            this.PhoneLBL.Text = "Téléphone:";
             // 
             // AddAnimalBTN
             // 
@@ -93,9 +93,9 @@
             this.AddAnimalBTN.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.AddAnimalBTN.Location = new System.Drawing.Point(28, 566);
             this.AddAnimalBTN.Name = "AddAnimalBTN";
-            this.AddAnimalBTN.Size = new System.Drawing.Size(111, 33);
+            this.AddAnimalBTN.Size = new System.Drawing.Size(128, 33);
             this.AddAnimalBTN.TabIndex = 6;
-            this.AddAnimalBTN.Text = "Ajouter animal";
+            this.AddAnimalBTN.Text = "AJOUTER ANIMAL";
             this.AddAnimalBTN.UseVisualStyleBackColor = false;
             this.AddAnimalBTN.Click += new System.EventHandler(this.AddAnimalBTN_Click);
             // 
@@ -109,7 +109,7 @@
             this.ValidateBTN.Name = "ValidateBTN";
             this.ValidateBTN.Size = new System.Drawing.Size(85, 33);
             this.ValidateBTN.TabIndex = 7;
-            this.ValidateBTN.Text = "Valider";
+            this.ValidateBTN.Text = "VALIDER";
             this.ValidateBTN.UseVisualStyleBackColor = false;
             this.ValidateBTN.Click += new System.EventHandler(this.ValidateBTN_Click);
             // 
@@ -123,7 +123,7 @@
             this.DeleteBTN.Name = "DeleteBTN";
             this.DeleteBTN.Size = new System.Drawing.Size(85, 33);
             this.DeleteBTN.TabIndex = 8;
-            this.DeleteBTN.Text = "Supprimer";
+            this.DeleteBTN.Text = "SUPPRIMER";
             this.DeleteBTN.UseVisualStyleBackColor = false;
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
@@ -188,9 +188,10 @@
             // BirthLBL
             // 
             this.BirthLBL.AutoSize = true;
-            this.BirthLBL.Location = new System.Drawing.Point(548, 25);
+            this.BirthLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthLBL.Location = new System.Drawing.Point(525, 20);
             this.BirthLBL.Name = "BirthLBL";
-            this.BirthLBL.Size = new System.Drawing.Size(96, 13);
+            this.BirthLBL.Size = new System.Drawing.Size(140, 21);
             this.BirthLBL.TabIndex = 17;
             this.BirthLBL.Text = "Date de naissance";
             // 
@@ -211,10 +212,10 @@
             this.Controls.Add(this.DeleteBTN);
             this.Controls.Add(this.ValidateBTN);
             this.Controls.Add(this.AddAnimalBTN);
-            this.Controls.Add(this.TelephoneLabel);
-            this.Controls.Add(this.EmailLabel);
-            this.Controls.Add(this.FirstNameLabel);
-            this.Controls.Add(this.LastNameLabel);
+            this.Controls.Add(this.PhoneLBL);
+            this.Controls.Add(this.EmailLBL);
+            this.Controls.Add(this.FirstNameLBL);
+            this.Controls.Add(this.LastNameLBL);
             this.Name = "ClientsDetails";
             this.Text = "Détails";
             this.ResumeLayout(false);
@@ -224,10 +225,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LastNameLabel;
-        private System.Windows.Forms.Label FirstNameLabel;
-        private System.Windows.Forms.Label EmailLabel;
-        private System.Windows.Forms.Label TelephoneLabel;
+        private System.Windows.Forms.Label LastNameLBL;
+        private System.Windows.Forms.Label FirstNameLBL;
+        private System.Windows.Forms.Label EmailLBL;
+        private System.Windows.Forms.Label PhoneLBL;
         private System.Windows.Forms.Button AddAnimalBTN;
         private System.Windows.Forms.Button ValidateBTN;
         private System.Windows.Forms.Button DeleteBTN;

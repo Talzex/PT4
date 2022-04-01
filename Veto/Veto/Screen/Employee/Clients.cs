@@ -51,6 +51,9 @@ namespace Veto
             ReloadPage();
         }
 
+        /// <summary>
+        /// Method to reload page 
+        /// </summary>
         public void ReloadPage()
         {
             page = 0;
