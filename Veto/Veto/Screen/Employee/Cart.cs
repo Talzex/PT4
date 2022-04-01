@@ -194,7 +194,9 @@ namespace Veto
                 List<ProduitFacture> productsBill = new List<ProduitFacture>();
                 foreach (Produit p in cart.Keys)
                 {
+                    Utils.RemoveQuantityProduct(p, cart[p]);
                     ProduitFacture pf = new ProduitFacture();
+
                     pf.Quantite = cart[p];
                     pf.IdFacture = f.IdFacture;
                     pf.IdProduit = p.IdProduit;
