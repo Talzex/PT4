@@ -54,9 +54,10 @@
             // NameLBL
             // 
             this.NameLBL.AutoSize = true;
+            this.NameLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameLBL.Location = new System.Drawing.Point(13, 13);
             this.NameLBL.Name = "NameLBL";
-            this.NameLBL.Size = new System.Drawing.Size(29, 13);
+            this.NameLBL.Size = new System.Drawing.Size(31, 13);
             this.NameLBL.TabIndex = 0;
             this.NameLBL.Text = "Nom";
             // 
@@ -77,9 +78,10 @@
             // SpecieLBL
             // 
             this.SpecieLBL.AutoSize = true;
+            this.SpecieLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpecieLBL.Location = new System.Drawing.Point(13, 53);
             this.SpecieLBL.Name = "SpecieLBL";
-            this.SpecieLBL.Size = new System.Drawing.Size(43, 13);
+            this.SpecieLBL.Size = new System.Drawing.Size(42, 13);
             this.SpecieLBL.TabIndex = 2;
             this.SpecieLBL.Text = "Espèce";
             // 
@@ -93,9 +95,10 @@
             // RaceLBL
             // 
             this.RaceLBL.AutoSize = true;
+            this.RaceLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RaceLBL.Location = new System.Drawing.Point(13, 95);
             this.RaceLBL.Name = "RaceLBL";
-            this.RaceLBL.Size = new System.Drawing.Size(33, 13);
+            this.RaceLBL.Size = new System.Drawing.Size(31, 13);
             this.RaceLBL.TabIndex = 4;
             this.RaceLBL.Text = "Race";
             // 
@@ -109,27 +112,30 @@
             // SizeLBL
             // 
             this.SizeLBL.AutoSize = true;
+            this.SizeLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SizeLBL.Location = new System.Drawing.Point(194, 13);
             this.SizeLBL.Name = "SizeLBL";
-            this.SizeLBL.Size = new System.Drawing.Size(32, 13);
+            this.SizeLBL.Size = new System.Drawing.Size(33, 13);
             this.SizeLBL.TabIndex = 7;
             this.SizeLBL.Text = "Taille";
             // 
             // WeightLBL
             // 
             this.WeightLBL.AutoSize = true;
+            this.WeightLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeightLBL.Location = new System.Drawing.Point(194, 53);
             this.WeightLBL.Name = "WeightLBL";
-            this.WeightLBL.Size = new System.Drawing.Size(33, 13);
+            this.WeightLBL.Size = new System.Drawing.Size(35, 13);
             this.WeightLBL.TabIndex = 9;
             this.WeightLBL.Text = "Poids";
             // 
             // BirthLBL
             // 
             this.BirthLBL.AutoSize = true;
+            this.BirthLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthLBL.Location = new System.Drawing.Point(13, 127);
             this.BirthLBL.Name = "BirthLBL";
-            this.BirthLBL.Size = new System.Drawing.Size(55, 26);
+            this.BirthLBL.Size = new System.Drawing.Size(57, 26);
             this.BirthLBL.TabIndex = 11;
             this.BirthLBL.Text = "Date de \r\nnaissance";
             // 
@@ -144,30 +150,39 @@
             // DiseasesLBL
             // 
             this.DiseasesLBL.AutoSize = true;
+            this.DiseasesLBL.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DiseasesLBL.Location = new System.Drawing.Point(431, 13);
             this.DiseasesLBL.Name = "DiseasesLBL";
-            this.DiseasesLBL.Size = new System.Drawing.Size(49, 13);
+            this.DiseasesLBL.Size = new System.Drawing.Size(53, 13);
             this.DiseasesLBL.TabIndex = 13;
             this.DiseasesLBL.Text = "Maladies";
             // 
             // AddDiseasesBTN
             // 
-            this.AddDiseasesBTN.Location = new System.Drawing.Point(434, 155);
+            this.AddDiseasesBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddDiseasesBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddDiseasesBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDiseasesBTN.ForeColor = System.Drawing.Color.White;
+            this.AddDiseasesBTN.Location = new System.Drawing.Point(434, 154);
             this.AddDiseasesBTN.Name = "AddDiseasesBTN";
-            this.AddDiseasesBTN.Size = new System.Drawing.Size(75, 23);
+            this.AddDiseasesBTN.Size = new System.Drawing.Size(129, 23);
             this.AddDiseasesBTN.TabIndex = 14;
-            this.AddDiseasesBTN.Text = "Ajouter Maladie";
-            this.AddDiseasesBTN.UseVisualStyleBackColor = true;
+            this.AddDiseasesBTN.Text = "AJOUTER MALADIE";
+            this.AddDiseasesBTN.UseVisualStyleBackColor = false;
             this.AddDiseasesBTN.Click += new System.EventHandler(this.AddDiseasesBTN_Click);
             // 
             // RmDiseaseBTN
             // 
-            this.RmDiseaseBTN.Location = new System.Drawing.Point(636, 154);
+            this.RmDiseaseBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.RmDiseaseBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RmDiseaseBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RmDiseaseBTN.ForeColor = System.Drawing.Color.White;
+            this.RmDiseaseBTN.Location = new System.Drawing.Point(595, 154);
             this.RmDiseaseBTN.Name = "RmDiseaseBTN";
-            this.RmDiseaseBTN.Size = new System.Drawing.Size(75, 23);
+            this.RmDiseaseBTN.Size = new System.Drawing.Size(116, 23);
             this.RmDiseaseBTN.TabIndex = 15;
-            this.RmDiseaseBTN.Text = "Enlever  Maladie";
-            this.RmDiseaseBTN.UseVisualStyleBackColor = true;
+            this.RmDiseaseBTN.Text = "ENLEVER MALADIE";
+            this.RmDiseaseBTN.UseVisualStyleBackColor = false;
             this.RmDiseaseBTN.Click += new System.EventHandler(this.RmDiseaseBTN_Click);
             // 
             // HeightNUM
@@ -196,39 +211,51 @@
             // 
             // SaveBTN
             // 
+            this.SaveBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SaveBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBTN.ForeColor = System.Drawing.Color.White;
             this.SaveBTN.Location = new System.Drawing.Point(434, 259);
             this.SaveBTN.Name = "SaveBTN";
-            this.SaveBTN.Size = new System.Drawing.Size(84, 23);
+            this.SaveBTN.Size = new System.Drawing.Size(99, 23);
             this.SaveBTN.TabIndex = 18;
-            this.SaveBTN.Text = "Sauvegarder";
-            this.SaveBTN.UseVisualStyleBackColor = true;
+            this.SaveBTN.Text = "SAUVEGARDER";
+            this.SaveBTN.UseVisualStyleBackColor = false;
             this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
             // 
             // DeleteBTN
             // 
+            this.DeleteBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
             this.DeleteBTN.Location = new System.Drawing.Point(539, 259);
             this.DeleteBTN.Name = "DeleteBTN";
-            this.DeleteBTN.Size = new System.Drawing.Size(75, 23);
+            this.DeleteBTN.Size = new System.Drawing.Size(91, 23);
             this.DeleteBTN.TabIndex = 19;
-            this.DeleteBTN.Text = "Supprimer";
-            this.DeleteBTN.UseVisualStyleBackColor = true;
+            this.DeleteBTN.Text = "SUPPRIMER";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // CancelBTN
             // 
+            this.CancelBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.CancelBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CancelBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBTN.ForeColor = System.Drawing.Color.White;
             this.CancelBTN.Location = new System.Drawing.Point(636, 259);
             this.CancelBTN.Name = "CancelBTN";
             this.CancelBTN.Size = new System.Drawing.Size(77, 23);
             this.CancelBTN.TabIndex = 20;
-            this.CancelBTN.Text = "Annuler";
-            this.CancelBTN.UseVisualStyleBackColor = true;
+            this.CancelBTN.Text = "ANNULER";
+            this.CancelBTN.UseVisualStyleBackColor = false;
             this.CancelBTN.Click += new System.EventHandler(this.CancelBTN_Click);
             // 
             // AnimalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(219)))), ((int)(((byte)(209)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(723, 294);
             this.Controls.Add(this.CancelBTN);
             this.Controls.Add(this.DeleteBTN);

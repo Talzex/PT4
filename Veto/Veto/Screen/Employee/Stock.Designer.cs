@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.ManagementPNL = new System.Windows.Forms.Panel();
-            this.FilterBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TextBoxResearch = new System.Windows.Forms.TextBox();
+            this.FilterCB = new System.Windows.Forms.ComboBox();
+            this.FilterLBL = new System.Windows.Forms.Label();
+            this.ResearchTB = new System.Windows.Forms.TextBox();
             this.NextBTN = new Veto.ButtonEllipse();
             this.PreviousBTN = new Veto.ButtonEllipse();
-            this.Stock_Title = new System.Windows.Forms.Label();
+            this.TitleLBL = new System.Windows.Forms.Label();
             this.AddProductBTN = new System.Windows.Forms.Button();
             this.AllProductsPNL = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
@@ -58,49 +58,49 @@
             // 
             // ManagementPNL
             // 
-            this.ManagementPNL.Controls.Add(this.FilterBox);
-            this.ManagementPNL.Controls.Add(this.label1);
-            this.ManagementPNL.Controls.Add(this.TextBoxResearch);
+            this.ManagementPNL.Controls.Add(this.FilterCB);
+            this.ManagementPNL.Controls.Add(this.FilterLBL);
+            this.ManagementPNL.Controls.Add(this.ResearchTB);
             this.ManagementPNL.Controls.Add(this.NextBTN);
             this.ManagementPNL.Controls.Add(this.PreviousBTN);
-            this.ManagementPNL.Controls.Add(this.Stock_Title);
+            this.ManagementPNL.Controls.Add(this.TitleLBL);
             this.ManagementPNL.Dock = System.Windows.Forms.DockStyle.Top;
             this.ManagementPNL.Location = new System.Drawing.Point(229, 86);
             this.ManagementPNL.Name = "ManagementPNL";
             this.ManagementPNL.Size = new System.Drawing.Size(835, 169);
             this.ManagementPNL.TabIndex = 8;
             // 
-            // FilterBox
+            // FilterCB
             // 
-            this.FilterBox.FormattingEnabled = true;
-            this.FilterBox.Items.AddRange(new object[] {
+            this.FilterCB.FormattingEnabled = true;
+            this.FilterCB.Items.AddRange(new object[] {
             "Quantité Décroissant",
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.FilterBox.Location = new System.Drawing.Point(632, 108);
-            this.FilterBox.Name = "FilterBox";
-            this.FilterBox.Size = new System.Drawing.Size(121, 21);
-            this.FilterBox.TabIndex = 10;
-            this.FilterBox.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
+            this.FilterCB.Location = new System.Drawing.Point(632, 108);
+            this.FilterCB.Name = "FilterCB";
+            this.FilterCB.Size = new System.Drawing.Size(121, 21);
+            this.FilterCB.TabIndex = 10;
+            this.FilterCB.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
             // 
-            // label1
+            // FilterLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(531, 108);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 21);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Trier par : ";
+            this.FilterLBL.AutoSize = true;
+            this.FilterLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterLBL.Location = new System.Drawing.Point(531, 108);
+            this.FilterLBL.Name = "FilterLBL";
+            this.FilterLBL.Size = new System.Drawing.Size(79, 21);
+            this.FilterLBL.TabIndex = 21;
+            this.FilterLBL.Text = "Trier par : ";
             // 
-            // TextBoxResearch
+            // ResearchTB
             // 
-            this.TextBoxResearch.Location = new System.Drawing.Point(65, 108);
-            this.TextBoxResearch.Name = "TextBoxResearch";
-            this.TextBoxResearch.Size = new System.Drawing.Size(170, 20);
-            this.TextBoxResearch.TabIndex = 9;
-            this.TextBoxResearch.TextChanged += new System.EventHandler(this.textBoxResearch_TextChanged);
+            this.ResearchTB.Location = new System.Drawing.Point(65, 108);
+            this.ResearchTB.Name = "ResearchTB";
+            this.ResearchTB.Size = new System.Drawing.Size(170, 20);
+            this.ResearchTB.TabIndex = 9;
+            this.ResearchTB.TextChanged += new System.EventHandler(this.textBoxResearch_TextChanged);
             // 
             // NextBTN
             // 
@@ -136,24 +136,24 @@
             this.PreviousBTN.UseVisualStyleBackColor = false;
             this.PreviousBTN.Click += new System.EventHandler(this.PreviousBTN_Click);
             // 
-            // Stock_Title
+            // TitleLBL
             // 
-            this.Stock_Title.AutoSize = true;
-            this.Stock_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stock_Title.Location = new System.Drawing.Point(293, 17);
-            this.Stock_Title.Name = "Stock_Title";
-            this.Stock_Title.Size = new System.Drawing.Size(253, 37);
-            this.Stock_Title.TabIndex = 17;
-            this.Stock_Title.Text = "Gestion des stocks";
+            this.TitleLBL.AutoSize = true;
+            this.TitleLBL.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLBL.Location = new System.Drawing.Point(293, 17);
+            this.TitleLBL.Name = "TitleLBL";
+            this.TitleLBL.Size = new System.Drawing.Size(253, 37);
+            this.TitleLBL.TabIndex = 17;
+            this.TitleLBL.Text = "Gestion des stocks";
             // 
             // AddProductBTN
             // 
             this.AddProductBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
             this.AddProductBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddProductBTN.ForeColor = System.Drawing.Color.White;
-            this.AddProductBTN.Location = new System.Drawing.Point(33, 15);
+            this.AddProductBTN.Location = new System.Drawing.Point(21, 16);
             this.AddProductBTN.Name = "AddProductBTN";
-            this.AddProductBTN.Size = new System.Drawing.Size(155, 23);
+            this.AddProductBTN.Size = new System.Drawing.Size(191, 23);
             this.AddProductBTN.TabIndex = 0;
             this.AddProductBTN.Text = "AJOUTER  AU CATALOGUE";
             this.AddProductBTN.UseVisualStyleBackColor = false;
@@ -190,12 +190,12 @@
         #endregion
 
         private System.Windows.Forms.Panel ManagementPNL;
-        private System.Windows.Forms.Label Stock_Title;
+        private System.Windows.Forms.Label TitleLBL;
         private ButtonEllipse PreviousBTN;
         private ButtonEllipse NextBTN;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TextBoxResearch;
-        private System.Windows.Forms.ComboBox FilterBox;
+        private System.Windows.Forms.Label FilterLBL;
+        private System.Windows.Forms.TextBox ResearchTB;
+        private System.Windows.Forms.ComboBox FilterCB;
         private System.Windows.Forms.Button AddProductBTN;
         private System.Windows.Forms.FlowLayoutPanel AllProductsPNL;
     }

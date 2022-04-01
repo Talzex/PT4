@@ -33,7 +33,7 @@
             this.QuantityLBL = new System.Windows.Forms.Label();
             this.SellPriceLBL = new System.Windows.Forms.Label();
             this.panel_product = new System.Windows.Forms.Panel();
-            this.RemoveBTN = new System.Windows.Forms.Button();
+            this.DeleteBTN = new System.Windows.Forms.Button();
             this.ModifyBTN = new System.Windows.Forms.Button();
             this.ImageProductPBOX = new System.Windows.Forms.PictureBox();
             this.PurchasePriceLBL = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             // 
             // panel_product
             // 
-            this.panel_product.Controls.Add(this.RemoveBTN);
+            this.panel_product.Controls.Add(this.DeleteBTN);
             this.panel_product.Controls.Add(this.ModifyBTN);
             this.panel_product.Controls.Add(this.ImageProductPBOX);
             this.panel_product.Controls.Add(this.PurchasePriceLBL);
@@ -86,19 +86,19 @@
             this.panel_product.Size = new System.Drawing.Size(200, 205);
             this.panel_product.TabIndex = 3;
             // 
-            // RemoveBTN
+            // DeleteBTN
             // 
-            this.RemoveBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.RemoveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.RemoveBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveBTN.ForeColor = System.Drawing.Color.White;
-            this.RemoveBTN.Location = new System.Drawing.Point(122, 179);
-            this.RemoveBTN.Name = "RemoveBTN";
-            this.RemoveBTN.Size = new System.Drawing.Size(75, 23);
-            this.RemoveBTN.TabIndex = 6;
-            this.RemoveBTN.Text = "SUPPRIMER";
-            this.RemoveBTN.UseVisualStyleBackColor = false;
-            this.RemoveBTN.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.DeleteBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.Location = new System.Drawing.Point(122, 179);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(75, 23);
+            this.DeleteBTN.TabIndex = 6;
+            this.DeleteBTN.Text = "SUPPRIMER";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
+            this.DeleteBTN.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // ModifyBTN
             // 
@@ -160,7 +160,7 @@
         private System.Windows.Forms.Panel panel_product;
         private System.Windows.Forms.Label PurchasePriceLBL;
         private System.Windows.Forms.PictureBox ImageProductPBOX;
-        private System.Windows.Forms.Button RemoveBTN;
+        private System.Windows.Forms.Button DeleteBTN;
         private System.Windows.Forms.Button ModifyBTN;
     }
 }
