@@ -40,8 +40,6 @@ namespace Veto
             this.PrinterCB = new System.Windows.Forms.ComboBox();
             this.ClientsCB = new System.Windows.Forms.ComboBox();
             this.panel_title = new System.Windows.Forms.Panel();
-            this.NextBTN = new Veto.ButtonEllipse();
-            this.PreviousBTN = new Veto.ButtonEllipse();
             this.Panel_AllProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.button_addconsultation = new System.Windows.Forms.Button();
             this.CenterPNL.SuspendLayout();
@@ -50,15 +48,15 @@ namespace Veto
             this.SidePNL.SuspendLayout();
             this.panel_bottombill.SuspendLayout();
             this.panel_title.SuspendLayout();
-            this.Panel_AllProducts.SuspendLayout();
             this.SuspendLayout();
             // 
             // CenterPNL
             // 
+            this.CenterPNL.Controls.Add(this.panel_title);
             this.CenterPNL.Controls.Add(this.Panel_AllProducts);
             this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CenterPNL.Location = new System.Drawing.Point(225, 86);
-            this.CenterPNL.Size = new System.Drawing.Size(839, 595);
+            this.CenterPNL.Location = new System.Drawing.Point(300, 86);
+            this.CenterPNL.Size = new System.Drawing.Size(764, 681);
             // 
             // SidePNL
             // 
@@ -66,8 +64,8 @@ namespace Veto
             // SidePNL.Panel2
             // 
             this.SidePNL.Panel2.Controls.Add(this.button_addconsultation);
-            this.SidePNL.Size = new System.Drawing.Size(225, 571);
-            this.SidePNL.SplitterDistance = 298;
+            this.SidePNL.Size = new System.Drawing.Size(300, 571);
+            this.SidePNL.SplitterDistance = 285;
             this.SidePNL.SplitterWidth = 6;
             // 
             // ValidateBTN
@@ -104,7 +102,7 @@ namespace Veto
             this.EmptyBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EmptyBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmptyBTN.ForeColor = System.Drawing.Color.White;
-            this.EmptyBTN.Location = new System.Drawing.Point(682, 183);
+            this.EmptyBTN.Location = new System.Drawing.Point(599, 183);
             this.EmptyBTN.Name = "EmptyBTN";
             this.EmptyBTN.Size = new System.Drawing.Size(143, 23);
             this.EmptyBTN.TabIndex = 10;
@@ -138,7 +136,7 @@ namespace Veto
             this.LoginBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LoginBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBTN.ForeColor = System.Drawing.Color.White;
-            this.LoginBTN.Location = new System.Drawing.Point(268, 12);
+            this.LoginBTN.Location = new System.Drawing.Point(266, 35);
             this.LoginBTN.Name = "LoginBTN";
             this.LoginBTN.Size = new System.Drawing.Size(123, 23);
             this.LoginBTN.TabIndex = 14;
@@ -150,7 +148,7 @@ namespace Veto
             // 
             this.label_cart.AutoSize = true;
             this.label_cart.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cart.Location = new System.Drawing.Point(322, 5);
+            this.label_cart.Location = new System.Drawing.Point(279, 5);
             this.label_cart.Name = "label_cart";
             this.label_cart.Size = new System.Drawing.Size(212, 37);
             this.label_cart.TabIndex = 16;
@@ -166,10 +164,9 @@ namespace Veto
             this.panel_bottombill.Controls.Add(this.BillBTN);
             this.panel_bottombill.Controls.Add(this.TotalLBL);
             this.panel_bottombill.Controls.Add(this.ValidateBTN);
-            this.panel_bottombill.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_bottombill.Location = new System.Drawing.Point(225, 438);
+            this.panel_bottombill.Location = new System.Drawing.Point(300, 431);
             this.panel_bottombill.Name = "panel_bottombill";
-            this.panel_bottombill.Size = new System.Drawing.Size(839, 219);
+            this.panel_bottombill.Size = new System.Drawing.Size(764, 226);
             this.panel_bottombill.TabIndex = 11;
             // 
             // PrinterCB
@@ -190,55 +187,18 @@ namespace Veto
             // 
             // panel_title
             // 
-            this.panel_title.Controls.Add(this.NextBTN);
-            this.panel_title.Controls.Add(this.PreviousBTN);
             this.panel_title.Controls.Add(this.label_cart);
-            this.panel_title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_title.Location = new System.Drawing.Point(3, 3);
+            this.panel_title.Location = new System.Drawing.Point(3, 0);
             this.panel_title.Name = "panel_title";
-            this.panel_title.Size = new System.Drawing.Size(839, 155);
+            this.panel_title.Size = new System.Drawing.Size(758, 61);
             this.panel_title.TabIndex = 17;
-            // 
-            // NextBTN
-            // 
-            this.NextBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.NextBTN.FlatAppearance.BorderSize = 0;
-            this.NextBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextBTN.ForeColor = System.Drawing.Color.White;
-            this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NextBTN.Location = new System.Drawing.Point(770, 3);
-            this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
-            this.NextBTN.Name = "NextBTN";
-            this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.NextBTN.Size = new System.Drawing.Size(52, 52);
-            this.NextBTN.TabIndex = 19;
-            this.NextBTN.Text = ">";
-            this.NextBTN.UseVisualStyleBackColor = false;
-            // 
-            // PreviousBTN
-            // 
-            this.PreviousBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.PreviousBTN.FlatAppearance.BorderSize = 0;
-            this.PreviousBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PreviousBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviousBTN.ForeColor = System.Drawing.Color.White;
-            this.PreviousBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.PreviousBTN.Location = new System.Drawing.Point(3, 5);
-            this.PreviousBTN.Name = "PreviousBTN";
-            this.PreviousBTN.Size = new System.Drawing.Size(50, 50);
-            this.PreviousBTN.TabIndex = 18;
-            this.PreviousBTN.Text = "<";
-            this.PreviousBTN.UseVisualStyleBackColor = false;
             // 
             // Panel_AllProducts
             // 
             this.Panel_AllProducts.AutoScroll = true;
-            this.Panel_AllProducts.Controls.Add(this.panel_title);
-            this.Panel_AllProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_AllProducts.Location = new System.Drawing.Point(0, 0);
+            this.Panel_AllProducts.Location = new System.Drawing.Point(0, 61);
             this.Panel_AllProducts.Name = "Panel_AllProducts";
-            this.Panel_AllProducts.Size = new System.Drawing.Size(839, 595);
+            this.Panel_AllProducts.Size = new System.Drawing.Size(764, 285);
             this.Panel_AllProducts.TabIndex = 18;
             // 
             // button_addconsultation
@@ -248,7 +208,7 @@ namespace Veto
             this.button_addconsultation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_addconsultation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_addconsultation.ForeColor = System.Drawing.Color.White;
-            this.button_addconsultation.Location = new System.Drawing.Point(12, 19);
+            this.button_addconsultation.Location = new System.Drawing.Point(54, 19);
             this.button_addconsultation.Name = "button_addconsultation";
             this.button_addconsultation.Size = new System.Drawing.Size(191, 23);
             this.button_addconsultation.TabIndex = 1;
@@ -276,7 +236,6 @@ namespace Veto
             this.panel_bottombill.PerformLayout();
             this.panel_title.ResumeLayout(false);
             this.panel_title.PerformLayout();
-            this.Panel_AllProducts.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,8 +251,6 @@ namespace Veto
         private System.Windows.Forms.Label label_cart;
         private System.Windows.Forms.Panel panel_bottombill;
         private System.Windows.Forms.Panel panel_title;
-        private ButtonEllipse PreviousBTN;
-        private ButtonEllipse NextBTN;
         private System.Windows.Forms.FlowLayoutPanel Panel_AllProducts;
         private System.Windows.Forms.Button button_addconsultation;
         private System.Windows.Forms.ComboBox ClientsCB;
