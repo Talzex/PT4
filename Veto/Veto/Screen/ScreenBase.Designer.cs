@@ -41,7 +41,7 @@ namespace Veto
             this.Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo.BackgroundImage")));
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logo.ImageLocation = "";
-            this.Logo.Location = new System.Drawing.Point(9, 6);
+            this.Logo.Location = new System.Drawing.Point(12, 12);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(60, 60);
             this.Logo.TabIndex = 1;
