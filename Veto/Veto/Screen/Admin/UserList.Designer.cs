@@ -49,10 +49,10 @@ namespace Veto
             this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBTN.ForeColor = System.Drawing.Color.White;
-            this.AddBTN.Location = new System.Drawing.Point(78, 16);
+            this.AddBTN.Location = new System.Drawing.Point(50, 14);
             this.AddBTN.Margin = new System.Windows.Forms.Padding(2);
             this.AddBTN.Name = "AddBTN";
-            this.AddBTN.Size = new System.Drawing.Size(127, 41);
+            this.AddBTN.Size = new System.Drawing.Size(191, 28);
             this.AddBTN.TabIndex = 0;
             this.AddBTN.Text = "AJOUTER EMPLOYÉ";
             this.AddBTN.UseVisualStyleBackColor = false;

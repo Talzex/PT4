@@ -30,7 +30,6 @@ namespace Veto
         private void InitializeComponent()
         {
             this.UserBTN = new System.Windows.Forms.Button();
-            this.LogsBTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel1.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -41,7 +40,6 @@ namespace Veto
             // 
             // SidePNL.Panel1
             // 
-            this.SidePNL.Panel1.Controls.Add(this.LogsBTN);
             this.SidePNL.Panel1.Controls.Add(this.UserBTN);
             // 
             // UserBTN
@@ -50,26 +48,13 @@ namespace Veto
             this.UserBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UserBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserBTN.ForeColor = System.Drawing.Color.White;
-            this.UserBTN.Location = new System.Drawing.Point(78, 113);
+            this.UserBTN.Location = new System.Drawing.Point(50, 118);
             this.UserBTN.Name = "UserBTN";
-            this.UserBTN.Size = new System.Drawing.Size(127, 35);
+            this.UserBTN.Size = new System.Drawing.Size(191, 28);
             this.UserBTN.TabIndex = 8;
             this.UserBTN.Text = "EMPLOYÉS";
             this.UserBTN.UseVisualStyleBackColor = false;
             this.UserBTN.Click += new System.EventHandler(this.UserBTN_Click);
-            // 
-            // LogsBTN
-            // 
-            this.LogsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.LogsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LogsBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogsBTN.ForeColor = System.Drawing.Color.White;
-            this.LogsBTN.Location = new System.Drawing.Point(78, 180);
-            this.LogsBTN.Name = "LogsBTN";
-            this.LogsBTN.Size = new System.Drawing.Size(127, 35);
-            this.LogsBTN.TabIndex = 9;
-            this.LogsBTN.Text = "HISTORIQUE";
-            this.LogsBTN.UseVisualStyleBackColor = false;
             // 
             // ScreenAdmin
             // 
@@ -87,6 +72,5 @@ namespace Veto
         #endregion
 
         private System.Windows.Forms.Button UserBTN;
-        private System.Windows.Forms.Button LogsBTN;
     }
 }

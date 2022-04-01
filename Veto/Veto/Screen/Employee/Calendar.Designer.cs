@@ -55,11 +55,6 @@ namespace Veto
             this.DaysPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CenterPNL
-            // 
-            this.CenterPNL.Location = new System.Drawing.Point(0, 0);
-            this.CenterPNL.Size = new System.Drawing.Size(1064, 681);
-            // 
             // SidePNL
             // 
             // 
@@ -275,9 +270,9 @@ namespace Veto
             this.AddRdvBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddRdvBT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddRdvBT.ForeColor = System.Drawing.Color.White;
-            this.AddRdvBT.Location = new System.Drawing.Point(69, 22);
+            this.AddRdvBT.Location = new System.Drawing.Point(54, 22);
             this.AddRdvBT.Name = "AddRdvBT";
-            this.AddRdvBT.Size = new System.Drawing.Size(151, 38);
+            this.AddRdvBT.Size = new System.Drawing.Size(191, 23);
             this.AddRdvBT.TabIndex = 0;
             this.AddRdvBT.Text = "NOUVEAU RENDEZ-VOUS";
             this.AddRdvBT.UseVisualStyleBackColor = false;

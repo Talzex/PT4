@@ -30,7 +30,6 @@ namespace Veto
         private void InitializeComponent()
         {
             this.ProductLBL = new System.Windows.Forms.Label();
-            this.TotalPriceLBL = new System.Windows.Forms.Label();
             this.UnitPriceLBL = new System.Windows.Forms.Label();
             this.QuantityLBL = new System.Windows.Forms.Label();
             this.QuantityTB = new System.Windows.Forms.TextBox();
@@ -49,25 +48,15 @@ namespace Veto
             this.ProductLBL.TabIndex = 3;
             this.ProductLBL.Text = "Produit 1 ";
             // 
-            // TotalPriceLBL
-            // 
-            this.TotalPriceLBL.AutoSize = true;
-            this.TotalPriceLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPriceLBL.Location = new System.Drawing.Point(744, 23);
-            this.TotalPriceLBL.Name = "TotalPriceLBL";
-            this.TotalPriceLBL.Size = new System.Drawing.Size(80, 21);
-            this.TotalPriceLBL.TabIndex = 2;
-            this.TotalPriceLBL.Text = "Total : 30€";
-            // 
             // UnitPriceLBL
             // 
             this.UnitPriceLBL.AutoSize = true;
             this.UnitPriceLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnitPriceLBL.Location = new System.Drawing.Point(606, 23);
+            this.UnitPriceLBL.Location = new System.Drawing.Point(609, 20);
             this.UnitPriceLBL.Name = "UnitPriceLBL";
-            this.UnitPriceLBL.Size = new System.Drawing.Size(93, 21);
+            this.UnitPriceLBL.Size = new System.Drawing.Size(75, 21);
             this.UnitPriceLBL.TabIndex = 1;
-            this.UnitPriceLBL.Text = "Prix /u : 15€";
+            this.UnitPriceLBL.Text = "Prix /u : €";
             // 
             // QuantityLBL
             // 
@@ -144,12 +133,11 @@ namespace Veto
             this.Controls.Add(this.LessBTN);
             this.Controls.Add(this.QuantityLBL);
             this.Controls.Add(this.UnitPriceLBL);
-            this.Controls.Add(this.TotalPriceLBL);
             this.Controls.Add(this.ProductLBL);
             this.Controls.Add(this.AddBTN);
             this.Controls.Add(this.RemoveBTN);
             this.Name = "ElementCart";
-            this.Size = new System.Drawing.Size(835, 65);
+            this.Size = new System.Drawing.Size(764, 65);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +148,6 @@ namespace Veto
         private ButtonEllipse RemoveBTN;
         private ButtonEllipse AddBTN;
         private System.Windows.Forms.Label ProductLBL;
-        private System.Windows.Forms.Label TotalPriceLBL;
         private System.Windows.Forms.Label UnitPriceLBL;
         private System.Windows.Forms.Label QuantityLBL;
         private ButtonEllipse LessBTN;

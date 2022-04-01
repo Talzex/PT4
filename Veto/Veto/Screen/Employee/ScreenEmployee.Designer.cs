@@ -32,7 +32,6 @@ namespace Veto
             this.CalendarBTN = new System.Windows.Forms.Button();
             this.CartBTN = new System.Windows.Forms.Button();
             this.ClientsBTN = new System.Windows.Forms.Button();
-            this.StatsBTN = new System.Windows.Forms.Button();
             this.StocksBTN = new System.Windows.Forms.Button();
             this.CenterPNL = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
@@ -46,7 +45,6 @@ namespace Veto
             // SidePNL.Panel1
             // 
             this.SidePNL.Panel1.Controls.Add(this.StocksBTN);
-            this.SidePNL.Panel1.Controls.Add(this.StatsBTN);
             this.SidePNL.Panel1.Controls.Add(this.ClientsBTN);
             this.SidePNL.Panel1.Controls.Add(this.CalendarBTN);
             this.SidePNL.Panel1.Controls.Add(this.CartBTN);
@@ -97,21 +95,6 @@ namespace Veto
             this.ClientsBTN.UseVisualStyleBackColor = false;
             this.ClientsBTN.Click += new System.EventHandler(this.ClientsBTN_Click);
             // 
-            // StatsBTN
-            // 
-            this.StatsBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.StatsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.StatsBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatsBTN.ForeColor = System.Drawing.Color.White;
-            this.StatsBTN.Location = new System.Drawing.Point(54, 254);
-            this.StatsBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.StatsBTN.Name = "StatsBTN";
-            this.StatsBTN.Size = new System.Drawing.Size(191, 23);
-            this.StatsBTN.TabIndex = 9;
-            this.StatsBTN.Text = "STATISTIQUES";
-            this.StatsBTN.UseVisualStyleBackColor = false;
-            this.StatsBTN.Click += new System.EventHandler(this.StatsBTN_Click);
-            // 
             // StocksBTN
             // 
             this.StocksBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
@@ -130,9 +113,9 @@ namespace Veto
             // CenterPNL
             // 
             this.CenterPNL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CenterPNL.Location = new System.Drawing.Point(300, 86);
+            this.CenterPNL.Location = new System.Drawing.Point(0, 0);
             this.CenterPNL.Name = "CenterPNL";
-            this.CenterPNL.Size = new System.Drawing.Size(764, 595);
+            this.CenterPNL.Size = new System.Drawing.Size(1064, 681);
             this.CenterPNL.TabIndex = 8;
             // 
             // ScreenEmployee
@@ -142,9 +125,9 @@ namespace Veto
             this.Controls.Add(this.CenterPNL);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "ScreenEmployee";
+            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
-            this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.SidePNL.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
@@ -156,7 +139,6 @@ namespace Veto
 
         private System.Windows.Forms.Button CalendarBTN;
         private System.Windows.Forms.Button StocksBTN;
-        private System.Windows.Forms.Button StatsBTN;
         private System.Windows.Forms.Button ClientsBTN;
         private System.Windows.Forms.Button CartBTN;
         protected System.Windows.Forms.Panel CenterPNL;

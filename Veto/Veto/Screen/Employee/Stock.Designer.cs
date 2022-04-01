@@ -37,6 +37,7 @@
             this.TitleLBL = new System.Windows.Forms.Label();
             this.AddProductBTN = new System.Windows.Forms.Button();
             this.AllProductsPNL = new System.Windows.Forms.FlowLayoutPanel();
+            this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
@@ -45,8 +46,10 @@
             // 
             // CenterPNL
             // 
-            this.CenterPNL.Location = new System.Drawing.Point(0, 0);
-            this.CenterPNL.Size = new System.Drawing.Size(1064, 681);
+            this.CenterPNL.Controls.Add(this.ManagementPNL);
+            this.CenterPNL.Dock = System.Windows.Forms.DockStyle.None;
+            this.CenterPNL.Location = new System.Drawing.Point(298, 0);
+            this.CenterPNL.Size = new System.Drawing.Size(766, 681);
             // 
             // SidePNL
             // 
@@ -54,7 +57,6 @@
             // SidePNL.Panel2
             // 
             this.SidePNL.Panel2.Controls.Add(this.AddProductBTN);
-            this.SidePNL.Size = new System.Drawing.Size(229, 595);
             // 
             // ManagementPNL
             // 
@@ -64,10 +66,9 @@
             this.ManagementPNL.Controls.Add(this.NextBTN);
             this.ManagementPNL.Controls.Add(this.PreviousBTN);
             this.ManagementPNL.Controls.Add(this.TitleLBL);
-            this.ManagementPNL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ManagementPNL.Location = new System.Drawing.Point(229, 86);
+            this.ManagementPNL.Location = new System.Drawing.Point(0, 86);
             this.ManagementPNL.Name = "ManagementPNL";
-            this.ManagementPNL.Size = new System.Drawing.Size(835, 169);
+            this.ManagementPNL.Size = new System.Drawing.Size(763, 169);
             this.ManagementPNL.TabIndex = 8;
             // 
             // FilterCB
@@ -78,7 +79,7 @@
             "Quantité Croissant",
             "Nom Croissant",
             "Nom Décroissant"});
-            this.FilterCB.Location = new System.Drawing.Point(632, 108);
+            this.FilterCB.Location = new System.Drawing.Point(536, 108);
             this.FilterCB.Name = "FilterCB";
             this.FilterCB.Size = new System.Drawing.Size(121, 21);
             this.FilterCB.TabIndex = 10;
@@ -88,7 +89,7 @@
             // 
             this.FilterLBL.AutoSize = true;
             this.FilterLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterLBL.Location = new System.Drawing.Point(531, 108);
+            this.FilterLBL.Location = new System.Drawing.Point(435, 108);
             this.FilterLBL.Name = "FilterLBL";
             this.FilterLBL.Size = new System.Drawing.Size(79, 21);
             this.FilterLBL.TabIndex = 21;
@@ -110,7 +111,7 @@
             this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextBTN.ForeColor = System.Drawing.Color.White;
             this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NextBTN.Location = new System.Drawing.Point(773, 112);
+            this.NextBTN.Location = new System.Drawing.Point(677, 112);
             this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
             this.NextBTN.Name = "NextBTN";
             this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
@@ -151,7 +152,7 @@
             this.AddProductBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
             this.AddProductBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddProductBTN.ForeColor = System.Drawing.Color.White;
-            this.AddProductBTN.Location = new System.Drawing.Point(21, 16);
+            this.AddProductBTN.Location = new System.Drawing.Point(54, 18);
             this.AddProductBTN.Name = "AddProductBTN";
             this.AddProductBTN.Size = new System.Drawing.Size(191, 23);
             this.AddProductBTN.TabIndex = 0;
@@ -161,9 +162,9 @@
             // 
             // AllProductsPNL
             // 
-            this.AllProductsPNL.Location = new System.Drawing.Point(229, 255);
+            this.AllProductsPNL.Location = new System.Drawing.Point(298, 253);
             this.AllProductsPNL.Name = "AllProductsPNL";
-            this.AllProductsPNL.Size = new System.Drawing.Size(835, 426);
+            this.AllProductsPNL.Size = new System.Drawing.Size(766, 428);
             this.AllProductsPNL.TabIndex = 9;
             // 
             // Stock
@@ -171,13 +172,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.AllProductsPNL);
-            this.Controls.Add(this.ManagementPNL);
             this.Name = "Stock";
             this.Controls.SetChildIndex(this.CenterPNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
-            this.Controls.SetChildIndex(this.ManagementPNL, 0);
             this.Controls.SetChildIndex(this.AllProductsPNL, 0);
+            this.CenterPNL.ResumeLayout(false);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
