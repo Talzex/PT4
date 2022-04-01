@@ -114,7 +114,7 @@ namespace Veto
         {
             Schedule element = null;
             rendezVous = Utils.WeeklyRDV(firstDayOfWeek);
-            RdvLayout.Controls.Clear();
+            RDVLYT.Controls.Clear();
 
                 for (int i = 9; i < 18; i++)
                 {
@@ -131,7 +131,7 @@ namespace Veto
                             {
                                 element = new Schedule();
                             }
-                            RdvLayout.Controls.Add(element);
+                            RDVLYT.Controls.Add(element);
                         }
                     }
                 }

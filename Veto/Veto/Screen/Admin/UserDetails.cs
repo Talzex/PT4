@@ -15,20 +15,28 @@ namespace Veto
     {
 
         private Salarie employee;
+        private bool create;
 
         public UserDetails()
         {
             InitializeComponent();
-            employee = new Salarie();
-            AddRoles();
         }
 
         public UserDetails(Salarie employee)
         {
             InitializeComponent();
-            this.employee = employee;
+            if (employee != null)
+            {
+                create = false;
+                this.employee = employee;
+                FillTextBoxes();
+            }
+            else
+            {
+                create = true;
+                this.employee = new Salarie();
+            }
             AddRoles();
-            FillTextBoxes();
         }
 
         /// <summary>
@@ -46,7 +54,7 @@ namespace Veto
         /// Adds the availbles roles into the combobox
         /// </summary>
         private void AddRoles()
-        {            
+        {
             List<Roles> roles = Utils.GetRolesAll();
             foreach (Roles r in roles)
             {
@@ -76,12 +84,21 @@ namespace Veto
             }
             else if (RoleCB.SelectedItem == null)
             {
-                MessageBox.Show("L'utilisateur doit avoir un rôle");
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                MessageBox.Show("L'utilisateur doit avoir un rôle");                
             }
             else
             {
+                employee.Login = LoginTB.Text;
+                employee.MDP = PasswordTB.Text;
+                employee.IdRoles = (RoleCB.SelectedItem as Roles).IdRoles;
+                employee.Mail = MailTB.Text;
+                if (create)
+                {
+                    Utils.SaveEmployee(employee);
+                } else
+                {
+                    Utils.ModifyEmployee(employee);
+                }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -100,6 +117,12 @@ namespace Veto
                 this.DialogResult = DialogResult.Abort;
                 this.Close();
             }
+        }
+
+        private void CancelBTN_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.None;
+            Close();
         }
     }
 }

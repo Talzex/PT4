@@ -194,7 +194,9 @@ namespace Veto
                 List<ProduitFacture> productsBill = new List<ProduitFacture>();
                 foreach (Produit p in cart.Keys)
                 {
+                    Utils.RemoveQuantityProduct(p, cart[p]);
                     ProduitFacture pf = new ProduitFacture();
+
                     pf.Quantite = cart[p];
                     pf.IdFacture = f.IdFacture;
                     pf.IdProduit = p.IdProduit;
@@ -208,7 +210,8 @@ namespace Veto
                 sb.AppendLine("Pénalité en cas de retard de paiement : Mort (ou 40€)");
 
                 SaveFile(sb.ToString(), now, f);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Le panier ne doit pas être videet un client doit être authentifié ! ");
             }
@@ -244,6 +247,16 @@ namespace Veto
         }
 
         #endregion
-        
+
+        private void button_addconsultation_Click(object sender, EventArgs e)
+        {
+            Produit p = new Produit();
+            p.NomProduit = "Consultation";
+            p.PrixVenteClient = 20;
+            p.QuantiteEnStock = 1;
+            Panel_AllProducts.Controls.Add(new ElementCart(p, 1));
+            total += 20;
+            TotalLBL.Text = "Total : " + total;
+        }
     }
 }

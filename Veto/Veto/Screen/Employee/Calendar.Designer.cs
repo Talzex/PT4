@@ -29,9 +29,9 @@ namespace Veto
         /// </summary>
         private void InitializeComponent()
         {
-            this.NextBT = new Veto.ButtonEllipse();
-            this.PrevBT = new Veto.ButtonEllipse();
-            this.RdvLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.NextBTN = new Veto.ButtonEllipse();
+            this.PrevBTN = new Veto.ButtonEllipse();
+            this.RDVLYT = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,13 +46,13 @@ namespace Veto
             this.TuesdayLB = new System.Windows.Forms.Label();
             this.FridayLB = new System.Windows.Forms.Label();
             this.MondayLB = new System.Windows.Forms.Label();
-            this.DaysPanel = new System.Windows.Forms.Panel();
+            this.DaysPNL = new System.Windows.Forms.Panel();
             this.WeekLB = new System.Windows.Forms.Label();
             this.AddRdvBT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
             this.SidePNL.SuspendLayout();
-            this.DaysPanel.SuspendLayout();
+            this.DaysPNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePNL
@@ -62,47 +62,47 @@ namespace Veto
             // 
             this.SidePNL.Panel2.Controls.Add(this.AddRdvBT);
             // 
-            // NextBT
+            // NextBTN
             // 
-            this.NextBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.NextBT.FlatAppearance.BorderSize = 0;
-            this.NextBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NextBT.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextBT.ForeColor = System.Drawing.Color.White;
-            this.NextBT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NextBT.Location = new System.Drawing.Point(1003, 92);
-            this.NextBT.Margin = new System.Windows.Forms.Padding(0);
-            this.NextBT.Name = "NextBT";
-            this.NextBT.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
-            this.NextBT.Size = new System.Drawing.Size(52, 52);
-            this.NextBT.TabIndex = 22;
-            this.NextBT.Text = ">";
-            this.NextBT.UseVisualStyleBackColor = false;
-            this.NextBT.Click += new System.EventHandler(this.NextBT_Click);
+            this.NextBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.NextBTN.FlatAppearance.BorderSize = 0;
+            this.NextBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextBTN.ForeColor = System.Drawing.Color.White;
+            this.NextBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NextBTN.Location = new System.Drawing.Point(1003, 92);
+            this.NextBTN.Margin = new System.Windows.Forms.Padding(0);
+            this.NextBTN.Name = "NextBTN";
+            this.NextBTN.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.NextBTN.Size = new System.Drawing.Size(52, 52);
+            this.NextBTN.TabIndex = 22;
+            this.NextBTN.Text = ">";
+            this.NextBTN.UseVisualStyleBackColor = false;
+            this.NextBTN.Click += new System.EventHandler(this.NextBT_Click);
             // 
-            // PrevBT
+            // PrevBTN
             // 
-            this.PrevBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
-            this.PrevBT.FlatAppearance.BorderSize = 0;
-            this.PrevBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrevBT.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrevBT.ForeColor = System.Drawing.Color.White;
-            this.PrevBT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.PrevBT.Location = new System.Drawing.Point(320, 92);
-            this.PrevBT.Name = "PrevBT";
-            this.PrevBT.Size = new System.Drawing.Size(50, 50);
-            this.PrevBT.TabIndex = 21;
-            this.PrevBT.Text = "<";
-            this.PrevBT.UseVisualStyleBackColor = false;
-            this.PrevBT.Click += new System.EventHandler(this.PrevBT_Click);
+            this.PrevBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(122)))), ((int)(((byte)(83)))));
+            this.PrevBTN.FlatAppearance.BorderSize = 0;
+            this.PrevBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrevBTN.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrevBTN.ForeColor = System.Drawing.Color.White;
+            this.PrevBTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PrevBTN.Location = new System.Drawing.Point(320, 92);
+            this.PrevBTN.Name = "PrevBTN";
+            this.PrevBTN.Size = new System.Drawing.Size(50, 50);
+            this.PrevBTN.TabIndex = 21;
+            this.PrevBTN.Text = "<";
+            this.PrevBTN.UseVisualStyleBackColor = false;
+            this.PrevBTN.Click += new System.EventHandler(this.PrevBT_Click);
             // 
-            // RdvLayout
+            // RDVLYT
             // 
-            this.RdvLayout.Location = new System.Drawing.Point(320, 181);
-            this.RdvLayout.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.RdvLayout.Name = "RdvLayout";
-            this.RdvLayout.Size = new System.Drawing.Size(735, 488);
-            this.RdvLayout.TabIndex = 23;
+            this.RDVLYT.Location = new System.Drawing.Point(320, 181);
+            this.RDVLYT.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.RDVLYT.Name = "RDVLYT";
+            this.RDVLYT.Size = new System.Drawing.Size(735, 488);
+            this.RDVLYT.TabIndex = 23;
             // 
             // label1
             // 
@@ -241,17 +241,17 @@ namespace Veto
             this.MondayLB.TabIndex = 33;
             this.MondayLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DaysPanel
+            // DaysPNL
             // 
-            this.DaysPanel.Controls.Add(this.FridayLB);
-            this.DaysPanel.Controls.Add(this.ThursdayLB);
-            this.DaysPanel.Controls.Add(this.WednesdayLB);
-            this.DaysPanel.Controls.Add(this.TuesdayLB);
-            this.DaysPanel.Controls.Add(this.MondayLB);
-            this.DaysPanel.Location = new System.Drawing.Point(320, 147);
-            this.DaysPanel.Name = "DaysPanel";
-            this.DaysPanel.Size = new System.Drawing.Size(735, 31);
-            this.DaysPanel.TabIndex = 38;
+            this.DaysPNL.Controls.Add(this.FridayLB);
+            this.DaysPNL.Controls.Add(this.ThursdayLB);
+            this.DaysPNL.Controls.Add(this.WednesdayLB);
+            this.DaysPNL.Controls.Add(this.TuesdayLB);
+            this.DaysPNL.Controls.Add(this.MondayLB);
+            this.DaysPNL.Location = new System.Drawing.Point(320, 147);
+            this.DaysPNL.Name = "DaysPNL";
+            this.DaysPNL.Size = new System.Drawing.Size(735, 31);
+            this.DaysPNL.TabIndex = 38;
             // 
             // WeekLB
             // 
@@ -283,7 +283,7 @@ namespace Veto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.WeekLB);
-            this.Controls.Add(this.DaysPanel);
+            this.Controls.Add(this.DaysPNL);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -293,15 +293,15 @@ namespace Veto
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.RdvLayout);
-            this.Controls.Add(this.NextBT);
-            this.Controls.Add(this.PrevBT);
+            this.Controls.Add(this.RDVLYT);
+            this.Controls.Add(this.NextBTN);
+            this.Controls.Add(this.PrevBTN);
             this.Name = "Calendar";
             this.Activated += new System.EventHandler(this.Calendar_Activated);
             this.Controls.SetChildIndex(this.CenterPNL, 0);
-            this.Controls.SetChildIndex(this.PrevBT, 0);
-            this.Controls.SetChildIndex(this.NextBT, 0);
-            this.Controls.SetChildIndex(this.RdvLayout, 0);
+            this.Controls.SetChildIndex(this.PrevBTN, 0);
+            this.Controls.SetChildIndex(this.NextBTN, 0);
+            this.Controls.SetChildIndex(this.RDVLYT, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
@@ -311,15 +311,15 @@ namespace Veto
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.label9, 0);
-            this.Controls.SetChildIndex(this.DaysPanel, 0);
+            this.Controls.SetChildIndex(this.DaysPNL, 0);
             this.Controls.SetChildIndex(this.TopPNL, 0);
             this.Controls.SetChildIndex(this.SidePNL, 0);
             this.Controls.SetChildIndex(this.WeekLB, 0);
             this.SidePNL.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).EndInit();
             this.SidePNL.ResumeLayout(false);
-            this.DaysPanel.ResumeLayout(false);
-            this.DaysPanel.PerformLayout();
+            this.DaysPNL.ResumeLayout(false);
+            this.DaysPNL.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,9 +327,9 @@ namespace Veto
 
         #endregion
 
-        private ButtonEllipse NextBT;
-        private ButtonEllipse PrevBT;
-        private System.Windows.Forms.FlowLayoutPanel RdvLayout;
+        private ButtonEllipse NextBTN;
+        private ButtonEllipse PrevBTN;
+        private System.Windows.Forms.FlowLayoutPanel RDVLYT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -344,7 +344,7 @@ namespace Veto
         private System.Windows.Forms.Label TuesdayLB;
         private System.Windows.Forms.Label FridayLB;
         private System.Windows.Forms.Label MondayLB;
-        private System.Windows.Forms.Panel DaysPanel;
+        private System.Windows.Forms.Panel DaysPNL;
         private System.Windows.Forms.Label WeekLB;
         private System.Windows.Forms.Button AddRdvBT;
     }

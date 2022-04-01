@@ -42,6 +42,14 @@ namespace Veto
         {
             if (client != null)
             {
+                foreach (RendezVous rdv in Utils.GetClientsRDV(client))
+                {
+                    Utils.RemoveRDV(rdv);
+                }
+                foreach (Animal a in Utils.getClientAnimals(client))
+                {
+                    Utils.RemoveAnimal(a);
+                }
                 entities.Client.Remove(client);
                 entities.SaveChanges();
             }

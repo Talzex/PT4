@@ -214,6 +214,7 @@ namespace Veto
             this.button_addconsultation.TabIndex = 1;
             this.button_addconsultation.Text = "AJOUTER CONSULTATION";
             this.button_addconsultation.UseVisualStyleBackColor = false;
+            this.button_addconsultation.Click += new System.EventHandler(this.button_addconsultation_Click);
             // 
             // Cart
             // 

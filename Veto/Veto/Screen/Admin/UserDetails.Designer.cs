@@ -64,7 +64,7 @@ namespace Veto
             this.UserDescPNL.Controls.Add(this.UserProfilePB);
             this.UserDescPNL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UserDescPNL.Location = new System.Drawing.Point(0, 0);
-            this.UserDescPNL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserDescPNL.Margin = new System.Windows.Forms.Padding(2);
             this.UserDescPNL.Name = "UserDescPNL";
             this.UserDescPNL.Size = new System.Drawing.Size(600, 201);
             this.UserDescPNL.TabIndex = 7;
@@ -122,6 +122,7 @@ namespace Veto
             this.CancelBTN.TabIndex = 7;
             this.CancelBTN.Text = "ANNULER";
             this.CancelBTN.UseVisualStyleBackColor = false;
+            this.CancelBTN.Click += new System.EventHandler(this.CancelBTN_Click);
             // 
             // DeleteBTN
             // 
@@ -190,7 +191,7 @@ namespace Veto
             this.UserProfilePB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserProfilePB.InitialImage = ((System.Drawing.Image)(resources.GetObject("UserProfilePB.InitialImage")));
             this.UserProfilePB.Location = new System.Drawing.Point(11, 13);
-            this.UserProfilePB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserProfilePB.Margin = new System.Windows.Forms.Padding(2);
             this.UserProfilePB.Name = "UserProfilePB";
             this.UserProfilePB.Size = new System.Drawing.Size(120, 130);
             this.UserProfilePB.TabIndex = 0;
