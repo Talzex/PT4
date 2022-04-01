@@ -85,7 +85,7 @@ namespace Veto
                           where data.IdRDV == rdv.idRdv
                           select data).First();
 
-            return (AnimalRDV) animal;
+            return (AnimalRDV)animal;
         }
 
         /// <summary>
@@ -95,6 +95,20 @@ namespace Veto
         public static List<RendezVous> getAllRDV()
         {
             var rdv = (from data in entities.RendezVous
+                       select data).ToList();
+
+            return (List<RendezVous>)rdv;
+        }
+
+        /// <summary>
+        /// Gets all appointments for a client
+        /// </summary>
+        /// <param name="c">The Client</param>
+        /// <returns>The Clients appointments</returns>
+        public static List<RendezVous> GetClientsRDV(Client c)
+        {
+            var rdv = (from data in entities.RendezVous
+                       where data.IdClient == c.IdClient
                        select data).ToList();
 
             return (List<RendezVous>)rdv;
