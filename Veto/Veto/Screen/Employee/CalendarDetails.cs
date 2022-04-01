@@ -17,18 +17,34 @@ namespace Veto
         public CalendarDetails()
         {
             InitializeComponent();
+            error.Text = "";
+            fillClients();
         }
 
         public CalendarDetails(RendezVous rdv)
         {
             InitializeComponent();
+            error.Text = "";
+            fillClients();
             this.rdv = rdv;
             this.ClientsList.SelectedItem = rdv.Client;
-            this.AnimalsList.SelectedItem = rdv.AnimalRDV;
+            
             this.BeginHour.Value = rdv.heureDebut.Hours;
             this.EndHour.Value = rdv.heureFin.Hours;
             this.ReasonTB.Text = rdv.motif;
-            this.Date.SelectionRange.Start = rdv.Journee.Date;
+            AnimalRDV a = Utils.getAnimalRDV(rdv);
+            Animal animal = a.Animal;
+            this.AnimalsList.SelectedItem = animal.Nom;
+            this.montantTB.Text = a.Montant.ToString();
+        }
+
+        private void fillClients()
+        {
+             List<Client> clients = Utils.GetClientsAll();
+            foreach (Client client in clients)
+            {
+                ClientsList.Items.Add(client);
+            }
         }
 
         /// <summary>
@@ -64,23 +80,84 @@ namespace Veto
             if (this.rdv == null)
             {
                 rdv = new RendezVous();
-                rdv.Client = (Client)this.ClientsList.SelectedItem;
-                rdv.AnimalRDV = (ICollection<AnimalRDV>)(Animal)this.AnimalsList.SelectedItem;
-                rdv.heureDebut = new TimeSpan((int)this.BeginHour.Value, 0, 0);
-                rdv.heureFin = new TimeSpan((int)this.EndHour.Value, 0, 0);
+                rdv.Client = (Client)ClientsList.SelectedItem;
+                rdv.heureDebut = new TimeSpan((int)BeginHour.Value, 0, 0);
+                rdv.heureFin = new TimeSpan((int)EndHour.Value, 0, 0);
                 rdv.motif = ReasonTB.Text;
                 rdv.Journee = journee;
-                Utils.SaveRDV(rdv);
+                
+
+                if (valid(rdv))
+                {
+                    Utils.SaveRDV(rdv);
+                    Animal animal = Utils.getAnimal(rdv.Client, (String)AnimalsList.SelectedItem);
+                    AnimalRDV animalRDV = new AnimalRDV();
+                    animalRDV.IdRDV = rdv.idRdv;
+                    animalRDV.IdAnimal = animal.IdAnimal;
+                    animalRDV.Montant = montantTB.Value;
+
+                    Utils.SaveAnimalRDV(animalRDV);
+                    this.Close();
+                }
             }
             else
             {
-                Client client = (Client)this.ClientsList.SelectedItem;
-                Animal animal = (Animal)(ICollection<AnimalRDV>)this.AnimalsList.SelectedItem;
-                Utils.ModifyRDV(rdv, client.IdClient, animal,
-                    new TimeSpan((int)this.BeginHour.Value, 0, 0), new TimeSpan((int)this.EndHour.Value, 0, 0), ReasonTB.Text.ToString(), journee.IdJournee);
+
+                if (valid(rdv))
+                {
+                    Animal animal = Utils.getAnimal(rdv.Client, (String)AnimalsList.SelectedItem);
+                    Client client = (Client)ClientsList.SelectedItem;
+
+                    Utils.ModifyRDV(rdv, client.IdClient,new TimeSpan((int)BeginHour.Value, 0, 0), new TimeSpan((int)EndHour.Value, 0, 0), ReasonTB.Text.ToString(), journee.IdJournee);
+                    Utils.modifyAnimalRDV(Utils.getAnimalRDV(rdv), rdv.idRdv, animal.IdAnimal);
+                    this.Close();
+                }
             }
 
-            this.Close();
+          
+        }
+
+        private void ClientsList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AnimalsList.Items.Clear();
+            Client client = (Client)ClientsList.SelectedItem;
+            List<Animal> animals = Utils.getClientAnimals(client);
+            foreach (Animal animal in animals)
+            {
+                AnimalsList.Items.Add(animal.Nom);
+            }
+        }
+
+        private bool valid(RendezVous rdv)
+        {
+            bool valid = true;
+
+            if ((int)BeginHour.Value < 9 || (int)BeginHour.Value > 17 || (int)EndHour.Value < 10 || (int)EndHour.Value > 18)
+            {
+                valid = false;
+                error.BackColor = Color.Red;
+                error.Text = "Horaires non conformes !";
+            }
+
+            List<RendezVous> rdvs = Utils.getAllRDV();
+            foreach (RendezVous r in rdvs)
+            {
+                if (r.Journee.Date.Equals(rdv.Journee.Date) && r.heureDebut.Equals(rdv.heureDebut) && r.idRdv != rdv.idRdv)
+                {
+                    valid = false;
+                    error.BackColor = Color.Red;
+                    error.Text = "Il existe déjà un RDV pour ce créneau !";
+                }
+            }
+
+            if ((Client)ClientsList.SelectedItem == null || (String)AnimalsList.SelectedItem == null || ReasonTB.Text.Equals(""))
+            {
+                valid = false;
+                error.BackColor = Color.Red;
+                error.Text = "Tous les champs ne sont pas sélectionnés ou remplis !";
+            }
+
+            return valid;
         }
     }
 }

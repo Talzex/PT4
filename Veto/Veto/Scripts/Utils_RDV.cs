@@ -61,12 +61,11 @@ namespace Veto
         /// <param name="end">end of the rdv</param>
         /// <param name="cause">the cause</param>
         /// <param name="idDay">the day of the rdv</param>
-        public static void ModifyRDV(RendezVous rendezVous, int idClient, Animal animal, TimeSpan begin, TimeSpan end, String cause, int idDay)
+        public static void ModifyRDV(RendezVous rendezVous, int idClient, TimeSpan begin, TimeSpan end, String cause, int idDay)
         {
             if (rendezVous != null)
             {
                 rendezVous.IdClient = idClient;
-                rendezVous.AnimalRDV = (ICollection<AnimalRDV>)animal;
                 rendezVous.heureDebut = begin;
                 rendezVous.heureFin = end;
                 rendezVous.motif = cause;
@@ -84,9 +83,21 @@ namespace Veto
         {
             var animal = (from data in entities.AnimalRDV
                           where data.IdRDV == rdv.idRdv
-                          select data).FirstOrDefault();
+                          select data).First();
 
             return (AnimalRDV) animal;
+        }
+
+        /// <summary>
+        /// Query which return all the RDV
+        /// </summary>
+        /// /// <returns>the list of rdv</returns>
+        public static List<RendezVous> getAllRDV()
+        {
+            var rdv = (from data in entities.RendezVous
+                       select data).ToList();
+
+            return (List<RendezVous>)rdv;
         }
     }
 }
