@@ -62,7 +62,7 @@ namespace Veto
             this.ControllerPNL.Dock = System.Windows.Forms.DockStyle.Top;
             this.ControllerPNL.Location = new System.Drawing.Point(0, 0);
             this.ControllerPNL.Name = "ControllerPNL";
-            this.ControllerPNL.Size = new System.Drawing.Size(764, 100);
+            this.ControllerPNL.Size = new System.Drawing.Size(1064, 100);
             this.ControllerPNL.TabIndex = 0;
             // 
             // TitleLBL
@@ -105,10 +105,9 @@ namespace Veto
             // 
             // ItemsPNL
             // 
-            this.ItemsPNL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ItemsPNL.Location = new System.Drawing.Point(0, 100);
+            this.ItemsPNL.Location = new System.Drawing.Point(300, 86);
             this.ItemsPNL.Name = "ItemsPNL";
-            this.ItemsPNL.Size = new System.Drawing.Size(764, 495);
+            this.ItemsPNL.Size = new System.Drawing.Size(764, 595);
             this.ItemsPNL.TabIndex = 1;
             // 
             // AddClientBTN
