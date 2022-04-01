@@ -92,6 +92,7 @@ namespace Veto
                 employee.MDP = PasswordTB.Text;
                 employee.IdRoles = (RoleCB.SelectedItem as Roles).IdRoles;
                 employee.Mail = MailTB.Text;
+                employee.Roles = RoleCB.SelectedItem as Roles;
                 if (create)
                 {
                     Utils.SaveEmployee(employee);

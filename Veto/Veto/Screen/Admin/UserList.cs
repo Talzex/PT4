@@ -45,8 +45,7 @@ namespace Veto
             UserDetails f = new UserDetails(employee);
             if (f.ShowDialog() == DialogResult.OK)
             {
-                UserDesign design = new UserDesign(employee, CenterPNL);
-                CenterPNL.Controls.Add(design);
+                LoadUsers();
             }
         }
     }

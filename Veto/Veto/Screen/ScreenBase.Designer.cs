@@ -63,6 +63,8 @@ namespace Veto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.TopPNL);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "ScreenBase";
             this.Text = "ScreenBase";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
