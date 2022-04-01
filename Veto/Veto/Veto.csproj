@@ -64,7 +64,7 @@
     <Compile Include="Animal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="MyMaladie.cs" />
+    <Compile Include="DBEntities\MyMaladie.cs" />
     <Compile Include="Screen\Employee\AnimalDetails.cs">
       <SubType>Form</SubType>
     </Compile>

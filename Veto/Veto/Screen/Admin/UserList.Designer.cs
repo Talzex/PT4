@@ -45,13 +45,17 @@ namespace Veto
             // 
             // AddBTN
             // 
+            this.AddBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddBTN.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBTN.ForeColor = System.Drawing.Color.White;
             this.AddBTN.Location = new System.Drawing.Point(78, 16);
             this.AddBTN.Margin = new System.Windows.Forms.Padding(2);
             this.AddBTN.Name = "AddBTN";
             this.AddBTN.Size = new System.Drawing.Size(127, 41);
             this.AddBTN.TabIndex = 0;
-            this.AddBTN.Text = "Ajouter Employé";
-            this.AddBTN.UseVisualStyleBackColor = true;
+            this.AddBTN.Text = "AJOUTER EMPLOYÉ";
+            this.AddBTN.UseVisualStyleBackColor = false;
             this.AddBTN.Click += new System.EventHandler(this.AddBTN_Click);
             // 
             // CenterPNL

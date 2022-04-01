@@ -91,6 +91,10 @@ namespace Veto
         {
             CalendarDetails calendar = new CalendarDetails();
             calendar.Show();
+            if (DialogResult == DialogResult.OK)
+            {
+                DisplayRDV();
+            }
         }
 
         /// <summary>
@@ -111,24 +115,27 @@ namespace Veto
             Schedule element = null;
             rendezVous = Utils.WeeklyRDV(firstDayOfWeek);
             RdvLayout.Controls.Clear();
-            foreach (RendezVous rdv in rendezVous)
-            {
+
                 for (int i = 9; i < 18; i++)
                 {
                     for (int j = 0; j < 5; j++)
                     {
-                        if (rdv.heureDebut.Hours == i && firstDayOfWeek.Day+j == rdv.Journee.Date.Day)
+                        foreach (RendezVous rdv in rendezVous)
                         {
-                            element = new Schedule(rdv, Utils.getAnimalRDV(rdv).Animal);
+                        TimeSpan time = new TimeSpan(j,0, 0, 0);
+                            if (rdv.heureDebut.Hours == i && firstDayOfWeek.Add(time).Day == rdv.Journee.Date.Day)
+                            {
+                                element = new Schedule(rdv, Utils.getAnimalRDV(rdv).Animal);
+                            }
+                            else
+                            {
+                                element = new Schedule();
+                            }
+                            RdvLayout.Controls.Add(element);
                         }
-                        else
-                        {
-                            element = new Schedule();
-                        }
-                        RdvLayout.Controls.Add(element);
                     }
                 }
-            }
+
         }
     }
 }

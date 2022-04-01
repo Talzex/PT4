@@ -29,57 +29,57 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockElement));
-            this.label_nom = new System.Windows.Forms.Label();
-            this.label_quantite = new System.Windows.Forms.Label();
-            this.label_pricesell = new System.Windows.Forms.Label();
+            this.NameLBL = new System.Windows.Forms.Label();
+            this.QuantityLBL = new System.Windows.Forms.Label();
+            this.SellPriceLBL = new System.Windows.Forms.Label();
             this.panel_product = new System.Windows.Forms.Panel();
             this.DeleteBTN = new System.Windows.Forms.Button();
             this.ModifyBTN = new System.Windows.Forms.Button();
             this.ImageProductPBOX = new System.Windows.Forms.PictureBox();
-            this.label_purchaseprice = new System.Windows.Forms.Label();
+            this.PurchasePriceLBL = new System.Windows.Forms.Label();
             this.panel_product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageProductPBOX)).BeginInit();
             this.SuspendLayout();
             // 
-            // label_nom
+            // NameLBL
             // 
-            this.label_nom.AutoSize = true;
-            this.label_nom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_nom.Location = new System.Drawing.Point(69, 85);
-            this.label_nom.Name = "label_nom";
-            this.label_nom.Size = new System.Drawing.Size(61, 21);
-            this.label_nom.TabIndex = 0;
-            this.label_nom.Text = "Produit";
+            this.NameLBL.AutoSize = true;
+            this.NameLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLBL.Location = new System.Drawing.Point(69, 85);
+            this.NameLBL.Name = "NameLBL";
+            this.NameLBL.Size = new System.Drawing.Size(61, 21);
+            this.NameLBL.TabIndex = 0;
+            this.NameLBL.Text = "Produit";
             // 
-            // label_quantite
+            // QuantityLBL
             // 
-            this.label_quantite.AutoSize = true;
-            this.label_quantite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_quantite.Location = new System.Drawing.Point(50, 110);
-            this.label_quantite.Name = "label_quantite";
-            this.label_quantite.Size = new System.Drawing.Size(99, 21);
-            this.label_quantite.TabIndex = 1;
-            this.label_quantite.Text = "Quantité : 12";
+            this.QuantityLBL.AutoSize = true;
+            this.QuantityLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityLBL.Location = new System.Drawing.Point(50, 110);
+            this.QuantityLBL.Name = "QuantityLBL";
+            this.QuantityLBL.Size = new System.Drawing.Size(99, 21);
+            this.QuantityLBL.TabIndex = 1;
+            this.QuantityLBL.Text = "Quantité : 12";
             // 
-            // label_pricesell
+            // SellPriceLBL
             // 
-            this.label_pricesell.AutoSize = true;
-            this.label_pricesell.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_pricesell.Location = new System.Drawing.Point(31, 134);
-            this.label_pricesell.Name = "label_pricesell";
-            this.label_pricesell.Size = new System.Drawing.Size(137, 21);
-            this.label_pricesell.TabIndex = 2;
-            this.label_pricesell.Text = "Prix de vente : 20€";
+            this.SellPriceLBL.AutoSize = true;
+            this.SellPriceLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellPriceLBL.Location = new System.Drawing.Point(31, 134);
+            this.SellPriceLBL.Name = "SellPriceLBL";
+            this.SellPriceLBL.Size = new System.Drawing.Size(137, 21);
+            this.SellPriceLBL.TabIndex = 2;
+            this.SellPriceLBL.Text = "Prix de vente : 20€";
             // 
             // panel_product
             // 
             this.panel_product.Controls.Add(this.DeleteBTN);
             this.panel_product.Controls.Add(this.ModifyBTN);
             this.panel_product.Controls.Add(this.ImageProductPBOX);
-            this.panel_product.Controls.Add(this.label_purchaseprice);
-            this.panel_product.Controls.Add(this.label_nom);
-            this.panel_product.Controls.Add(this.label_pricesell);
-            this.panel_product.Controls.Add(this.label_quantite);
+            this.panel_product.Controls.Add(this.PurchasePriceLBL);
+            this.panel_product.Controls.Add(this.NameLBL);
+            this.panel_product.Controls.Add(this.SellPriceLBL);
+            this.panel_product.Controls.Add(this.QuantityLBL);
             this.panel_product.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_product.Location = new System.Drawing.Point(0, 0);
             this.panel_product.Name = "panel_product";
@@ -126,15 +126,15 @@
             this.ImageProductPBOX.TabStop = false;
             this.ImageProductPBOX.Click += new System.EventHandler(this.ImageProductPBOX_Click);
             // 
-            // label_purchaseprice
+            // PurchasePriceLBL
             // 
-            this.label_purchaseprice.AutoSize = true;
-            this.label_purchaseprice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_purchaseprice.Location = new System.Drawing.Point(36, 156);
-            this.label_purchaseprice.Name = "label_purchaseprice";
-            this.label_purchaseprice.Size = new System.Drawing.Size(128, 21);
-            this.label_purchaseprice.TabIndex = 3;
-            this.label_purchaseprice.Text = "Prix d\'achat : 10€";
+            this.PurchasePriceLBL.AutoSize = true;
+            this.PurchasePriceLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchasePriceLBL.Location = new System.Drawing.Point(36, 156);
+            this.PurchasePriceLBL.Name = "PurchasePriceLBL";
+            this.PurchasePriceLBL.Size = new System.Drawing.Size(128, 21);
+            this.PurchasePriceLBL.TabIndex = 3;
+            this.PurchasePriceLBL.Text = "Prix d\'achat : 10€";
             // 
             // StockElement
             // 
@@ -154,11 +154,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label_nom;
-        private System.Windows.Forms.Label label_quantite;
-        private System.Windows.Forms.Label label_pricesell;
+        private System.Windows.Forms.Label NameLBL;
+        private System.Windows.Forms.Label QuantityLBL;
+        private System.Windows.Forms.Label SellPriceLBL;
         private System.Windows.Forms.Panel panel_product;
-        private System.Windows.Forms.Label label_purchaseprice;
+        private System.Windows.Forms.Label PurchasePriceLBL;
         private System.Windows.Forms.PictureBox ImageProductPBOX;
         private System.Windows.Forms.Button DeleteBTN;
         private System.Windows.Forms.Button ModifyBTN;

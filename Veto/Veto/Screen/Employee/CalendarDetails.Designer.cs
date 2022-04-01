@@ -42,8 +42,12 @@
             this.Date = new System.Windows.Forms.MonthCalendar();
             this.ReasonLB = new System.Windows.Forms.Label();
             this.ReasonTB = new System.Windows.Forms.TextBox();
+            this.montantLB = new System.Windows.Forms.Label();
+            this.montantTB = new System.Windows.Forms.NumericUpDown();
+            this.error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BeginHour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EndHour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montantTB)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +63,7 @@
             // CancelBT
             // 
             this.CancelBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
+            this.CancelBT.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CancelBT.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBT.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -73,6 +78,7 @@
             // ValidateBT
             // 
             this.ValidateBT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
+            this.ValidateBT.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.ValidateBT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ValidateBT.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValidateBT.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -92,6 +98,7 @@
             this.ClientsList.Name = "ClientsList";
             this.ClientsList.Size = new System.Drawing.Size(221, 95);
             this.ClientsList.TabIndex = 12;
+            this.ClientsList.SelectedIndexChanged += new System.EventHandler(this.ClientsList_SelectedIndexChanged);
             // 
             // AnimalsList
             // 
@@ -167,7 +174,7 @@
             // 
             this.ReasonLB.AutoSize = true;
             this.ReasonLB.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReasonLB.Location = new System.Drawing.Point(44, 354);
+            this.ReasonLB.Location = new System.Drawing.Point(44, 355);
             this.ReasonLB.Name = "ReasonLB";
             this.ReasonLB.Size = new System.Drawing.Size(35, 13);
             this.ReasonLB.TabIndex = 21;
@@ -181,12 +188,42 @@
             this.ReasonTB.Size = new System.Drawing.Size(221, 22);
             this.ReasonTB.TabIndex = 22;
             // 
+            // montantLB
+            // 
+            this.montantLB.AutoSize = true;
+            this.montantLB.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.montantLB.Location = new System.Drawing.Point(44, 408);
+            this.montantLB.Name = "montantLB";
+            this.montantLB.Size = new System.Drawing.Size(52, 13);
+            this.montantLB.TabIndex = 23;
+            this.montantLB.Text = "Montant";
+            // 
+            // montantTB
+            // 
+            this.montantTB.Location = new System.Drawing.Point(138, 406);
+            this.montantTB.Name = "montantTB";
+            this.montantTB.Size = new System.Drawing.Size(47, 20);
+            this.montantTB.TabIndex = 24;
+            // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.error.Location = new System.Drawing.Point(10, 666);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(71, 13);
+            this.error.TabIndex = 25;
+            this.error.Text = "Heure de fin";
+            // 
             // CalendarDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(314, 655);
+            this.ClientSize = new System.Drawing.Size(314, 701);
+            this.Controls.Add(this.error);
+            this.Controls.Add(this.montantTB);
+            this.Controls.Add(this.montantLB);
             this.Controls.Add(this.ReasonTB);
             this.Controls.Add(this.ReasonLB);
             this.Controls.Add(this.Date);
@@ -205,6 +242,7 @@
             this.Text = "Ajout";
             ((System.ComponentModel.ISupportInitialize)(this.BeginHour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EndHour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montantTB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +264,8 @@
         private System.Windows.Forms.MonthCalendar Date;
         private System.Windows.Forms.Label ReasonLB;
         private System.Windows.Forms.TextBox ReasonTB;
+        private System.Windows.Forms.Label montantLB;
+        private System.Windows.Forms.NumericUpDown montantTB;
+        private System.Windows.Forms.Label error;
     }
 }

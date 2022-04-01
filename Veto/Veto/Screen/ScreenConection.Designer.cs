@@ -30,60 +30,63 @@ namespace Veto
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenConection));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ConnexionPNL = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.IdLBL = new System.Windows.Forms.Label();
             this.ConnectBT = new System.Windows.Forms.Button();
             this.PasswordTB = new System.Windows.Forms.TextBox();
             this.LoginTB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.CoonexionLBL = new System.Windows.Forms.Label();
+            this.ConnexionPNL.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // ConnexionPNL
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(51)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.IdLBL);
-            this.panel1.Controls.Add(this.ConnectBT);
-            this.panel1.Controls.Add(this.PasswordTB);
-            this.panel1.Controls.Add(this.LoginTB);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(88, 233);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 396);
-            this.panel1.TabIndex = 2;
+            this.ConnexionPNL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(51)))), ((int)(((byte)(39)))));
+            this.ConnexionPNL.Controls.Add(this.label2);
+            this.ConnexionPNL.Controls.Add(this.IdLBL);
+            this.ConnexionPNL.Controls.Add(this.ConnectBT);
+            this.ConnexionPNL.Controls.Add(this.PasswordTB);
+            this.ConnexionPNL.Controls.Add(this.LoginTB);
+            this.ConnexionPNL.Controls.Add(this.CoonexionLBL);
+            this.ConnexionPNL.Location = new System.Drawing.Point(88, 233);
+            this.ConnexionPNL.Name = "ConnexionPNL";
+            this.ConnexionPNL.Size = new System.Drawing.Size(383, 396);
+            this.ConnexionPNL.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
-            this.label2.Location = new System.Drawing.Point(126, 233);
+            this.label2.Location = new System.Drawing.Point(130, 225);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 17);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mot de Passe";
             // 
             // IdLBL
             // 
             this.IdLBL.AutoSize = true;
+            this.IdLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
-            this.IdLBL.Location = new System.Drawing.Point(137, 133);
+            this.IdLBL.Location = new System.Drawing.Point(130, 129);
             this.IdLBL.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.IdLBL.Name = "IdLBL";
-            this.IdLBL.Size = new System.Drawing.Size(69, 17);
+            this.IdLBL.Size = new System.Drawing.Size(80, 21);
             this.IdLBL.TabIndex = 4;
             this.IdLBL.Text = "Identifiant";
             // 
             // ConnectBT
             // 
-            this.ConnectBT.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ConnectBT.BackColor = System.Drawing.Color.White;
             this.ConnectBT.FlatAppearance.BorderSize = 0;
+            this.ConnectBT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConnectBT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConnectBT.ForeColor = System.Drawing.Color.Black;
-            this.ConnectBT.Location = new System.Drawing.Point(112, 312);
-            this.ConnectBT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ConnectBT.Location = new System.Drawing.Point(134, 341);
+            this.ConnectBT.Margin = new System.Windows.Forms.Padding(5);
             this.ConnectBT.Name = "ConnectBT";
             this.ConnectBT.Size = new System.Drawing.Size(96, 28);
             this.ConnectBT.TabIndex = 3;
@@ -97,11 +100,11 @@ namespace Veto
             this.PasswordTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
             this.PasswordTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTB.Location = new System.Drawing.Point(98, 255);
-            this.PasswordTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PasswordTB.Location = new System.Drawing.Point(134, 251);
+            this.PasswordTB.Margin = new System.Windows.Forms.Padding(5);
             this.PasswordTB.Name = "PasswordTB";
             this.PasswordTB.PasswordChar = '*';
-            this.PasswordTB.Size = new System.Drawing.Size(151, 27);
+            this.PasswordTB.Size = new System.Drawing.Size(151, 22);
             this.PasswordTB.TabIndex = 2;
             this.PasswordTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -111,26 +114,26 @@ namespace Veto
             this.LoginTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
             this.LoginTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LoginTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginTB.Location = new System.Drawing.Point(96, 155);
-            this.LoginTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.LoginTB.Location = new System.Drawing.Point(134, 155);
+            this.LoginTB.Margin = new System.Windows.Forms.Padding(5);
             this.LoginTB.Name = "LoginTB";
             this.LoginTB.Size = new System.Drawing.Size(115, 22);
             this.LoginTB.TabIndex = 1;
             this.LoginTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // CoonexionLBL
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
-            this.label1.Location = new System.Drawing.Point(105, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Connexion";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CoonexionLBL.AutoSize = true;
+            this.CoonexionLBL.BackColor = System.Drawing.Color.Transparent;
+            this.CoonexionLBL.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoonexionLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(224)))), ((int)(((byte)(204)))));
+            this.CoonexionLBL.Location = new System.Drawing.Point(135, 29);
+            this.CoonexionLBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CoonexionLBL.Name = "CoonexionLBL";
+            this.CoonexionLBL.Size = new System.Drawing.Size(112, 30);
+            this.CoonexionLBL.TabIndex = 0;
+            this.CoonexionLBL.Text = "Connexion";
+            this.CoonexionLBL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ScreenConection
             // 
@@ -138,25 +141,25 @@ namespace Veto
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ConnexionPNL);
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "ScreenConection";
             this.Activated += new System.EventHandler(this.ScreenConection_Activated);
             this.Controls.SetChildIndex(this.TopPNL, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Controls.SetChildIndex(this.ConnexionPNL, 0);
+            this.ConnexionPNL.ResumeLayout(false);
+            this.ConnexionPNL.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ConnexionPNL;
         private System.Windows.Forms.Button ConnectBT;
         private System.Windows.Forms.TextBox PasswordTB;
         private System.Windows.Forms.TextBox LoginTB;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CoonexionLBL;
         private System.Windows.Forms.Label IdLBL;
         private System.Windows.Forms.Label label2;
     }
