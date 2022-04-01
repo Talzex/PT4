@@ -44,8 +44,6 @@ namespace Veto
             this.PreviousBTN = new Veto.ButtonEllipse();
             this.Panel_AllProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.button_addconsultation = new System.Windows.Forms.Button();
-            this.button_addoperation = new System.Windows.Forms.Button();
-            this.button_addnight = new System.Windows.Forms.Button();
             this.CenterPNL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SidePNL)).BeginInit();
             this.SidePNL.Panel2.SuspendLayout();
@@ -67,8 +65,6 @@ namespace Veto
             // 
             // SidePNL.Panel2
             // 
-            this.SidePNL.Panel2.Controls.Add(this.button_addnight);
-            this.SidePNL.Panel2.Controls.Add(this.button_addoperation);
             this.SidePNL.Panel2.Controls.Add(this.button_addconsultation);
             this.SidePNL.Size = new System.Drawing.Size(225, 571);
             this.SidePNL.SplitterDistance = 298;
@@ -258,34 +254,7 @@ namespace Veto
             this.button_addconsultation.TabIndex = 1;
             this.button_addconsultation.Text = "AJOUTER CONSULTATION";
             this.button_addconsultation.UseVisualStyleBackColor = false;
-            // 
-            // button_addoperation
-            // 
-            this.button_addoperation.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button_addoperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.button_addoperation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_addoperation.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_addoperation.ForeColor = System.Drawing.Color.White;
-            this.button_addoperation.Location = new System.Drawing.Point(12, 48);
-            this.button_addoperation.Name = "button_addoperation";
-            this.button_addoperation.Size = new System.Drawing.Size(191, 23);
-            this.button_addoperation.TabIndex = 2;
-            this.button_addoperation.Text = "AJOUTER OPÉRATION";
-            this.button_addoperation.UseVisualStyleBackColor = false;
-            // 
-            // button_addnight
-            // 
-            this.button_addnight.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.button_addnight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(58)))), ((int)(((byte)(4)))));
-            this.button_addnight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_addnight.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_addnight.ForeColor = System.Drawing.Color.White;
-            this.button_addnight.Location = new System.Drawing.Point(12, 77);
-            this.button_addnight.Name = "button_addnight";
-            this.button_addnight.Size = new System.Drawing.Size(191, 23);
-            this.button_addnight.TabIndex = 3;
-            this.button_addnight.Text = "AJOUTER NUIT";
-            this.button_addnight.UseVisualStyleBackColor = false;
+            this.button_addconsultation.Click += new System.EventHandler(this.button_addconsultation_Click);
             // 
             // Cart
             // 
@@ -326,8 +295,6 @@ namespace Veto
         private ButtonEllipse PreviousBTN;
         private ButtonEllipse NextBTN;
         private System.Windows.Forms.FlowLayoutPanel Panel_AllProducts;
-        private System.Windows.Forms.Button button_addnight;
-        private System.Windows.Forms.Button button_addoperation;
         private System.Windows.Forms.Button button_addconsultation;
         private System.Windows.Forms.ComboBox ClientsCB;
         private System.Windows.Forms.ComboBox PrinterCB;
