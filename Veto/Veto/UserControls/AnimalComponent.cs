@@ -21,6 +21,11 @@ namespace Veto
             UpdateLabels();
         }
 
+        /// <summary>
+        /// Click on the "Détails" Button. Shows a new form with the aniaml's details
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DetailsBTN_Click(object sender, EventArgs e)
         {
             AnimalDetails ad = new AnimalDetails(animal);

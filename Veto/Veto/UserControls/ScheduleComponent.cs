@@ -15,6 +15,11 @@ namespace Veto
         private RendezVous rdv;
         private Animal animal;
 
+        /// <summary>
+        // Schedule class constructor
+        /// </summary>
+        /// <param name="rdv">the rendez-vous</param>
+        /// <param name="animal">the animal</param>
         public Schedule(RendezVous rdv, Animal animal)
         {
             InitializeComponent();
@@ -23,6 +28,9 @@ namespace Veto
             MAJSchedule(rdv, animal);
         }
 
+        /// <summary>
+        /// Schedule class constructor, whitout parameter
+        /// </summary>
         public Schedule()
         {
             InitializeComponent();
@@ -49,6 +57,11 @@ namespace Veto
             }
         }
 
+        /// <summary>
+        /// Click on the Schedule. Shows a new form to add a new schedule
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Schedule_Click(object sender, EventArgs e)
         {
             if (rdv != null && animal != null)

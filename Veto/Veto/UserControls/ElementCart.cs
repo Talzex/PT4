@@ -31,8 +31,8 @@ namespace Veto
         private void MAJProduit()
         {
             QuantityTB.Text = quantity + "";
-            label_product.Text = product.NomProduit;
-            label_unitprice.Text = product.PrixVenteClient.ToString() + "€";
+            ProductLBL.Text = product.NomProduit;
+            UnitPriceLBL.Text = product.PrixVenteClient.ToString() + "€";
         }
 
         #region Inputs
